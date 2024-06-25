@@ -11,23 +11,25 @@
       
       
       
+        <link rel="prev" href="../4/">
       
       
-      <link rel="icon" href="/assets/favicon.jpg">
+      
+      <link rel="icon" href="../../assets/favicon.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
     
 	<meta name="format-detection" content="telephone=no">
 
     
       
-        <title>hust_notes</title>
+        <title>5 连续时间系统的复频域分析 - hust_notes</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -46,13 +48,13 @@
       
     
     
-      <link rel="stylesheet" href="/css/katex.css">
+      <link rel="stylesheet" href="../../css/katex.css">
     
-      <link rel="stylesheet" href="/css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -90,6 +92,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#chapter5" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +109,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="hust_notes" class="md-header__button md-logo" aria-label="hust_notes" data-md-component="logo">
+    <a href="../.." title="hust_notes" class="md-header__button md-logo" aria-label="hust_notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m57.7 193 9.4 16.4c8.3 14.5 21.9 25.2 38 29.8l57.9 16.5c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6 16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5 4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5.3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3-92.8 0-171.5 60.9-198.2 145zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0z"/></svg>
@@ -122,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              5 连续时间系统的复频域分析
             
           </span>
         </div>
@@ -220,7 +227,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="hust_notes" class="md-nav__button md-logo" aria-label="hust_notes" data-md-component="logo">
+    <a href="../.." title="hust_notes" class="md-nav__button md-logo" aria-label="hust_notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m57.7 193 9.4 16.4c8.3 14.5 21.9 25.2 38 29.8l57.9 16.5c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6 16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5 4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5.3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3-92.8 0-171.5 60.9-198.2 145zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0z"/></svg>
@@ -237,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -290,7 +297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part1/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part2/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -330,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part3/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -350,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part4/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -411,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/1/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/2/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -451,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/3/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/4/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/7/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/8/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/10/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/11/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/12/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/13/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/14/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/15/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -692,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/1/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -712,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/2/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/3/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/4/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/5/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -792,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/6/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -853,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%A4%A7%E7%89%A9/9/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E7%89%A9/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -873,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%A4%A7%E7%89%A9/10/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E7%89%A9/10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%A4%A7%E7%89%A9/11/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E7%89%A9/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -913,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%A4%A7%E7%89%A9/13/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E7%89%A9/13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -938,17 +945,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -961,7 +970,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             信号与线性系统
@@ -974,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/1/" class="md-nav__link">
+      <a href="../1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/2/" class="md-nav__link">
+      <a href="../2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/3/" class="md-nav__link">
+      <a href="../3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/4/" class="md-nav__link">
+      <a href="../4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,9 +1061,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5 连续时间系统的复频域分析
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1063,6 +1090,78 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter5" class="md-nav__link">
+    $Chapter5$&emsp;连续时间系统的复频域分析
+  </a>
+  
+    <nav class="md-nav" aria-label="$Chapter5$ 连续时间系统的复频域分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    拉普拉斯变换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    拉普拉斯反变换的求解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    拉普拉斯变换的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="拉普拉斯变换的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    时域微分性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    时域积分性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1093,6 +1192,68 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter5" class="md-nav__link">
+    $Chapter5$&emsp;连续时间系统的复频域分析
+  </a>
+  
+    <nav class="md-nav" aria-label="$Chapter5$ 连续时间系统的复频域分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    拉普拉斯变换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    拉普拉斯反变换的求解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    拉普拉斯变换的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="拉普拉斯变换的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    时域微分性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    时域积分性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1103,8 +1264,112 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  <h1>5 连续时间系统的复频域分析</h1>
+
+<h2 id="chapter5">$Chapter5$&emsp;连续时间系统的复频域分析<a class="headerlink" href="#chapter5" title="Permanent link">&para;</a></h2>
+<h3 id="_1">拉普拉斯变换<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;拉普拉斯变换通过引入一个<strong>收敛因子</strong> $\mathrm e^{-\sigma t}$，使得对于那些没有傅里叶变换的信号 $f(t)$ 而言，$f(t)\mathrm e^{-\sigma t}$ 有傅里叶变换。对 $f(t)\mathrm e^{-\sigma t}$ 的傅里叶变换就是对 $f(t)$ 的拉普拉斯变换。<strong>双边</strong>拉普拉斯变换为：
+$$F(s)=\int _ {-\infty}^{+\infty}f(t)\mathrm e^{-st}\mathrm dt\tag{5.1}$$</p>
+<p>反变换为：
+$$f(t)=\cfrac{1}{2\pi\mathrm j}\int _ {\sigma-\mathrm j\infty}^{\sigma+\mathrm j\infty}F(s)\mathrm e^{st}\mathrm ds\tag{5.2}$$</p>
+<blockquote>
+&emsp;&emsp;实际上，并不是对于所有信号 $f(t)$，总存在 $\sigma$ 使其收敛，例如一些比指数增长还快的信号 $f(t)=\mathrm e^{t^2}$。但是这种信号在工程运用中是不会碰到的，可以认为所有实际出现的信号的阶都不会高于指数。
+</blockquote>
+
+<p>&emsp;&emsp;实际上，我们一般只用到<strong>单边</strong>拉普拉斯变换：
+$$\begin{cases}F(s)=\displaystyle\int _ 0^{+\infty}f(t)\mathrm e^{-st}\mathrm dt\\
+f(t)=\displaystyle\left[\cfrac{1}{2\pi\mathrm j}\int _ {\sigma-\mathrm j\infty}^{\sigma+\mathrm j\infty}F(s)\mathrm e^{st}\mathrm ds\right]\varepsilon(t)\end{cases}\tag{5.3}$$</p>
+<table align="center">
+<caption>表2 常见函数的拉普拉斯变换</caption>
+<tr>
+    <th>公式编号</th>
+    <th>$f(t)$</th>
+    <th>$F(s)$</th>
+</tr>
+<tr>
+    <td>$1$</td>
+    <td>$\delta(t)$</td>
+    <td>$1$</td>
+</tr>
+<tr>
+    <td>$2$</td>
+    <td>$\varepsilon(t)$</td>
+    <td>$\cfrac{1}{s}$</td>
+</tr>
+<tr>
+    <td>$3$</td>
+    <td>$t\varepsilon(t)$</td>
+    <td>$\cfrac{1}{s^2}$</td>
+</tr>
+<tr>
+    <td>$4$</td>
+    <td>$t^n\varepsilon(t)$</td>
+    <td>$\cfrac{n!}{s^{n+1}}$</td>
+</tr>
+<tr>
+    <td>$5$</td>
+    <td>$\mathrm e^{\alpha t}\varepsilon(t)$</td>
+    <td>$\cfrac{1}{s-\alpha}$</td>
+</tr>
+<tr>
+    <td>$6$</td>
+    <td>$t\mathrm e^{\alpha t}\varepsilon(t)$</td>
+    <td>$\cfrac{1}{(s-\alpha)^2}$</td>
+</tr>
+<tr>
+    <td>$7$</td>
+    <td>$t^n\mathrm e^{\alpha t}\varepsilon(t)$</td>
+    <td>$\cfrac{n!}{(s-\alpha)^{n+1}}$</td>
+</tr>
+<tr>
+    <td>$8$</td>
+    <td>$\sin(\omega t)\varepsilon(t)$</td>
+    <td>$\cfrac{\omega}{s^2+\omega^2}$</td>
+</tr>
+<tr>
+    <td>$9$</td>
+    <td>$\cos(\omega t)\varepsilon(t)$</td>
+    <td>$\cfrac{s}{s^2+\omega^2}$</td>
+</tr>
+<tr>
+    <td>$10$</td>
+    <td>$\mathrm e^{\alpha t}\sin(\omega t)\varepsilon(t)$</td>
+    <td>$\cfrac{\omega}{(s-\alpha)^2+\omega^2}$</td>
+</tr>
+<tr>
+    <td>$11$</td>
+    <td>$\mathrm e^{\alpha t}\cos(\omega t)\varepsilon(t)$</td>
+    <td>$\cfrac{s-\alpha}{(s-\alpha)^2+\omega^2}$</td>
+</tr>
+</table>
+
+<h3 id="_2">拉普拉斯反变换的求解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;从积分上下限 $\sigma\pm\mathrm j\omega$ 来看，拉普拉斯反变换不好直接根据式 $(5.3)$ 计算。在求反变换上，还是傅里叶反变换更简单。除了复变中的方法之外，若要求 $F(s)$ 的原函数，只能通过将 $F(s)$ 拆解成一些简单项的和，利用拉普拉斯变换的线性性，逐项对照上表求反变换。</p>
+<blockquote>
+&emsp;&emsp;例如，$F(s)=\cfrac{1+s}{s^2}$，求其反变换可以对照上表的第 $2,3$ 项：
+$$f(t)=\mathscr L^{-1}\left\lbrace\cfrac{1+s}{s^2}\right\rbrace=\mathscr L^{-1}\left\lbrace\cfrac{1}{s^2}\right\rbrace+\mathscr L^{-1}\left\lbrace\cfrac{1}{s}\right\rbrace=(1+t)\varepsilon(t)\tag{5.4}$$ 
+</blockquote>
+
+<h3 id="_3">拉普拉斯变换的性质<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;拉普拉斯变换是通过傅里叶变换得到的，所以很多性质都可以参考傅里叶变换。应用于连续时间系统的分析，拉普拉斯主要有两个性质和傅里叶变换中稍有区别：</p>
+<h4 id="_4">时域微分性质<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>&emsp;&emsp;时域微分能够计入初始值，这是单边傅里叶变换 $(5.3)$ 的特性决定的：
+$$\mathscr L\left\lbrace\cfrac{\mathrm d^nf(t)}{\mathrm dt}\right\rbrace=s^nF(s)-s^{n-1}f(0^-)-s^{n-1}f ' (0^-)-\cdots-f^{(n-1)}(0^-)\tag{5.5}$$</p>
+<p>&emsp;&emsp;$n$ 阶微分需要 $n$ 个初始值。因此已知初始值，可以用拉普拉斯变换来求系统的全响应。</p>
+<h4 id="_5">时域积分性质<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>&emsp;&emsp;一般拉普拉斯变换处理的都是 $t=0$ 开始的有始信号 $f(t)$，因而 $t&lt;0^-$ 时 $f(t)=0$。对于这样的 $f(t)$，满足下面的积分性质：
+$$\mathscr L\left\lbrace\int _ {-\infty}^tf(\tau)\mathrm d\tau\right\rbrace=\cfrac{F(s)}{s}\tag{5.6}$$</p>
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -1115,6 +1380,28 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../4/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 4 连续时间系统的频域分析" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                4 连续时间系统的频域分析
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1179,12 +1466,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.copy", "navigation.footer"], "search": "/assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="/js/katex.js"></script>
+        <script src="../../js/katex.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
       

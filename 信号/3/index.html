@@ -11,23 +11,27 @@
       
       
       
+        <link rel="prev" href="../2/">
       
       
-      <link rel="icon" href="/assets/favicon.jpg">
+        <link rel="next" href="../4/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
     
 	<meta name="format-detection" content="telephone=no">
 
     
       
-        <title>hust_notes</title>
+        <title>3 连续信号的正交分解 - hust_notes</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -46,13 +50,13 @@
       
     
     
-      <link rel="stylesheet" href="/css/katex.css">
+      <link rel="stylesheet" href="../../css/katex.css">
     
-      <link rel="stylesheet" href="/css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -90,6 +94,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#chapter3" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="hust_notes" class="md-header__button md-logo" aria-label="hust_notes" data-md-component="logo">
+    <a href="../.." title="hust_notes" class="md-header__button md-logo" aria-label="hust_notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m57.7 193 9.4 16.4c8.3 14.5 21.9 25.2 38 29.8l57.9 16.5c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6 16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5 4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5.3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3-92.8 0-171.5 60.9-198.2 145zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0z"/></svg>
@@ -122,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              3 连续信号的正交分解
             
           </span>
         </div>
@@ -220,7 +229,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="hust_notes" class="md-nav__button md-logo" aria-label="hust_notes" data-md-component="logo">
+    <a href="../.." title="hust_notes" class="md-nav__button md-logo" aria-label="hust_notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m57.7 193 9.4 16.4c8.3 14.5 21.9 25.2 38 29.8l57.9 16.5c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6 16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5 4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5.3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3-92.8 0-171.5 60.9-198.2 145zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0z"/></svg>
@@ -237,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -290,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part1/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part2/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -330,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part3/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -350,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part4/" class="md-nav__link">
+      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Part4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -411,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/1/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/2/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -451,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/3/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/4/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/7/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/8/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/10/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/11/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/12/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/13/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/14/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/15/" class="md-nav__link">
+      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -692,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/1/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -712,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/2/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/3/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/4/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/5/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -792,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/6/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -853,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%A4%A7%E7%89%A9/9/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E7%89%A9/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -873,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%A4%A7%E7%89%A9/10/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E7%89%A9/10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%A4%A7%E7%89%A9/11/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E7%89%A9/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -913,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%A4%A7%E7%89%A9/13/" class="md-nav__link">
+      <a href="../../%E5%A4%A7%E7%89%A9/13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -938,17 +947,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -961,7 +972,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             信号与线性系统
@@ -974,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/1/" class="md-nav__link">
+      <a href="../1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/2/" class="md-nav__link">
+      <a href="../2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,9 +1023,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3 连续信号的正交分解
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1023,6 +1052,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter3" class="md-nav__link">
+    $Chapter3$&emsp;连续信号的正交分解
+  </a>
+  
+    <nav class="md-nav" aria-label="$Chapter3$ 连续信号的正交分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    傅里叶级数
+  </a>
+  
+    <nav class="md-nav" aria-label="傅里叶级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    三角傅里叶级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    指数傅里叶级数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    傅里叶变换及其性质
+  </a>
+  
+    <nav class="md-nav" aria-label="傅里叶变换及其性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    傅里叶变换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    傅里叶变换的性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varepsilont" class="md-nav__link">
+    阶跃函数 $\varepsilon(t)$ 的傅里叶变换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1034,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/4/" class="md-nav__link">
+      <a href="../4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1054,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E4%BF%A1%E5%8F%B7/5/" class="md-nav__link">
+      <a href="../5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1093,6 +1214,88 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter3" class="md-nav__link">
+    $Chapter3$&emsp;连续信号的正交分解
+  </a>
+  
+    <nav class="md-nav" aria-label="$Chapter3$ 连续信号的正交分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    傅里叶级数
+  </a>
+  
+    <nav class="md-nav" aria-label="傅里叶级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    三角傅里叶级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    指数傅里叶级数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    傅里叶变换及其性质
+  </a>
+  
+    <nav class="md-nav" aria-label="傅里叶变换及其性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    傅里叶变换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    傅里叶变换的性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varepsilont" class="md-nav__link">
+    阶跃函数 $\varepsilon(t)$ 的傅里叶变换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1103,8 +1306,126 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  <h1>3 连续信号的正交分解</h1>
+
+<h2 id="chapter3">$Chapter3$&emsp;连续信号的正交分解<a class="headerlink" href="#chapter3" title="Permanent link">&para;</a></h2>
+<h3 id="_1">傅里叶级数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="_2">三角傅里叶级数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>&emsp;&emsp;对于真实信号<strong>周期函数</strong> $f(t)$ 来说，一般都可以分解为傅里叶级数：
+$$f(t)=\cfrac{a _ 0}{2}+\sum _ {n=1}^\infty(a _ n\cos n\varOmega t+b _ n\sin n\varOmega t)\tag{3.1}$$</p>
+<blockquote>
+&emsp;&emsp;根据 Dirichlet 条件，上式中的 “$=$” 写作 “$\sim$” 更严谨，因为可能会存在一些离散的点，等式左右两边在这些点上的取值不相等。但是毕竟是个别离散的点，工程上可以直接忽略，所以直接使用了 “$=$”。
+</blockquote>
+
+<p>&emsp;&emsp;其中，系数 $a _ n,b _ n$ 的求解公式是：
+$$\begin{cases}\displaystyle a _ n=\cfrac{2}{T}\int _ {t _ 1}^{t _ 1+T}f(t)\cos n\varOmega t\mathrm dt\\
+\displaystyle b _ n=\cfrac{2}{T}\int _ {t _ 1}^{t _ 1+T}f(t)\sin n\varOmega t\mathrm dt\end{cases}\tag{3.2}$$</p>
+<p>&emsp;&emsp;其中有 $T=2\pi/\varOmega$，是函数 $f(t)$ 的周期。</p>
+<h4 id="_3">指数傅里叶级数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>&emsp;&emsp;显然，式 $(3.1)$ 也可以使用配角公式，写作式 $(3.3)$ 所示：
+$$f(t)=\cfrac{a _ 0}{2}+\sum _ {n=1}^\infty A_ n\cos(n\varOmega t+\varphi _ n)\tag{3.3}$$</p>
+<p>&emsp;&emsp;如果考虑到欧拉公式，使用复指数消去三角函数，就得到了 $f(t)$ 的<strong>指数傅里叶级数</strong>：
+$$f(t)=\cfrac{1}{2}\sum_ {n=-\infty}^{+\infty}A _ n\mathrm e^{\mathrm j(n\varOmega t+\varphi _ n)}=\cfrac{1}{2}\sum _ {n=-\infty}^{+\infty}\dot A _ n\mathrm e^{\mathrm jn\varOmega t}\tag{3.4}$$</p>
+<p>&emsp;&emsp;注意 $n$ 从 $(3.3)$ 中的 $\mathbb N _ +$ 拓展到了 $(3.4)$ 中的 $\mathbb Z$。这是指数傅里叶级数与三角傅里叶级数最大的不同之处。<br />
+&emsp;&emsp;$n&gt;0$ 时式 $(3.4)$ 的 $A _ n$ 和 $\varphi _ n$ 同 $(3.3)$。<br />
+&emsp;&emsp;特别地，对于 $n=0$，有 $A _ 0=a _ 0$，$\varphi _ 0=0$。<br />
+&emsp;&emsp;对于 $n&lt;0$，则有 $A _ n=A _ {-n}$，$\varphi _ n=-\varphi _ {-n}$。  </p>
+<blockquote>
+<p>&emsp;&emsp;有的地方使用 $F _ n$ 和 $\dot F _ n$，它们分别有 $F _ n=A _ n/2$，$\dot F _ n=\dot A _ n/2$。</p>
+</blockquote>
+<h3 id="_4">傅里叶变换及其性质<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">傅里叶变换<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>&emsp;&emsp;当周期函数的 $T$ 趋于无穷大时，这个函数就不再具备周期性，同时其傅里叶级数中 $k$ 次谐波和 $k+1$ 次谐波的频率差也趋于 $0$，离散的函数有向连续转变的趋势，级数和有向定积分转变的趋势。对比式 $(3.4)$，对于<strong>非周期函数</strong> $f(t)$，有：
+$$f(t)=\cfrac{1}{2\pi}\int _ {-\infty}^{+\infty} F(\omega)\mathrm e^{\mathrm j\omega t}\mathrm d\omega\tag{3.5}$$</p>
+<blockquote>
+&emsp;&emsp;有的地方也把 $F(\omega)$ 写作 $F(\mathrm j\omega)$。为了方便，后面都记作 $F(\omega)$。
+</blockquote>
+
+<p>&emsp;&emsp;其中“系数” $F(\omega)$ 可以通过下式求得：
+$$F(\omega)=\int _ {-\infty}^{+\infty}f(t)\mathrm e^{-\mathrm j\omega t}\mathrm dt\tag{3.6}$$</p>
+<p>&emsp;&emsp;式 $(3.5)(3.6)$ 被统称为傅里叶变换式，$(3.6)$ 被称为正变换，也写作 $F(\omega)=\mathscr F\lbrace f(t)\rbrace $；$(3.5)$ 被称为反变换，也写作 $f(t)=\mathscr F^{-1}\lbrace F(\omega)\rbrace $。<br />
+&emsp;&emsp;特别地，<st><strong>单矩形脉冲信号</strong> $f(t)=A[\varepsilon(-\tau/2)-\varepsilon(\tau/2)]$ 的傅里叶变换是 $F(\omega)=A\tau \mathrm{Sa}\left(\cfrac{\omega\tau}{2}\right)$</st>。其中，<strong>抽样函数</strong> $\mathrm{Sa}(t)=\cfrac{\sin t}{t}$。</p>
+<table width="100%">
+<caption>表1 单矩形脉冲信号及其傅里叶变换</caption>
+    <tr>
+        <td width="50%">单矩形脉冲信号 $f(t)$</td>
+        <td width="50%">单矩形脉冲信号的傅里叶变换 $F(\omega)$</td>
+    </tr>
+    <tr>
+        <th><img src="/信号/fig1.svg"></img></th>
+        <th><img src="/信号/fig2.svg"></img></th>
+    </tr>
+</table>
+
+<h4 id="_6">傅里叶变换的性质<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>&emsp;&emsp;傅里叶变换具有的性质有：<br />
+<strong>线性特性</strong>：$\mathscr F\lbrace af _ 1(t) +bf _ 2(t)\rbrace =a\mathscr F\lbrace  f _ 1(t)\rbrace  + b\mathscr F\lbrace  f _ 2(t)\rbrace $。<br />
+<strong>延时特性</strong>：若 $f(t)\leftrightarrow F(\omega)$，则 $f(t-t _ 0)\leftrightarrow F(\omega)\mathrm e^{-\mathrm j\omega t _ 0}$。<br />
+<strong>移频特性</strong>：若 $f(t)\leftrightarrow F(\omega)$，则 $f(t)\mathrm e^{\mathrm j\omega _ ct}\leftrightarrow F(\omega-\omega _ c)$。<br />
+&emsp;&emsp;特别的，由于余弦函数可以用复指数表示，因此也存在 $f(t)\cos\omega _ ct\leftrightarrow \cfrac{1}{2}[F(\omega+\omega _ c)+F(\omega-\omega _ c)]$。<br />
+<strong>尺度变换特性</strong>：若 $f(t)\leftrightarrow F(\omega)$，则 $f(at)\leftrightarrow \cfrac{1}{|a|}F\left(\cfrac{\omega}{a}\right)$。<br />
+<strong>对称特性</strong>（非常有用）：若 $f(t)\leftrightarrow F(\omega)$，则 $F(t)\leftrightarrow 2\pi f(-\omega)$。</p>
+<blockquote>
+&emsp;&emsp;对称特性非常适合用于求已知反变换的函数的正变换。例如，抽样函数是单矩形脉冲函数的傅里叶变换，但是直接求抽样函数的傅里叶变换会比较困难。
+$$\begin{aligned}\mathscr F\lbrace \mathrm{Sa}(t)\rbrace&=\int _ {-\infty}^{+\infty}\mathrm{Sa}(t)\mathrm e^{-\mathrm j\omega t}\mathrm dt\\
+&=2\int _ {0}^{+\infty}\cfrac{\sin t}{t}\cos(\omega t)\\
+&=\int _ {0}^{+\infty}\cfrac{\sin(1+\omega) t+\sin(1-\omega)t}{t}\mathrm dt\end{aligned}\tag{3.7}$$
+根据狄利克雷积分：
+$$\int _ 0^{+\infty}\cfrac{\sin x}{x}\mathrm dx=\cfrac{\pi}{2}\tag{3.8}$$
+可得当 $-1< \omega< 1$ 时，$\mathscr F\lbrace\mathrm{Sa}(t)\rbrace=\pi$;当 $\omega > 1$ 或 $\omega < -1$ 时，$\mathscr F\lbrace\mathrm{Sa}(t)\rbrace=0$。<br>即 $\mathscr F\lbrace\mathrm{Sa}(t)\rbrace\leftrightarrow \pi[\varepsilon(\omega+1)-\varepsilon(\omega-1)]$。<br>
+&emsp;&emsp;显然用对称特性会比直接计算快一些：令 $A=\cfrac{1}{2}$ 和 $\tau=2$，那么有：
+$$\cfrac{1}{2}[\varepsilon(t+1)-\varepsilon(t-1)]\leftrightarrow \mathrm{Sa}(\omega)\tag{3.8}$$
+根据对称特性有：
+$$\mathrm{Sa}(t)\leftrightarrow \pi[\varepsilon(-\omega+1)-\varepsilon(-\omega-1)]\tag{3.9}$$
+式 $(3.9)$ 和用狄利克雷积分获得的结果是一样的。
+</blockquote>
+
+<p><strong>微分特性</strong>：分为时域上的微分和频域上的微分。<br />
+&emsp;&emsp;若 $f(t)\leftrightarrow F(\omega)$，则有 $\cfrac{\mathrm d^nf(t)}{\mathrm dt^n}\leftrightarrow (\mathrm j\omega)^nF(\omega)$ 和 $(-\mathrm jt)^nf(t)\leftrightarrow \cfrac{\mathrm d^nF(\omega)}{\mathrm dt^n}$。<br />
+<strong>积分特性</strong>：分为时域上的积分和频域上的积分。<br />
+&emsp;&emsp;若 $f(t)\leftrightarrow F(\omega)$，且不考虑 $t=0,\omega=0$ 时 $f(t),F(\omega)$ 的取值，则有 $\displaystyle\int _ {-\infty}^t f(\tau)\mathrm d\tau\leftrightarrow \cfrac{1}{\mathrm j\omega}F(\omega)$ 和 $\displaystyle\cfrac{1}{-\mathrm jt}f(t)\leftrightarrow\int _ {-\infty}^\omega F(\varOmega)\mathrm d\varOmega$。<br />
+&emsp;&emsp;需要注意的是式中的积分都应该收敛。<br />
+<strong>卷积特性</strong>（非常重要）：<br />
+&emsp;&emsp;<strong>特性一</strong>：两个信号的卷积的傅里叶变换是它们分别傅里叶变换的乘积：$$f _ 1(t) * f _ 2(t)\leftrightarrow \mathscr F\lbrace f _ 1(t)\rbrace\mathscr F\lbrace f _ 2(t)\rbrace\tag{3.10}$$</p>
+<p>&emsp;&emsp;<strong>特性二</strong>：两个信号的乘积的傅里叶变换是它们分别傅里叶变换的卷积的 $\cfrac{1}{2\pi}$：$$f _ 1(t)f _ 2(t)\leftrightarrow \cfrac{1}{2\pi}\mathscr F\lbrace f _ 1(t)\rbrace * \mathscr F\lbrace f _ 2(t)\rbrace\tag{3.11}$$</p>
+<p>这一结论可以由特性一和对称特性导出。</p>
+<blockquote>
+&emsp;&emsp;下面给出由特性一和对称特性导出特性二的过程。<br>&emsp;&emsp;不妨记 $\mathscr F\lbrace g _ 1(t)\rbrace=G _ 1(\omega)$，$\mathscr F\lbrace g _ 2(t)\rbrace=G _ 2(\omega)$。由特性一，有 $$g _ 1(t) * g _ 2(t)\leftrightarrow G _ 1(\omega)G _ 2(\omega)\tag{3.12}$$
+因此得到三个傅里叶变换关系：
+$$\begin{cases}g _ 1(t)\leftrightarrow G _ 1(\omega)\\
+g _ 2(t)\leftrightarrow G _ 2(\omega)\\
+g _ 1(t) * g _ 2(t)\leftrightarrow G _ 1(\omega)G _ 2(\omega)\end{cases}\tag{3.13}$$
+根据<strong>对称特性</strong>，有：
+$$\begin{cases}G _ 1(t)\leftrightarrow 2\pi g _ 1(-\omega)\\
+G _ 2(t)\leftrightarrow 2\pi g _ 2(-\omega)\\
+G _ 1(t)G _ 2(t)\leftrightarrow 2\pi g _ 1(-\omega) * g _ 2(-\omega)\end{cases}\tag{3.14}$$
+由 $(3.14)$ 中前两式可得 $\mathscr F\lbrace G _ 1(t)\rbrace=2\pi g _ 1(-\omega)$，$\mathscr F\lbrace G _ 2(t)\rbrace=2\pi g _ 2(-\omega)$。代入第三式即得：
+$$G _ 1(t)G _ 2(t)\leftrightarrow \cfrac{1}{2\pi}\mathscr F\lbrace G _ 1(t)\rbrace * \mathscr F\lbrace G _ 2(t)\rbrace\tag{3.15}$$
+</blockquote>
+
+<h3 id="varepsilont">阶跃函数 $\varepsilon(t)$ 的傅里叶变换<a class="headerlink" href="#varepsilont" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;有一些不绝对可积的函数，在广义函数视角下也能有傅里叶变换，比如 $1\leftrightarrow \delta(\omega)$。<br />
+&emsp;&emsp;这里特别提一下阶跃函数的傅里叶变换：
+$$\varepsilon(t)\leftrightarrow \pi\delta(\omega)-\mathrm j\cfrac{1}{\omega}\tag{3.16}$$</p>
+<p>&emsp;&emsp;它实在是太古怪了，因为虚部 $-\cfrac{1}{\omega}$ 在 $\omega=0$ 处的积分是发散的。而这一点就导致对变换 $(3.16)$ 使用<strong>对称特性</strong>时出现数学问题。<br />
+&emsp;&emsp;不妨计算一下 $\pi\delta(t)-\mathrm j\cfrac{1}{t}$ 的傅里叶变换：
+$$\begin{aligned}\int _ {-\infty}^{+\infty}\left(\pi\delta(t)-\mathrm j\cfrac{1}{t}\right)\mathrm e^{-\mathrm j\omega t}\mathrm dt&amp;=\pi-\mathrm j\int _ {-\infty}^{+\infty}\cfrac{\cos(\omega t)-\mathrm j\sin(\omega t)}{t}\mathrm dt\\
+&amp;=\pi-\mathrm j\int _ {-\infty}^{+\infty}\cfrac{\cos(\omega t)}{t}\mathrm dt-\int _ {-\infty}^{+\infty}\cfrac{\sin(\omega t)}{t}\mathrm dt\\
+&amp;=2\pi\varepsilon(-t)-\mathrm j\int _ {-\infty}^{+\infty}\cfrac{\cos(\omega t)}{t}\mathrm dt\end{aligned}\tag{3.17}$$</p>
+<p>&emsp;&emsp;式 $(3.16)$ 最后一个等号处用到了狄利克雷积分，参见式 $(3.8)$。<br />
+&emsp;&emsp;按照对称特性，$(3.17)$ 的结果应该等于 $2\pi\varepsilon(-t)$，这也就意味着式 $(3.17)$ 最后的一个积分项应为零。但是根据 $\cos x&gt;1-\cfrac{x^2}{2}$，有 $\cfrac{\cos(\omega t)}{t}&gt;\cfrac{1}{t}-\cfrac{\omega^2t}{2}(t&gt;0)$，从而积分 $\displaystyle\int _ {-\infty}^{+\infty}\cfrac{\cos(\omega t)}{t}\mathrm dt$ 发散而不是等于零。<br />
+&emsp;&emsp;这就对数学很不尊敬，还是不要继续深究了。</p>
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -1115,6 +1436,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2 连续时间系统的时域分析" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                2 连续时间系统的时域分析
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../4/" class="md-footer__link md-footer__link--next" aria-label="下一页: 4 连续时间系统的频域分析" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                4 连续时间系统的频域分析
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1179,12 +1538,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.copy", "navigation.footer"], "search": "/assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="/js/katex.js"></script>
+        <script src="../../js/katex.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
       
