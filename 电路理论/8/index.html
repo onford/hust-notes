@@ -1273,30 +1273,31 @@
   <h1>8 一阶电路暂态分析</h1>
 
 <h2 id="_1">分析方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;暂态电路中如果只有一个独立储能元件（一阶电路），其分析会方便很多，也能够总结出一些技巧。 
+<p>&emsp;&emsp;暂态电路中如果只有一个独立储能元件（一阶电路），其分析会方便很多，也能够总结出一些技巧。<br />
 &emsp;&emsp;零输入响应（自然响应）、零状态响应（阶跃响应）都可以看作是<strong>全响应</strong>的特殊情况，因而可以都使用三要素法。电路中的任何响应（电压或电流）$ y $ 都按照式 $ (8.1) $ 变化。
 $$y(t)=y(\infty)+[y(0 _ +)-y(\infty)]\mathrm e^{-\frac{t}{\tau}}\tag{8.1}$$</p>
 <p>&emsp;&emsp;简单来说，也就是响应 $ y $ 从初始值 $ y(0 _ +) $ 按指数规律渐近到 $ y(\infty) $。其中的 $ \tau $ 是电路的<strong>时间常数</strong>。先将储能元件外的电路等效为<strong>戴维南支路</strong>，其等效电阻为 $ R _ \mathrm{eq} $。对于储能元件是电容的电路，$ \tau=R _ \mathrm{eq}C $；对于储能元件是电感的电路，$ \tau=\cfrac{L}{R _ \mathrm{eq}} $。</p>
-<blockquote>
-&emsp;&emsp;初值 $ y(0 _ +) $ 求法在 $ Chapter7 $，稳态 $ y(\infty) $ 在稳态电路图中求。对于所有的一阶电路来说，暂态持续 $ 5\tau $ 后，认为达到了稳态。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">一阶电路的初末值及稳态条件</p>
+<p>&emsp;&emsp;初值 $ y(0 _ +) $ 求法在<a href="../7/">第七章</a>，稳态 $ y(\infty) $ 在稳态电路图中求。对于所有的一阶电路来说，暂态持续 $ 5\tau $ 后，认为达到了稳态。</p>
+</div>
 <p>&emsp;&emsp;全响应还可以看作是<st>零输入响应与零状态响应的叠加</st>。考虑全响应中任意一个响应 $ y $。如果将电路中所有的独立电源置零，此时对应的响应为 $ y' $；将电路中储能元件的储能清空，此时对应的响应为 $ y'' $ 。那么 $ y=y'+y'' $ 。</p>
 <h2 id="_2">一些分量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;式 $ (8.1) $ 中，$ [y(0 _ +)-y(\infty)]\mathrm e^{-\frac{t}{\tau}} $ 是<strong>暂态分量</strong>，因为指数使其随时间衰减为 $ 0 $，只能暂时存在。它也是<strong>自由分量</strong>，在电源强制稳住电容（或电感）之前，允许电容（或电感）自由发挥一会。<br />
 &emsp;&emsp; $ y(\infty) $ 是<strong>稳态分量</strong>，因为响应最终会稳定在这个值。它也是<strong>强制分量</strong>，是电源强制响应收敛到这个值的。</p>
 <h2 id="_3">线性非时变特性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;一般见到的由独立电源、电阻、储能元件构成的电路，都是线性非时变电路。它们的<strong>零状态</strong>响应有两个性质。<br />
-&emsp;&emsp;<strong>线性特性</strong>：若 $ x _ 1(t) $ 激励下的零状态响应为 $ y _ 1(t) $，$ x _ 2(t) $ 激励下的零状态响应为 $ y _ 2(t) $，则 $ k _ 1x _ 1(t)+k _ 2x _ 2(t) $ 激励下的零状态响应为 $ k _ 1y _ 1(t)+k _ 2y _ 2(t) $ .</p>
-<blockquote>
-&emsp;&emsp;<strong>线性特性</strong>中的响应 $ y(t) $ 与 $ (8.1) $ 式中的有些许不同，一般只考虑电容、电感的响应。同时，<strong>线性特性</strong>适用于时变独立电源。后面的非时变特性也是这样的。
-</blockquote>
-
+&emsp;&emsp;<strong>线性特性</strong>：若 $ x _ 1(t) $ 激励下的零状态响应为 $ y _ 1(t) $，$ x _ 2(t) $ 激励下的零状态响应为 $ y _ 2(t) $，则 $ k _ 1x _ 1(t)+k _ 2x _ 2(t) $ 激励下的零状态响应为 $ k _ 1y _ 1(t)+k _ 2y _ 2(t) $ 。</p>
+<div class="admonition note">
+<p class="admonition-title">关于这里的线性特性</p>
+<p>&emsp;&emsp;<strong>线性特性</strong>中的响应 $ y(t) $ 与 $ (8.1) $ 式中的有些许不同，一般只考虑电容、电感的响应。同时，<strong>线性特性</strong>适用于时变独立电源。后面的非时变特性也是这样的。</p>
+</div>
 <p>&emsp;&emsp;<strong>非时变特性</strong>：若 $ x(t) $ 激励下的零状态响应为 $ y(t) $，则 $ x(t-t _ 0) $ 激励下的零状态响应为 $ y(t-t _ 0) $ 。<br />
-&emsp;&emsp;除此之外，还有一个<strong>重要特性</strong>：若 $ x(t) $ 激励下的零状态响应是 $ y(t) $，则 $ \cfrac{\mathrm dx(t)}{\mathrm dt} $ 激励下的零状态响应是 $ \cfrac{\mathrm dy(t)}{\mathrm dt} $，$ \displaystyle\int _ {0 _ -}^tx(t)\mathrm dt $ 激励下的零状态响应是 $ \displaystyle\int _ {0 _ -}^ty(t)\mathrm dt $ .</p>
-<blockquote>
-&emsp;&emsp;这个性质实用的一点在，我们可以根据阶跃电源（如 $ u _ S\varepsilon(t) $）下的零状态响应，求冲击电源（对应的，$ u _ S\delta(t) $）下的零状态响应。
-</blockquote>
+&emsp;&emsp;<strong>微分特性</strong>与<strong>积分特性</strong>：若 $ x(t) $ 激励下的零状态响应是 $ y(t) $，则 $ \cfrac{\mathrm dx(t)}{\mathrm dt} $ 激励下的零状态响应是 $ \cfrac{\mathrm dy(t)}{\mathrm dt} $，$ \displaystyle\int _ {0 _ -}^tx(t)\mathrm dt $ 激励下的零状态响应是 $ \displaystyle\int _ {0 _ -}^ty(t)\mathrm dt $ 。</p>
+<div class="admonition note">
+<p class="admonition-title">微分特性、积分特性的实用之处</p>
+<p>&emsp;&emsp;这个性质实用的一点在，我们可以根据阶跃电源（如 $ u _ S\varepsilon(t) $）下的零状态响应，求冲击电源（对应的，$ u _ S\delta(t) $）下的零状态响应。</p>
+</div>
 
 
   

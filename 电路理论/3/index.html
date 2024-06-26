@@ -1274,21 +1274,22 @@ G _ {a1}&amp;\cdots&amp;G _ {aa}\end{bmatrix}\begin{bmatrix}u _ {\mathrm n1}\\
 <li>先简化电源支路，以免干扰电导矩阵的列写。</li>
 <li>戴维南支路应全部转化为诺顿支路。</li>
 </ul>
-<blockquote>&emsp;&emsp;所谓简化电源支路，指的是以下两种情况：电流源串联了一个电阻，或者电压源并联了一个电阻。根据电源支路的等效变换，我们应直接把电阻给删了，以免后面出现不必要的麻烦。<br>
-&emsp;&emsp;但是，如果要求电路中相应电源的功率的话，在解完结点方程后，还应把电路还原。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于简化电源支路</p>
+<p>&emsp;&emsp;所谓简化电源支路，指的是以下两种情况：电流源串联了一个电阻，或者电压源并联了一个电阻。根据电源支路的等效变换，我们应直接把电阻给删了，以免后面出现不必要的麻烦。<br>
+&emsp;&emsp;但是，如果要求电路中相应电源的功率的话，在解完结点方程后，还应把电路还原。</p>
+</div>
 <p>&emsp;&emsp;使用节点方程的时候，对于电源支路的处理：</p>
 <ul>
 <li>支路上只有电流源，不参与电导矩阵的列写。</li>
 <li>支路上只有电压源。<ul>
-<li>如果支路连接到结点$\mathrm n _0$，直接得出支路另一个结点的电势，其它结点正常列写方程，合计方程个数仍为$a$个。</li>
-<li>支路不连接到$\mathrm n _0$，应该把电压源支路的两个端头结点合并成一个广义结点，再弥补一个电压方程：比如电压源$u _s$的升压方向为结点$j\rightarrow k$，把$j,k$看作广义节点，再弥补一个方程$u _ {\mathrm nk}-u _ {\mathrm nj}=u _s$，合计方程个数仍为$a$个。</li>
+<li>如果支路连接到结点 $\mathrm n _0$，直接得出支路另一个结点的电势，其它结点正常列写方程，合计方程个数仍为 $a$ 个。</li>
+<li>支路不连接到 $\mathrm n _ 0$，应该把电压源支路的两个端头结点合并成一个广义结点，再弥补一个电压方程：比如电压源 $u _ s$ 的升压方向为结点 $j\rightarrow k$，把 $j,k$ 看作广义节点，再弥补一个方程 $u _ {\mathrm nk}-u _ {\mathrm nj}=u _ s$，合计方程个数仍为 $a$ 个。</li>
 </ul>
 </li>
 </ul>
 <h2 id="_2">网孔方程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;网孔方程，其实是在KVL方程组中，用<strong>网孔电流 $i _m$ 消去各元件的电压 $u$ </strong>得到的。假设网孔电流设为 $i _ {\mathrm m1\cdots\mathrm mb}$。快速列写为方程 $(3.2)$ 所示：
+<p>&emsp;&emsp;网孔方程，其实是在 KVL 方程组中，用<strong>网孔电流 $i _m$ 消去各元件的电压 $u$ </strong>得到的。假设网孔电流设为 $i _ {\mathrm m1\cdots\mathrm mb}$。快速列写为方程 $(3.2)$ 所示：
 $$\begin{bmatrix}R _ {11}&amp;\cdots&amp;R _ {1b}\\
 \vdots&amp;\ddots&amp;\vdots\\
 R _ {b1}&amp;\cdots&amp;R _ {bb}\end{bmatrix}\begin{bmatrix}i _ {\mathrm m1}\\
@@ -1301,10 +1302,10 @@ u _ {\mathrm{Sm}b}
 \end{bmatrix}\tag{3.2}$$</p>
 <p>&emsp;&emsp;$R _ {kk}$ 是网孔 $k$ 内所有支路的电阻之和，称为网孔 $k$ 的自电阻。$R _ {kj}(k\neq j)$ 是网孔 $k,j$ 的公共支路电阻的<st><strong>相反数</strong></st>，称为网孔 $k,j$ 的互电阻。$u _ {\mathrm{Sn}k}$ 是沿着网孔$k$的电流方向电压源<st><strong>升压</strong></st>代数和。<br />
 &emsp;&emsp;由此就可以解出网孔$k$的电流$i _ {\mathrm mk}$。</p>
-<blockquote>
-    &emsp;&emsp;教材上，默认了所有网孔电流的参考方向都是顺时针方向。其实每个网孔电流的方向都可以随意规定，只要列写方程时满足 $u _ \mathrm{Sn}$ 的书写规则（沿网孔电流方向<strong>升压</strong>），解出来的 $i _ \mathrm m$ 就是当前参考方向的网孔电流值。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于网孔电流的参考方向</p>
+<p>&emsp;&emsp;教材上，默认了所有网孔电流的参考方向都是顺时针方向。其实每个网孔电流的方向都可以随意规定，只要列写方程时满足 $u _ \mathrm{Sn}$ 的书写规则（沿网孔电流方向<strong>升压</strong>），解出来的 $i _ \mathrm m$ 就是当前参考方向的网孔电流值。</p>
+</div>
 <p>&emsp;&emsp;使用网孔方程前，要注意以下两种情况：</p>
 <ul>
 <li>先简化电路，同结点方程列写时的处理。</li>

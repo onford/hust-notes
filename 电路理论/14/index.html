@@ -1327,10 +1327,10 @@ $$H(\omega)=\cfrac{\dot Y(\omega)}{\dot X(\omega)}\tag{14.1}$$</p>
 $$Q=\cfrac{\omega _ 0L}{R}=\cfrac{1}{\omega _ 0CR}=\cfrac{1}{R}\sqrt{\cfrac{L}{C}}\tag{14.2}$$</p>
 <p>&emsp;&emsp;以 $ \dot U _ R $ 为响应，能够构造一个带通滤波器，其通带宽度为：
 $$B=\omega _ {c2}-\omega _ {c _ 1}=\cfrac{\omega _ 0}{Q}\tag{14.3}$$</p>
-<blockquote>
-&emsp;&emsp;课本用 $ Q=\cfrac{U _ {L0}}{U _ S}=\cfrac{U _ {C0}}{U _ S} $ 引入品质因数 $ Q $。但我认为式 $ (14.3) $ 才是品质因数的最好体现，品质因数越大，带宽越小，滤波能力越强。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于品质因数 $Q$ 的定义</p>
+<p>&emsp;&emsp;课本用 $ Q=\cfrac{U _ {L0}}{U _ S}=\cfrac{U _ {C0}}{U _ S} $ 引入品质因数 $ Q $。但我认为式 $ (14.3) $ 才是品质因数的最好体现，品质因数越大，带宽越小，滤波能力越强。</p>
+</div>
 <h3 id="rlc_1">RLC 并联谐振电路<a class="headerlink" href="#rlc_1" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;RLC 并联电路的谐振（角）频率和串联一样，品质因数：
 $$Q=\cfrac{\omega _ 0C}{G}=\cfrac{1}{\omega _ 0LG}\tag{14.4}$$</p>
@@ -1339,10 +1339,11 @@ $$Q=\cfrac{\omega _ 0C}{G}=\cfrac{1}{\omega _ 0LG}\tag{14.4}$$</p>
 <p>&emsp;&emsp;谐振，其实就是电流和电压一起振动，它们的相位相同。据此可以分析各种混联电路的谐振情况，也就是混联后阻抗 $ Z $（或者等价地，导纳 $ G $）<st><strong>只有实部</strong></st>。电流和电压有着相同的相位，这说明电路的功率因数角 $ \varphi=0 $，<st><strong>无功功率为 $ 0 $ </strong></st>，电感吸收的无功功率与电容发出的无功功率恰好抵消。根据这些都可以找到谐振频率。<br />
 &emsp;&emsp;由式 $ (14.2) $ 和 $ (14.4) $ 看出，品质因数 $ Q $ 在不同电路里的定义是不同的，我摸索出了一个统一的定义： $ Q $ 是谐振电路中所有电感吸收的无功功率（或所有电容发出的无功功率）$ Q _ L $ 与电路消耗的有功功率 $ P _ R $ 之比。即：
 $$Q=\cfrac{Q _ L}{P _ R}\tag{14.5}$$</p>
-<blockquote>
-&emsp;&emsp;式 $ (14.5) $ 是本人做了一些题后想到的经验公式，它能够解释 RLC 串联、并联电路的品质因数。以 RLC 串联电路为例：
-$$Q=\cfrac{\omega _ 0L}{R}=\cfrac{I^2X _ L(\omega _ 0)}{I^2 R}=\cfrac{IU _ L}{P _ R}=\cfrac{Q _ L}{P _ R}\tag{14.6}$$
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">关于式 $(14.5)$</p>
+<p>&emsp;&emsp;式 $ (14.5) $ 是本人做了一些题后想到的经验公式，它能够解释 RLC 串联、并联电路的品质因数。以 RLC 串联电路为例：
+$$Q=\cfrac{\omega _ 0L}{R}=\cfrac{I^2X _ L(\omega _ 0)}{I^2 R}=\cfrac{IU _ L}{P _ R}=\cfrac{Q _ L}{P _ R}\tag{14.6}$$</p>
+</div>
 
 
   

@@ -850,7 +850,7 @@
       
         <li class="md-nav__item">
   <a href="#rs" class="md-nav__link">
-    基本RS触发器
+    基本 RS 触发器
   </a>
   
 </li>
@@ -865,28 +865,28 @@
         
           <li class="md-nav__item">
   <a href="#rs_1" class="md-nav__link">
-    钟控RS触发器
+    钟控 RS 触发器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#d" class="md-nav__link">
-    钟控D触发器
+    钟控 D 触发器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#jk" class="md-nav__link">
-    钟控JK触发器
+    钟控 JK 触发器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#t" class="md-nav__link">
-    钟控T触发器
+    钟控 T 触发器
   </a>
   
 </li>
@@ -906,7 +906,7 @@
         
           <li class="md-nav__item">
   <a href="#rs_2" class="md-nav__link">
-    主从RS触发器
+    主从 RS 触发器
   </a>
   
 </li>
@@ -1314,7 +1314,7 @@
       
         <li class="md-nav__item">
   <a href="#rs" class="md-nav__link">
-    基本RS触发器
+    基本 RS 触发器
   </a>
   
 </li>
@@ -1329,28 +1329,28 @@
         
           <li class="md-nav__item">
   <a href="#rs_1" class="md-nav__link">
-    钟控RS触发器
+    钟控 RS 触发器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#d" class="md-nav__link">
-    钟控D触发器
+    钟控 D 触发器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#jk" class="md-nav__link">
-    钟控JK触发器
+    钟控 JK 触发器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#t" class="md-nav__link">
-    钟控T触发器
+    钟控 T 触发器
   </a>
   
 </li>
@@ -1370,7 +1370,7 @@
         
           <li class="md-nav__item">
   <a href="#rs_2" class="md-nav__link">
-    主从RS触发器
+    主从 RS 触发器
   </a>
   
 </li>
@@ -1435,39 +1435,58 @@
   <h1>5 触发器</h1>
 
 <p>&emsp;&emsp;毫无疑问的一点是，这一章是时序逻辑电路的重要基础。本章描述了很多类型的触发器，不过正如目录中所陈列的那样，它们可以分为四类。</p>
-<h2 id="rs">基本RS触发器<a class="headerlink" href="#rs" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;又分为两种，由与非门构成的（逻辑符号图如左图），以及由或非门构成的（逻辑符号图如右图）。其中，$R$ 代表 RESET（重设），有效时会将输出 $Q$ 置为 $0$；$S$ 代表SET（设置），有效时会将输出 $Q$ 置为 $ 1$。</p>
-<div align="center"><img src="/数字电路/rs1.png"width="40%"></img><img src="/数字电路/rs2.png"width="40%"></img></div>
-
-<p>&emsp;&emsp;这样就可以理解基本RS触发器的4种情况。对于左边的，由与非门构成的RS触发器，由于其低电平有效：<br />
-&emsp;&emsp;<em>RS</em> = 00&emsp; $ \rightarrow $ &emsp;RESET且SET，显然这是不被允许的。<br />
-&emsp;&emsp;<em>RS</em> = 01&emsp; $ \rightarrow $ &emsp;仅RESET&emsp; $ \rightarrow $ &emsp;<em>Q</em>置0.<br />
-&emsp;&emsp;<em>RS</em> = 10&emsp; $ \rightarrow $ &emsp;仅SET&emsp; $ \rightarrow $ &emsp;<em>Q</em>置1.<br />
-&emsp;&emsp;<em>RS</em> = 11&emsp; $ \rightarrow $ &emsp;<strong><em>No operation</em></strong>&emsp; $ \rightarrow $ &emsp;<em>Q</em>不变.<br />
-&emsp;&emsp;同样可以理解另一种RS触发器的工作方式。</p>
+<h2 id="rs">基本 RS 触发器<a class="headerlink" href="#rs" title="Permanent link">&para;</a></h2>
+<div class="admonition notes inline end">
+<p class="admonition-title">基本 RS 触发器逻辑符号图</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">与非门构成的</label><label for="__tabbed_1_2">或非门构成的</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img src="/数字电路/rs1.png"width="100%"></img></p>
+</div>
+<div class="tabbed-block">
+<p><img src="/数字电路/rs2.png"width="100%"></img></p>
+</div>
+</div>
+</div>
+</div>
+<p>&emsp;&emsp;又分为两种，由与非门构成的，以及由或非门构成的。其中，$R$ 代表 RESET（重设），有效时会将输出 $Q$ 置为 $0$；$S$ 代表 SET（设置），有效时会将输出 $Q$ 置为 $ 1$。<br />
+&emsp;&emsp;这样就可以理解基本 RS 触发器的 $4$ 种情况。对于由与非门构成的 RS 触发器，由于其低电平有效：<br />
+&emsp;&emsp;<em>RS</em> = 00&emsp; $ \rightarrow $ &emsp;RESET 且 SET，显然这是不被允许的。<br />
+&emsp;&emsp;<em>RS</em> = 01&emsp; $ \rightarrow $ &emsp;仅 RESET&emsp; $ \rightarrow $ &emsp;<em>Q</em> 置 0。 <br />
+&emsp;&emsp;<em>RS</em> = 10&emsp; $ \rightarrow $ &emsp;仅 SET&emsp; $ \rightarrow $ &emsp;<em>Q</em> 置 1。<br />
+&emsp;&emsp;<em>RS</em> = 11&emsp; $ \rightarrow $ &emsp;<strong><em>No operation</em></strong>&emsp; $ \rightarrow $ &emsp;<em>Q</em> 不变。<br />
+&emsp;&emsp;同样可以理解另一种 RS 触发器的工作方式。</p>
 <h2 id="_1">同步触发器<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;时钟 <em>CP</em> 从这里开始引入。从此以后的触发器，全都带有这个时钟控制变量 <em>CP</em>，这是让人很头疼的事情。我们需要知道<st><strong>触发器的工作窗口与时钟信号的关系</strong></st>，这是一个比较关键的点。下面的 $4$ 种触发器的“同步”功能均是通过时钟信号控制的，因此又叫钟控触发器，并且这些触发器的工作窗口都是<st><strong>时钟高电平</strong></st>。</p>
-<h3 id="rs_1">钟控RS触发器<a class="headerlink" href="#rs_1" title="Permanent link">&para;</a></h3>
-<div align="center"><img src="/数字电路/rsc1.png"width="40%"></img></div>
-
+<p>&emsp;&emsp;时钟 <em>CP</em> 从这里开始引入。从此以后的触发器，全都带有这个时钟控制变量 <em>CP</em>，这是让人很头疼的事情。我们需要知道<st><strong>触发器的工作窗口与时钟信号的关系</strong></st>，这是一个比较关键的点。<br />
+&emsp;&emsp;下面的 $4$ 种触发器的“同步”功能均是通过时钟信号控制的，因此又叫钟控触发器，并且这些触发器的工作窗口都是<st><strong>时钟高电平</strong></st>。</p>
+<div class="admonition notes inline end">
+<p class="admonition-title">钟控 RS 触发器逻辑符号图</p>
+<p><img src="/数字电路/rsc1.png"width="100%"></img></p>
+</div>
+<h3 id="rs_1">钟控 RS 触发器<a class="headerlink" href="#rs_1" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;这是它的逻辑符号图。构造上，可以有这个：<div align="center">与非门基本 RS 触发器  $ + $  $2$ 个与非门  $ = $  钟控RS触发器</div></p>
 <p>&emsp;&emsp;当 <em>CP</em> =  0，触发器被锁死了，状态不变。当 <em>CP</em> = 1，触发器被打开，这时它的工作结果和或非门构成的基本RS触发器是一样的。这个时钟信号<em>CP</em>和组合逻辑电路器件中的“使能端”有些类似。<br />
 &emsp;&emsp;有时候在触发器两端加上 $ R_D $ 和 $ S_D $ ，可以强制改变触发器的状态。</p>
-<h3 id="d">钟控D触发器<a class="headerlink" href="#d" title="Permanent link">&para;</a></h3>
-<div align="center"><img src="/数字电路/cd.png"width="40%"></img></div>
-
+<div class="admonition notes inline end">
+<p class="admonition-title">钟控 D 触发器逻辑符号图</p>
+<p><img src="/数字电路/cd.png"width="100%"></img></p>
+</div>
+<h3 id="d">钟控 D 触发器<a class="headerlink" href="#d" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />
 &emsp;&emsp;在钟控 RS 触发器的基础上，令 $ S=D,R=\overline{D} $ 即可得到钟控D触发器。同样当 <em>CP</em> = 0 时触发器锁死，<em>CP</em> = 1 时，输出 <em>Q</em> 就是 <em>D</em>（所以可以把 <em>D</em> 解释为 Data）。<br />
-&emsp;&emsp;这个触发器没有非法输入。</p>
-<h3 id="jk">钟控JK触发器<a class="headerlink" href="#jk" title="Permanent link">&para;</a></h3>
-<div align="center"><img src="/数字电路/jkc.png"width="40%"></img></div>
-
+&emsp;&emsp;这个触发器没有非法输入。
+<br><br></p>
+<h3 id="jk">钟控 JK 触发器<a class="headerlink" href="#jk" title="Permanent link">&para;</a></h3>
+<div class="admonition notes inline end">
+<p class="admonition-title">钟控 JK 触发器逻辑符号图</p>
+<p><img src="/数字电路/jkc.png"width="100%"></img></p>
+</div>
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />
 &emsp;&emsp;相比于前面的 $2$ 个同步触发器，钟控JK触发器有一点很特别。<st><strong>输出端到控制门有反馈线</strong>，</st>这就导致它的功能中出现了前所未有的“改变”（前面的触发器，功能仅限于“置0”“置1”“不变”）。<br />
-&emsp;&emsp;当 <em>CP</em> = 0 时，触发器锁死；<em>CP</em> = 1 时，钟控 JK 触发器的功能可以用口诀概述为“00不变11改，JK不同随J摆”。<br />
-&emsp;&emsp;再来谈谈这个“改变”，它比较玄乎——因为这个时候不看触发器的现态，还真不知道次态是什么；但是置0、置1就不同，不需要关心你的现态。所以钟控JK触发器存在<st><strong>第二类空翻</strong></st>现象：在时钟为有效电平的时间段内，输出不发生改变，但输入诱导的结果是“改变输出”，于是输出在这段时间内不断地被改变，表现为反复横跳。也就是说钟控JK触发器在“改变”功能（也就是<em>J</em> = <em>K</em> = 1）持续时段，输出<em>Q</em>会不断在0和1之间横跳，直到“改变”功能结束。<br />
+&emsp;&emsp;当 <em>CP</em> = 0 时，触发器锁死；<em>CP</em> = 1 时，钟控 JK 触发器的功能可以用口诀概述为“00 不变 11 改，JK 不同随 J 摆”。<br />
+&emsp;&emsp;再来谈谈这个“改变”，它比较玄乎——因为这个时候不看触发器的现态，还真不知道次态是什么；但是置 0、置 1 就不同，不需要关心你的现态。所以钟控JK触发器存在<st><strong>第二类空翻</strong></st>现象：在时钟为有效电平的时间段内，输出不发生改变，但输入诱导的结果是“改变输出”，于是输出在这段时间内不断地被改变，表现为反复横跳。也就是说钟控JK触发器在“改变”功能（也就是 <em>J</em> = <em>K</em> = 1）持续时段，输出 <em>Q</em> 会不断在 0 和 1 之间横跳，直到“改变”功能结束。<br />
 &emsp;&emsp;其实对于“不变”功能而言，要想知道次态，我们也必须知道现态是什么。我们也可以这样理解：在“不变”功能持续阶段，输出<em>Q</em>一直在进行“不变”操作，只是电平不发生变化，所以没有观察到第二类翻转。</p>
-<h3 id="t">钟控T触发器<a class="headerlink" href="#t" title="Permanent link">&para;</a></h3>
+<h3 id="t">钟控 T 触发器<a class="headerlink" href="#t" title="Permanent link">&para;</a></h3>
 <div align="center"><img src="/数字电路/ct.png"width="40%"></img></div>
 
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />
@@ -1475,7 +1494,7 @@
 &emsp;&emsp;然后，这些同步触发器其实还存在<st><strong>第一类空翻</strong></st>现象：在时钟为有效电平的时间段内，输入本身发生“跳动”（就是输入电平信号本身不稳定），直接导致输出也跟着横跳。这一类空翻的发生是因为同步触发器的工作窗口都是<st><strong>时钟高电平</strong></st>（这是一段时间，而不是某个时刻），触发器的输入在这段时间内都会影响输出。</p>
 <h2 id="_2">主从触发器<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;主从触发器主要解决了一些同步触发器空翻的问题，此类触发器的输出不再和某一段时间相关，而是仅与某些时刻相关。但是主从触发器其实都<st><strong>含有 $2$ 个触发器</strong></st>，需要 $2$ 个时钟信号接入，这一点与前面的触发器都不同。由于这两个触发器的时钟信号未必都是 <em>CP</em>，所以 $2$ 个触发器就可能有不同的工作窗口。</p>
-<h3 id="rs_2">主从RS触发器<a class="headerlink" href="#rs_2" title="Permanent link">&para;</a></h3>
+<h3 id="rs_2">主从 RS 触发器<a class="headerlink" href="#rs_2" title="Permanent link">&para;</a></h3>
 <div align="center"><img src="/数字电路/rsc2.png"width="40%"></img></div>
 
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />

@@ -1318,23 +1318,31 @@
 &emsp;&emsp;线性电阻电路的相应和激励又是<strong>齐次线性关系</strong>，所以叠加定理可以表述为下式：
 $$i(\mathrm{or\ } u)=\sum _  {j=1}^n k _ju _  {\mathrm sj}+\sum _  {j=1}^mk'_ji _  {\mathrm sj}\tag{3.3}$$</p>
 <p>&emsp;&emsp;“齐次”表现在式$(3.3)$等号右边没有加上什么常数。只要确定所有系数 $k$，响应就能够由各个电源的参数表示。</p>
-<blockquote>
-&emsp;&emsp;如果要求 $k _t$，可以把除电压源 $u _  {\mathrm st}$ 之外的电源全部置零，在置零后的电路中，就有 $i(\mathrm{or\ }u)=k _tu _  {\mathrm st}$，从而求出系数 $k _t$。每一个系数都可以这样求。<br>
-&emsp;&emsp;电压源置零相当于将其短路，电流源置零相当于将其断路。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于电源置零求系数 $k$</p>
+<p>&emsp;&emsp;如果要求 $k _t$，可以把除电压源 $u _  {\mathrm st}$ 之外的电源全部置零，在置零后的电路中，就有 $i(\mathrm{or\ }u)=k _tu _  {\mathrm st}$，从而求出系数 $k _t$。每一个系数都可以这样求。<br>
+&emsp;&emsp;电压源置零相当于将其短路，电流源置零相当于将其断路。</p>
+</div>
 <h3 id="_3">替代定理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;在任何电路中，如果某条支路 $k$ 的电压为 $u _k$，则支路可以用电压源 $ u _k$ 替代；如果支路 $k$ 的电流为 $i _k$ ，则支路可用电流源 $i _k$ 替代。在原电路和替换后电路<st>均具有唯一解</st>的条件下，两个电路的工作状态相同。</p>
+<p>&emsp;&emsp;在任何电路中，如果某条支路 $k$ 的电压为 $u _k$，则支路可以用电压源 $ u _k$ 替代；如果支路 $k$ 的电流为 $i _k$ ，则支路可用电流源 $i _k$ 替代。在原电路和替换后电路<st><strong>均具有唯一解</strong></st>的条件下，两个电路的工作状态相同。</p>
 <h2 id="_4">戴维南定理和诺顿定理<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;这两个定理都是对一端口<strong>含电源</strong>线性电阻网络的等效变化。戴维南定理将网络等效变换为戴维南电路，诺顿定理将网络等效变换为诺顿电路。<br />
-&emsp;&emsp;<strong>戴维南定理</strong>：含有独立电源的一端口线性电阻网络，对端口以外的电路 而言，等效为<st><strong>由电压源 $u _  {\mathrm{OC}}$ 和电阻 $R _  \mathrm{eq}$ 串联</strong></st>的戴维南支路，称为戴维南等效电路。其中 $u _  \mathrm{OC}$ 是网络的<st><strong>端口开路电压</strong></st>，$R _  \mathrm{eq}$ 是网络内部全部置零后的<st><strong>端口等效电阻</strong></st>。<br />
-&emsp;&emsp;<strong>诺顿定理</strong>：含有独立电源的一端口线性电阻网络，对端口以外的电路而言，等效为<st><strong>由电流源 $i _  \mathrm{SC}$ 和电阻 $R _  \mathrm{eq}$ 并联</strong></st>的诺顿支路，称为诺顿等效电路。其中 $i _  \mathrm{SC}$ 是<st><strong>端口短路电流</strong></st>，$R _  \mathrm{eq}$ 是网络内部独立电源全部置零后的端口等效电阻。</p>
-<blockquote>
-&emsp;&emsp;一般碰到的电路都是由独立电压（电流）源、受控源、电阻组成的，这样的电路都是线性电阻网络，都可以使用上面两个定理。<br>
+<p>&emsp;&emsp;这两个定理都是对一端口<strong>含电源</strong>线性电阻网络的等效变化。戴维南定理将网络等效变换为戴维南电路，诺顿定理将网络等效变换为诺顿电路。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">戴维南定理</label><label for="__tabbed_1_2">诺顿定理</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>&emsp;&emsp;含有独立电源的一端口线性电阻网络，对端口以外的电路 而言，等效为<st><strong>由电压源 $u _  {\mathrm{OC}}$ 和电阻 $R _  \mathrm{eq}$ 串联</strong></st>的戴维南支路，称为戴维南等效电路。<br>&emsp;&emsp;其中 $u _  \mathrm{OC}$ 是网络的<st><strong>端口开路电压</strong></st>，$R _  \mathrm{eq}$ 是网络内部全部置零后的<st><strong>端口等效电阻</strong></st>。</p>
+</div>
+<div class="tabbed-block">
+<p>&emsp;&emsp;含有独立电源的一端口线性电阻网络，对端口以外的电路而言，等效为<st><strong>由电流源 $i _  \mathrm{SC}$ 和电阻 $R _  \mathrm{eq}$ 并联</strong></st>的诺顿支路，称为诺顿等效电路。<br>&emsp;&emsp;其中 $i _  \mathrm{SC}$ 是<st><strong>端口短路电流</strong></st>，$R _  \mathrm{eq}$ 是网络内部独立电源全部置零后的端口等效电阻。</p>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">关于定理的使用</p>
+<p>&emsp;&emsp;一般碰到的电路都是由独立电压（电流）源、受控源、电阻组成的，这样的电路都是线性电阻网络，都可以使用上面两个定理。<br>
 &emsp;&emsp;在用戴维南定理求 $u _  \mathrm{OC}$ 时，如果网络内部只有一个独立电源，可以运用基尔霍夫定律或者电路方程求解。当网络中出现<strong>多个独立电源</strong>的时，运用叠加定理，分别对单个独立电源激励的情况求解。在用诺顿定理求 $i _  \mathrm{SC}$ 时也是如此。<br>
-&emsp;&emsp;上面两个定理求 $R _  \mathrm{eq}$ 时，都是在松弛网络里求解的。所谓松弛网络，就是网络中所有电源置零后得到的网络。松弛网络可能是纯电阻网络，这种情况挺好求解的,使用 $Chapter2$ 中的方法。当松弛网络中<strong>含有受控源</strong>的时候，要通过写出端口的 $u-i$ 关系求 $R _  \mathrm{eq}$。
-</blockquote>
-
+&emsp;&emsp;上面两个定理求 $R _  \mathrm{eq}$ 时，都是在松弛网络里求解的。所谓松弛网络，就是网络中所有电源置零后得到的网络。松弛网络可能是纯电阻网络，这种情况挺好求解的,使用<a href="../2/">第二章</a>中的方法。当松弛网络中<strong>含有受控源</strong>的时候，要通过写出端口的 $u-i$ 关系求 $R _  \mathrm{eq}$。</p>
+</div>
 <h2 id="_5">最大功率传输定理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;求某线性电阻网络中可变电阻 $R$ 的最大传输功率，一般将电路中 $R$ 外的一端口网络等效为戴维南支路，当 $R$ 等于 $R _  \mathrm{eq}$ 时，获得最大功率 $P _  \mathrm{max}=\cfrac{U _  \mathrm{OC}^2}{4R _  \mathrm{eq}}$。</p>
 

@@ -1189,19 +1189,24 @@
 
   <h1>2 动态规划与贪心算法</h1>
 
-<p>&emsp;&emsp;动态规划的两个核心：<strong>最优子结构性</strong>的证明，<strong>状态转移方程</strong>的建立。动态规划运行的核心是<strong>最优子结构性</strong>，证明了这个底层逻辑，动态规划算法就是正确的。</p>
-<blockquote>
-&emsp;&emsp;实际上，课程所讲述的动态规划全部属于<strong>区间DP</strong>，动态规划还有树形DP、状态压缩DP、期望DP等各种各样的形式。使用动态规划算法解决的经典问题：<br>
+<p>&emsp;&emsp;动态规划的两个核心：</p>
+<ul>
+<li><strong>最优子结构性</strong>的证明</li>
+<li><strong>状态转移方程</strong>的建立。</li>
+</ul>
+<p>&emsp;&emsp;动态规划运行的核心是<strong>最优子结构性</strong>，证明了这个底层逻辑，动态规划算法就是正确的。</p>
+<details class="note">
+<summary>关于本课程的动态规划</summary>
+<p>&emsp;&emsp;实际上，课程所讲述的动态规划全部属于<strong>区间DP</strong>，动态规划还有树形DP、状态压缩DP、期望DP等各种各样的形式。使用动态规划算法解决的经典问题：<br>
 &emsp;&emsp;一维DP：钢条切割问题。<br>
 &emsp;&emsp;二维DP：矩阵链乘法问题、最长公共子序列（LCS，Longest Common Subsequence）问题，最优二叉搜索树问题，0-1背包问题。<br>
-&emsp;&emsp;DP维度，就是开辟的DP数组的维数。可能要使用三维DP的问题：<a href="http://poj.org/problem?id=1185" target="new">POJ 1185</a>。关于这一方面的内容，在这里部署一个<a href="https://blog.csdn.net/weixin_72137075/category_12581277.html" target="new">动态规划学习</a>。
-</blockquote>
-
+&emsp;&emsp;DP维度，就是开辟的DP数组的维数。可能要使用三维DP的问题：<a href="http://poj.org/problem?id=1185" target="new">POJ 1185</a>。关于这一方面的内容，在这里部署一个<a href="https://blog.csdn.net/weixin_72137075/category_12581277.html" target="new">动态规划学习</a>。</p>
+</details>
 <p>&emsp;&emsp;贪心算法，在某种程度上可以看做是动态规划的一个特例。动态规划更偏向于穷举，每条路都试一下；贪心算法则是绕开了这种穷举，抄一条近路直接到达目的地，所以很多情况下并不能保证最优解。<br />
 &emsp;&emsp;贪心算法运行的核心是<strong>贪心选择性质</strong>——可以通过做出局部最优解（贪心）来构造全局最优解。只要你证明了这个底层逻辑，贪心算法的正确性一般就能够保证。</p>
 <blockquote>
-&emsp;&emsp;Huffman树的生成原理，使用了贪心算法：每次调两个最小的结点合并，直到只剩下一个节点，它就是Huffman树的根节点。<br>
-&emsp;&emsp;图论中也有很多算法的底层逻辑是贪心算法。比如最小生成树的Prim算法和Kruskal算法，单源最短路径的Dijkstra算法。
+&emsp;&emsp;Huffman 树的生成原理，使用了贪心算法：每次调两个最小的结点合并，直到只剩下一个节点，它就是 Huffman 树的根节点。<br>
+&emsp;&emsp;图论中也有很多算法的底层逻辑是贪心算法。比如最小生成树的 Prim 算法和 Kruskal 算法，单源最短路径的 Dijkstra 算法。
 </blockquote>
 
 

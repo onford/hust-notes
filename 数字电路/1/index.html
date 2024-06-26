@@ -1263,40 +1263,41 @@
 </blockquote>
 <hr />
 <h2 id="_1">带符号二进制加减法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;首先来看看带符号二进制数的算术运算。我们知道，正数的三个机器码（原码、反码、补码）是一样的，只有负数才需要变换。不过，一个正数与一个负数的原码貌似是<st>不能直接进行加减运算的</st>。反码运算时，进位加到最低位（循环进位）；补码运算就直接舍弃进位了。当然，这样运算正确的前提是<st>不发生溢出</st>。</p>
-<blockquote>
-    &emsp;&emsp;反码、补码加减为什么可以这样运算？这里对其正确性提供一些想法。
-    <blockquote><strong>注：《计算机组成原理》有非常详尽的证明，当时写出这些想法的时候还没学组原，可以看个乐子。</strong></blockquote>
-    <br/>&emsp;&emsp;对于两个二进制整数 $ a_ 1 $ 和 $ a_ 2 $，设其二进制补码均有 $ n $ 位，分别用 $ A_ 1 $ 和 $ A_ 2 $ 表示。如果把补码看作无符号二进制数，显然有:
-    $$A_ i=\begin{cases}
-    a_ i & a_ i\geq 0\\
-    2^n+a_ i & a_ i < 0
-    \end{cases} \tag{1.1}$$
-    &emsp;&emsp;其中 $ i=1,2 $，$ -2^{n-1}\leq a_ i\leq 2^{n-1}-1 $，且由式 $ (1.1) $ 也能推得 $ A_ i $ 是 $ a_ i $ 的补码.因此，下式是显然的：$$A_ i\equiv a_ i\pmod{2^n}\tag{1.2}(i=1,2)$$&emsp;&emsp;直接对 $ A_ 1 $ 和 $ A_ 2 $ 进行加法运算，如果产生进位则舍去（相当于减去了 $ 2^n $ ），如果记这样算得的和为 $ S $。将 $ S $ 视为无符号二进制数，那么
-    $$S\equiv A_ 1+A_ 2\pmod{2^n} \tag{1.3}$$
-    $$0\leq S\leq 2^n-1\tag{1.4}$$
-    &emsp;&emsp;根据同余的性质，由式 $ (1.2)(1.3) $ 可得：
-    $$S\equiv a_ 1+a_ 2\pmod{2^n} \tag{1.5}$$
-    &emsp;&emsp;而在不发生溢出的前提下，$ a_ 1+a_ 2 $ 应仍然可以用 $ n $ 位补码表示，即有：$$-2^{n-1}\leq a_ 1+a_ 2\leq 2^{n-1}-1 \tag{1.6}$$
-    &emsp;&emsp;综合式 $ (1.4) $ ~ $ (1.6) $ 发现，当 $ -2^{n-1}\leq a_ 1+a_ 2 < 0 $ 时，应有 $ S=a_ 1+a_ 2+2^n $；而当 $ 0\leq a_ 1+a_ 2\leq 2^{n-1}-1 $ 时，应有 $ S=a_ 1+a_ 2 $。即 $ S $ 与 $ a_ 1+a_ 2 $ 有以下关系成立：
-    $$S=\begin{cases}
-    a_ 1+a_ 2+2^n & a_ 1+a_ 2 < 0\\
-    a_ 1+a_ 2 & a_ 1+a_ 2\geq 0
-    \end{cases} \tag{1.7}$$
-    &emsp;&emsp;式 $ (1.7) $ 与式 $ (1.1) $ 在形式上完全相符，因此我们所算得的 $ S $ 就是 $ a_ 1+a_ 2 $ 的结果的补码。反码计算的正确性也可以用同样的方法得证。
-</blockquote>
-
+<p>&emsp;&emsp;正数的三个机器码（原码、反码、补码）是一样的，只有负数才需要变换。不过，一个正数与一个负数的原码貌似是<st><strong>不能直接进行加减运算的</strong></st>。反码运算时，进位加到最低位（循环进位）；补码运算就直接舍弃进位了。当然，这样运算正确的前提是<st><strong>不发生溢出</strong></st>。</p>
+<details class="note">
+<summary>关于反码、补码加减运算原理的思考</summary>
+<p>&emsp;&emsp;反码、补码加减为什么可以这样运算？这里对其正确性提供一些想法。
+<blockquote><strong>注：《计算机组成原理》有非常详尽的证明，当时写出这些想法的时候还没学组原，可以看个乐子。</strong></blockquote>
+&emsp;&emsp;对于两个二进制整数 $ a_ 1 $ 和 $ a_ 2 $，设其二进制补码均有 $ n $ 位，分别用 $ A_ 1 $ 和 $ A_ 2 $ 表示。如果把补码看作无符号二进制数，显然有:
+$$A_ i=\begin{cases}
+a_ i &amp; a_ i\geq 0\
+2^n+a_ i &amp; a_ i &lt; 0
+\end{cases} \tag{1.1}$$
+&emsp;&emsp;其中 $ i=1,2 $，$ -2^{n-1}\leq a_ i\leq 2^{n-1}-1 $，且由式 $ (1.1) $ 也能推得 $ A_ i $ 是 $ a_ i $ 的补码.因此，下式是显然的：$$A_ i\equiv a_ i\pmod{2^n}\tag{1.2}(i=1,2)$$&emsp;&emsp;直接对 $ A_ 1 $ 和 $ A_ 2 $ 进行加法运算，如果产生进位则舍去（相当于减去了 $ 2^n $ ），如果记这样算得的和为 $ S $。将 $ S $ 视为无符号二进制数，那么
+$$S\equiv A_ 1+A_ 2\pmod{2^n} \tag{1.3}$$
+$$0\leq S\leq 2^n-1\tag{1.4}$$
+&emsp;&emsp;根据同余的性质，由式 $ (1.2)(1.3) $ 可得：
+$$S\equiv a_ 1+a_ 2\pmod{2^n} \tag{1.5}$$
+&emsp;&emsp;而在不发生溢出的前提下，$ a_ 1+a_ 2 $ 应仍然可以用 $ n $ 位补码表示，即有：$$-2^{n-1}\leq a_ 1+a_ 2\leq 2^{n-1}-1 \tag{1.6}$$
+&emsp;&emsp;综合式 $ (1.4) $ ~ $ (1.6) $ 发现，当 $ -2^{n-1}\leq a_ 1+a_ 2 &lt; 0 $ 时，应有 $ S=a_ 1+a_ 2+2^n $；而当 $ 0\leq a_ 1+a_ 2\leq 2^{n-1}-1 $ 时，应有 $ S=a_ 1+a_ 2 $。即 $ S $ 与 $ a_ 1+a_ 2 $ 有以下关系成立：
+$$S=\begin{cases}
+a_ 1+a_ 2+2^n &amp; a_ 1+a_ 2 &lt; 0\
+a_ 1+a_ 2 &amp; a_ 1+a_ 2\geq 0
+\end{cases} \tag{1.7}$$
+&emsp;&emsp;式 $ (1.7) $ 与式 $ (1.1) $ 在形式上完全相符，因此我们所算得的 $ S $ 就是 $ a_ 1+a_ 2 $ 的结果的补码。反码计算的正确性也可以用同样的方法得证。</p>
+</details>
 <h2 id="_2">格雷码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;然后说说格雷码（Gray Code）。感觉其重点在于二进制码与对应格雷码之间的相互转换。实际上只需要记住二进制码转化为格雷码（单向）的方式即可：
 $$G_ n=B_ n$$ </p>
 <p>$$G_ i=B_ {i+1}\oplus B_ i(i&lt;n)$$
-&emsp;&emsp;某一位的格雷码，等于对位的二进制码与高位的二进制码的异或。格雷码转换为二进制码的公式可以依据异或的性质由上式反推。
-<blockquote>
-    关于异或的一些小性质：<br />
-    （1） $  A\oplus B=C\rightarrow  $   $  B\oplus C=A  $  且  $  A\oplus C=B  $。<br/>
-    （2）对应连续异或的式子如：$$A=A_ 1\oplus A_ 2\oplus …\oplus A_ n$$
-    &emsp;&emsp; $ A $ 可以看作是 $ A_ i(i=1,2,…,n) $ 的算数和（也就是不再看作布尔变量求和）模 $2$。
-</blockquote></p>
+&emsp;&emsp;某一位的格雷码，等于对位的二进制码与高位的二进制码的异或。格雷码转换为二进制码的公式可以依据异或的性质由上式反推。</p>
+<div class="admonition note">
+<p class="admonition-title">关于异或的一些小性质</p>
+<p>关于异或的一些小性质：<br />
+（1） $  A\oplus B=C\rightarrow  $   $  B\oplus C=A  $  且  $  A\oplus C=B  $。<br/>
+（2）对应连续异或的式子如：$$A=A_ 1\oplus A_ 2\oplus …\oplus A_ n$$
+&emsp;&emsp; $ A $ 可以看作是 $ A_ i(i=1,2,…,n) $ 的算数和（也就是不再看作布尔变量求和）模 $2$。</p>
+</div>
 
 
   

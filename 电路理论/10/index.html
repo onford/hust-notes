@@ -1285,14 +1285,14 @@ $$y=\sqrt{\cfrac{1}{T}\int _ 0 ^Ty^2(t)\mathrm dt}\tag{10.1}$$</p>
 $$\begin{aligned}\sqrt 2U[\cos(\omega t+\varphi)+\color{red}{\mathrm j\sin(\omega t+\varphi)}]&amp;=\sqrt 2U\mathrm e^{\mathrm j(\omega t+\varphi)}\\&amp;=\sqrt 2\color{red}{U}\mathrm e^{\mathrm j\omega t}\cdot\color{red}{\mathrm e^{\mathrm j\varphi}}\\
 &amp;=\sqrt 2\mathrm e^{\mathrm j\omega t}\color{red}{\dot U}\end{aligned}\tag{10.2}$$</p>
 <p>&emsp;&emsp; $ \dot U $ 含有正弦电量 $ u $ 的<strong>初相位</strong>信息，不含时域 $ t $ 的信息，被称为<strong>相量</strong>。</p>
-<blockquote>
-&emsp;&emsp;电路理论里面用 $ \mathrm j $ 表示<strong>虚数单位</strong>，可能是考虑到 $ i $ 在电路中表示电流，避免混淆。相量的引入，有些类似大学物理研究简谐振动时<strong>旋转矢量法</strong>的引入。旋转矢量在 $ y $ 轴上的投影和振动本身关系不大，只是利用了其在 $ x $ 轴上的投影。振动的叠加采用旋转矢量法，所以相量法也非常方便正弦电量的加减。<br>
+<div class="admonition note">
+<p class="admonition-title">关于相量的表示和运算</p>
+<p>&emsp;&emsp;电路理论里面用 $ \mathrm j $ 表示<strong>虚数单位</strong>，可能是考虑到 $ i $ 在电路中表示电流，避免混淆。相量的引入，有些类似大学物理研究简谐振动时<strong>旋转矢量法</strong>的引入。旋转矢量在 $ y $ 轴上的投影和振动本身关系不大，只是利用了其在 $ x $ 轴上的投影。振动的叠加采用旋转矢量法，所以相量法也非常方便正弦电量的加减。<br>
 &emsp;&emsp;相量的引入还优化了正弦电量的微分、积分运算。“相量的微分运算很简单”的说法实际上是错误的，因为我们根本没有对相量微分，相量的表达式中根本不含 $ t $ 。我们是将时域量 $ u(i) $ 的微分、积分运算，<strong>对应</strong>到相量 $ \dot U(\dot I) $ 的乘法、除法运算：
-$$\begin{aligned}\cfrac{\mathrm du}{\mathrm dt}&\longleftrightarrow \mathrm j\omega\dot U\\
-\int u\mathrm dt&\longleftrightarrow \cfrac{\dot U}{\mathrm j\omega}\end{aligned}\tag{10.3}$$
-&emsp;&emsp;相量到底是什么？我认为它是一个抽取了电量初态（即 $ t=0 $ 时）信息的量，由于正弦电路电量的变化是周期性的、有规律的，这个初态就足以表征电量的所有特征。
-</blockquote>
-
+$$\begin{aligned}\cfrac{\mathrm du}{\mathrm dt}&amp;\longleftrightarrow \mathrm j\omega\dot U\
+\int u\mathrm dt&amp;\longleftrightarrow \cfrac{\dot U}{\mathrm j\omega}\end{aligned}\tag{10.3}$$
+&emsp;&emsp;相量到底是什么？我认为它是一个抽取了电量初态（即 $ t=0 $ 时）信息的量，由于正弦电路电量的变化是周期性的、有规律的，这个初态就足以表征电量的所有特征。</p>
+</div>
 <h2 id="_3">阻抗和导纳<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;对于电感 $ L $ ，由相量的微分关系可得 $ \cfrac{\dot U _ L}{\dot I _ L}=\mathrm j\omega L $ ，其中的 $ \mathrm j $ 代表电压超前电流 $ \cfrac{\pi}{2} $ 。对比电阻 $ R=\cfrac{U}{I} $ ，我们记 $ X _ L=\omega L $ 为<strong>电抗</strong>，它和电阻一样表征阻止、抵抗电流的性质。电阻的倒数是电导，所以定义电抗的倒数<strong>电纳</strong> $ B _ L=\cfrac{1}{\omega L} $ 。电容也可以相应地得到 $ X _ C=\cfrac{1}{\omega C} $ ， $ L _ C=\omega C $ 。<br />
 &emsp;&emsp;电阻和电抗一样都能阻止、抵抗电流的性质，并且都具有 $ U/I $ 的形式，可以统一成<strong>阻抗</strong>：

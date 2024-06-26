@@ -1190,15 +1190,15 @@
   <h1>4 图树周游</h1>
 
 <p>&emsp;&emsp;关于图树周游，其实无非是深搜、广搜、按层遍历（树）等一些基本方法。课程课件中涉及到了一个求连通图$G$关节点的方法：</p>
-<blockquote>
-&emsp;&emsp;关节点，就是割点。对于连通图 $G$，其连通分支 $p(G)=1$。割点指的就是满足 $p(G-\{v\}) > 1$ 的这些点 $v$。
-</blockquote>
-
-<p>&emsp;&emsp;对图 $G$ 进行深度优先遍历，能够得到一颗深度优先生成树 $T$，$T$ 中包含了 $G$ 中所有的顶点和部分边。在图 $G$ 中，但是不在生成树 $T$ 中的边称为<st><strong>逆边</strong></st>。</p>
-<blockquote>
-&emsp;&emsp;使用深度优先遍历的好处是，图$G$中不存在这样一条边 $(u,v)$，使得在 $T$ 中 $u$ 和 $v$ 没有祖孙关系（互相不是对方的祖先），也可以说是图 $G$ 中不含相对 $T$ 的<strong>交叉边</strong>。如果是使用广度优先生成树 $T$，$G$ 就可能存在相对 $T$ 的交叉边。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于关节点</p>
+<p>&emsp;&emsp;关节点，就是割点。对于连通图 $G$，其连通分支 $p(G)=1$。割点指的就是满足 $p(G-{v}) &gt; 1$ 的这些点 $v$。</p>
+</div>
+<p>&emsp;&emsp;对图 $G$ 进行<strong>深度优先遍历</strong>，能够得到一颗深度优先生成树 $T$，$T$ 中包含了 $G$ 中所有的顶点和部分边。在图 $G$ 中，但是不在生成树 $T$ 中的边称为<st><strong>逆边</strong></st>。</p>
+<div class="admonition question">
+<p class="admonition-title">关于为什么不用广度优先遍历</p>
+<p>&emsp;&emsp;使用深度优先遍历的好处是，图$G$中不存在这样一条边 $(u,v)$，使得在 $T$ 中 $u$ 和 $v$ 没有祖孙关系（互相不是对方的祖先），也可以说是图 $G$ 中不含相对 $T$ 的<strong>交叉边</strong>。<br>&emsp;&emsp;如果是使用广度优先生成树 $T$，$G$ 就可能存在相对 $T$ 的交叉边。</p>
+</div>
 <p>&emsp;&emsp;图 $G$ 中每一个结点 $v$ 都有<strong>深度优先数</strong> $\mathrm{DFN}(v)$，表示结点 $v$ 是深度优先遍历图 $G$ 时第几个被遍历到的结点。每个节点 $v$ 还有一个<strong>最低深度优先数</strong>$L(v)$，它的定义是：
 $$L(v)=\min \lbrace \mathrm{DFN}(v),\min\lbrace L(w)|w是v的儿子\rbrace, \min\lbrace \mathrm{DFN}(w)|(v,w)是一条逆边 \rbrace \rbrace \tag{4.1}$$</p>
 <p>&emsp;&emsp;直观地，$L(v)$ 就是 $v$ 通过一条子孙路径且至多后随一条逆边所可能到达的最低深度优先数。判定割点的规则是，在深度优先生成树 $T$ 中，根节点如果至少有两个儿子就是割点，非根节点 $v$ 如果存在一个儿子 $w$ 满足 $L(w)\geq \mathrm{DFN}(v)$ 就是割点。</p>

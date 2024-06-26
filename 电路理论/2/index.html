@@ -1280,24 +1280,31 @@
     </tr>
 </table>
 
-<p>&emsp;&emsp;如果不是对称电路，一般就需要用到星-三角互换。<br />
-&emsp;&emsp;<strong>$\Delta\rightarrow \mathrm Y$</strong>：
-$$\begin{cases}R  _  1=\cfrac {R  _  {12}R  _  {31}}{R  _  {12}+R  _  {23}+R  _  {31}}\\ R  _ 2=\cfrac{R  _ {23}R  _ {12}}{R  _ {12}+R  _ {23}+R  _ {31}} \\
- R  _ 3=\cfrac{R  _ {23}R  _ {31}}{R  _ {12}+R  _ {23}+R  _ {31}} \end{cases}\tag{2.1}$$ </p>
-<p>&emsp;&emsp;规律是 $R  _ k=\cfrac{连于k结点的两个电阻之积}{\qquad\Delta\text{内三个电阻之和}\qquad }$。<br />
-&emsp;&emsp;<strong>$\mathrm Y\rightarrow \Delta$</strong>：
-$$\begin{cases}G  _ {12}=\cfrac{G  _ 1G  _ 2}{G  _ 1+G  _ 2+G  _ 3}\\ 
+<p>&emsp;&emsp;如果不是对称电路，一般就需要用到星-三角互换。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">$\Delta\rightarrow \mathrm Y$ 变换</label><label for="__tabbed_1_2">$\mathrm Y\rightarrow \Delta$ 变换</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>$$\begin{cases}R  _  1=\cfrac {R  _  {12}R  _  {31}}{R  _  {12}+R  _  {23}+R  _  {31}}\\ R  _ 2=\cfrac{R  _ {23}R  _ {12}}{R  _ {12}+R  _ {23}+R  _ {31}} \\
+R  _ 3=\cfrac{R  _ {23}R  _ {31}}{R  _ {12}+R  _ {23}+R  _ {31}} \end{cases}\tag{2.1}$$ </p>
+<p>&emsp;&emsp;规律是 $R  _ k=\cfrac{连于k结点的两个电阻之积}{\qquad\Delta\text{内三个电阻之和}\qquad }$。  </p>
+</div>
+<div class="tabbed-block">
+<p>$$\begin{cases}G  _ {12}=\cfrac{G  _ 1G  _ 2}{G  _ 1+G  _ 2+G  _ 3}\\ 
 G  _ {23}=\cfrac{G  _ 2G  _ 3}{G  _ 1+G  _ 2+G  _ 3}\\
 G  _ {31}=\cfrac{G  _ 3G  _ 1}{G  _ 1+G  _ 2+G  _ 3}\end{cases}\tag{2.2}$$</p>
 <p>&emsp;&emsp;规律是 $G  _ {kj}=\cfrac{\text{连于}k\text{、连于}j\text{结点的两个电导之积}}{\text{Y内三个电导之和}}$。</p>
+</div>
+</div>
+</div>
 <h2 id="_2">电源变换<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;主要就是诺顿支路与戴维南支路相互变换。<br />
 &emsp;&emsp;<strong>诺顿$\rightarrow$戴维南</strong>：$(I  _ s)\parallel (R)\rightarrow (U  _ s=I  _ s\cdot R)+R$<br />
 &emsp;&emsp;<strong>戴维南$\rightarrow$诺顿</strong>：$(U  _ s)+(R)\rightarrow(I  _ s=U  _ s/R)\parallel(R)$<br />
 &emsp;&emsp;变换之后还需要注意，变换前后电压源、电流源的方向相反（类似于非关联）。如果是控制源，也可以按照这样的规则变换。但是要达到最简等效电路的话，必须要把控制源变换成电阻。</p>
-<blockquote>
-&emsp;&emsp;当受控源的 $u-i$ 关系（关联参考方向）满足 $u/i=R  _ c$（其中 $R  _ c$ 为常量）时，就可以用一个大小为 $R  _ c$ 的电阻等效替换这个受控源。$R  _ c$ 与一般的电阻不同，极有可能是负值，也有可能是 $0$。
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">关于受控源的替代</p>
+<p>&emsp;&emsp;当受控源的 $u-i$ 关系（关联参考方向）满足 $u/i=R  _ c$（其中 $R  _ c$ 为常量）时，就可以用一个大小为 $R  _ c$ 的电阻等效替换这个受控源。<br>&emsp;&emsp;$R  _ c$ 与一般的电阻不同，极有可能是负值，也有可能是 $0$。</p>
+</div>
 
 
   

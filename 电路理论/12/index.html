@@ -1388,12 +1388,12 @@ $$Z _ \Delta=3Z _ \mathrm Y\tag{12.1}$$</p>
 <p>&emsp;&emsp;<strong>正序对称</strong>电路中线电量与相电量的关系为：<br />
 &emsp;&emsp; $ \mathrm Y $ 型连接，线电压 $ \dot U _ l $ 与对应相电压 $ \dot U _ p $ 的关系是 $ \dot U _ l=\sqrt 3\dot U _ p\phase{30^\circ} $，线电流与相电流是同一个电流。<br />
 &emsp;&emsp; $ \Delta $ 型连接，线电压与相电压是同一个电压，线电流 $ \dot I _ l $ 与对应相电流 $ \dot I _ p $ 的关系是 $ \dot I _ l=\sqrt 3\dot I _ p\phase{ -30^\circ} $ 。</p>
-<blockquote>
-&emsp;&emsp;线电压可以与相电流对应，因为对称三相电路中的电量有很好的轮换对称性质。约定<strong>正序</strong>对称电路的线量与相量对应关系： $ \dot U _ \mathrm {ab}\leftrightarrow \dot U _ \mathrm {an},\dot U _ \mathrm {bc}\leftrightarrow \dot U _ \mathrm {bn},\dot U _ \mathrm{ca}\leftrightarrow \dot U _ \mathrm{cn} $ 。<br>
+<div class="admonition note">
+<p class="admonition-title">不同连接方式下的线量与相量</p>
+<p>&emsp;&emsp;线电压可以与相电流对应，因为对称三相电路中的电量有很好的轮换对称性质。约定<strong>正序</strong>对称电路的线量与相量对应关系： $ \dot U _ \mathrm {ab}\leftrightarrow \dot U _ \mathrm {an},\dot U _ \mathrm {bc}\leftrightarrow \dot U _ \mathrm {bn},\dot U _ \mathrm{ca}\leftrightarrow \dot U _ \mathrm{cn} $ 。<br>
 &emsp;&emsp;将 $ \dot U $ 换成 $ \dot I $，或是将 $ \mathrm{a,b,c} $ 换成 $ \mathrm{A,B,C} $ （负载侧换成电源侧），对应关系也成立。<br>
-&emsp;&emsp;对于电源侧，因为一般情况都是 $ \mathrm Y $ 型三相电源，所以电源侧的线电流和相电流就是同一个电流，一般只考虑电源侧的电压关系。对于负载侧，由于常见的接法两种都有，所以要按照负载侧的接法讨论线量和相量。
-</blockquote>
-
+&emsp;&emsp;对于电源侧，因为一般情况都是 $ \mathrm Y $ 型三相电源，所以电源侧的线电流和相电流就是同一个电流，一般只考虑电源侧的电压关系。对于负载侧，由于常见的接法两种都有，所以要按照负载侧的接法讨论线量和相量。</p>
+</div>
 <p>&emsp;&emsp;对称三相电路中，点 $ \mathrm N $ 与点 $ \mathrm n $ 的电势总是相等的。因此可以将 $ \mathrm{N,n} $ 短接，这是利用分相法计算对称三相电路的理论基础；也可以将 $ \mathrm{N-n} $ 断路，从而降低输电成本。</p>
 <h3 id="_6">三相功率<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;设负载侧的相电压有效值 $ U _ p $，相电流有效值 $ I _ p $，那么<st>三相电路负载的瞬时功率是恒定值</st>。考虑到星形、三角形负载均有 $ U _ lI _ l=\sqrt 3U _ pI _ p $，所以：
@@ -1409,8 +1409,9 @@ $$Q=3U _ pI _ p\sin\varphi=\sqrt 3U _ lI _ l\sin\varphi\tag{12.4}$$</p>
 <p>&emsp;&emsp;同理得到三相负载电路的复功率和视在功率：
 $$\overline S=P+\mathrm jQ=3U _ pI _ p(\cos\varphi +\mathrm j\sin\varphi)=\sqrt 3U _ lI _ l(\cos\varphi +\mathrm j\sin\varphi)\tag{12.5}$$</p>
 <p>$$S=|\overline S|=\sqrt{P^2+Q^2}=3U _ pI _ p=\sqrt 3U _ lI _ l\tag{12.6}$$</p>
-<blockquote>
-&emsp;&emsp;由于我们是直接对负载的电压、电流分析得到一系列的功率，所以三相电路的复功率仍然可以用相电量表示为：
+<details class="note">
+<summary>三相电路的复功率</summary>
+<p>&emsp;&emsp;由于我们是直接对负载的电压、电流分析得到一系列的功率，所以三相电路的复功率仍然可以用相电量表示为：
 $$\overline S=3\dot U _ p\dot I _ p^ * \tag{12.7}$$
 &emsp;&emsp;但是
 $$\overline S\neq \sqrt 3\dot U _ l\dot I _ l^ * \tag{12.8}$$
@@ -1419,9 +1420,8 @@ $$\overline S _ \Delta=3\dot U _ p\dot I _ p^ * =3\dot U _ l(\cfrac{\dot I _ l}{
 &emsp;&emsp;对于星形负载，$ \dot U _ l=\sqrt 3\dot U _ p\angle 30^\circ $，$ \dot I _ l=\dot I _ p $，所以
 $$\overline S _ \mathrm Y=3\dot U _ p\dot I _ p^ * =3\cfrac{U _ l}{\sqrt 3\angle 30^\circ}\dot I _ l^ * =\sqrt 3\dot U _ l\dot I _ l^ * \color{red}{\angle -30^\circ}\tag{12.10}$$
 &emsp;&emsp;所以三相电路的复功率用线量应表示为：
-$$\overline S=\sqrt 3\dot U _ l\dot I _ l^ * \color{red}{\angle -30^\circ}\tag{12.11}$$
-</blockquote>
-
+$$\overline S=\sqrt 3\dot U _ l\dot I _ l^ * \color{red}{\angle -30^\circ}\tag{12.11}$$</p>
+</details>
 <h2 id="_7">三相电路有功功率的测量<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;可以用三个瓦特表分别测三相有功功率，适合对称和不对称的三相电路（所有电路）。<br />
 &emsp;&emsp;如果只用两个瓦特表，仅不适用于中线电流 $ I _ \mathrm n $ 非零的四线制电路。两个瓦特表的示数没有物理意义，可能出现负值，但是和 $ P _ 1+P _ 2 $ 为三相电路的总有功功率。在对称三相电路中，$ P _ 1,P _ 2 $ 还与电路的无功功率 $ Q $ 有联系。如果正序三相电路中 $ \mathrm W _ 1 $ 所在相的相位领先 $ \mathrm W _ 2 $ 所在相 $ 120^\circ $ 的话，就有：

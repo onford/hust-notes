@@ -1444,25 +1444,25 @@ $$\varepsilon(f(t))+\varepsilon(-f(t))=1\tag{7.2}$$</p>
 <h3 id="_3">闸门函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;闸门函数的定义：
 $$G(t _ 1,t _ 2)=\begin{cases}1&amp;t _ 1&lt; t &lt; t _ 2,\\0&amp; t &lt; t _ 1\mathrm{\ or\ }t &gt; t _ 2.\end{cases}\tag{7.3}$$</p>
-<blockquote>
-&emsp;&emsp; $ G(t _ 1,t _ 2) $ 其实是一种极致的简写，这样的写法甚至省略了自变量，只保留函数参数。一般闸门函数 $ G $ 的自变量就是 $ t $，也许写成 $ G(t,t _ 1,t _ 2) $ 更严谨一些。
-</blockquote>
-
+<div class="admonition notes">
+<p class="admonition-title">关于闸门函数 $G$ 的写法</p>
+<p>&emsp;&emsp; $ G(t _ 1,t _ 2) $ 其实是一种极致的简写，这样的写法甚至省略了自变量，只保留函数参数。一般闸门函数 $ G $ 的自变量就是 $ t $，也许写成 $ G(t,t _ 1,t _ 2) $ 更严谨一些。</p>
+</div>
 <p>&emsp;&emsp;在 $ t _ 1\leq t _ 2 $ 的情况下（一般不会跑出这种情况），$ G(t _ 1,t _ 2) $ 满足：
 $$G(t _ 1,t _ 2)=\varepsilon(t-t _ 1)-\varepsilon(t-t _ 2)=\varepsilon(t-t _ 1)\times\varepsilon(t _ 2-t)\tag{7.4}$$</p>
 <p>&emsp;&emsp;为了避免高次项的出现，我们一般采用前一个等号。</p>
-<blockquote>
-&emsp;&emsp;我们可以定义这样的式子：$ \varepsilon(t+\infty)=\varepsilon(+\infty)=1,\varepsilon(t-\infty)=\varepsilon(-\infty)=0 $ 。这样可以获得闸门函数的两种特殊情况：
-$$\begin{aligned}G(-\infty,t _ 2)&=\varepsilon(t+\infty)-\varepsilon(t-t _ 2)=1-\varepsilon(t -t _ 2)=\varepsilon(t _ 2-t)\\
-G(t _ 1,+\infty)&=\varepsilon(t-t _ 1)-\varepsilon(t _ 2-\infty)=\varepsilon(t-t _ 1)\end{aligned}\tag{7.5}$$
-&emsp;&emsp;定义这两个式子可以方便一些解题。比如将 $ u=\begin{cases}2&t < 0\\
--5&0 < t <1\\
-0& t > 1\end{cases} $ 写成广义函数，就可以这样：
-$$\begin{aligned}u&=2G(-\infty,0)-5G(0,1)+0G(1,+\infty)\\
-&=2\varepsilon(-t)-5[\varepsilon(t)-\varepsilon(t-1)]+0\\
-&=2\varepsilon(-t)-5\varepsilon(t)+5\varepsilon(t-1)\end{aligned}\tag{7.6}$$
-</blockquote>
-
+<div class="admonition notes">
+<p class="admonition-title">闸门函数带 $\infty$ 的情况</p>
+<p>&emsp;&emsp;我们可以定义这样的式子：$ \varepsilon(t+\infty)=\varepsilon(+\infty)=1,\varepsilon(t-\infty)=\varepsilon(-\infty)=0 $ 。这样可以获得闸门函数的两种特殊情况：
+$$\begin{aligned}G(-\infty,t _ 2)&amp;=\varepsilon(t+\infty)-\varepsilon(t-t _ 2)=1-\varepsilon(t -t _ 2)=\varepsilon(t _ 2-t)\\
+G(t _ 1,+\infty)&amp;=\varepsilon(t-t _ 1)-\varepsilon(t _ 2-\infty)=\varepsilon(t-t _ 1)\end{aligned}\tag{7.5}$$
+&emsp;&emsp;定义这两个式子可以方便一些解题。比如将 $ u=\begin{cases}2&amp;t &lt; 0\\
+-5&amp;0 &lt; t &lt;1\\
+0&amp; t &gt; 1\end{cases} $ 写成广义函数，就可以这样：
+$$\begin{aligned}u&amp;=2G(-\infty,0)-5G(0,1)+0G(1,+\infty)\\
+&amp;=2\varepsilon(-t)-5[\varepsilon(t)-\varepsilon(t-1)]+0\\
+&amp;=2\varepsilon(-t)-5\varepsilon(t)+5\varepsilon(t-1)\end{aligned}\tag{7.6}$$</p>
+</div>
 <h3 id="_4">单位冲激函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;单位冲激函数 $ \delta(t) $ 定义如下：
 $$\begin{cases}\begin{aligned}&amp;\delta(t)=0,t\neq 0\\
@@ -1492,18 +1492,18 @@ $$u _ k'=u _ {k0}+\Delta u _ k=u _ {k0}+(u'-u _ 0)\cfrac{C _ k^{-1}}{\sum\limits
 $$C _ \mathrm{eq}=\sum _ {k=1}^nC _ k\tag{7.15}$$</p>
 <p>&emsp;&emsp;如果各个电容的初始电压相等，那么它们就等于 $ u _ {k0} $ .如果不是全部相等，在并联的一瞬间会产生冲击电流，使得电压统一为 $ u _ 0 $：
 $$u _ 0=\cfrac{\sum\limits _ {k=1}^nC _ ku _ {k0}}{\sum\limits _ {k=1}^nC _ k}\tag{7.16}$$</p>
-<blockquote>
-&emsp;&emsp;形式上，$ u _ 0 $ 是 $ u _ {k0} $ 以 $ C _ k $ 为权的加权平均值，也即各个电容的初始电压以电容为权的加权平均值。冲击电流带来的是电容极板上电荷量 $ q $ 的瞬间重新分配,冲击前后电容极板上电荷守恒 $ \sum q=\sum Cu=\mathrm{Const} $ 。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于式 $(7.16)$ 的解读</p>
+<p>&emsp;&emsp;形式上，$ u _ 0 $ 是 $ u _ {k0} $ 以 $ C _ k $ 为权的加权平均值，也即各个电容的初始电压以电容为权的加权平均值。冲击电流带来的是电容极板上电荷量 $ q $ 的瞬间重新分配,冲击前后电容极板上电荷守恒 $ \sum q=\sum Cu=\mathrm{Const} $ 。</p>
+</div>
 <h2 id="_9">电感<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;储存磁场能量的元件，$ \varPsi=Li $ 。其 $ u-i $ 关系：
 $$\begin{aligned}&amp;u=\cfrac{\mathrm d\varPsi}{\mathrm dt}=\cfrac{\mathrm d(Li)}{\mathrm dt}=L\cfrac{\mathrm di}{\mathrm dt}\\
 &amp;i(t)=i(0 _ -)+\cfrac{1}{L}\int _ {0 _ -}^tu\mathrm dt\end{aligned}\tag{7.17}$$</p>
-<blockquote>
-&emsp;&emsp;法拉第电磁感应定律指出，$ \mathscr E _ i=-\cfrac{\mathrm d\varPsi}{\mathrm dt} $ 。但是式 $ (7.17) $ 中没有负号。这是因为，感应电动势 $ \mathscr E _ i $ 的方向是从低电势指向高电势；而电路理论中 $ u $ 的方向是压降的方向，从高电势指向低电势。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于式 $(7.17)$ 的注意事项</p>
+<p>&emsp;&emsp;法拉第电磁感应定律指出，$ \mathscr E _ i=-\cfrac{\mathrm d\varPsi}{\mathrm dt} $ 。但是式 $ (7.17) $ 中没有负号。这是因为，感应电动势 $ \mathscr E _ i $ 的方向是从低电势指向高电势；而电路理论中 $ u $ 的方向是压降的方向，从高电势指向低电势。</p>
+</div>
 <h3 id="_10">电感并联<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp; $ n $ 个电感为 $ L _ k $，初始电流为 $ i _ {k0}(k=1,2,\cdots,n) $ 的电感器，按照相同电流方向<strong>并联</strong>得到一个电感位 $ L _ \mathrm{eq} $，初始电流为 $ i _ 0 $ 的等效电感：
 $$i _ 0=\sum _ {k=1}^ni _ {k0}\qquad \cfrac{1}{L _ \mathrm{eq}}=\sum _ {k=1}^n\cfrac{1}{L _ k}\tag{7.18}$$</p>
@@ -1514,21 +1514,21 @@ $$i _ k'=i _ {k0}+\Delta i _ k=i _ {k0}+(i'-i _ 0)\cfrac{L _ k^{-1}}{\sum\limits
 $$L _ \mathrm{eq}=\sum _ {k=1}^nL _ k\tag{7.20}$$</p>
 <p>&emsp;&emsp;如果各个电感的初始电流相等，那它们就等于 $ i _ 0 $ .如果不是全部相等，在串联的一瞬间会产生冲击电压，使得电流统一为 $ i _ 0 $：
 $$i _ 0=\cfrac{\sum\limits _ {k=1}^nL _ ki _ {k0}}{\sum\limits _ {k=1}^nL _ k}\tag{7.21}$$</p>
-<blockquote>
-&emsp;&emsp;形式上，$ i _ 0 $ 是 $ i _ {k0} $ 以 $ L _ k $ 为权的加权平均值，也即各个电感的初始电流以电感为权的加权平均值。冲击电压带来的是电感内磁链 $ \varPsi $ 的瞬间重新分配，冲击前后电感中磁链守恒 $ \sum \varPsi=\sum Li=\mathrm{Const} $ 。<br>
-&emsp;&emsp;相比于电荷守恒，磁链守恒可能没有那么直观，理解起来稍微困难一些。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于式 $(7.21)$ 的解读</p>
+<p>&emsp;&emsp;形式上，$ i _ 0 $ 是 $ i _ {k0} $ 以 $ L _ k $ 为权的加权平均值，也即各个电感的初始电流以电感为权的加权平均值。冲击电压带来的是电感内磁链 $ \varPsi $ 的瞬间重新分配，冲击前后电感中磁链守恒 $ \sum \varPsi=\sum Li=\mathrm{Const} $ 。<br>
+&emsp;&emsp;相比于电荷守恒，磁链守恒可能没有那么直观，理解起来稍微困难一些。</p>
+</div>
 <h2 id="_12">动态电路暂态分析<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;列写微分方程，根据初值条件得到唯一解。微分方程的阶数为电路中<strong>独立储能元件</strong>个数。</p>
-<blockquote>
-&emsp;&emsp;两个储能元件不独立，一般具备以下条件：<br>
-&emsp;&emsp;1.元件类型相同。比如说都是电容，或者都是电感。<br>
-&emsp;&emsp;2.两个元件串联或者并联。<br>
+<div class="admonition note">
+<p class="admonition-title">储能元件不独立的条件</p>
+<p>&emsp;&emsp;两个储能元件不独立，一般具备以下条件：<br>
+&emsp;&emsp;1. 元件类型相同。比如说都是电容，或者都是电感。<br>
+&emsp;&emsp;2. 两个元件串联或者并联。<br>
 &emsp;&emsp;其实也就是两个元件可以“合成”一个等效元件。如果电感 $ L _ 1 $ 与一个电阻 $ R $ 先串联后，再与 $ L _ 2 $ 并联，那也是两个独立储能元件。如果实在判断不了，就直接列微分方程；每个元件的微分方程阶数未必相等，但阶数最高的那个等于电路的阶数。<br>
-&emsp;&emsp;两个元件不独立，也有可能是其它因素对它们造成了约束。
-</blockquote>
-
+&emsp;&emsp;两个元件不独立，也有可能是其它因素对它们造成了约束。</p>
+</div>
 <p>&emsp;&emsp;初值条件是 $ t=0 _ + $ 时各个量的值。一般情况是连续换路，对于电容有 $ u(0 _ +)=u(0 _ -) $，对于电感有 $ i (0 _ +)=i (0 _ -) $，根据电路定理求出电路在 $ t=0 _ + $ 时的各电压、电流值。如果求微分值，一般需要进行转换：</p>
 <ul>
 <li>电容 $ C $ 的 $ \cfrac{\mathrm du _ C}{\mathrm dt} $，根据 $ i=C\cfrac{\mathrm du}{\mathrm dt} $ 转化为求 $ i _ C $ .</li>

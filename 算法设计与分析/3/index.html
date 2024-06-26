@@ -416,14 +416,14 @@
         
           <li class="md-nav__item">
   <a href="#prim" class="md-nav__link">
-    Prim算法
+    Prim 算法
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#kruskal" class="md-nav__link">
-    Kruskal算法
+    Kruskal 算法
   </a>
   
 </li>
@@ -443,14 +443,14 @@
         
           <li class="md-nav__item">
   <a href="#bellman-ford" class="md-nav__link">
-    Bellman-Ford算法
+    Bellman-Ford 算法
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#dijkstra" class="md-nav__link">
-    Dijkstra算法
+    Dijkstra 算法
   </a>
   
 </li>
@@ -484,7 +484,7 @@
         
           <li class="md-nav__item">
   <a href="#floyd-warshall" class="md-nav__link">
-    Floyd-Warshall算法
+    Floyd-Warshall 算法
   </a>
   
 </li>
@@ -1315,14 +1315,14 @@
         
           <li class="md-nav__item">
   <a href="#prim" class="md-nav__link">
-    Prim算法
+    Prim 算法
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#kruskal" class="md-nav__link">
-    Kruskal算法
+    Kruskal 算法
   </a>
   
 </li>
@@ -1342,14 +1342,14 @@
         
           <li class="md-nav__item">
   <a href="#bellman-ford" class="md-nav__link">
-    Bellman-Ford算法
+    Bellman-Ford 算法
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#dijkstra" class="md-nav__link">
-    Dijkstra算法
+    Dijkstra 算法
   </a>
   
 </li>
@@ -1383,7 +1383,7 @@
         
           <li class="md-nav__item">
   <a href="#floyd-warshall" class="md-nav__link">
-    Floyd-Warshall算法
+    Floyd-Warshall 算法
   </a>
   
 </li>
@@ -1422,48 +1422,61 @@
 
 <h2 id="_1">最小生成树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;最小生成树的概念，是针对于无向连通图的。有两个贪心算法。</p>
-<h3 id="prim">Prim算法<a class="headerlink" href="#prim" title="Permanent link">&para;</a></h3>
+<h3 id="prim">Prim 算法<a class="headerlink" href="#prim" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;从一个源点 $S$ 开始。在不形成环的情况下，每次选择连接 $S$ 所在的连通分支的边中，权重最小的那个。直到只剩下一个连通分支。</p>
-<h3 id="kruskal">Kruskal算法<a class="headerlink" href="#kruskal" title="Permanent link">&para;</a></h3>
+<h3 id="kruskal">Kruskal 算法<a class="headerlink" href="#kruskal" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;在不形成环的情况下，从所有的边中选择权重最小的，直到只剩下一个连通分支。</p>
 <h2 id="_2">单源最短路径<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="bellman-ford">Bellman-Ford算法<a class="headerlink" href="#bellman-ford" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;如果图 $G$ 有 $n$ 个节点，在初始化之后，执行 $n-1$ 轮松弛。每轮松弛都是按照特定的顺序松弛 $G$ 中所有的边。根据操作后结点的 $d$ 值是否满足三角不等式，返回<code>bool</code>值，代表该图中最短路径是否能够定义。<br />
-&emsp;&emsp;初始化操作（后面的 Dijkstra 也是）：对所有的结点 $v\in V$，置 $v.d=\infty\ \mathrm{and}\ v.\pi=\mathrm{NIL}$。然后置 $s.d=0$，其中 $s$ 是源节点。<br>
+<h3 id="bellman-ford">Bellman-Ford 算法<a class="headerlink" href="#bellman-ford" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;如果图 $G$ 有 $n$ 个节点，在初始化之后，执行 $n-1$ 轮松弛。每轮松弛都是按照特定的顺序松弛 $G$ 中所有的边。根据操作后结点的 $d$ 值是否满足三角不等式，返回<code>bool</code>值，代表该图中最短路径是否能够定义。</p>
+<details class="note">
+<summary>Bellman-Ford 算法的具体运行方式</summary>
+<p>&emsp;&emsp;初始化操作（后面的 Dijkstra 也是）：对所有的结点 $v\in V$，置 $v.d=\infty\ \mathrm{and}\ v.\pi=\mathrm{NIL}$。然后置 $s.d=0$，其中 $s$ 是源节点。<br>
 &emsp;&emsp;Bellman-Ford 返回的<code>bool</code>值，也代表“图 $G$ 中是否含有可以由 $s$ 到达的负权重回路”。一旦返回<code>true</code>，那么对于所有的结点 $v\in V$，都有 $\delta(s,v)=v.d$。<br>
 &emsp;&emsp;在手动运行Bellman-Ford算法的时候，有两种松弛方式：<br>
 &emsp;&emsp;（1）用每轮松弛操作前的 $d$ 值进行松弛，是一种“并行松弛”。每轮松弛后的结果与边松弛的先后顺序无关，我们可以按照任意的顺序对这些边进行松弛。<br>
 &emsp;&emsp;（2）每次松弛时采用最新的 $d$ 值，是一种“串行松弛”。这个依赖于每条边的松弛顺序，也就是说，松弛顺序不同，一轮松弛得到的结果也会有区别。<br>
 &emsp;&emsp;比如我在第一次松弛的时候，得到了 $u.d=6$，$v.d=7$，图中有 $w(u,v)=3$。在进行第二轮松弛的时候，$(u,v)$ 被松弛之前，先更新了 $u.d =2$。如果是采取松弛方式（2），在后续对 $(u,v)$ 进行松弛的时候，$v.d$ 会被更新为 $2+3=5$；如果是采取松弛方式（1），在后续对 $(u,v)$ 进行松弛的时候，使用的 $u.d$ 仍然是第一轮松弛得到的 $6$，所以 $v.d$ 不会改变。<br>
-&emsp;&emsp;Bellman-Ford实际的运行方式是松弛方式（2），但不理解有的题目要我们用方式（1）。不过，虽然方式（2）每轮松弛的结果依赖边松弛的顺序，但是在算法返回<code>true</code>的情况下，最终的结果和这个松弛顺序是无关的——最终 $v.d$ 都会收敛到 $\delta(s,v)$。<br />
-&emsp;&emsp;算法的优点是<st><strong>可以处理含有负权重边的图</strong></st>，缺点是时间复杂度 $O(VE)$ 有点大。简单图的边数 $E$ 可以达到 $O(V^2)$ 的规模，这个时候 Bellman-Ford 算法的时间复杂度就是 $O(n^3)$。</p>
-<h3 id="dijkstra">Dijkstra算法<a class="headerlink" href="#dijkstra" title="Permanent link">&para;</a></h3>
+&emsp;&emsp;Bellman-Ford实际的运行方式是松弛方式（2），但不理解有的题目要我们用方式（1）。不过，虽然方式（2）每轮松弛的结果依赖边松弛的顺序，但是在算法返回<code>true</code>的情况下，最终的结果和这个松弛顺序是无关的——最终 $v.d$ 都会收敛到 $\delta(s,v)$。  </p>
+</details>
+<p>&emsp;&emsp;算法的优点是<st><strong>可以处理含有负权重边的图</strong></st>，缺点是时间复杂度 $O(VE)$ 有点大。简单图的边数 $E$ 可以达到 $O(V^2)$ 的规模，这个时候 Bellman-Ford 算法的时间复杂度就是 $O(n^3)$。</p>
+<h3 id="dijkstra">Dijkstra 算法<a class="headerlink" href="#dijkstra" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;维持一个集合 $S$，在初始化之后，不断重复这样的操作：  </p>
-<ul>
+<ol>
 <li>对于不在 $S$ 中的结点，找到$d$值最小的那个 $v$ 加入 $S$。</li>
 <li>松弛所有从 $v$ 发出的边。</li>
-<li>最后，所有的结点都会进入 $S$，此时算法终止。Dijkstra 算法在时间复杂度上优于 Bellman-Ford 算法， 不经优化就能达到 $O(n^2)$ 的复杂度，但是<st><strong>不能处理含有负权重边的图</strong></st>。</li>
-</ul>
+<li>最后，所有的结点都会进入 $S$，此时算法终止。</li>
+</ol>
+<p>&emsp;&emsp;Dijkstra 算法在时间复杂度上优于 Bellman-Ford 算法， 不经优化就能达到 $O(n^2)$ 的复杂度，但是<st><strong>不能处理含有负权重边的图</strong></st>。</p>
 <h3 id="spfa">SPFA算法<a class="headerlink" href="#spfa" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;维持一个队列 $Q$，初始时有且只有源节点 $s$。重复这样的操作：每次从 $Q$ 中出队队首节点 $v$，松弛所有从 $v$ 发出的边，在松弛中 $d$ 值改变的结点都入队。直到 $Q$ 空时，算法终止。它的优点是<st><strong>可以处理含有负权重边的图</strong></st>，并且时间复杂度也显著优于 Bellman-Ford 算法。但是貌似泛用性不强，容易被卡。  </p>
+<p>&emsp;&emsp;维持一个队列 $Q$，初始时有且只有源节点 $s$。重复这样的操作：</p>
+<ol>
+<li>每次从 $Q$ 中出队队首节点 $v$，松弛所有从 $v$ 发出的边。</li>
+<li>在松弛中 $d$ 值改变的结点都入队。</li>
+<li>直到 $Q$ 空时，算法终止。</li>
+</ol>
+<p>&emsp;&emsp;它的优点是<st><strong>可以处理含有负权重边的图</strong></st>，并且时间复杂度也显著优于 Bellman-Ford 算法。但是貌似泛用性不强，容易被卡。  </p>
 <h2 id="_3">多源最短路径<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">一种自然的想法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;对从 $u$ 到 $v$ 的路径长度 $l$ 进行动态规划：求出所有节点对在路径长度不大于 $l=l _ 0$ 时的最短路径，就可以自底向上地推导所有结点对在路径长度不大于 $l=l _ 0+1$ 时的最短路径。这种动态规划的时间复杂度是 $O(n^3\lg n)$。</p>
-<h3 id="floyd-warshall">Floyd-Warshall算法<a class="headerlink" href="#floyd-warshall" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;<strong>Floyd-Warshall算法</strong>也是一个动态规划的算法，但思路是先求出所有结点对在经过中间结点 $v _ c$ 编号 $c\in [1,k]$ 时的最短路径，再自底向上地推导出所有节点在经过中间节点编号 $c\in [1,k+1]$ 时的最短路径。时间复杂度可以降至 $O(n^3)$。</p>
-<blockquote>
-&emsp;&emsp;Floy-Warshall算法可以看作是三维DP。数组 $dp[i][j][k]$ 表示在中间节点编号 $c\in [1,k]$ 的时候，从结点 $i$ 结点到 $j$ 的最短距离。状态转移方程是：
+<p>&emsp;&emsp;对从 $u$ 到 $v$ 的路径长度 $l$ 进行动态规划：求出所有节点对在路径长度不大于 $l=l _ 0$ 时的最短路径，就可以自底向上地推导所有结点对在路径长度不大于 $l=l _ 0+1$ 时的最短路径。<br />
+&emsp;&emsp;这种动态规划的时间复杂度是 $O(n^3\lg n)$。</p>
+<h3 id="floyd-warshall">Floyd-Warshall 算法<a class="headerlink" href="#floyd-warshall" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;<strong>Floyd-Warshall 算法</strong>也是一个动态规划的算法，但思路是先求出所有结点对在经过中间结点 $v _ c$ 编号 $c\in [1,k]$ 时的最短路径，再自底向上地推导出所有节点在经过中间节点编号 $c\in [1,k+1]$ 时的最短路径。<br />
+&emsp;&emsp;时间复杂度可以降至 $O(n^3)$。</p>
+<div class="admonition notes">
+<p class="admonition-title">Floyd-Warshall 算法的状态转移方程</p>
+<p>&emsp;&emsp;Floy-Warshall 算法可以看作是三维 DP。数组 $dp[i][j][k]$ 表示在中间节点编号 $c\in [1,k]$ 的时候，从结点 $i$ 结点到 $j$ 的最短距离。状态转移方程是：
 $$dp[i][j][k]=\min(dp[i][j][k-1],dp[i][k][k-1]+dp[k][j][k-1])\tag{3.1}$$
-&emsp;&emsp;由于状态转移方程中 $dp[…][…][k]$ 只和 $dp[…][…][k-1]$ 有关，其实可以把 $dp$ 数组的第三维压掉，变成二维DP。
-</blockquote>
-
+&emsp;&emsp;由于状态转移方程中 $dp[…][…][k]$ 只和 $dp[…][…][k-1]$ 有关，其实可以把 $dp$ 数组的第三维压掉，变成二维 DP。</p>
+</div>
 <h3 id="johnson">Johnson算法<a class="headerlink" href="#johnson" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;<strong>Johnson算法</strong>的设计还是比较巧妙的，它的核心思想就是在确保最短路径不变的情况下，把图 $G$ 的边权 $w$ 转化成非负的权重 $\hat w$，让 Dijkstra 能跑起来。</p>
-<blockquote>
-&emsp;&emsp;Johnson 算法引入一个外部节点 $s$ 加入 $V$ 中，同时向 $E$ 中添加 $n$ 条由 $s$ 发出、到 $V$ 中的结点的边，生成图 $G'$。在图 $G'$ 中以 $s$ 为源点运行 Bellman-Ford 算法，给每个节点标记一个 $h$ 值 $h(v)=\delta(s,v)$。<br>
-&emsp;&emsp;如果 Bellman-Ford 算法返回 true，说明图 $G$ 不含负权重回路，以 $\hat w(u,v)=w(u,v)+h(u)-h(v)$ 运行 Dijkstra 算法，能够得到各结点对之间的最短距离 $\hat\delta(u,v)$。修正后的 $\delta(u,v)=\hat\delta(u,v)-h(u)+h(v)$ 就是我们需要求的结果。<br>
-&emsp;&emsp;Johnson 算法适用于稀疏图，究其原因还是 Bellman-Ford 在非稀疏图上跑起来很需要时间。
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Johnson 算法的具体运行方式</p>
+<p>&emsp;&emsp;Johnson 算法引入一个外部节点 $s$ 加入 $V$ 中，同时向 $E$ 中添加 $n$ 条由 $s$ 发出、到 $V$ 中的结点的边，生成图 $G'$。在图 $G'$ 中以 $s$ 为源点运行 Bellman-Ford 算法，给每个节点标记一个 $h$ 值 $h(v)=\delta(s,v)$。<br>
+&emsp;&emsp;如果 Bellman-Ford 算法返回<code>true</code>，说明图 $G$ 不含负权重回路，以 $\hat w(u,v)=w(u,v)+h(u)-h(v)$ 运行 Dijkstra 算法，能够得到各结点对之间的最短距离 $\hat\delta(u,v)$。修正后的 $\delta(u,v)=\hat\delta(u,v)-h(u)+h(v)$ 就是我们需要求的结果。</p>
+</div>
+<p>&emsp;&emsp;Johnson 算法适用于稀疏图，究其原因还是 Bellman-Ford 在非稀疏图上跑起来很需要时间。</p>
 
 
   

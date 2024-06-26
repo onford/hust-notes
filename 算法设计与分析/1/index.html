@@ -1195,9 +1195,12 @@
 <p>但是这套答案对于很多题目都没有给出完整回答，仅作参考。</p>
 </blockquote>
 <hr />
-<p>&emsp;&emsp;主方法用来求解递归式，获得一些<st>渐进紧确界</st>：<br />
-&emsp;&emsp;<strong>主定理</strong>&emsp;令 $a\geq 1$ 和 $b &gt; 1$ 是常数，$f(n)$ 是一个函数，$T(n)$ 是定义在非负整数上的递归式
+<p>&emsp;&emsp;主方法用来求解递归式，获得一些<st><strong>渐进紧确界</strong></st>。</p>
+<div class="admonition quote">
+<p class="admonition-title">关于主定理</p>
+<p>&emsp;&emsp;<strong>主定理</strong>&emsp;令 $a\geq 1$ 和 $b &gt; 1$ 是常数，$f(n)$ 是一个函数，$T(n)$ 是定义在非负整数上的递归式
 $$T(n)=aT(n/b)+f(n)\tag{1.1}$$</p>
+</div>
 <p>&emsp;&emsp;其中我们将 $n/b$ 解释为 $\lfloor n/b\rfloor$ 或 $\lceil n/b\rceil$。那么：</p>
 <ul>
 <li>若对于某个常数 $\varepsilon &gt; 0$ 有 $f(n)=O(n^{\log _b a-\varepsilon})$，则 $ T(n)=\Theta(n^{\log _b a})$。</li>

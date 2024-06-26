@@ -1266,12 +1266,18 @@
 <p>&emsp;&emsp;对包括电源在内的各种电路器件而言，当$u,i$选择<strong>关联</strong>的参考方向时，$p=ui$就是<strong>吸收功率</strong>。对于非直流电路，严格来说是<strong>瞬时</strong>吸收功率。<br />
 &emsp;&emsp;课本上的四种受控电源都是<strong>有源元件</strong>，能够提供功率。这个功率来自受控源本身，课本上也没有详细说明受控源提供的能量来自哪里。是像电池一样储存在受控源内部的能量吗？事实上课本上的受控源是高度抽象的电路模型，不需要过多地纠结。</p>
 <h2 id="_2">基尔霍夫定律<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;电路的基本定律就是基尔霍夫定律，其中包含基尔霍夫电流定律（KCL）和基尔霍夫电压定律（KVL）。<br />
-&emsp;&emsp;<strong>基尔霍夫电流定律</strong>：集中参数电路中，任何时刻流入一个结点（或者一个闭合面）的支路电流的代数和为$0$。也即：
+<p>&emsp;&emsp;电路的基本定律就是基尔霍夫定律，其中包含基尔霍夫电流定律（KCL）和基尔霍夫电压定律（KVL）。</p>
+<div class="admonition quote">
+<p class="admonition-title">基尔霍夫电流定律</p>
+<p>&emsp;&emsp;<strong>基尔霍夫电流定律</strong>：集中参数电路中，任何时刻流入一个结点（或者一个闭合面）的支路电流的代数和为$0$。也即：
 $$\sum _{k=1}^b i _k=0\tag{1.1}$$</p>
-<p>&emsp;&emsp;这个实际上就是<st>电流连续性方程</st>。这里没有位移电流项，因为在电路里不能把类似电容这样的元器件拆开来看作两个极板，要整体地看成一个器件。<br />
-&emsp;&emsp;<strong>基尔霍夫电压定律</strong>：集中参数电路中，任何时刻，任意一个回路中所有支路电压代数和为$0$。即：
+</div>
+<p>&emsp;&emsp;式 $(1.1)$ 实际上就是<st><strong>电流连续性方程</strong></st>。这里没有位移电流项，因为在电路里不能把类似电容这样的元器件拆开来看作两个极板，要整体地看成一个器件。</p>
+<div class="admonition quote">
+<p class="admonition-title">基尔霍夫电压定律</p>
+<p>&emsp;&emsp;<strong>基尔霍夫电压定律</strong>：集中参数电路中，任何时刻，任意一个回路中所有支路电压代数和为$0$。即：
 $$\sum _{k=1}^b u _k=0\tag{1.2}$$</p>
+</div>
 
 
   
