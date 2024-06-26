@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../1/">
       
       
-        <link rel="next" href="../Part2/">
+        <link rel="next" href="../3/">
       
       
       <link rel="icon" href="../../assets/favicon.jpg">
@@ -24,7 +24,7 @@
 
     
       
-        <title>1 分治策略 - hust_notes</title>
+        <title>2 动态规划与贪心算法 - hust_notes</title>
       
     
     
@@ -94,11 +94,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#part1" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -131,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 分治策略
+              2 动态规划与贪心算法
             
           </span>
         </div>
@@ -204,6 +199,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/onford/hust-notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    onford/hust-notes
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -237,6 +244,18 @@
     </a>
     hust_notes
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/onford/hust-notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    onford/hust-notes
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -299,6 +318,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 分治策略
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -308,63 +347,7 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    1 分治策略
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    1 分治策略
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#part1" class="md-nav__link">
-    $Part1$ &emsp;分治策略
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Part2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,6 +356,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -384,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Part3/" class="md-nav__link">
+      <a href="../3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Part4/" class="md-nav__link">
+      <a href="../4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1122,6 +1106,46 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BF%A1%E5%8F%B7/6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 连续时间系统的系统函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BF%A1%E5%8F%B7/7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 离散时间系统的时域分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1147,21 +1171,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#part1" class="md-nav__link">
-    $Part1$ &emsp;分治策略
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1174,25 +1183,26 @@
                 
                   
 
+  
+  
 
-  <h1>1 分治策略</h1>
 
+  <h1>2 动态规划与贪心算法</h1>
+
+<p>&emsp;&emsp;动态规划的两个核心：<strong>最优子结构性</strong>的证明，<strong>状态转移方程</strong>的建立。动态规划运行的核心是<strong>最优子结构性</strong>，证明了这个底层逻辑，动态规划算法就是正确的。</p>
 <blockquote>
-<p>《算法设计与分析》是计算机专业的重要核心课。这门课使用的教材是第三版算法导论黑皮书，由于课程并没有涉及到书中全部的章节，笔记只是对其中少数几个部分的理解。</p>
-<p>附：☞<a href="https://walkccc.me/CLRS/" target="new">算法导论第三版参考答案（English Ver.）</a></p>
-<p>但是这套答案对于很多题目都没有给出完整回答，仅作参考。</p>
+&emsp;&emsp;实际上，课程所讲述的动态规划全部属于<strong>区间DP</strong>，动态规划还有树形DP、状态压缩DP、期望DP等各种各样的形式。使用动态规划算法解决的经典问题：<br>
+&emsp;&emsp;一维DP：钢条切割问题。<br>
+&emsp;&emsp;二维DP：矩阵链乘法问题、最长公共子序列（LCS，Longest Common Subsequence）问题，最优二叉搜索树问题，0-1背包问题。<br>
+&emsp;&emsp;DP维度，就是开辟的DP数组的维数。可能要使用三维DP的问题：<a href="http://poj.org/problem?id=1185" target="new">POJ 1185</a>。关于这一方面的内容，在这里部署一个<a href="https://blog.csdn.net/weixin_72137075/category_12581277.html" target="new">动态规划学习</a>。
 </blockquote>
-<hr />
-<h2 id="part1">$Part1$ &emsp;分治策略<a class="headerlink" href="#part1" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;主方法用来求解递归式，获得一些<st>渐进紧确界</st>：<br />
-&emsp;&emsp;<strong>主定理</strong>&emsp;令 $a\geq 1$ 和 $b &gt; 1$ 是常数，$f(n)$ 是一个函数，$T(n)$ 是定义在非负整数上的递归式
-$$T(n)=aT(n/b)+f(n)\tag{1.1}$$</p>
-<p>&emsp;&emsp;其中我们将 $n/b$ 解释为 $\lfloor n/b\rfloor$ 或 $\lceil n/b\rceil$。那么：</p>
-<ul>
-<li>若对于某个常数 $\varepsilon &gt; 0$ 有 $f(n)=O(n^{\log _b a-\varepsilon})$，则 $ T(n)=\Theta(n^{\log _b a})$。</li>
-<li>若 $f(n)=\Theta(n^{\log _ ba})$，则 $T(n)=(n^{\log _ ba}\lg n)$。</li>
-<li>若对于某个常数 $\varepsilon &gt; 0$ 有 $f(n)=\Omega(n^{\log _b a+\varepsilon})$，且对于某个常数 $c &lt; 1$ 和足够大的 $n$ 有 $af(n/b)\leq cf(n)$，则 $T(n)=\Theta(f(n))$。</li>
-</ul>
+
+<p>&emsp;&emsp;贪心算法，在某种程度上可以看做是动态规划的一个特例。动态规划更偏向于穷举，每条路都试一下；贪心算法则是绕开了这种穷举，抄一条近路直接到达目的地，所以很多情况下并不能保证最优解。<br />
+&emsp;&emsp;贪心算法运行的核心是<strong>贪心选择性质</strong>——可以通过做出局部最优解（贪心）来构造全局最优解。只要你证明了这个底层逻辑，贪心算法的正确性一般就能够保证。</p>
+<blockquote>
+&emsp;&emsp;Huffman树的生成原理，使用了贪心算法：每次调两个最小的结点合并，直到只剩下一个节点，它就是Huffman树的根节点。<br>
+&emsp;&emsp;图论中也有很多算法的底层逻辑是贪心算法。比如最小生成树的Prim算法和Kruskal算法，单源最短路径的Dijkstra算法。
+</blockquote>
 
 
   
@@ -1216,7 +1226,7 @@ $$T(n)=aT(n/b)+f(n)\tag{1.1}$$</p>
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="上一页: 前言" rel="prev">
+          <a href="../1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1 分治策略" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1226,20 +1236,20 @@ $$T(n)=aT(n/b)+f(n)\tag{1.1}$$</p>
                 上一页
               </span>
               <div class="md-ellipsis">
-                前言
+                1 分治策略
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Part2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2 动态规划与贪心算法" rel="next">
+          <a href="../3/" class="md-footer__link md-footer__link--next" aria-label="下一页: 3 基本图算法" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                2 动态规划与贪心算法
+                3 基本图算法
               </div>
             </div>
             <div class="md-footer__button md-icon">
