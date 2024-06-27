@@ -1106,6 +1106,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    全响应
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1327,6 +1334,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    全响应
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1366,27 +1380,43 @@
 <p>&emsp;&emsp;一个系统在 $t$ 时刻的响应，只和 $t$ 时刻及其之前的时刻的激励有关。</p>
 <p>&emsp;&emsp;上面的三个性质中，因果性是最好判定的。只需看 $r(t)$ 的表达式即可。线性性也是好判定的，直接根据抽象定义，构造两个激励 $e _ 1(t)$ 和 $e _ 2(t)$ 并判断是否具有该性质即可。<br />
 &emsp;&emsp;关于时不变性的判定，可以构造两个激励 $e _ 1(t)$ 和 $e _ 2(t)$，其中 $e _ 2(t)$ 是 $e _ 1(t)$ 平移得到的，从而转化为判定：若 $e _ 1(t)\rightarrow r _ 1(t)$，是否有 $e _ 2(t)\rightarrow r _ 2(t)$。</p>
+<div class="admonition note">
+<p class="admonition-title">关于时不变性的正确判定方法</p>
+<p>&emsp;&emsp;用一个习题中碰到的例子 $r(t)=e(1-t)$ 来说明。这个系统是不具备时不变性的，具体可以按照下面的方式判定：<br></p>
 <blockquote>
-&emsp;&emsp;关于时不变性的判定，举个例子：$r(t)=e(1-t)$。这是在习题中碰到的。这个系统是不具备时不变性的，可以按照下面的方式判定：<br>
-&emsp;&emsp;记 $e _ 1(t)\rightarrow e _ 1(1-t) = r _ 1(t)$，$e _ 2(t)=e _ 1(t-t _ 0)$。那么 $r _ 2(t)=e _ 2(1-t)=e _ 1(1-t-t _ 0)=r _ 1(t+t _ 0)\neq r _ 1(t-t _ 0)$。因此，若 $e(t)\rightarrow r(t)$，无法得到 $e(t-t _ 0)\rightarrow r(t-t _ 0)$。<br>
-&emsp;&emsp;之所以单独强调时不变性，是因为产生过一个莫名其妙的错误做法：<br>
-&emsp;&emsp;将原式中的 $t$ 换成 $t-t _ 0$ 可得 $r(t-t _ 0)=e(1-t+t _ 0)$，记作式 $(1)$。所以对于一个激励 $e(t-t _ 0)$，根据原式，它产生的响应应该是 $e(1-t+t _ 0)$，也即 $r(t-t _ 0)$。所以系统具备时不变性。<br>
-&emsp;&emsp;这种错误做法看起来有点像是循环论证，但是它却能够正确地判断 $r(t)=\varepsilon(t)e(t)$ 不具备时不变性。所以花了一个下午的时间总结出时不变性的正确判定方法，并且特意强调，以免以后再落入这个陷阱。
+<p>&emsp;&emsp;记 $e _ 1(t)\rightarrow e _ 1(1-t) = r _ 1(t)$，$e _ 2(t)=e _ 1(t-t _ 0)$。那么 $r _ 2(t)=e _ 2(1-t)=e _ 1(1-t-t _ 0)=r _ 1(t+t _ 0)\neq r _ 1(t-t _ 0)$。因此，若 $e(t)\rightarrow r(t)$，无法得到 $e(t-t _ 0)\rightarrow r(t-t _ 0)$。</p>
 </blockquote>
-
+<p>&emsp;&emsp;之所以单独强调时不变性，是因为产生过一个莫名其妙的<strong>错误做法</strong>：</p>
+<blockquote>
+<p>&emsp;&emsp;将原式中的 $t$ 换成 $t-t _ 0$ 可得 $r(t-t _ 0)=e(1-t+t _ 0)$，记作式 $(1)$。所以对于一个激励 $e(t-t _ 0)$，根据原式，它产生的响应应该是 $e(1-t+t _ 0)$，也即 $r(t-t _ 0)$。所以系统具备时不变性。</p>
+</blockquote>
+<p>&emsp;&emsp;这种错误做法看起来有点像是循环论证，但是它却能够正确地判断 $r(t)=\varepsilon(t)e(t)$ 不具备时不变性。所以花了一个下午的时间总结出时不变性的正确判定方法，并且特意强调，以免以后再落入这个陷阱。</p>
+</div>
 <h2 id="_5">各种各样的响应<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <h3 id="_6">古典法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;古典法依据微分方程的数学解形式来定义系统的不同响应。一个 $n$ 阶线性系统的微分方程可以用下面的式子来表示：
 $$\cfrac{\mathrm d^nr}{\mathrm dt^n}+a _ {n-1}\cfrac{\mathrm d^{n-1}r}{\mathrm dt^{n-1}}+\cdots+a _ 1\cfrac{\mathrm dr}{\mathrm dt}+a _ 0r=b _ m\cfrac{\mathrm d^me}{\mathrm dt^m}+b _ {m-1}\cfrac{\mathrm d^{m-1}e}{\mathrm dt^{m-1}}+b _ 1\cfrac{\mathrm de}{\mathrm dt}+b _ 0e\tag{1.1}$$</p>
 <p>&emsp;&emsp;这个微分方程对应的齐次方程的通解（通过初值条件确定待定系数），被称作系统的<strong>自然响应（自由响应）</strong>，记作 $r _ h(t)$。微分方程对应的特解（也通过初值条件确定了待定系数）被称作系统的<strong>受迫响应</strong>，记作 $r _ p(t)$。</p>
-<blockquote>
-&emsp;&emsp;回顾一下高数里求解微分方程的过程，通解往往带有待定系数 $C _ 1,C _ 2\cdots$，但是特解是不带的。这就说明系统的自由响应 $r _ h(t)$ 受系统初值的影响，但是受迫响应 $r _ p(t)$ 不受影响。<br>
-&emsp;&emsp;同时，只有全解出来了，才能确定 $r _ h(t)$ 的系数。因此 $r _ h(t)$ 的求解会受到 $r _ p(t)$ 的制约。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于 $r _ p(t)$ 和 $r _ h(t)$ 之间的关系</p>
+<p>&emsp;&emsp;回顾一下高数里求解微分方程的过程。</p>
+<ul>
+<li>通解 $r _ h(t)$ 往往带有待定系数 $C _ i$，但是特解 $r _ p(t)$ 是不带的。</li>
+<li>通解 $r _ h(t)$ 中的系数 $ C _ i$ 是将系统的初值 $r^{(n)}(0^-)$ 代入全响应 $r(t) = r _ h(t)  + r _ p(t)$ 后解出来的。</li>
+</ul>
+<p>&emsp;&emsp;这又说明了两点：</p>
+<ul>
+<li>系统的自由响应 $r _ h(t)$ 受系统初值的影响，但是受迫响应 $r _ p(t)$ 不受初值影响。</li>
+<li>不能绕开 $r _ p(t)$ 而直接求 $r _ h(t)$。要想得到 $r _ h(t)$，需要先解出 $r _ p(t)$。</li>
+</ul>
+</div>
 <h3 id="_7">近代时域分析法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;近代的时域分析法就把响应分为<strong>零输入响应</strong> $r _ {zi}(t)$ 和<strong>零状态响应</strong> $r _ {zs}(t)$。这一点同电路理论中的概念。<br />
-&emsp;&emsp;这些响应与全响应 $r(t)$ 之间的关系是：
+<p>&emsp;&emsp;近代的时域分析法就把响应分为<strong>零输入响应</strong> $r _ {zi}(t)$ 和<strong>零状态响应</strong> $r _ {zs}(t)$。这一点同电路理论中的概念。</p>
+<blockquote>
+<p>&emsp;&emsp;$r _ {zi}(t)$ 和 $r _ {zs}(t)$ 的求解就没有先后顺序的制约。</p>
+</blockquote>
+<h3 id="_8">全响应<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;这些响应与全响应 $r(t)$ 之间的关系是：
 $$r _ h(t)=r _ {zi}(t)+r _ {zs}(t)=r _ h(t)+r _ p(t)\tag{1.2}$$</p>
 
 

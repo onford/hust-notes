@@ -1356,10 +1356,10 @@
 <h3 id="_2">三角傅里叶级数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;对于真实信号<strong>周期函数</strong> $f(t)$ 来说，一般都可以分解为傅里叶级数：
 $$f(t)=\cfrac{a _ 0}{2}+\sum _ {n=1}^\infty(a _ n\cos n\varOmega t+b _ n\sin n\varOmega t)\tag{3.1}$$</p>
-<blockquote>
-&emsp;&emsp;根据 Dirichlet 条件，上式中的 “$=$” 写作 “$\sim$” 更严谨，因为可能会存在一些离散的点，等式左右两边在这些点上的取值不相等。但是毕竟是个别离散的点，工程上可以直接忽略，所以直接使用了 “$=$”。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">关于傅里叶级数严谨的写法</p>
+<p>&emsp;&emsp;根据 Dirichlet 条件，式 $(3.1)$ 中的 “$=$” 写作 “$\sim$” 更严谨，因为可能会存在一些离散的点，等式左右两边在这些点上的取值不相等。但是毕竟是个别离散的点，工程上可以直接忽略，所以直接使用了 “$=$”。</p>
+</div>
 <p>&emsp;&emsp;其中，系数 $a _ n,b _ n$ 的求解公式是：
 $$\begin{cases}\displaystyle a _ n=\cfrac{2}{T}\int _ {t _ 1}^{t _ 1+T}f(t)\cos n\varOmega t\mathrm dt\\
 \displaystyle b _ n=\cfrac{2}{T}\int _ {t _ 1}^{t _ 1+T}f(t)\sin n\varOmega t\mathrm dt\end{cases}\tag{3.2}$$</p>
@@ -1386,8 +1386,10 @@ $$f(t)=\cfrac{1}{2\pi}\int _ {-\infty}^{+\infty} F(\omega)\mathrm e^{\mathrm j\o
 
 <p>&emsp;&emsp;其中“系数” $F(\omega)$ 可以通过下式求得：
 $$F(\omega)=\int _ {-\infty}^{+\infty}f(t)\mathrm e^{-\mathrm j\omega t}\mathrm dt\tag{3.6}$$</p>
-<p>&emsp;&emsp;式 $(3.5)(3.6)$ 被统称为傅里叶变换式，$(3.6)$ 被称为正变换，也写作 $F(\omega)=\mathscr F\lbrace f(t)\rbrace $；$(3.5)$ 被称为反变换，也写作 $f(t)=\mathscr F^{-1}\lbrace F(\omega)\rbrace $。<br />
-&emsp;&emsp;特别地，<st><strong>单矩形脉冲信号</strong> $f(t)=A[\varepsilon(-\tau/2)-\varepsilon(\tau/2)]$ 的傅里叶变换是 $F(\omega)=A\tau \mathrm{Sa}\left(\cfrac{\omega\tau}{2}\right)$</st>。其中，<strong>抽样函数</strong> $\mathrm{Sa}(t)=\cfrac{\sin t}{t}$。</p>
+<p>&emsp;&emsp;式 $(3.5)(3.6)$ 被统称为傅里叶变换式，$(3.6)$ 被称为正变换，也写作 $F(\omega)=\mathscr F\lbrace f(t)\rbrace $；$(3.5)$ 被称为反变换，也写作 $f(t)=\mathscr F^{-1}\lbrace F(\omega)\rbrace $。  </p>
+<details class="note">
+<summary>单矩形脉冲信号与抽样函数</summary>
+<p>&emsp;&emsp;特别地，<st><strong>单矩形脉冲信号</strong> $f(t)=A[\varepsilon(-\tau/2)-\varepsilon(\tau/2)]$ 的傅里叶变换是 $F(\omega)=A\tau \mathrm{Sa}\left(\cfrac{\omega\tau}{2}\right)$</st>。其中，<strong>抽样函数</strong> $\mathrm{Sa}(t)=\cfrac{\sin t}{t}$。
 <table width="100%">
 <caption>表1 单矩形脉冲信号及其傅里叶变换</caption>
     <tr>
@@ -1398,8 +1400,8 @@ $$F(\omega)=\int _ {-\infty}^{+\infty}f(t)\mathrm e^{-\mathrm j\omega t}\mathrm 
         <th><img src="/信号/fig1.svg"></img></th>
         <th><img src="/信号/fig2.svg"></img></th>
     </tr>
-</table>
-
+</table></p>
+</details>
 <h3 id="_6">傅里叶变换的性质<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;傅里叶变换具有的性质有：<br />
 <strong>线性特性</strong>：$\mathscr F\lbrace af _ 1(t) +bf _ 2(t)\rbrace =a\mathscr F\lbrace  f _ 1(t)\rbrace  + b\mathscr F\lbrace  f _ 2(t)\rbrace $。<br />
@@ -1408,21 +1410,21 @@ $$F(\omega)=\int _ {-\infty}^{+\infty}f(t)\mathrm e^{-\mathrm j\omega t}\mathrm 
 &emsp;&emsp;特别的，由于余弦函数可以用复指数表示，因此也存在 $f(t)\cos\omega _ ct\leftrightarrow \cfrac{1}{2}[F(\omega+\omega _ c)+F(\omega-\omega _ c)]$。<br />
 <strong>尺度变换特性</strong>：若 $f(t)\leftrightarrow F(\omega)$，则 $f(at)\leftrightarrow \cfrac{1}{|a|}F\left(\cfrac{\omega}{a}\right)$。<br />
 <strong>对称特性</strong>（非常有用）：若 $f(t)\leftrightarrow F(\omega)$，则 $F(t)\leftrightarrow 2\pi f(-\omega)$。</p>
-<blockquote>
-&emsp;&emsp;对称特性非常适合用于求已知反变换的函数的正变换。例如，抽样函数是单矩形脉冲函数的傅里叶变换，但是直接求抽样函数的傅里叶变换会比较困难。
-$$\begin{aligned}\mathscr F\lbrace \mathrm{Sa}(t)\rbrace&=\int _ {-\infty}^{+\infty}\mathrm{Sa}(t)\mathrm e^{-\mathrm j\omega t}\mathrm dt\\
-&=2\int _ {0}^{+\infty}\cfrac{\sin t}{t}\cos(\omega t)\\
-&=\int _ {0}^{+\infty}\cfrac{\sin(1+\omega) t+\sin(1-\omega)t}{t}\mathrm dt\end{aligned}\tag{3.7}$$
+<details class="note">
+<summary>关于对称特性的独到用处</summary>
+<p>&emsp;&emsp;对称特性非常适合用于求已知反变换的函数的正变换。例如，单矩形脉冲函数的傅里叶变换是抽样函数，但是直接求抽样函数的傅里叶变换会比较困难。
+$$\begin{aligned}\mathscr F\lbrace \mathrm{Sa}(t)\rbrace&amp;=\int _ {-\infty}^{+\infty}\mathrm{Sa}(t)\mathrm e^{-\mathrm j\omega t}\mathrm dt\\
+&amp;=2\int _ {0}^{+\infty}\cfrac{\sin t}{t}\cos(\omega t)\\
+&amp;=\int _ {0}^{+\infty}\cfrac{\sin(1+\omega) t+\sin(1-\omega)t}{t}\mathrm dt\end{aligned}\tag{3.7}$$
 根据狄利克雷积分：
 $$\int _ 0^{+\infty}\cfrac{\sin x}{x}\mathrm dx=\cfrac{\pi}{2}\tag{3.8}$$
-可得当 $-1< \omega< 1$ 时，$\mathscr F\lbrace\mathrm{Sa}(t)\rbrace=\pi$;当 $\omega > 1$ 或 $\omega < -1$ 时，$\mathscr F\lbrace\mathrm{Sa}(t)\rbrace=0$。<br>即 $\mathscr F\lbrace\mathrm{Sa}(t)\rbrace\leftrightarrow \pi[\varepsilon(\omega+1)-\varepsilon(\omega-1)]$。<br>
+可得当 $-1&lt; \omega&lt; 1$ 时，$\mathscr F\lbrace\mathrm{Sa}(t)\rbrace=\pi$;当 $\omega &gt; 1$ 或 $\omega &lt; -1$ 时，$\mathscr F\lbrace\mathrm{Sa}(t)\rbrace=0$。<br>即 $\mathscr F\lbrace\mathrm{Sa}(t)\rbrace\leftrightarrow \pi[\varepsilon(\omega+1)-\varepsilon(\omega-1)]$。<br>
 &emsp;&emsp;显然用对称特性会比直接计算快一些：令 $A=\cfrac{1}{2}$ 和 $\tau=2$，那么有：
 $$\cfrac{1}{2}[\varepsilon(t+1)-\varepsilon(t-1)]\leftrightarrow \mathrm{Sa}(\omega)\tag{3.8}$$
 根据对称特性有：
 $$\mathrm{Sa}(t)\leftrightarrow \pi[\varepsilon(-\omega+1)-\varepsilon(-\omega-1)]\tag{3.9}$$
-式 $(3.9)$ 和用狄利克雷积分获得的结果是一样的。
-</blockquote>
-
+式 $(3.9)$ 和用狄利克雷积分获得的结果是一样的。</p>
+</details>
 <p><strong>微分特性</strong>：分为时域上的微分和频域上的微分。<br />
 &emsp;&emsp;若 $f(t)\leftrightarrow F(\omega)$，则有 $\cfrac{\mathrm d^nf(t)}{\mathrm dt^n}\leftrightarrow (\mathrm j\omega)^nF(\omega)$ 和 $(-\mathrm jt)^nf(t)\leftrightarrow \cfrac{\mathrm d^nF(\omega)}{\mathrm dt^n}$。<br />
 <strong>积分特性</strong>：分为时域上的积分和频域上的积分。<br />
@@ -1432,8 +1434,9 @@ $$\mathrm{Sa}(t)\leftrightarrow \pi[\varepsilon(-\omega+1)-\varepsilon(-\omega-1
 &emsp;&emsp;<strong>特性一</strong>：两个信号的卷积的傅里叶变换是它们分别傅里叶变换的乘积：$$f _ 1(t) * f _ 2(t)\leftrightarrow \mathscr F\lbrace f _ 1(t)\rbrace\mathscr F\lbrace f _ 2(t)\rbrace\tag{3.10}$$</p>
 <p>&emsp;&emsp;<strong>特性二</strong>：两个信号的乘积的傅里叶变换是它们分别傅里叶变换的卷积的 $\cfrac{1}{2\pi}$：$$f _ 1(t)f _ 2(t)\leftrightarrow \cfrac{1}{2\pi}\mathscr F\lbrace f _ 1(t)\rbrace * \mathscr F\lbrace f _ 2(t)\rbrace\tag{3.11}$$</p>
 <p>这一结论可以由特性一和对称特性导出。</p>
-<blockquote>
-&emsp;&emsp;下面给出由特性一和对称特性导出特性二的过程。<br>&emsp;&emsp;不妨记 $\mathscr F\lbrace g _ 1(t)\rbrace=G _ 1(\omega)$，$\mathscr F\lbrace g _ 2(t)\rbrace=G _ 2(\omega)$。由特性一，有 $$g _ 1(t) * g _ 2(t)\leftrightarrow G _ 1(\omega)G _ 2(\omega)\tag{3.12}$$
+<details class="note">
+<summary>由特性一和对称特性导出特性二</summary>
+<p>&emsp;&emsp;&emsp;&emsp;不妨记 $\mathscr F\lbrace g _ 1(t)\rbrace=G _ 1(\omega)$，$\mathscr F\lbrace g _ 2(t)\rbrace=G _ 2(\omega)$。由特性一，有 $$g _ 1(t) * g _ 2(t)\leftrightarrow G _ 1(\omega)G _ 2(\omega)\tag{3.12}$$
 因此得到三个傅里叶变换关系：
 $$\begin{cases}g _ 1(t)\leftrightarrow G _ 1(\omega)\\
 g _ 2(t)\leftrightarrow G _ 2(\omega)\\
@@ -1443,9 +1446,8 @@ $$\begin{cases}G _ 1(t)\leftrightarrow 2\pi g _ 1(-\omega)\\
 G _ 2(t)\leftrightarrow 2\pi g _ 2(-\omega)\\
 G _ 1(t)G _ 2(t)\leftrightarrow 2\pi g _ 1(-\omega) * g _ 2(-\omega)\end{cases}\tag{3.14}$$
 由 $(3.14)$ 中前两式可得 $\mathscr F\lbrace G _ 1(t)\rbrace=2\pi g _ 1(-\omega)$，$\mathscr F\lbrace G _ 2(t)\rbrace=2\pi g _ 2(-\omega)$。代入第三式即得：
-$$G _ 1(t)G _ 2(t)\leftrightarrow \cfrac{1}{2\pi}\mathscr F\lbrace G _ 1(t)\rbrace * \mathscr F\lbrace G _ 2(t)\rbrace\tag{3.15}$$
-</blockquote>
-
+$$G _ 1(t)G _ 2(t)\leftrightarrow \cfrac{1}{2\pi}\mathscr F\lbrace G _ 1(t)\rbrace * \mathscr F\lbrace G _ 2(t)\rbrace\tag{3.15}$$</p>
+</details>
 <h2 id="varepsilont">阶跃函数 $\varepsilon(t)$ 的傅里叶变换<a class="headerlink" href="#varepsilont" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;有一些不绝对可积的函数，在广义函数视角下也能有傅里叶变换，比如 $1\leftrightarrow \delta(\omega)$。<br />
 &emsp;&emsp;这里特别提一下阶跃函数的傅里叶变换：

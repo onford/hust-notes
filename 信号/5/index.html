@@ -1371,10 +1371,10 @@
 $$F(s)=\int _ {-\infty}^{+\infty}f(t)\mathrm e^{-st}\mathrm dt\tag{5.1}$$</p>
 <p>反变换为：
 $$f(t)=\cfrac{1}{2\pi\mathrm j}\int _ {\sigma-\mathrm j\infty}^{\sigma+\mathrm j\infty}F(s)\mathrm e^{st}\mathrm ds\tag{5.2}$$</p>
-<blockquote>
-&emsp;&emsp;实际上，并不是对于所有信号 $f(t)$，总存在 $\sigma$ 使其收敛，例如一些比指数增长还快的信号 $f(t)=\mathrm e^{t^2}$。但是这种信号在工程运用中是不会碰到的，可以认为所有实际出现的信号的阶都不会高于指数。
-</blockquote>
-
+<div class="admonition note">
+<p class="admonition-title">收敛因子不一定能起到收敛效果</p>
+<p>&emsp;&emsp;实际上，并不是对于所有信号 $f(t)$，总存在 $\sigma$ 使其收敛，例如一些比指数增长还快的信号 $f(t)=\mathrm e^{t^2}$。但是这种信号在工程运用中是不会碰到的，可以认为所有实际出现的信号的阶都不会高于指数。</p>
+</div>
 <p>&emsp;&emsp;实际上，我们一般只用到<strong>单边</strong>拉普拉斯变换：
 $$\begin{cases}F(s)=\displaystyle\int _ 0^{+\infty}f(t)\mathrm e^{-st}\mathrm dt\\
 f(t)=\displaystyle\left[\cfrac{1}{2\pi\mathrm j}\int _ {\sigma-\mathrm j\infty}^{\sigma+\mathrm j\infty}F(s)\mathrm e^{st}\mathrm ds\right]\varepsilon(t)\end{cases}\tag{5.3}$$</p>
@@ -1451,7 +1451,8 @@ f(t)=\displaystyle\left[\cfrac{1}{2\pi\mathrm j}\int _ {\sigma-\mathrm j\infty}^
 $$f(t)=\mathscr L^{-1}\left\lbrace\cfrac{1+s}{s^2}\right\rbrace=\mathscr L^{-1}\left\lbrace\cfrac{1}{s^2}\right\rbrace+\mathscr L^{-1}\left\lbrace\cfrac{1}{s}\right\rbrace=(1+t)\varepsilon(t)\tag{5.4}$$ </p>
 <h3 id="_4">双边拉普拉斯变换的求解<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;很多时候是会遇到<strong>双边</strong>拉普拉斯变换的，包括后面的 $z$ 变换也存在双边的情况。这个时候<strong>收敛域显得至关重要</strong>。</p>
-<blockquote>
+<div class="admonition note">
+<p class="admonition-title">关于收敛域的重要性</p>
 <p>&emsp;&emsp;考虑下面两个双边拉普拉斯变换：
 $$\mathscr L _ {\mathrm d}\lbrace{\mathrm e^{\alpha t}}\varepsilon(t)\rbrace=\cfrac{1}{s-\alpha}\tag{5.5}$$
 $$\mathscr L _ {\mathrm d}\lbrace{-\mathrm e^{\alpha t}}\varepsilon(-t)\rbrace=\cfrac{1}{s-\alpha}\tag{5.6}$$</p>
@@ -1460,12 +1461,13 @@ $$\mathscr L _ {\mathrm d}\lbrace{-\mathrm e^{\alpha t}}\varepsilon(-t)\rbrace=\
 <li>如果给出收敛域 $\sigma&gt;\alpha$，那么就是右边信号，是式 $(5.5)$ 中的原函数。</li>
 <li>如果给出收敛域 $\sigma&lt;\alpha$，那么就是左边信号，是式 $(5.6)$ 中的原函数。</li>
 </ul>
-</blockquote>
-<p>&emsp;&emsp;给出收敛域，能够区分 $F(s)$ 中哪些对应右边信号，哪些对应左边信号。如给出收敛域为 $4&lt;\sigma&lt;6$ 的 $s$ 域函数：
+</div>
+<p>&emsp;&emsp;给出收敛域，能够区分 $F(s)$ 中哪些对应右边信号，哪些对应左边信号。<br />
+&emsp;&emsp;如给出收敛域为 $4&lt;\sigma&lt;6$ 的 $s$ 域函数：
 $$F _ {\mathrm d}(s)=\cfrac{1}{s-4}-\cfrac{1}{s-6}\tag{5.7}$$</p>
 <p>&emsp;&emsp;这个收敛域的含义是，右边信号在 $\sigma &gt;4$ 时收敛，左边信号在 $\sigma&lt;6$ 时收敛。</p>
 <ul>
-<li>$\cfrac{1}{s-4}$ 不收敛时，$s=4$，在右边信号的<strong>非收敛域</strong>，所以 $\cfrac{1}{s-4}$ 对应右边信号 $\mathrm e^{4t}$。</li>
+<li>$\cfrac{1}{s-4}$ 不收敛时，$s=4$，在右边信号的<strong>非收敛域</strong>，所以 $\cfrac{1}{s-4}$ 对应右边信号 $\mathrm e^{4t}\varepsilon(t)$。</li>
 <li>$\cfrac{1}{s-6}$ 不收敛时，$s=6$，在左边信号的<strong>非收敛域</strong>，所以 $\cfrac{1}{s-6}$ 对应左边信号 $-\mathrm e^{6t}\varepsilon(t)$。</li>
 </ul>
 <p>&emsp;&emsp;因此 $f(t)=\mathrm e^{4t}\varepsilon(t)+\mathrm e^{6t}\varepsilon(t)$。</p>
