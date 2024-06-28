@@ -1439,10 +1439,10 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">与非门构成的</label><label for="__tabbed_1_2">或非门构成的</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img src="./rs1.png"width="100%"></img></p>
+<p><img alt="" src="../../img/rs1.png" /></p>
 </div>
 <div class="tabbed-block">
-<p><img src="./rs2.png"width="100%"></img></p>
+<p><img alt="" src="../../img/rs2.png" /></p>
 </div>
 </div>
 </div>
@@ -1459,7 +1459,7 @@
 &emsp;&emsp;下面的 $4$ 种触发器的“同步”功能均是通过时钟信号控制的，因此又叫钟控触发器，并且这些触发器的工作窗口都是<st><strong>时钟高电平</strong></st>。</p>
 <div class="admonition info inline end">
 <p class="admonition-title">钟控 RS 触发器逻辑符号图</p>
-<p><img src="./rsc1.png"width="100%"></img></p>
+<p><img alt="" src="../../img/rsc1.png" /></p>
 </div>
 <h3 id="rs_1">钟控 RS 触发器<a class="headerlink" href="#rs_1" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;这是它的逻辑符号图。构造上，可以有这个：<div align="center">与非门基本 RS 触发器  $ + $  $2$ 个与非门  $ = $  钟控RS触发器</div></p>
@@ -1467,7 +1467,7 @@
 &emsp;&emsp;有时候在触发器两端加上 $ R_D $ 和 $ S_D $ ，可以强制改变触发器的状态。</p>
 <div class="admonition info inline end">
 <p class="admonition-title">钟控 D 触发器逻辑符号图</p>
-<p><img src="./cd.png"width="100%"></img></p>
+<p><img alt="" src="../../img/cd.png" /></p>
 </div>
 <h3 id="d">钟控 D 触发器<a class="headerlink" href="#d" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />
@@ -1477,7 +1477,7 @@
 <h3 id="jk">钟控 JK 触发器<a class="headerlink" href="#jk" title="Permanent link">&para;</a></h3>
 <div class="admonition info inline end">
 <p class="admonition-title">钟控 JK 触发器逻辑符号图</p>
-<p><img src="./jkc.png"width="100%"></img></p>
+<p><img alt="" src="../../img/jkc.png" /></p>
 </div>
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />
 &emsp;&emsp;相比于前面的 $2$ 个同步触发器，钟控JK触发器有一点很特别。<st><strong>输出端到控制门有反馈线</strong>，</st>这就导致它的功能中出现了前所未有的“改变”（前面的触发器，功能仅限于“置0”“置1”“不变”）。<br />
@@ -1487,7 +1487,7 @@
 <h3 id="t">钟控 T 触发器<a class="headerlink" href="#t" title="Permanent link">&para;</a></h3>
 <div class="admonition info inline end">
 <p class="admonition-title">钟控 T 触发器逻辑符号图</p>
-<p><img src="./ct.png"width="100%"></img></p>
+<p><img alt="" src="../../img/ct.png" /></p>
 </div>
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />
 &emsp;&emsp;在钟控 JK 触发器的基础上，令 $ J=K=T $ 即可得到钟控T触发器。它相当于只有“00不变”和“11改”的低配钟控JK触发器，显然它也存在<st><strong>第二类空翻</strong></st>现象。  <br />
@@ -1497,7 +1497,7 @@
 <h3 id="rs_2">主从 RS 触发器<a class="headerlink" href="#rs_2" title="Permanent link">&para;</a></h3>
 <div class="admonition info inline end">
 <p class="admonition-title">主从 RS 触发器逻辑符号图</p>
-<p><img src="./rsc2.png"width="100%"></img></p>
+<p><img alt="" src="../../img/rsc2.png" /></p>
 </div>
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />
 &emsp;&emsp;它是由两个钟控 RS 触发器构成的，一个作主触发器，一个作从触发器。在 <em>CP</em> = 1 时，主触发器的输出其实仍然会存在<st><strong>第一类空翻</strong></st>现象，但是此时从触发器被锁死了。整个触发器的输出（从触发器的输出）仅取决于时钟<em>CP</em>下降沿的输入。<br />
@@ -1505,7 +1505,7 @@
 <h3 id="jk_1">主从JK触发器<a class="headerlink" href="#jk_1" title="Permanent link">&para;</a></h3>
 <div class="admonition info inline end">
 <p class="admonition-title">主从 JK 触发器逻辑符号图</p>
-<p><img src="./jkc2.png"width="100%"></img></p>
+<p><img alt="" src="../../img/jkc2.png" /></p>
 </div>
 <p>&emsp;&emsp;这是它的逻辑符号图。<br />
 &emsp;&emsp;主从JK触发器，也是存在这样的特别结构：<st>从触发器输出端到主触发器控制门有反馈线</st>。与由于 $ J,K $ 直接相连的逻辑门分别受到 $ Q,\overline{Q} $ 的控制，因此只要主从JK触发器正常工作，这两个逻辑门在同一时刻必是一个打开、另一个封锁的状态。也正是因为有着这样的特点，主从JK触发器才会存在“一次翻转”的现象。<br><br></p>
@@ -1519,14 +1519,14 @@
 <h3 id="-d">维持-阻塞 D 触发器<a class="headerlink" href="#-d" title="Permanent link">&para;</a></h3>
 <div class="admonition info inline end">
 <p class="admonition-title">维持-阻塞 D 触发器逻辑符号图</p>
-<p><img src="./cd2.png"width="100%"></img></p>
+<p><img alt="" src="../../img/cd2.png" /></p>
 </div>
 <p>&emsp;&emsp;这是它的逻辑符号图。当 <em>CP</em> = 0 时，触发器（控制门）被锁住；当 <em>CP</em> = 1 时，触发器打开，可以接收外接信号，同时在接收到信号时锁住与<em>D</em>相连的与非门或者触发器的控制门（当输入 <em>D</em> = 0 时锁与 <em>D</em> 相连的与非门，当输入 <em>D</em> = 1 时锁住控制门），不再受输入 <em>D</em> 的影响。<br />
 &emsp;&emsp;这个触发器的工作窗口是<st><strong>时钟上升沿</strong></st>。</p>
 <h3 id="jk_2">边沿 JK 触发器<a class="headerlink" href="#jk_2" title="Permanent link">&para;</a></h3>
 <div class="admonition info inline end">
 <p class="admonition-title">边沿 JK 触发器逻辑符号图</p>
-<p><img src="./jkc3.png"width="100%"></img></p>
+<p><img alt="" src="../../img/jkc3.png" /></p>
 </div>
 <p>&emsp;&emsp;这是它的逻辑符号图。这个触发器比较独特，它是这一章介绍的唯一一个利用门电路传输延迟时间实现的触发器。这个触发器的工作窗口是<st><strong>时钟下降沿</strong></st>。</p>
 
