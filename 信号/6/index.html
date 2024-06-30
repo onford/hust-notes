@@ -1356,23 +1356,56 @@
 <h3 id="_2">极零图<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;将极点（用×）和零点（用○）在 $s$ 平面中标出来，就得到系统的极零图。</p>
 <h3 id="_3">系统函数的不可约分性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;有时候系统函数 $H(s)$ 中分子 $N(s)$ 与分母 $D(s)$ 含有同一个因式 $(s-\lambda _ k)$，这个时候不应该约分。<br />
-&emsp;&emsp;比如要求一个系统的零状态响应，这个系统有下面的微分方程：
-$$r^{\prime\prime}(t)-r(t)=e^\prime(t)-e(t)\tag{6.1}$$</p>
-<p>令激励 $e(t)=\mathrm e^{-t}\varepsilon(t)$，求解微分方程 $(6.1)$ 得
-$$r(t)=C _ 1\mathrm e^t + C _ 2\mathrm e^{-t}+t\mathrm e^{-t}(t&gt;0)\tag{6.2}$$</p>
-<p>代入系统的初值 $r(0^-)=r^\prime(0^-)=0$ 得
-$$r(t)=\left(-\cfrac{1}{2}\mathrm e^t+\cfrac{1}{2}\mathrm e^{-t}+t\mathrm e^{-t}\right)\varepsilon(t)=\left(t\mathrm e^{-t}-\sinh t\right)\varepsilon(t)\tag{6.3}$$</p>
+<p>&emsp;&emsp;先来看看关于 $H(s)$ 约分的两种观点。</p>
+<div class="admonition quote">
+<p class="admonition-title">管致中教材</p>
+<p>&emsp;&emsp;在某种特定的情况下，系统函数可能有某一对相同的零极点，即 $H(s)$ 的分母多项式 $D(s)$ 和分子多项式 $N(s)$ 有一相同的因式 $(s-\lambda _ k)$。假如此共同因子相消，则系统将丢失一自然频率，<strong>零输入响应</strong>中则少掉一响应的指数项。因此以消去分子、分母共同因子后的系统函数的分母等于零作为系统的特征方程是错误的。由于该方程的根只反映了系统的部分极点而不是系统极点的全貌，因此该方程也就不再是系统的特征方程了。 </p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">郑君里教材</p>
+<p>&emsp;&emsp;$H(p)$ 是一个算子，$p$ 不是变量。而 $H(s)$ 是变量 $s$ 的函数。在 $H(s)$ 中，分子和分母的公共因子<strong>可以消去</strong>，而在 $H(p)$ 表示式中则不准相消。只有当 $H(p)$ 的分母与分子没有公因子的条件下，$H(p)$ 与 $H(s)$ 的形式才完全对应相同。$H(p)$ 既可用来说明零状态特性，又可说明零输入特性。而 $H(s)$ <strong>只能用来说明零状态特性</strong>。</p>
+</div>
+<p>&emsp;&emsp;上面两种立场其实是不矛盾的，管从零输入响应的角度指出 $H(s)$ 不可约分，郑从零状态响应的角度指出 $H(s)$ 可以约分。对此的总结就是，在<strong>零状态响应</strong>中，$H(s)$ 始终是可约分的，$H(s)$ 约分只会造成<strong>零输入响应</strong>的错误求解。</p>
+<div class="admonition note">
+<p class="admonition-title">关于实际系统中的系统函数</p>
+<p>&emsp;&emsp;一般说来，在实际系统求解 $H(s)$ 的过程中，如果最后得到的 $H(s)$ 可以约分得到 $\hat H(s)$，多半是因为你的方法不够简洁。换句话说，$\hat H(s)$ 是能够通过更简洁的方法正确导出的，因此这时系统函数表现出“可以约分”的情况。</p>
+</div>
+<details class="example">
+<summary>求零状态响应时“可约分”的例子</summary>
+<p>&emsp;&emsp;比如要求一个系统的零状态响应，这个系统有下面的微分方程：
+$$r^{\prime\prime}(t)-r(t)=e^\prime(t)-e(t)\tag{6.1}$$
+其中激励 $e(t)=\mathrm e^{-t}\varepsilon(t)$。求解微分方程 $(6.1)$ 得
+$$r(t)=C _ 1\mathrm e^t + C _ 2\mathrm e^{-t}+t\mathrm e^{-t}(t&gt;0)\tag{6.2}$$
+&emsp;&emsp;系统的初值不能代入 $r(0^-)=r^\prime(0^-)=0$，只能代入 $0^+$ 时刻的初值。根据<a href="../2/#ht">冲击平衡法</a>得 $r(0^+)=0$，$r^\prime(0^+)=1$，代入式子 $(6.2)$ 有
+$$r(t)=t\mathrm e^{-t}\varepsilon(t)\tag{6.3}$$</p>
 <blockquote>
-<p>方程的解 $(6.3)$ 中出现了无界的 $\sinh t$，实际系统中不会有 $(6.1)$ 这样的微分方程。</p>
+<p>冲击平衡法还得到了 $r^{\prime\prime}(0^+)=-2$，这符合式 $(6.3)$，逻辑上自洽。</p>
 </blockquote>
-<p>&emsp;&emsp;但是根据式 $(6.1)$，该系统的系统函数应是
+<p>&emsp;&emsp;根据式 $(6.1)$，该系统的系统函数应是
 $$H(s)=\cfrac{R(s)}{E(s)}=\cfrac{s-1}{s^2-1}\tag{6.4}$$</p>
-<p>一旦进行约分处理，就有
+<p>进行约分处理，就有
 $$R(s)=H(s)E(s)=\cfrac{1}{(s+1)^2}\tag{6.5}$$</p>
 <p>从而
 $$r(t)=\mathscr L^{-1}\left\lbrace\cfrac{1}{(s+1)^2}\right\rbrace=t\mathrm e^{-t}\varepsilon(t)\tag{6.6}$$</p>
-<p>&emsp;&emsp;式 $(6.6)$ 得到的结果与 $(6.3)$ 不同，究其原因就是对 $H(s)$ 随意约分。</p>
+<p>&emsp;&emsp;式 $(6.6)$ 得到的结果与 $(6.3)$ 是一样的，说明此时<strong>系统函数是可约分的</strong>。</p>
+<blockquote>
+<p>我还试了一下激励为 $e(t)=\mathrm e^t\varepsilon(t)$ 的情况，通过约分的系统函数也能得到正确答案。</p>
+</blockquote>
+<hr />
+<p>&emsp;&emsp;事实上，系统函数的约分将 $(6.1)$ 变成了下面的微分方程
+$$r^\prime(t)+r(t)=e(t)\tag{6.7}$$</p>
+<p>&emsp;&emsp;容易证明 $(6.1)$ 和 $(6.7)$ 是等价的，这也就是系统函数 $(6.4)$ 能够约分的原因。<br />
+&emsp;&emsp;$(6.7)$ 到 $(6.1)$ 显然成立，下面给出 $(6.1)$ 到 $(6.7)$ 的推导。<br />
+&emsp;&emsp;令 $x(t)=r(t)+r^\prime(t)$，则 $(6.1)$ 化为
+$$x^\prime(t)-x(t)=e^\prime(t)-e(t)\tag{6.8}$$</p>
+<p>&emsp;&emsp;即要证式 $(6.8)$ 是 $x(t)=e(t)$ 的充分条件。由 $(6.8)$ 能够得到通解 $x _ h(t)=C\mathrm e^t$，观察到特解 $x _ p(t)=e(t)$，从而
+$$x(t)=C\mathrm e^{t}+e(t)\tag{6.9}$$</p>
+<p>&emsp;&emsp;显然激励是有始信号，即 $e(0^-)=0$；而零状态响应 $r^{(n)}(0^-)=0$，从而 $x(0^-)=0$。代入 $(6.9)$ 得 $C=0$，从而得证。</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">求零输入响应时“不可约分”</p>
+<p>&emsp;&emsp;这是显然的。一方面，由于系统可能存在着初始状态，式 $(6.9)$ 中的 $C=0$ 一般不会成立。另一方面，约分导致系统特征根减少，$r _ {zi}(t)$ 所含的待定系数数量减少，代入初始值后可能会出现无解或者多解的情况。</p>
+</div>
 <h2 id="_4">系统稳定性<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;系统的稳定性指的是一个系统在激励函数有界时，响应函数也有界，即 BIBO（boundary-input，boundary-output）特性。</p>
 <h3 id="_5">系统稳定的零输入响应要求<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
