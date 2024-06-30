@@ -1471,7 +1471,7 @@ $$dp[i][j][k]=\min(dp[i][j][k-1],dp[i][k][k-1]+dp[k][j][k-1])\tag{3.1}$$
 <p>&emsp;&emsp;<strong>Johnson算法</strong>的设计还是比较巧妙的，它的核心思想就是在确保最短路径不变的情况下，把图 $G$ 的边权 $w$ 转化成非负的权重 $\hat w$，让 Dijkstra 能跑起来。</p>
 <div class="admonition note">
 <p class="admonition-title">Johnson 算法的具体运行方式</p>
-<p>&emsp;&emsp;Johnson 算法引入一个外部节点 $s$ 加入 $V$ 中，同时向 $E$ 中添加 $n$ 条由 $s$ 发出、到 $V$ 中的结点的边，生成图 $G&rsquo;$。在图 $G&rsquo;$ 中以 $s$ 为源点运行 Bellman-Ford 算法，给每个节点标记一个 $h$ 值 $h(v)=\delta(s,v)$。<br>
+<p>&emsp;&emsp;Johnson 算法引入一个外部节点 $s$ 加入 $V$ 中，同时向 $E$ 中添加 $n$ 条由 $s$ 发出、到 $V$ 中的结点的边，生成图 $G^\prime$。在图 $G^\prime$ 中以 $s$ 为源点运行 Bellman-Ford 算法，给每个节点标记一个 $h$ 值 $h(v)=\delta(s,v)$。<br>
 &emsp;&emsp;如果 Bellman-Ford 算法返回<code>true</code>，说明图 $G$ 不含负权重回路，以 $\hat w(u,v)=w(u,v)+h(u)-h(v)$ 运行 Dijkstra 算法，能够得到各结点对之间的最短距离 $\hat\delta(u,v)$。修正后的 $\delta(u,v)=\hat\delta(u,v)-h(u)+h(v)$ 就是我们需要求的结果。</p>
 </div>
 <p>&emsp;&emsp;Johnson 算法适用于稀疏图，究其原因还是 Bellman-Ford 在非稀疏图上跑起来很需要时间。</p>

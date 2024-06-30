@@ -1397,7 +1397,7 @@ $$\cfrac{\mathrm d}{\mathrm dt}[u(t) * v(t)]=u(t) * \cfrac{\mathrm dv(t)}{\mathr
 <p>&emsp;&emsp;上面的式子当然可以推广到多个函数卷积的导数/积分，以及卷积结果的多阶导数/积分。</p>
 <div class="admonition note">
 <p class="admonition-title">关于卷积微分、积分性质 $(2.5)(2.6)$ 的使用条件</p>
-<p>&emsp;&emsp;需要注意的是，$(2.5)$ 的使用没有限制条件，但是 $(2.6)$ 是<strong>不能随便使用</strong>的。这是因为在引入了奇异函数 $\varepsilon(t)$，$\delta(t)$，$\delta&rsquo;(t)$ 等后，几乎所有的<st><strong>真实信号函数</strong></st>都是无穷阶可导的，但是不是所有函数都可以执行变上限积分。<br>
+<p>&emsp;&emsp;需要注意的是，$(2.5)$ 的使用没有限制条件，但是 $(2.6)$ 是<strong>不能随便使用</strong>的。这是因为在引入了奇异函数 $\varepsilon(t)$，$\delta(t)$，$\delta^\prime(t)$ 等后，几乎所有的<st><strong>真实信号函数</strong></st>都是无穷阶可导的，但是不是所有函数都可以执行变上限积分。<br>
 &emsp;&emsp;在应用式 $(2.6)$ 时，至少需要满足以下 $2$ 个条件：</p>
 <ul>
 <li>被积函数 $u(t) * v(t)$ 是可积的。<blockquote>
@@ -1415,12 +1415,12 @@ $$u(t) * v(t)=\cfrac{\mathrm du(t)}{\mathrm dt} * \int_ {-\infty}^tv(x)\mathrm d
 <p>&emsp;&emsp;上式还能互换 $u(t),v(t)$ 的地位，这里略去不写。</p>
 <details class="note">
 <summary>式 $(2.7)$ 使用的充要条件</summary>
-<p>&emsp;&emsp;式 $(2.7)$ 的使用<strong>充要条件</strong>是 $\displaystyle\int_ {-\infty}^tv(x)\mathrm dx$ 存在，且<st> $\color{red}{\lim\limits_ {t\rightarrow -\infty}u(t) * v(t)=0}$</st>。红色的式子也可以等价地表述为 $u(t) * v(t)=\displaystyle\int_ {-\infty}^t[u(x) * v(x)]&rsquo;\mathrm dx$。<br />
+<p>&emsp;&emsp;式 $(2.7)$ 的使用<strong>充要条件</strong>是 $\displaystyle\int_ {-\infty}^tv(x)\mathrm dx$ 存在，且<st> $\color{red}{\lim\limits_ {t\rightarrow -\infty}u(t) * v(t)=0}$</st>。红色的式子也可以等价地表述为 $u(t) * v(t)=\displaystyle\int_ {-\infty}^t[u(x) * v(x)]^\prime\mathrm dx$。<br />
 &emsp;&emsp;这是因为式 $(2.7)$ 可以看作是对式子 $u(t) * v(t)=u(t) * v(t)$ 两边分别运用 $(2.5)(2.6)$ 得到的，只不过等号右边选择了不同的函数进行微分、积分操作。需要注意的是，左边的 $u(t) * v(t)$ 在进行微分、积分后要能够还原出 $u(t) * v(t)$。如果先进行微分，那么：
 $$\int_ {-\infty}^t\cfrac{\mathrm d[u(x) * v(x)]}{\mathrm dx}\mathrm dt=u(t) * v(t)-u(-\infty) * v(-\infty)\tag{2.8}$$</p>
 <p>&emsp;&emsp;显然只有满足 $\lim\limits_ {x\rightarrow -\infty}u(t) * v(t)=0$，左边才能复原。如果先进行积分，那么首先就要保证 $\displaystyle\int_ {-\infty}^t[u(x) * v(x)]\mathrm dx$ 存在，显然也需要满足 $\lim\limits_ {x\rightarrow -\infty}u(t) * v(t)=0$，否则反常积分不收敛。</p>
 <hr />
-<p>&emsp;&emsp;同时，有的地方说 $(2.7)$ 成立的条件是 $u(t)=\displaystyle\int_ {-\infty}^tu&rsquo;(x)\mathrm dx$，也就是 $\lim\limits_ {x\rightarrow -\infty}u(x)=0$。这个条件仅仅是<strong>充分条件</strong>，其必要性不成立。<br>
+<p>&emsp;&emsp;同时，有的地方说 $(2.7)$ 成立的条件是 $u(t)=\displaystyle\int_ {-\infty}^tu^\prime(x)\mathrm dx$，也就是 $\lim\limits_ {x\rightarrow -\infty}u(x)=0$。这个条件仅仅是<strong>充分条件</strong>，其必要性不成立。<br>
 &emsp;&emsp;考虑 $u(t)=1+\varepsilon(t),v(t)=\left[\mathrm e^{-t}-\cfrac{1}{(t+1)^2}\right]\varepsilon(t)$，虽然不满足 $\lim\limits_ {x\rightarrow -\infty}u(x)=0$，但是依然可以使用 $(2.7)$ 式：
 $$\begin{aligned}u(t) * v(t)&amp;=\delta(t) * \int_ {-\infty}^t\left[\mathrm e^{-x}-\cfrac{1}{(x+1)^2}\right]\varepsilon(x)\mathrm dx\\ &amp;=\varepsilon(t)\int_ 0^t\left[\mathrm e^{-x}-\cfrac{1}{(x+1)^2}\right]\mathrm dx\\ &amp;=\left(\cfrac{1}{t+1}-\mathrm e^{-t}\right)\varepsilon(t)\end{aligned}\tag{2.9}$$</p>
 </details>
@@ -1440,29 +1440,29 @@ $$\begin{aligned}u(t) * v(t)&amp;=\delta(t) * \int_ {-\infty}^t\left[\mathrm e^{
 <li>系统在 $t\geq 0^+$ 时按照零输入响应的方式求解——列微分方程，根据初值 $r^{(n)}(0^+)$ 求取微分方程的<strong>通解</strong> $h(t)$。</li>
 </ul>
 <p>&emsp;&emsp;求微分方程的通解自然是容易的，关键在如何求系统的初值 $r^{(n)}(0^+)$ 。这个初值可以用<strong>冲击平衡法</strong>求取。<br />
-&emsp;&emsp;在引入奇异函数后，我们可以将常见信号大致分为以下 $2$ 类：<strong>连续函数</strong>，<strong>非连续的连续函数的导数</strong>（后文简称非连续函数）。其中非连续函数可以写成 $\varepsilon^{(n)}(t)(n\geq 0)$ 或其组合的形式，其中最大的 $n$ 值为其<strong>间断阶</strong>（这是为了方便理解编造的术语）。比如 $x(t)=\varepsilon(t)+\delta&rsquo;(t)$ 的间断阶为 $2$。</p>
+&emsp;&emsp;在引入奇异函数后，我们可以将常见信号大致分为以下 $2$ 类：<strong>连续函数</strong>，<strong>非连续的连续函数的导数</strong>（后文简称非连续函数）。其中非连续函数可以写成 $\varepsilon^{(n)}(t)(n\geq 0)$ 或其组合的形式，其中最大的 $n$ 值为其<strong>间断阶</strong>（这是为了方便理解编造的术语）。比如 $x(t)=\varepsilon(t)+\delta^\prime(t)$ 的间断阶为 $2$。</p>
 <div class="admonition note">
 <p class="admonition-title">连续函数多次求导变为非连续函数</p>
-<p>&emsp;&emsp;考虑一个连续函数 $x(t)$ 在某个点 $t _ 0$ 处很“尖锐”，也就是 $x(t)$ 在 $t _ 0$ 两侧的导数值不相等，那么 $x&rsquo;(t)$ 将会成为<strong>非连续函数</strong>并出现阶跃项。若再求导，将依次出现冲击项、冲击偶项，间断阶以 $1$ 为步长不断升高……<br>&emsp;&emsp;当然了，也有一些函数不属于上面 $2$ 类中的任何一类，比如 Dirichlet 函数那样的，但这种函数无法在实际信号中实现，故不考虑这些函数。</p>
+<p>&emsp;&emsp;考虑一个连续函数 $x(t)$ 在某个点 $t _ 0$ 处很“尖锐”，也就是 $x(t)$ 在 $t _ 0$ 两侧的导数值不相等，那么 $x^\prime(t)$ 将会成为<strong>非连续函数</strong>并出现阶跃项。若再求导，将依次出现冲击项、冲击偶项，间断阶以 $1$ 为步长不断升高……<br>&emsp;&emsp;当然了，也有一些函数不属于上面 $2$ 类中的任何一类，比如 Dirichlet 函数那样的，但这种函数无法在实际信号中实现，故不考虑这些函数。</p>
 </div>
 <p>&emsp;&emsp;<strong>冲击平衡法的思想就是令微分方程中 $r(t)$ 的最高阶导数项是一个非连续函数，且其间断阶等于方程中非 $r(t)$ 的最高的间断阶，利用待定系数法求解。</strong>该思想还能用来求单位阶跃响应，单位冲击偶响应等。</p>
 <details class="example">
 <summary>一个例子理解冲击平衡法的思想</summary>
 <p>&emsp;&emsp;用一个例子来说明，有下面的微分方程：
-$$i&rsquo;&lsquo;(t)+6i&rsquo;(t)+8i(t)=\delta&rsquo;(t)\tag{2.10}$$</p>
-<p>&emsp;&emsp;其中 $i(t)$ 的最高导数项是 $i&rsquo;&lsquo;(t)$，方程中最高间断阶是 $\delta&rsquo;(t)$ 的 $2$，那么就令 $i&rsquo;&lsquo;(t)$ 的间断阶是 $2$，从而 $i&rsquo;&lsquo;(t)$ 有下面的形式：
-$$i&rsquo;&lsquo;(t)=a\delta&rsquo;(t)+b\delta(t)+c\varepsilon(t)+\xi(t)\tag{2.11}$$</p>
+$$i^{\prime\prime}(t)+6i^\prime(t)+8i(t)=\delta^\prime(t)\tag{2.10}$$</p>
+<p>&emsp;&emsp;其中 $i(t)$ 的最高导数项是 $i^{\prime\prime}(t)$，方程中最高间断阶是 $\delta^\prime(t)$ 的 $2$，那么就令 $i^{\prime\prime}(t)$ 的间断阶是 $2$，从而 $i^{\prime\prime}(t)$ 有下面的形式：
+$$i^{\prime\prime}(t)=a\delta^\prime(t)+b\delta(t)+c\varepsilon(t)+\xi(t)\tag{2.11}$$</p>
 <p>&emsp;&emsp;其中 $a,b,c$ 都是待定系数，$\xi(t)$ 是连续函数，且 $t&lt;0$ 时 $\xi(t)=0$。将 $(2.11)$ 代入 $(2.10)$ 中，<strong>间断阶相等的非连续项一一对应</strong>，有：
-$$\begin{cases}a\delta&rsquo;(t)=\delta&rsquo;(t)\\
+$$\begin{cases}a\delta^\prime(t)=\delta^\prime(t)\\
 (b+6a)\delta(t)=0\\
 (c+6b+8a)\varepsilon(t)=0\end{cases}\tag{2.12}$$</p>
-<p>&emsp;&emsp;从而解得 $a=1,b=-6,c=28$。<strong>最后使得函数在 $t=0$ 左右跳变的只有阶跃函数 $\varepsilon(t)$</strong>，这样就有 $i&rsquo;&lsquo;(0^+)=i&rsquo;&lsquo;(0^-)+c=1$。根据 $(2.11)$ 还可以知道 $i&rsquo;(t)$ 中含有阶跃项 $b\varepsilon(t)$，$i(t)$ 中含有阶跃项 $a\varepsilon(t)$（你可以从下面看到阶跃项不止我说的这些，其中我没提到的阶跃项实际上是连续函数），从而得到 $i&rsquo;(0^+)=b=-6,i(0^+)=a=1$。
+<p>&emsp;&emsp;从而解得 $a=1,b=-6,c=28$。<strong>最后使得函数在 $t=0$ 左右跳变的只有阶跃函数 $\varepsilon(t)$</strong>，这样就有 $i^{\prime\prime}(0^+)=i^{\prime\prime}(0^-)+c=1$。根据 $(2.11)$ 还可以知道 $i^\prime(t)$ 中含有阶跃项 $b\varepsilon(t)$，$i(t)$ 中含有阶跃项 $a\varepsilon(t)$（你可以从下面看到阶跃项不止我说的这些，其中我没提到的阶跃项实际上是连续函数），从而得到 $i^\prime(0^+)=b=-6,i(0^+)=a=1$。
 <blockquote>
-&emsp;&emsp;在代入 $i&rsquo;&lsquo;(t)$ 表达式得到 $(2.12)$ 式的过程中，我们省略了将连续项对应的步骤。其实连续项也是可以自洽的。为方便描述令 $\eta(t)=\displaystyle\int _ {-\infty}^t\mathrm du\int _ {-\infty}^u\xi(v)\mathrm dv$，从而 $\xi(t)=\eta&rsquo;&lsquo;(t)$。考虑到 $i&rsquo;&lsquo;(0^-)=i&rsquo;(0^-)=i(0^-)=0$，有：
-$$\begin{cases}i&rsquo;(t)=a\delta(t)+(b+ct)\varepsilon(t)+\eta&rsquo;(t)\\
+&emsp;&emsp;在代入 $i^{\prime\prime}(t)$ 表达式得到 $(2.12)$ 式的过程中，我们省略了将连续项对应的步骤。其实连续项也是可以自洽的。为方便描述令 $\eta(t)=\displaystyle\int _ {-\infty}^t\mathrm du\int _ {-\infty}^u\xi(v)\mathrm dv$，从而 $\xi(t)=\eta^{\prime\prime}(t)$。考虑到 $i^{\prime\prime}(0^-)=i^\prime(0^-)=i(0^-)=0$，有：
+$$\begin{cases}i^\prime(t)=a\delta(t)+(b+ct)\varepsilon(t)+\eta^\prime(t)\\
 i(t)=\left(a+bt+\cfrac{t^2}{2}\right)\varepsilon(t)+\eta(t)\end{cases}\tag{2.13}$$
 &emsp;&emsp;把连续项拿出来是
-$$\eta&rsquo;&lsquo;(t)+6\eta&rsquo;(t)+8\eta(t)=-(6ct+8bt+4t^2)\varepsilon(t)\tag{2.14}$$
+$$\eta^{\prime\prime}(t)+6\eta^\prime(t)+8\eta(t)=-(6ct+8bt+4t^2)\varepsilon(t)\tag{2.14}$$
 &emsp;&emsp;所以 $\eta(t)$ 相当于是激励为 $-(6ct+8bt+4t^2)\varepsilon(t)$ 时的零状态响应，可以用微积分的常规方法求解。
 </blockquote></p>
 </details>
@@ -1478,7 +1478,7 @@ $$\eta&rsquo;&lsquo;(t)+6\eta&rsquo;(t)+8\eta(t)=-(6ct+8bt+4t^2)\varepsilon(t)\t
 <p>&emsp;&emsp;在时域上，这两个响应也是可以单独地通过系统的微分方程求得。特点是自由响应对应系统的特征频率，受迫响应对应非特征频率。</p>
 <div class="admonition note">
 <p class="admonition-title">自由响应、受迫响应的频率特点</p>
-<p>&emsp;&emsp;自由响应、受迫响应的频率特点使得它们可以很好地从全响应中区分开来。例如给出一个系统的微分方程是 $u&rsquo;(t)+u=e(t)$，全响应是 $u(t)=\left(1+\cfrac{1}{2}\mathrm e^{-t}-\cfrac{1}{2}\mathrm e^{-3t}\right)\varepsilon(t)$。可以发现系统微分方程具有特征根 $\lambda=-1$，从而全响应中任何与 $\mathrm e^{-t}\varepsilon(t)$ 线性相关的都是自由响应，非线性相关的都是受迫响应。因此不难得到自由响应 $u _ h(t)=\cfrac{1}{2}\mathrm e^{-t}\varepsilon(t)$，受迫响应 $u _ p(t)=\left(1-\cfrac{1}{2}\mathrm e^{-3t}\right)\varepsilon(t)$。</p>
+<p>&emsp;&emsp;自由响应、受迫响应的频率特点使得它们可以很好地从全响应中区分开来。例如给出一个系统的微分方程是 $u^\prime(t)+u=e(t)$，全响应是 $u(t)=\left(1+\cfrac{1}{2}\mathrm e^{-t}-\cfrac{1}{2}\mathrm e^{-3t}\right)\varepsilon(t)$。可以发现系统微分方程具有特征根 $\lambda=-1$，从而全响应中任何与 $\mathrm e^{-t}\varepsilon(t)$ 线性相关的都是自由响应，非线性相关的都是受迫响应。因此不难得到自由响应 $u _ h(t)=\cfrac{1}{2}\mathrm e^{-t}\varepsilon(t)$，受迫响应 $u _ p(t)=\left(1-\cfrac{1}{2}\mathrm e^{-3t}\right)\varepsilon(t)$。</p>
 </div>
 </div>
 <div class="tabbed-block">
