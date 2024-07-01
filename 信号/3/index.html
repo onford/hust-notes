@@ -35,6 +35,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
+
 
     
     
@@ -1387,10 +1393,12 @@ $$\begin{cases}\displaystyle a _ n=\cfrac{2}{T}\int _ {t _ 1}^{t _ 1+T}f(t)\cos 
 $$f(t)=\cfrac{a _ 0}{2}+\sum _ {n=1}^\infty A_ n\cos(n\varOmega t+\varphi _ n)\tag{3.3}$$</p>
 <p>&emsp;&emsp;如果考虑到欧拉公式，使用复指数消去三角函数，就得到了 $f(t)$ 的<strong>指数傅里叶级数</strong>：
 $$f(t)=\cfrac{1}{2}\sum_ {n=-\infty}^{+\infty}A _ n\mathrm e^{\mathrm j(n\varOmega t+\varphi _ n)}=\cfrac{1}{2}\sum _ {n=-\infty}^{+\infty}\dot A _ n\mathrm e^{\mathrm jn\varOmega t}\tag{3.4}$$</p>
-<p>&emsp;&emsp;注意 $n$ 从 $(3.3)$ 中的 $\mathbb N _ +$ 拓展到了 $(3.4)$ 中的 $\mathbb Z$。这是指数傅里叶级数与三角傅里叶级数最大的不同之处。<br />
-&emsp;&emsp;$n&gt;0$ 时式 $(3.4)$ 的 $A _ n$ 和 $\varphi _ n$ 同 $(3.3)$。<br />
-&emsp;&emsp;特别地，对于 $n=0$，有 $A _ 0=a _ 0$，$\varphi _ 0=0$。<br />
-&emsp;&emsp;对于 $n&lt;0$，则有 $A _ n=A _ {-n}$，$\varphi _ n=-\varphi _ {-n}$。  </p>
+<p>&emsp;&emsp;注意 $n$ 从 $(3.3)$ 中的 $\mathbb N _ +$ 拓展到了 $(3.4)$ 中的 $\mathbb Z$。这是指数傅里叶级数与三角傅里叶级数最大的不同之处。</p>
+<ul>
+<li>$n&gt;0$ 时式 $(3.4)$ 的 $A _ n$ 和 $\varphi _ n$ 同 $(3.3)$。  </li>
+<li>特别地，对于 $n=0$，有 $A _ 0=a _ 0$，$\varphi _ 0=0$。  </li>
+<li>对于 $n&lt;0$，则有 $A _ n=A _ {-n}$，$\varphi _ n=-\varphi _ {-n}$。</li>
+</ul>
 <blockquote>
 <p>&emsp;&emsp;有的地方使用 $F _ n$ 和 $\dot F _ n$，它们分别有 $F _ n=A _ n/2$，$\dot F _ n=\dot A _ n/2$。</p>
 </blockquote>
@@ -1477,7 +1485,7 @@ $$\begin{aligned}\int _ {-\infty}^{+\infty}\left(\pi\delta(t)-\mathrm j\cfrac{1}
 &amp;=2\pi\varepsilon(-t)-\mathrm j\int _ {-\infty}^{+\infty}\cfrac{\cos(\omega t)}{t}\mathrm dt\end{aligned}\tag{3.17}$$</p>
 <p>&emsp;&emsp;式 $(3.16)$ 最后一个等号处用到了狄利克雷积分，参见式 $(3.8)$。<br />
 &emsp;&emsp;按照对称特性，$(3.17)$ 的结果应该等于 $2\pi\varepsilon(-t)$，这也就意味着式 $(3.17)$ 最后的一个积分项应为零。但是根据 $\cos x&gt;1-\cfrac{x^2}{2}$，有 $\cfrac{\cos(\omega t)}{t}&gt;\cfrac{1}{t}-\cfrac{\omega^2t}{2}(t&gt;0)$，从而积分 $\displaystyle\int _ {-\infty}^{+\infty}\cfrac{\cos(\omega t)}{t}\mathrm dt$ 发散而不是等于零。<br />
-&emsp;&emsp;这就对数学很不尊敬，还是不要继续深究了。</p>
+&emsp;&emsp;这门课看似基于数学，但很多时候也简化了很多细节，刻意避开无法用数学解释的地方而为工程实践服务。</p>
 
 
   
@@ -1595,7 +1603,7 @@ $$\begin{aligned}\int _ {-\infty}^{+\infty}\left(\pi\delta(t)-\mathrm j\cfrac{1}
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>

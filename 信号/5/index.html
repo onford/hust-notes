@@ -35,6 +35,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
+
 
     
     
@@ -1184,15 +1190,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     卷积特性
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1352,15 +1358,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     卷积特性
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1499,11 +1505,18 @@ $$\mathscr L\left\lbrace\cfrac{\mathrm d^nf(t)}{\mathrm dt}\right\rbrace=s^nF(s)
 <p>&emsp;&emsp;一般拉普拉斯变换处理的都是 $t=0$ 开始的有始信号 $f(t)$，因而 $t&lt;0^-$ 时 $f(t)=0$。对于这样的 $f(t)$，满足下面的积分性质：
 $$\mathscr L\left\lbrace\int _ {-\infty}^tf(\tau)\mathrm d\tau\right\rbrace=\cfrac{F(s)}{s}\tag{5.9}$$</p>
 <p>&emsp;&emsp;若 $f(t)$ 不是有始信号，应将式 $(5.9)$ 中的 $F(s)$ 改为 $F(s)+\displaystyle\int _ {-\infty}^{0^-}f(\tau)\mathrm d\tau$。</p>
-<h2 id="_8">卷积特性<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_8">卷积特性<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;拉普拉斯的卷积特性与傅里叶变换的稍有不同：
 $$f _ 1(t) * f _ 2(t)\leftrightarrow \mathscr L\lbrace f _ 1(t)\rbrace\mathscr L\lbrace f _ 2(t)\rbrace\tag{5.10}$$
 $$f _ 1(t)f _ 2(t)\leftrightarrow \cfrac{1}{2\pi\mathrm j}\mathscr L\lbrace f _ 1(t)\rbrace * \mathscr L\lbrace f _ 2(t)\rbrace\tag{5.11}$$</p>
-<p>&emsp;&emsp;注意对比 $(5.11)$ 与 $(3.11)$ 的系数。</p>
+<p class="annotate">&emsp;&emsp;注意对比 $(5.11)$ 与 $(3.11)$(1)的系数。</p>
+<ol>
+<li>$f _ 1(t)f _ 2(t)\leftrightarrow \textcolor{red}{\cfrac{1}{2\pi}}\mathscr F\lbrace f _ 1(t)\rbrace * \mathscr F\lbrace f _ 2(t)\rbrace$</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">关于拉普拉斯变换的卷积特性</p>
+<p>&emsp;&emsp;式 $(5.11)$ 在书上未给出证明，经典地“留作习题”。如果不考虑复变函数中的方法，我们无法仿照式 $(3.11)$ 的证法给出式 $(5.11)$ 的证明，因为拉普拉斯变换不存在对称特性。</p>
+</div>
 
 
   
@@ -1621,7 +1634,7 @@ $$f _ 1(t)f _ 2(t)\leftrightarrow \cfrac{1}{2\pi\mathrm j}\mathscr L\lbrace f _ 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>

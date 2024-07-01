@@ -35,6 +35,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
+
 
     
     
@@ -1324,16 +1330,22 @@
 <li>很多激励函数的傅里叶变换都是不存在的。</li>
 <li>傅里叶变换考虑了 $t &lt; 0$ 的时间域。</li>
 </ul>
-<p>&emsp;&emsp;从式 $(3.6)$ 中我们可以感性地看到，当 $t\rightarrow -\infty$ 时，复变量 $\mathrm e^{-\mathrm j\omega t}$ 会不停地在复平面旋转；如果 $f(t)$ 是实信号，只有$\lim\limits _ {t\rightarrow -\infty}f(t)=0$，反常积分才可能收敛，傅里叶变换 $F(\omega)$ 才有可能存在。<br>
+<p class="annotate">&emsp;&emsp;从式 $(3.6)$(1)中我们可以感性地看到，当 $t\rightarrow -\infty$ 时，复变量 $\mathrm e^{-\mathrm j\omega t}$ 会不停地在复平面旋转；如果 $f(t)$ 是实信号，只有$\lim\limits _ {t\rightarrow -\infty}f(t)=0$，反常积分才可能收敛，傅里叶变换 $F(\omega)$ 才有可能存在。<br>
 &emsp;&emsp;由于我们在频域求解时，对 $r(t)$ 进行了傅里叶变换，其前提就是傅里叶变换存在，因而有 $\lim\limits _ {t\rightarrow -\infty}r(t)=0$，即系统无初始储能。<br>
 &emsp;&emsp;基于相同的原因，双边拉普拉斯变换应该也存在只能求解零状态响应的问题。但是单边拉普拉斯变换因为积分下限是 $0$，$\mathrm e^{-st}$ 中的 $s$ 就不会跑到负无穷那边去，因而不需要条件 $\lim\limits _ {t\rightarrow -\infty}f(t)=0$。</p>
+<ol>
+<li>$\displaystyle F(\omega)=\int _ {-\infty}^{+\infty}f(t)\mathrm e^{-\mathrm j\omega t}\mathrm dt$</li>
+</ol>
 </details>
 <h2 id="_1">频率分析方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">频率响应函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;频率响应函数 $H(\omega)$ 描述了系统对特定频率的激励的响应特征。一方面，根据系统 $r(t)$ 与 $e(t)$ 的微分方程，经过傅里叶变换后得到频域的方程，从而<strong>定义</strong>频率响应函数：
 $$H(\omega)=\cfrac{R(\omega)}{E(\omega)}\tag{4.1}$$</p>
-<p>&emsp;&emsp;若已知 $E(\omega)$，可以直接与频响函数相乘得 $R(\omega)$。<br />
-&emsp;&emsp;另一方面，根据 $(2.2)$ 的卷积式也能得到 $R(\omega)=H(\omega)E(\omega)$，从而发现<strong>频响函数是冲激响应的傅里叶变换</strong>，即 $h(t)\leftrightarrow H(\omega)$。  </p>
+<p class="annotate">&emsp;&emsp;若已知 $E(\omega)$，可以直接与频响函数相乘得 $R(\omega)$。<br />
+&emsp;&emsp;另一方面，根据 $(2.3)$(1)的卷积式也能得到 $R(\omega)=H(\omega)E(\omega)$，从而发现<strong>频响函数是冲激响应的傅里叶变换</strong>，即 $h(t)\leftrightarrow H(\omega)$。</p>
+<ol>
+<li>$\displaystyle r(t) = \int _ 0^te(t)h(t-\tau)\mathrm d\tau$</li>
+</ol>
 <h3 id="_3">利用频响函数进行频域分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;对于给定的激励信号 $e(t)$，可以按照下面的步骤，在频域求响应 $r(t)$：</p>
 <ol>
@@ -1468,7 +1480,7 @@ $$H(\omega)=\cfrac{R(\omega)}{E(\omega)}\tag{4.1}$$</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>

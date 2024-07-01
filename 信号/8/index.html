@@ -33,6 +33,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>');}</style>
+
 
     
     
@@ -1193,6 +1199,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#z_1" class="md-nav__link">
+    $z$ 变换的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="$z$ 变换的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    移序性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    卷积定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dtft" class="md-nav__link">
+    离散时间傅里叶变换（DTFT）
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1240,6 +1280,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#z_1" class="md-nav__link">
+    $z$ 变换的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="$z$ 变换的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    移序性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    卷积定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dtft" class="md-nav__link">
+    离散时间傅里叶变换（DTFT）
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1273,7 +1347,87 @@ $$F(z)=\sum _ {n=-\infty}^{+\infty}f(n)z^{-n}\tag{8.3}$$</p>
 $$|z|=\left|\mathrm e^{(\sigma+\mathrm j\omega)T}\right|=\mathrm e^{\sigma T}\tag{8.4}$$
 &emsp;&emsp;在<a href="../6/#_4">连续时间系统的系统函数</a>已经得到系统稳定的充要条件是所有极点 $s$ 满足 $\sigma&lt;0$，根据式 $(8.4)$ 可知，$z$ 域中<strong>系统稳定的充要条件</strong>是对于所有极点 $z$ 有 $|z|&lt;1$。<br />
 &emsp;&emsp;同时，还能发现 $s$ 与 $z$ 之间是<strong>多对一的关系</strong>。如果 $z _ 0=\mathrm e^{s _ 0T}$，那么 $z _ 0=\mathrm e^{s _ 0T+2k\pi\mathrm j}(k\in\mathbb Z)$。</p>
-<p>$\boxed{\mathrm{To\ Be\ Continued}}$</p>
+<table align="center">
+<caption>表3 常见函数的 $z$ 变换</caption>
+<tr>
+    <th>公式编号</th>
+    <th>$f(n)$</th>
+    <th>$F(z)$</th>
+</tr>
+<tr>
+    <td>$1$</td>
+    <td>$\delta(n)$</td>
+    <td>$1$</td>
+</tr>
+<tr>
+    <td>$2$</td>
+    <td>$\varepsilon(n)$</td>
+    <td>$\cfrac{z}{z-1}$</td>
+</tr>
+<tr>
+    <td>$3$</td>
+    <td>$v^n\varepsilon(n)$</td>
+    <td>$\cfrac{z}{z-v}$</td>
+</tr>
+<tr>
+    <td>$4$</td>
+    <td>$v^{n-1}\varepsilon(n-1)$</td>
+    <td>$\cfrac{1}{z-v}$</td>
+</tr>
+<tr>
+    <td>$5$</td>
+    <td>$n\varepsilon(n)$</td>
+    <td>$\cfrac{z}{(z-1)^2}$</td>
+</tr>
+<tr>
+    <td>$6$</td>
+    <td>$\cos(\beta nT)\varepsilon(n)$</td>
+    <td>$\cfrac{z(z-\cos\beta T)}{z^2-2z\cos\beta T+1}$</td>
+</tr>
+<tr>
+    <td>$7$</td>
+    <td>$\sin(\beta nT)\varepsilon(n)$</td>
+    <td>$\cfrac{z\sin\beta T}{z^2-2z\cos\beta T+1}$</td>
+</tr>
+</table>
+
+<p>&emsp;&emsp;上表第 $6,7$ 项可以从第 $3$ 项由欧拉公式推得。</p>
+<div class="admonition note">
+<p class="admonition-title">关于反 $z$ 变换</p>
+<p>&emsp;&emsp;根据象函数 $F(z)$ 求原函数 $f(n)$，大多数时候查上面的表就行了。</p>
+</div>
+<h2 id="z_1">$z$ 变换的性质<a class="headerlink" href="#z_1" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;$z$ 变换具有线性性，尺度变换特性 $a^nf(n)\leftrightarrow F\left(\cfrac{z}{a}\right)$。包括微分特性、初值定理、终值定理，这些不需要刻意去记，可以现场推。主要是移序性质和卷积定理。</p>
+<h3 id="_1">移序性质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;其实这个也可以现场推导，也可以记忆一下：
+$$f(n+m)\leftrightarrow\begin{cases}\displaystyle z^m\left[F(z)-\sum _ {k=0}^{m-1}f(k)z^{-k}\right],&amp;m\geq1\\\displaystyle z^m\left[F(z)+\sum _ {k=m}^{-1}f(k)z^{-k}\right],&amp;m\leq-1\end{cases}\tag{8.5}$$</p>
+<h3 id="_2">卷积定理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;$z$ 变换的卷积定理只涉及到时域卷积。
+$$f _ 1(n)f _ 2(n)\leftrightarrow F _ 1(z)F _ 2(z)\tag{8.6}$$</p>
+<h2 id="dtft">离散时间傅里叶变换（DTFT）<a class="headerlink" href="#dtft" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;首先对<strong>离散时间系统</strong>的 $\omega$ 有一个比较清醒的认识，这个 $\omega$ 不再是物理频率。$\sin(\omega t)$ 和 $\sin[(\omega+2\pi)t]$ 是两个频率不同的连续时间正弦信号，而 $\sin(\omega n)$ 和 $\sin[(\omega+2\pi)n]$ 是两个完全相同的离散时间正弦信号。<br />
+&emsp;&emsp;DTFT 正变换是
+$$F(\mathrm e^{\mathrm j\omega})=\sum _ {n=-\infty}^{+\infty}f(n)\mathrm e^{-\mathrm j\omega n}\tag{8.7}$$</p>
+<p class="annotate">&emsp;&emsp;对比式 $(8.7)$ 与 CTFT（连续时间傅里叶变换）正变换(1)，有几个注意点。</p>
+<ol>
+<li>$\displaystyle F(\omega)=\int _ {-\infty}^{+\infty}f(t)\mathrm e^{-\mathrm j\omega t}\mathrm dt$</li>
+</ol>
+<ul>
+<li> 此（DTFT）$\omega$ 非彼（CTFT）$\omega$。</li>
+<li> $F(\mathrm e^{\mathrm j\omega})$ 说到底只是一个记号，记成 $F(\omega)$ 或者 $F(\mathrm j\omega)$ 其实都没事。使用这种记法突出 $F(\cdot)$ 是一个周期函数。</li>
+<li> $F(\mathrm e^{\mathrm j\omega})$ 的<strong>定义域是连续的</strong>（连续频谱），或者说它是“连续频率信号”。主要区分 $f(n)$ 是离散时间信号。</li>
+</ul>
+
+<p>&emsp;&emsp;DTFT 反变换是
+$$f(n)=\cfrac{1}{2\pi}\int _ {-\pi}^\pi F(\mathrm e^{\mathrm j\omega})\mathrm e^{\mathrm j\omega n}\mathrm d\omega\tag{8.8}$$</p>
+<p class="annotate">&emsp;&emsp;对比式 $(8.8)$ 与 CTFT 反变换(1)，需要注意积分上下限改变了，可以是任意的宽度为 $2\pi$ 的区间。</p>
+<ol>
+<li>$\displaystyle f(t)=\cfrac{1}{2\pi}\int _ {-\infty}^{+\infty} F(\omega)\mathrm e^{\mathrm j\omega t}\mathrm d\omega$</li>
+</ol>
+<blockquote>
+<p>注意 DTFT（离散时间傅里叶变换）和 DFS（离散序列傅里叶级数）是不同的两个概念。</p>
+</blockquote>
+<p>$ \boxed{\mathbb{The\ End}.} $ </p>
 
 
   
@@ -1375,7 +1529,7 @@ $$|z|=\left|\mathrm e^{(\sigma+\mathrm j\omega)T}\right|=\mathrm e^{\sigma T}\ta
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.footer"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
