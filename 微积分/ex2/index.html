@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../ex4/">
+        <link rel="prev" href="../7/">
       
       
-        <link rel="next" href="../ex6-1/">
+        <link rel="next" href="../ex4/">
       
       
       <link rel="icon" href="../../assets/favicon.jpg">
@@ -24,7 +24,7 @@
 
     
       
-        <title>不定积分练习题 - HUST_CS 学习笔记</title>
+        <title>数列/函数极限计算题 - HUST_CS 学习笔记</title>
       
     
     
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              不定积分练习题
+              数列/函数极限计算题
             
           </span>
         </div>
@@ -1387,9 +1387,16 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ex2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1398,6 +1405,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1427,16 +1435,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ex5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1446,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1540,56 +1540,63 @@
   
 
 
-  <h1>不定积分练习题</h1>
+  <h1>数列/函数极限计算题</h1>
 
-<p>&emsp;&emsp;灵活运用，熟能生巧，复杂计算之后别忘了加上 $C$。</p>
+<p>&emsp;&emsp;极限的计算可以和微分中值定理、泰勒公式、定积分、二重积分结合在一起，从而极其具有思维深度。</p>
 <hr />
-<p><strong>题 1</strong>&emsp;计算 $I=\displaystyle\int\cfrac{\mathrm dx}{x\sqrt{x^6-x^3-1}}(x&gt;0)$。</p>
+<p><strong>题 1</strong>&emsp;求数列极限 $\displaystyle\lim _ {n\to\infty} n\sin(2\pi en!)$。</p>
 <details class="tip">
-<summary>解题思路（来自课本例 11）</summary>
-<p><strong>答案</strong>&emsp;$-\cfrac{1}{3}\arcsin\left(\cfrac{x^3+2}{\sqrt 5x^3}\right)+C$</p>
+<summary>$\bigstar\bigstar\bigstar$&emsp;<strong>Lagrange 余项的泰勒展开</strong>——解题思路（来自小红书）</summary>
+<p><strong>答案</strong>&emsp;$2\pi$<br></p>
 <blockquote>
-<p>这道题使用凑微分法，考验极强的洞察力。$x&gt;0$ 是我自己加上去的，否则下式第一步就是错的。<br></p>
+<p>一些周期性函数的数列极限，往往需要利用好这个<strong>周期性</strong>。比如观察题目形式，$\sin$ 的周期为 $2\pi$，我们需要将 $en!$ 变成整数加无穷小量的形式。</p>
 </blockquote>
-<p><strong>解</strong>$$\displaystyle\begin{aligned}I&amp;=\int\cfrac{\mathrm dx}{x^4\sqrt{1-x^{-3}-x^{-6}}}=-\cfrac{1}{3}\int\cfrac{\mathrm d\left(x^{-3}+1/2\right)}{\sqrt{\cfrac{5}{4}-\left(x^{-3}+1/2\right)^2}}\\
-&amp;=-\cfrac{1}{3}\arcsin\left[\cfrac{2}{\sqrt 5}\left(x^{-3}+\cfrac{1}{2}\right)\right]+C\\
-&amp;=-\cfrac{1}{3}\arcsin\left(\cfrac{x^3+2}{\sqrt 5x^3}\right)+C\end{aligned}$$</p>
+<p><strong>解</strong>&emsp;对 $e^x$ 进行带 Lagrange 余项的 Maclaurin 展开，并令 $x=1$，即可得到
+$$\mathrm e=\sum _ {k=0}^m\cfrac{1}{k!}+\cfrac{\mathrm e^\theta}{(m+1)!}(0 &lt; \theta &lt; 1)$$
+其中，取 $m=n+1$（读者可以结合后文，思考为什么这样取 $m$），得到
+$$\mathrm e=\sum _ {k=0}^{n+1}\cfrac{1}{k!}+\cfrac{\mathrm e^\theta}{(n+2)!}(0 &lt; \theta &lt; 1)$$
+将其代入原极限，可求解
+$$\begin{aligned}\lim _ {n\to\infty} n\sin(2\pi en!)&amp;=\lim _ {n\to\infty} n\sin\left[2\pi n!\left(1+1+\cfrac{1}{2!}+\cdots+\cfrac{1}{n!}+\cfrac{1}{(n+1)!}+\cfrac{\mathrm e^\theta}{(n+2)!}\right)\right]\\
+&amp;=\lim _ {n\to\infty} n\sin\left[2k\pi+\cfrac{2\pi}{n+1}+\cfrac{2\pi\mathrm e^\theta}{(n+1)(n+2)}\right]\quad(k\in\mathbb Z)\\
+&amp;=\lim _ {n\to\infty} n\sin\left[\cfrac{2\pi}{n+1}+\cfrac{2\pi\mathrm e^\theta}{(n+1)(n+2)}\right]\\
+&amp;=\lim _ {n\to\infty} n\left[\cfrac{2\pi}{n+1}+\cfrac{2\pi\mathrm e^\theta}{(n+1)(n+2)}\right]=2\pi\end{aligned}$$</p>
 </details>
-<p><strong>题 2</strong>&emsp;求不定积分 $I=\displaystyle\int\cfrac{1+x}{x(1+x\mathrm e^x)}\mathrm dx$。</p>
+<p><strong>题 2</strong>&emsp;对于数列 $\lbrace x _ n\rbrace$，已知 $x _ 1&gt;0$，$x _ {n+1}=\ln(1+x _ n)(n\geq 1)$，计算极限 $\displaystyle\lim _ {n\to\infty}nx _ n$。</p>
 <details class="tip">
-<summary>解题思路（来自《微积分学练习册》）</summary>
-<p><strong>答案</strong>&emsp;$\ln\left|\cfrac{x\mathrm e^x}{1+x\mathrm e^x}\right|+C$</p>
+<summary>$\bigstar\bigstar\bigstar$&emsp;<strong>Stolz 公式估阶</strong>——解题思路（来自小红书）</summary>
+<p><strong>答案</strong>&emsp;$2$<br></p>
 <blockquote>
-<p>这道题需要分式上下同时乘一个因子 $\mathrm e^x$，然后即可凑微分。</p>
+<p>如果提示你使用 stolz 公式，这道题就迎刃而解了。</p>
 </blockquote>
-<p><strong>解</strong>$$\displaystyle\begin{aligned}I&amp;=\int\cfrac{\mathrm e^x(1+x)\mathrm dx}{x\mathrm e^x(1+x\mathrm e^x)}\\
-&amp;=\int\left(\cfrac{1}{x\mathrm e^x}-\cfrac{1}{1+x\mathrm e^x}\right)\mathrm d(x\mathrm e^x)\\
-&amp;=\ln\left|\cfrac{x\mathrm e^x}{1+x\mathrm e^x}\right|+C\end{aligned}$$</p>
+<p><strong>解</strong>&emsp;由 $x _ 1&gt;0$，$x _ {n+1}=\ln(1+x _ n)(n\geq 1)$，归纳可得 $x _ n&gt;0(n\in\mathbb N _ +)$，数列<strong>有下界</strong>。又根据递推公式得到 $x _ {n+1}=\ln(1+x _ n) &lt; x _ n$，故数列<strong>严格单调递减</strong>。至此，数列 $\lbrace x _ n\rbrace$ 收敛，记 $\lim\limits _ {n\to\infty}x _ n=x$，对递推式两边取极限得 $x=0$。<br>
+因为 $x=0$ 且 $x _ n&gt;0$，所以数列 $\left\lbrace\cfrac{1}{x _ n}\right\rbrace$ 发散至 $+\infty$，根据 stolz 定理有
+$$\begin{aligned}\lim _ {n\to\infty}nx _ n&amp;=\lim _ {n\to\infty}\cfrac{n}{1/x _ n}=\lim _ {n\to\infty}\cfrac{(n+1)-n}{\frac{1}{x _ {n+1}}-\frac{1}{x _ n}}\\
+&amp;=\lim _ {n\to\infty}\cfrac{x _ {n+1}x _ n}{x _ n - x _ {n+1}}\\
+&amp;=\lim _ {n\to\infty}\cfrac{x _ n\ln(1+x _ n)}{x _ n-\ln(1+x _ n)}\\
+&amp;=\lim _ {n\to\infty}\cfrac{x _ n^2}{x _ n^2/2}=2\end{aligned}$$</p>
+<blockquote>
+<p>根据上面的结果，很容易估阶 $x _ n\sim\cfrac{2}{n}$。</p>
+</blockquote>
 </details>
-<p><strong>题 3</strong>&emsp;求不定积分 $I=\displaystyle\int\cfrac{\mathrm e^x(1+\sin x)}{1+\cos x}\mathrm dx$。</p>
+<p><strong>题 3</strong>&emsp;求数列极限 $\displaystyle\lim _ {n\to\infty} \cfrac{n+\sqrt n+\sqrt[3]{n}+\cdots+\sqrt[n]{n}}{n}$。</p>
 <details class="tip">
-<summary>解题思路（来自《微积分学练习册》）</summary>
-<p><strong>答案</strong>&emsp;$\mathrm e^x\tan\cfrac{x}{2}+C$</p>
+<summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;<strong>基本不等式</strong>——解题思路（来自小红书）</summary>
+<p><strong>答案</strong>&emsp;$2$<br></p>
 <blockquote>
-<p>这道题将分部积分法逆用，颇具启发性。同时启发我们对于 $1+\sin x$ 这类<strong>不齐次的三角式</strong>，往往需要降角升次。</p>
+<p>原极限的形式比较复杂，很容易想到夹逼法，而夹逼的上界难以想到。实际上，可以通过不等式将 $\sqrt[k]{n}(k &gt; 2)$ 放大到 $\sqrt n$ 的式子求上界。</p>
 </blockquote>
-<p><strong>解</strong>$$\displaystyle\begin{aligned}I&amp;=\int\cfrac{\mathrm e^x(1+\sin x)}{2\cos^2(x/2)}\mathrm dx\\
-&amp;=\int\cfrac{\mathrm e^x}{2\cos^2(x/2)}\mathrm dx+\int\cfrac{\mathrm e^x\sin x}{2\cos^2(x/2)}\mathrm dx\\
-&amp;=\int\mathrm e^x\mathrm d\left(\tan\cfrac{x}{2}\right)+\int\tan\cfrac{x}{2}\mathrm d(\mathrm e^x)\\
-&amp;=\mathrm e^x\tan\cfrac{x}{2}+C\end{aligned}$$</p>
-</details>
-<p><strong>题 4</strong>&emsp;求不定积分 $I=\displaystyle\int\cfrac{x^2+1}{x^4+1}\mathrm dx$。</p>
-<details class="tip">
-<summary>解题思路（来自《微积分学练习册》）</summary>
-<p><strong>答案</strong>&emsp;$\cfrac{1}{\sqrt 2}\arctan\cfrac{x^2-1}{\sqrt 2x}+C$</p>
+<p><strong>解</strong>&emsp;记原极限为 $I$。当 $n\geq 1$ 时有 $\sqrt[k]n\geq 1(k\geq 2)$，从而
+$$I\geq\lim _ {n\to\infty}\cfrac{n+\overbrace{1+1+\cdots+1}^{n-1 个}}{n}=\lim _ {n\to\infty}\cfrac{2n-1}{n}=2$$
+又根据均值不等式，当 $k\geq 2$ 时，有
+$$\sqrt[k]n=\sqrt[k]{\sqrt n\times\sqrt n\times\underbrace{1\times\cdots\times1} _ {k-2个}}\leq\cfrac{\sqrt n+\sqrt n+\overbrace{1+\cdots+1}^{k-2个}}{k}=\cfrac{2\sqrt n+k-2}{k}$$
+据此可得
+$$\begin{aligned}I&amp;\leq\lim _ {n\to\infty}\cfrac{n+\sum _ {k=2}^n\frac{2\sqrt n+k-2}{k}}{n}=\lim _ {n\to\infty}2-\cfrac{1}{n}+\cfrac{2(\sqrt n-1)}{n}\sum _ {k=2}^n\cfrac{1}{k}\\
+&amp;\leq\lim _ {n\to\infty} 2+\cfrac{2\sqrt n}{n}\sum _ {k=2}^n\cfrac{1}{k}\leq\lim _ {n\to\infty} 2+\cfrac{2\sqrt n}{n}\int _ 1 ^n\cfrac{\mathrm dx}{x}\\
+&amp;=\lim _ {n\to\infty}2+\cfrac{2\ln n}{\sqrt n}=2\end{aligned}$$
+综上所述，$I=2$。</p>
 <blockquote>
-<p>这道题使用凑微分法，考验极强的洞察力。</p>
+<p>根据此题的思想，读者可以试一试求 $\displaystyle\lim _ {n\to\infty} \cfrac{1}{\sqrt n}\left(\sum _ {k=1}^n\sqrt[k]{n}-2n\right)$，结果是 $1$，方法类似。</p>
 </blockquote>
-<p><strong>解</strong>$$\displaystyle\begin{aligned}I&amp;=\int\cfrac{x^{-2}+1}{x^2+x^{-2}}\mathrm dx\\
-&amp;=\int\cfrac{\mathrm d(x-x^{-1})}{(x-x^{-1})^2+2}\\
-&amp;=\cfrac{1}{\sqrt 2}\int\cfrac{\mathrm d(t/\sqrt 2)}{(t/\sqrt 2)^2+1}\quad(t = x-x^{-1})\\
-&amp;=\cfrac{1}{\sqrt 2}\arctan\cfrac{t}{\sqrt 2} +C\\
-&amp;=\cfrac{1}{\sqrt 2}\arctan\cfrac{x^2-1}{\sqrt 2x}+C\end{aligned}$$</p>
 </details>
 
 
@@ -1614,7 +1621,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../ex4/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Taylor 公式/中值定理证明题" rel="prev">
+          <a href="../7/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 7 常微分方程" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1624,20 +1631,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Taylor 公式/中值定理证明题
+                7 常微分方程
               </div>
             </div>
           </a>
         
         
           
-          <a href="../ex6-1/" class="md-footer__link md-footer__link--next" aria-label="下一页: 定积分计算题" rel="next">
+          <a href="../ex4/" class="md-footer__link md-footer__link--next" aria-label="下一页: Taylor 公式/中值定理证明题" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                定积分计算题
+                Taylor 公式/中值定理证明题
               </div>
             </div>
             <div class="md-footer__button md-icon">

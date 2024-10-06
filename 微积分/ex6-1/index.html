@@ -1389,6 +1389,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../ex2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数列/函数极限计算题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ex4/" class="md-nav__link">
         
   
@@ -1526,7 +1546,7 @@
 <hr />
 <p><strong>题 1</strong>&emsp;计算定积分 $I=\displaystyle\int _ 0 ^{+\infty}\cfrac{\ln x}{1+x^2}\mathrm dx$。</p>
 <details class="tip">
-<summary>解题思路（来自《微积分学练习册》）</summary>
+<summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自《微积分学练习册》）</summary>
 <p><strong>答案</strong>&emsp;$0$</p>
 <blockquote>
 <p>这道题先进行换元，然后可用定积分的性质求解。</p>
@@ -1534,6 +1554,18 @@
 <p><strong>解</strong>$$\displaystyle\begin{aligned}I&amp;=\int _ 0^{\pi/2}\ln\tan t\mathrm dt\quad(t=\arctan x)\\
 &amp;=\cfrac{1}{2}\int _ 0 ^{\pi/2}\left[\ln\tan t+\ln\tan\left(\cfrac{\pi}{2}-t\right)\right]\mathrm dt\\
 &amp;=\cfrac{1}{2}\int _ 0 ^{\pi/2}\ln 1\mathrm dt=0\end{aligned}$$</p>
+</details>
+<p><strong>题 2</strong>&emsp;计算定积分 $I=\displaystyle\int _ 0 ^1\left(\left[\cfrac{2}{x}\right]-2\left[\cfrac{1}{x}\right]\right)\mathrm dx$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自小红书）</summary>
+<p><strong>答案</strong>&emsp;$2\ln2-1$</p>
+<blockquote>
+<p>这道题考验对取整符号的灵活处理，设法将积分限约束在某个有限的区间内，这时取整符号即可解除。</p>
+</blockquote>
+<p><strong>解</strong>$$\displaystyle\begin{aligned}I&amp;=\int _ 1^{+\infty}\cfrac{[2t]-2[t]}{t^2}\mathrm dt\quad\left(t=\cfrac{1}{x}\right)\\
+&amp;=\int _ 1^{+\infty}\cfrac{[2t]-2t}{t^2}\mathrm dt+\int _ 1^{+\infty}\cfrac{2t-2[t]}{t^2}\mathrm dt\quad(\text{两个反常积分均收敛，所以可拆})\\
+&amp;=2\int _ 2 ^{+\infty}\cfrac{[x]-x}{x^2}\mathrm dx-2\int _ 1^{+\infty}\cfrac{[x]-x}{x^2}\mathrm dx\quad(\text{前一个积分换元}\ x=2t)\\
+&amp;=2\int _ 1 ^2\cfrac{x-[x]}{x^2}\mathrm dx=2\int _ 1 ^2\cfrac{x-1}{x^2}\mathrm dx=2\ln 2-1\end{aligned}$$</p>
 </details>
 
 
