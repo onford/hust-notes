@@ -1354,6 +1354,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lhospital" class="md-nav__link">
+    L'Hospital 法则
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#taylor" class="md-nav__link">
     Taylor 公式
   </a>
@@ -1644,6 +1651,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lhospital" class="md-nav__link">
+    L'Hospital 法则
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#taylor" class="md-nav__link">
     Taylor 公式
   </a>
@@ -1702,6 +1716,34 @@
 <div class="admonition quote">
 <p class="admonition-title">Cauchy 中值定理</p>
 <p>&emsp;&emsp;设 $f(x)$ 与 $g(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导且 $g^\prime(x)\neq 0$，则存在 $\xi\in(a,b)$ 使得：$$\cfrac{f(b)-f(a)}{g(b)-g(a)}=\cfrac{f^\prime(\xi)}{g^\prime(\xi)}\tag{4.2}$$</p>
+</div>
+<h2 id="lhospital">L&rsquo;Hospital 法则<a class="headerlink" href="#lhospital" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;洛必达法则也是求数列极限的一个利器，但是 L&rsquo;Hospital 法则的适用前提却常常被忽视，所以很容易被误用。<br />
+&emsp;&emsp;最容易被忽视的是下面第 $3$ 点，即洛之后的极限要么存在，要么为无穷，否则不能洛。因此，例如 $\lim\limits _ {x\to\infty}\cfrac{x+\sin x}{x}$ 就不能洛。</p>
+<div class="admonition notes">
+<p class="admonition-title">L&rsquo;Hospital 法则</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">$0/0$ 型</label><label for="__tabbed_1_2">$\infty/\infty$ 型</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>若函数 $f(x),g(x)$ 满足下列条件：</p>
+<ol>
+<li>$\lim\limits _ {x\to a}f(x)=\lim\limits _ {x\to a}g(x)=0$</li>
+<li>在点 $a$ 的某去心邻域内两者都可导，且 $g^\prime(x)\neq 0$</li>
+<li>$\lim\limits _ {x\to a}\cfrac{f^\prime(x)}{g^\prime(x)}=A$（$A$ 可为实数，也可为 $\pm\infty$）</li>
+</ol>
+<p>则 $\lim\limits _ {x\to a}\cfrac{f(x)}{g(x)}=\lim\limits _ {x\to a}\cfrac{f^\prime(x)}{g^\prime(x)}=A$</p>
+</div>
+<div class="tabbed-block">
+<p>若函数 $f(x),g(x)$ 满足下列条件：</p>
+<ol>
+<li>$\lim\limits _ {x\to a}f(x)=\lim\limits _ {x\to a}g(x)=\infty$</li>
+<li>在点 $a$ 的某去心邻域内两者都可导，且 $g^\prime(x)\neq 0$</li>
+<li>$\lim\limits _ {x\to a}\cfrac{f^\prime(x)}{g^\prime(x)}=A$（$A$ 可为实数，也可为 $\pm\infty$）</li>
+</ol>
+<p>则 $\lim\limits _ {x\to a}\cfrac{f(x)}{g(x)}=\lim\limits _ {x\to a}\cfrac{f^\prime(x)}{g^\prime(x)}=A$</p>
+</div>
+</div>
+</div>
 </div>
 <h2 id="taylor">Taylor 公式<a class="headerlink" href="#taylor" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;Taylor 公式更是这一章的重中之重，我已收集一些考题于<a href="../ex4/">习题集锦</a>中。这些习题对于拓展思维会有一些帮助。</p>

@@ -1569,6 +1569,31 @@ $$f(2)-f(0)=2f^\prime(x _ 0)+\cfrac{1}{2}[f^{\prime\prime}(\xi)(2-x _ 0)^2-f^{\p
 <hr />
 <p><strong>注意</strong>&emsp;要证明的等式可以写作 $(\xi-1)f^{\prime\prime}(\xi)+2f^\prime(\xi)=0$。由于没有给出关于 $f(x)$ 的值，直接令 $F^\prime(x)=(x-1)f^{\prime\prime}(x)+2f^\prime(x)$，会导致构造的函数 $F(x)=(x-1)f^\prime(x)+f(x)$ 在 $x=0,1$ 处的值无法比较。将要证明的等式两边同时乘上因子 $(\xi-1)$，从而构造出 $F(x)=(x-1)^2f^\prime(x)$，能够得出 $F(0)=F(1)$，进而使用 Rolle 定理。</p>
 </details>
+<p><strong>题 3</strong>&emsp;设函数 $f(x)$ 在区间 $[0,1]$ 上具有连续导数，且 $\displaystyle\int _ 0^1x^2f^\prime(x)\mathrm dx=1$，证明：<br />
+（1）存在 $\xi\in[0,1]$，使得 $f^\prime(\xi)=3$。<br />
+（2）若 $f(1)=\displaystyle\int _ 0^1f(x)\mathrm dx=0$，则存在 $\eta\in[0,1]$，使得 $f^\prime(\eta)=-\cfrac{6}{7}$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;<strong>Rolle 中值定理</strong>——解题思路（来自小红书）</summary>
+<blockquote>
+<p>本题的难度集中在第（2）小问。根据题目条件可以考虑构造 $\displaystyle\int _ 0^1p(x)\left[f^\prime(x)+\cfrac{6}{7}\right]\mathrm dx=0$ 结构且 $p(x)\neq 0$ 在 $[0,1]$ 上恒成立，对该式利用积分中值定理即可得证，且结论更强。使用微分中值定理也可以。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;（1）因为 $f^\prime(x)$ 在 $[0,1]$ 上连续，所以 $f^\prime(x)$ 在 $[0,1]$ 上存在最大值 $M$ 与最小值 $m$。于是有
+$$\cfrac{m}{3}=m\int _ 0^1x^2\mathrm dx\leq\int _ 0 ^1x^2f^\prime(x)\mathrm dx\leq M\int _ 0^1x^2\mathrm dx=\cfrac{M}{3}$$
+又 $\displaystyle\int _ 0^1x^2f^\prime(x)\mathrm dx=1$，得 $m\leq 3\leq M$。对 $f^\prime(x)$ 使用介值定理即可得证。<br>
+（2）由题 $\displaystyle\int _ 0^1f(x)\mathrm dx=xf(x)\bigg| _ 0^1-\int _ 0^1xf^\prime(x)\mathrm dx=0$，因为 $f(1)=0$，从而
+$$\int _ 0^1xf^\prime(x)\mathrm dx=0$$
+设存在 $a$ 使得
+$$\int _ 0^1(x^2+ax)\left[f^\prime(x)+\cfrac{6}{7}\right]\mathrm dx=0$$</p>
+<blockquote>
+<p>设 $p(x)=x^2+ax$ 的原因是，题干和求解中已经出现了 $x^2f^\prime(x)$ 和 $xf^\prime(x)$ 在 $[0,1]$ 上的定积分。</p>
+</blockquote>
+<p>不难解得 $a=-3$。根据微分中值定理，存在 $\eta\in(0,1)$，使得
+$$\int _ 0^1(x^2-3x)\left[f^\prime(x)+\cfrac{6}{7}\right]\mathrm dx=(\eta^2-3\eta)\left[f^\prime(\eta)+\cfrac{6}{7}\right]=0$$
+因为 $\eta\in(0,1)$，所以 $\eta^2-3\eta\neq 0$，从而得证。</p>
+<p>或者使用 Rolle 定理。若记 $F(x)=\displaystyle\int _ 0^x(t^2+at)\left[f^\prime(t)+\cfrac{6}{7}\right]\mathrm dt$，则 $F(0)=F(1)=0$。由 Rolle 定理知存在 $\eta\in(0,1)$，使得
+$$F^\prime(\eta)=(\eta^2-3\eta)\left[f^\prime(\eta)+\cfrac{6}{7}\right]=0$$</p>
+<p>一样可以得证。</p>
+</details>
 
 
   
