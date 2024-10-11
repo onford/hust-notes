@@ -14,7 +14,7 @@
         <link rel="prev" href="../8/">
       
       
-        <link rel="next" href="../ex2/">
+        <link rel="next" href="../10/">
       
       
       <link rel="icon" href="../../assets/favicon.jpg">
@@ -1508,6 +1508,46 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 重积分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 曲线积分与曲面积分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
     
     
     
@@ -1517,9 +1557,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_12" >
         
-          <label class="md-nav__link" for="__nav_7_10" id="__nav_7_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_12" id="__nav_7_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1530,8 +1570,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_12">
             <span class="md-nav__icon md-icon"></span>
             习题集锦
           </label>
@@ -1786,7 +1826,7 @@
 <h3 id="_4">全微分<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;多元函数的全微分存在（可微）是一个很强的结论。由<strong>可微性</strong>可以得到多元函数连续，以及多元函数的偏导数存在。而为了得到可微性，一个充分条件是存在<strong>连续</strong>偏导数。</p>
 <h3 id="_5">隐函数微分法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;一般来说，$n$ 个线性无关的方程在特定条件下可以确定 $n$ 个函数（可以是一元或多元）。课本上给出了两个情形，其中一个是：</p>
+<p>&emsp;&emsp;一般来说，$n$ 个线性无关的方程在特定条件下可以隐式地确定 $n$ 个函数（可以是一元或多元）。课本上给出了两个情形，其中一个是：</p>
 <details class="notes">
 <summary>两个一元函数 $u(x),v(x)$ 的情形</summary>
 <p>&emsp;&emsp;设函数 $F(x,u,v)$ 与 $G(x,u,v)$ 在点 $P _ 0(x _ 0,u _ 0,v _ 0)$ 的某个领域内关于自变量的偏导数都连续，且有</p>
@@ -1808,10 +1848,15 @@ $$\cfrac{\partial f(P _ 0)}{\partial\boldsymbol n}=f _ x(P _ 0)\cos\alpha+f _ y(
 $$\operatorname{\bold{grad}} f=\lbrace f _ x,f _ y,f _ z\rbrace\tag{9.2}$$</p>
 <h2 id="_7">多元函数的极值<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <h3 id="_8">自由极值<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;类似于一元函数的二阶导，我们看二元函数的极值时，往往会看二阶偏导 $f _ {xx}$ 和 $f _ {yy}$。但是仅有 $f _ {xx}(P _ 0) &gt; 0$ 和 $f _ {yy}(P _ 0) &gt; 0$ 并不能说明 $P _ 0$ 是极小值点。类似地，仅有 $f _ {xx}(P _ 0) &lt; 0$ 和 $f _ {yy}(P _ 0) &lt; 0$ 并不能说明 $P _ 0$ 是极大值点。<br />
+<p>&emsp;&emsp;类似于一元函数的极值，我们看二元函数的极值时，首先会看一阶偏导 $f _ x=f _ y=0$ 是否成立；若成立则往往会看二阶偏导 $f _ {xx}$ 和 $f _ {yy}$。但是仅有 $f _ {xx}(P _ 0) &gt; 0$ 和 $f _ {yy}(P _ 0) &gt; 0$ 并不足以说明 $P _ 0$ 是极小值点。类似地，仅有 $f _ {xx}(P _ 0) &lt; 0$ 和 $f _ {yy}(P _ 0) &lt; 0$ 并不足以说明 $P _ 0$ 是极大值点。<br />
 &emsp;&emsp;简单的来说，首先需要根据 $\Delta&gt;0$ 来判断是极值点，$\Delta &lt; 0$ 判断不是极值点，再根据二阶偏导的符号判断是何种极值点。其中
 $$\Delta = f _ {xx}(P _ 0)f _ {yy}(P _ 0)-f _ {xy}^2(P _ 0)\tag{9.3}$$</p>
 <h3 id="_9">条件极值<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;目标函数 $f(x _ 1,\cdots,x _ n)$，约束条件为 $g _ i(x _ 1,\cdots,x _ n)=0(i=1,2,\cdots,m)$。在 $f,g _ i(i=1,2,\cdots,m)$ 对 $x _ j(j=1,2,\cdots,n)$ 均存在<strong>一阶连续偏导数</strong>的情况下，可以使用 Lagrange 乘数法求解条件极值。<br />
+&emsp;&emsp;构造 Lagrange 函数
+$$L=f+\sum _ {i=1}^m\lambda _ ig _ i\tag{9.4}$$</p>
+<p>即可通过式 $(9.5)$ 求得 $f$ 的驻点。
+$$\begin{cases}\cfrac{\partial L}{\partial x _ j}=0(j=1,2,\cdots,n),\\ g _ i=0(i=1,2,\cdots,m)\end{cases}\tag{9.5}$$</p>
 
 
   
@@ -1852,13 +1897,13 @@ $$\Delta = f _ {xx}(P _ 0)f _ {yy}(P _ 0)-f _ {xy}^2(P _ 0)\tag{9.3}$$</p>
         
         
           
-          <a href="../ex2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 数列/函数极限计算题" rel="next">
+          <a href="../10/" class="md-footer__link md-footer__link--next" aria-label="下一页: 10 重积分" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                数列/函数极限计算题
+                10 重积分
               </div>
             </div>
             <div class="md-footer__button md-icon">
