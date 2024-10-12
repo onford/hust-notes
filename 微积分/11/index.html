@@ -104,6 +104,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1420,6 +1425,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    11 曲线积分与曲面积分
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1429,6 +1445,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    曲线积分
+  </a>
+  
+    <nav class="md-nav" aria-label="曲线积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    第一型曲线积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    第二型曲线积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#green" class="md-nav__link">
+    Green 公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    曲面积分
+  </a>
+  
+    <nav class="md-nav" aria-label="曲面积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    第一型曲面积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第二型曲面积分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1602,6 +1696,75 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    曲线积分
+  </a>
+  
+    <nav class="md-nav" aria-label="曲线积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    第一型曲线积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    第二型曲线积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#green" class="md-nav__link">
+    Green 公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    曲面积分
+  </a>
+  
+    <nav class="md-nav" aria-label="曲面积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    第一型曲面积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第二型曲面积分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1620,7 +1783,42 @@
 
   <h1>11 曲线积分与曲面积分</h1>
 
-
+<h2 id="_1">曲线积分<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">第一型曲线积分<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;第一型曲线积分的值与<strong>方向</strong>无关。无论是从曲线上 $A\to B$ 还是 $B\to A$，结果都应是一样的。计算过程中最麻烦的问题就是如何处理 $\mathrm ds$ 这个弧微分，一般都是采用<strong>曲线的参数方程</strong>化为定积分。<br />
+&emsp;&emsp;对于空间曲线 $L$ 而言，若它可以由 $x=x(t),y=y(t),z=z(t)(\alpha\leq t\leq\beta)$ 确定，那么有
+$$\int _ Lf\mathrm ds=\int _ \alpha^\beta f(x(t),y(t),z(t))\sqrt{x^{\prime 2}(t)+y^{\prime 2}(t)+z^{\prime 2}(t)}\mathrm dt\tag{11.1}$$</p>
+<p>这是一个比较普适的方法。其中限制条件是 $x^{\prime 2}(t)+y^{\prime 2}(t)+z^{\prime 2}(t)\neq 0$，这确保了 $L$ 不会退化为一个点。<br />
+&emsp;&emsp;若 $L$ 可由 $x=r(\theta)\cos\theta,y=r(\theta)\sin\theta,z=z(\theta)(\alpha\leq\theta\leq\beta)$ 确定，那么有
+$$\int _ Lf\mathrm ds=\int _ \alpha^\beta f(r(\theta)\cos\theta,r(\theta)\sin\theta,z(\theta))\sqrt{r^2(\theta)+r^{\prime 2}(\theta)+z^{\prime 2}(\theta)}\mathrm d\theta\tag{11.2}$$</p>
+<p>但是，不是所有的空间曲线都能用这种柱坐标参数方程表示，所以这种方式具有一定的局限性。</p>
+<h3 id="_3">第二型曲线积分<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;第二型曲线积分有着很多表示形式，如
+$$\int _ L\boldsymbol F\cdot\mathrm d\boldsymbol r=\int _ L\boldsymbol F\cdot\boldsymbol\tau\mathrm ds=\int _ LP\mathrm dx+Q\mathrm dy+R\mathrm dz\tag{11.3}$$</p>
+<p>对于它的计算，往往也是采用<strong>曲线的参数方程</strong>化为定积分。</p>
+<div class="admonition notes">
+<p class="admonition-title">分辨第一型与第二型曲线积分</p>
+<p>首先，在积分号下面有一个 $L$ 表示积分路径的，是曲线积分；否则是定积分。在曲线积分中，一般给出 $\mathrm ds$ 的是<strong>第一型</strong>，给出 $\mathrm dx,\mathrm dy,\mathrm dz$ 的组合的是<strong>第二型</strong>。</p>
+</div>
+<h3 id="green">Green 公式<a class="headerlink" href="#green" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;Green 公式是计算<strong>第二型曲线积分</strong>的利器，将其转化为二重积分。</p>
+<div class="admonition quote">
+<p class="admonition-title">Green 公式</p>
+<p>设区域 $D$ 由 $xy$ 平面上的简单闭曲线 $L$ 围成，函数 $P,Q$ 在 $D$ 上（包含边界）有<strong>连续</strong>的一阶偏导数，则成立如下公式
+$$\oint _ LP\mathrm dx+Q\mathrm dy=\iint \limits _ D(Q _ x-P _ y)\mathrm dx\mathrm dy=\iint \limits _ D\left|\begin{matrix}\partial/\partial x&amp;\partial/\partial y\\ P&amp;Q\end{matrix}\right|\mathrm dx\mathrm dy\tag{11.4}$$</p>
+</div>
+<h2 id="_4">曲面积分<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">第一型曲面积分<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;第一型曲面积分，也不考虑曲面的“方向”问题。曲面面积元 $\mathrm dS$ 需要经过适当的转换变为平面面积元 $\mathrm d\sigma$，从而转化为二重积分。如果曲面是 $z=z(x,y)$ 的一部分，那么
+$$\iint\limits _ Sf\mathrm dS=\iint\limits _ Df(x,y,z(x,y))\sqrt{1+z _ x^2+z _ y^2}\mathrm dx\mathrm dy\tag{11.5}$$</p>
+<p>&emsp;&emsp;第一型曲面积分的直接计算方法，相对来说，没有第一型曲线积分的方法那么丰富。</p>
+<h3 id="_6">第二型曲面积分<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;第二型曲面积分也有着很多表示形式，如
+$$\iint\limits _ S\boldsymbol F\cdot\mathrm d\boldsymbol S=\iint\limits _ S\boldsymbol F\cdot\boldsymbol n\mathrm dS=\iint\limits _ SP\mathrm dy\mathrm dz+Q\mathrm dz\mathrm dx+R\mathrm dx\mathrm dy\tag{11.6}$$</p>
+<div class="admonition notes">
+<p class="admonition-title">分辨第一型与第二型曲面积分</p>
+<p>首先，在积分号下面有一个 $S$ 代表积分曲面的的是曲面积分；否则积分号下面表示积分平面（一般用不等式或者符号 $D$），是二重积分。在曲面积分中，一般给出 $\mathrm dS$ 的是<strong>第一型</strong>，给出 $\mathrm dx\mathrm dy,\mathrm dy\mathrm dz,\mathrm dz\mathrm dx$ 的组合的是<strong>第二型</strong>。</p>
+</div>
 
 
   
