@@ -4,3 +4,9 @@
 body {  
     font-family: 'Times New Roman','Simsun'; 
 }
+.md-tooltip__inner{
+    font-family: 'Times New Roman','Simsun'; 
+}
+.md-typeset h2,.md-typeset h3,.md-typeset h4{
+    font-weight: bold;
+}

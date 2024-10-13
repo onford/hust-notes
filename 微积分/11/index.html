@@ -14,7 +14,7 @@
         <link rel="prev" href="../10/">
       
       
-        <link rel="next" href="../ex2/">
+        <link rel="next" href="../12/">
       
       
       <link rel="icon" href="../../assets/favicon.jpg">
@@ -1520,10 +1520,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gause-stokes" class="md-nav__link">
+    Gause 公式与 Stokes 公式
+  </a>
+  
+    <nav class="md-nav" aria-label="Gause 公式与 Stokes 公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gause" class="md-nav__link">
+    Gause 公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stokes" class="md-nav__link">
+    Stokes 公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12 无穷级数
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1543,9 +1590,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_13" >
         
-          <label class="md-nav__link" for="__nav_7_12" id="__nav_7_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_13" id="__nav_7_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1556,8 +1603,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_13">
             <span class="md-nav__icon md-icon"></span>
             习题集锦
           </label>
@@ -1763,6 +1810,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gause-stokes" class="md-nav__link">
+    Gause 公式与 Stokes 公式
+  </a>
+  
+    <nav class="md-nav" aria-label="Gause 公式与 Stokes 公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gause" class="md-nav__link">
+    Gause 公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stokes" class="md-nav__link">
+    Stokes 公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1801,12 +1875,9 @@ $$\int _ L\boldsymbol F\cdot\mathrm d\boldsymbol r=\int _ L\boldsymbol F\cdot\bo
 <p>首先，在积分号下面有一个 $L$ 表示积分路径的，是曲线积分；否则是定积分。在曲线积分中，一般给出 $\mathrm ds$ 的是<strong>第一型</strong>，给出 $\mathrm dx,\mathrm dy,\mathrm dz$ 的组合的是<strong>第二型</strong>。</p>
 </div>
 <h3 id="green">Green 公式<a class="headerlink" href="#green" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;Green 公式是计算<strong>第二型曲线积分</strong>的利器，将其转化为二重积分。</p>
-<div class="admonition quote">
-<p class="admonition-title">Green 公式</p>
-<p>设区域 $D$ 由 $xy$ 平面上的简单闭曲线 $L$ 围成，函数 $P,Q$ 在 $D$ 上（包含边界）有<strong>连续</strong>的一阶偏导数，则成立如下公式
+<p>&emsp;&emsp;Green 公式是计算<strong>第二型曲线积分</strong>的利器，将其转化为二重积分。遗憾的是 Green 公式所对应的曲线被限定为<strong>平面曲线</strong>。对于空间曲线，还得使用<a href="#stokes">Stokes 公式</a>才行。<br />
+&emsp;&emsp;Green 公式的表述为：设区域 $D$ 由 $xy$ 平面上的简单闭曲线 $L$ 围成，函数 $P,Q$ 在 $D$ 上（包含边界）有<strong>连续</strong>的一阶偏导数，则成立如下公式
 $$\oint _ LP\mathrm dx+Q\mathrm dy=\iint \limits _ D(Q _ x-P _ y)\mathrm dx\mathrm dy=\iint \limits _ D\left|\begin{matrix}\partial/\partial x&amp;\partial/\partial y\\ P&amp;Q\end{matrix}\right|\mathrm dx\mathrm dy\tag{11.4}$$</p>
-</div>
 <h2 id="_4">曲面积分<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="_5">第一型曲面积分<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;第一型曲面积分，也不考虑曲面的“方向”问题。曲面面积元 $\mathrm dS$ 需要经过适当的转换变为平面面积元 $\mathrm d\sigma$，从而转化为二重积分。如果曲面是 $z=z(x,y)$ 的一部分，那么
@@ -1819,6 +1890,35 @@ $$\iint\limits _ S\boldsymbol F\cdot\mathrm d\boldsymbol S=\iint\limits _ S\bold
 <p class="admonition-title">分辨第一型与第二型曲面积分</p>
 <p>首先，在积分号下面有一个 $S$ 代表积分曲面的的是曲面积分；否则积分号下面表示积分平面（一般用不等式或者符号 $D$），是二重积分。在曲面积分中，一般给出 $\mathrm dS$ 的是<strong>第一型</strong>，给出 $\mathrm dx\mathrm dy,\mathrm dy\mathrm dz,\mathrm dz\mathrm dx$ 的组合的是<strong>第二型</strong>。</p>
 </div>
+<p>&emsp;&emsp;直接求取第二型曲面积分，一般使用<strong>分散投影法</strong>或<strong>统一投影法</strong>。统一投影法的原理是：
+$$\iint\limits _ SP\mathrm dy\mathrm dz+Q\mathrm dz\mathrm dx+R\mathrm dx\mathrm dy=\iint\limits _ S[-Pz _ x(x,y)-Qz _ y(x,y)+R]\mathrm dx\mathrm dy\tag{11.7}$$</p>
+<p>&emsp;&emsp;从式 $(11.6)$ 中看出，如果你能直接得到 $\boldsymbol n$ 的表达式，那么就可以转换为第一型曲面积分计算。不过大多数时候其他方法也能解决，所以不必费尽心思求 $\boldsymbol n$ 的表达式。</p>
+<h2 id="gause-stokes">Gause 公式与 Stokes 公式<a class="headerlink" href="#gause-stokes" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;在引入这两个公式之前，首先约定了一些记号。式 $(11.8)(11.9)$ 分别定义矢量函数 $\boldsymbol F=\lbrace P,Q,R\rbrace$ 的<strong>散度</strong>与<strong>旋度</strong>。
+$$\operatorname{div}\boldsymbol F=P _ x+Q _ y+R _ z\tag{11.8}$$ $$\operatorname{\bold{rot}}\boldsymbol F=\lbrace R _ y-Q _ z,P _ z-R _ x,Q _ x-P _ y\rbrace\tag{11.9}$$</p>
+<p>&emsp;&emsp;然而旋度的计算式太难记了。引入 <strong>Hamilton 算子</strong> $\nabla=\left\lbrace\cfrac{\partial}{\partial x},\cfrac{\partial}{\partial y},\cfrac{\partial}{\partial z}\right\rbrace$ 后，可以简化为 $\operatorname{div}\boldsymbol F=\nabla\cdot\boldsymbol F$ 以及 $\operatorname{\bold{rot}}\boldsymbol F=\nabla\times\boldsymbol F$。同时梯度可以写成数乘向量 $\operatorname{\bold{grad}}u=\nabla u$。</p>
+<blockquote>
+<p class="annotate">也不能简单地将 $\nabla$ 看作一个矢量，把 $u$ 看作一个数量；$\nabla$ 矢量在运算中不仅具有一般性，还具有特殊性(1)。散度、旋度和梯度之间具有一些二级结论公式(2)。</p>
+<ol>
+<li>特殊性可以从以下的 Leibniz 规则中看出：$$\nabla(uv)=v\nabla u+u\nabla v$$ $$\nabla\cdot(u\boldsymbol F)=\nabla u\cdot\boldsymbol F+u\nabla\cdot\boldsymbol F$$ $$\nabla\times(u\boldsymbol F)=\nabla u\times\boldsymbol F+u\nabla\times\boldsymbol F$$ $$\nabla\cdot(\boldsymbol F\times\boldsymbol G)=(\nabla\times\boldsymbol F)\cdot\boldsymbol G-\boldsymbol F\cdot(\nabla\times\boldsymbol G)$$</li>
+<li>下面两个结论能够按照定义证明出来，但是可能不太好记忆： $$\nabla\cdot(\nabla\times\boldsymbol F)=\operatorname{div}\operatorname{\bold{rot}}\boldsymbol F=0$$ $$\nabla\times\nabla u=\operatorname{\bold{rot}}\operatorname{\bold{grad}}u=0$$ 下面这个计算结果也记为 $\Delta u$，其中 $\Delta$ 是 Laplace 算子：$$\nabla\cdot\nabla u=\nabla^2u=u _ {xx}+u _ {yy} + u _ {zz}$$</li>
+</ol>
+</blockquote>
+<h3 id="gause">Gause 公式<a class="headerlink" href="#gause" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;Gause 公式将空间中的<strong>闭曲面的第二型曲面积分</strong>与曲面所包围的空间区域的三重积分联系起来。这和 <a href="#green">Green 公式</a>类似，Green 公式将平面中的<strong>闭曲线的第二型曲线积分</strong>与曲线所包围的平面区域的二重积分联系起来。<br />
+&emsp;&emsp;Gause 公式的形式为
+$$\oiint\limits _ SP\mathrm dy\mathrm dz+Q\mathrm dz\mathrm dx+R\mathrm dx\mathrm dy=\iiint\limits _ V(P _ x+Q _ y+R _ z)\mathrm dv\tag{11.10}$$
+或者写作
+$$\oiint\limits _ S(\boldsymbol F\cdot\boldsymbol n)\mathrm dS=\iiint\limits _ V(\nabla\cdot\boldsymbol F)\mathrm dv\tag{11.11}$$</p>
+<h3 id="stokes">Stokes 公式<a class="headerlink" href="#stokes" title="Permanent link">&para;</a></h3>
+<p class="annotate">&emsp;&emsp;设分片光滑的定向曲面 $S$ 以分段光滑的有向闭曲线 $L$ 为边界，$L$ 与 $S$ 的定向一致(1)；函数 $P,Q,R$ 在 $S$（包括边界）上有连续的一阶偏导数，$\boldsymbol F=\lbrace P,Q,R\rbrace$，则</p>
+<ol>
+<li>若一人立于 $S$ 的指定一侧沿 $L$ 行进时，$S$ 的指定一侧总是在左侧，则说 $L$ 与 $S$ 的定向一致。</li>
+</ol>
+<p>$$\oint _ L \boldsymbol F\cdot\mathrm d\boldsymbol r=\iint\limits _ S(\nabla\times\boldsymbol F)\cdot\boldsymbol n\mathrm dS\tag{11.12}$$</p>
+<p>在实际计算中，一般采用
+$$\oint _ LP\mathrm dx+Q\mathrm dy+R\mathrm dz=\iint\limits _ S\left|\begin{matrix}\mathrm dy\mathrm dz&amp;\mathrm dz\mathrm dx&amp;\mathrm dx\mathrm dy\\\cfrac{\partial}{\partial x}&amp;\cfrac{\partial}{\partial y}&amp;\cfrac{\partial}{\partial z}\\P&amp;Q&amp;R\end{matrix}\right|\tag{11.13}$$</p>
+<p>从而转换为第二型曲面积分计算。</p>
 
 
   
@@ -1859,13 +1959,13 @@ $$\iint\limits _ S\boldsymbol F\cdot\mathrm d\boldsymbol S=\iint\limits _ S\bold
         
         
           
-          <a href="../ex2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 数列/函数极限计算题" rel="next">
+          <a href="../12/" class="md-footer__link md-footer__link--next" aria-label="下一页: 12 无穷级数" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                数列/函数极限计算题
+                12 无穷级数
               </div>
             </div>
             <div class="md-footer__button md-icon">
