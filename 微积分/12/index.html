@@ -1799,7 +1799,7 @@
 <p>很多情况下，这个 $\sum b _ n$ 具有简单的形式，比如 $p-$级数。</p>
 </blockquote>
 </li>
-<li>极限形式的比较判别法。若 $b _ n\neq 0$，$\lim\limits _ {n\to\infty}a _ n/b _ n=l$，则当 $0\leq l\leq +\infty$ 时 $\sum a _ n$ 与 $\sum b _ n$ 敛散性相同。</li>
+<li>极限形式的比较判别法。若 $b _ n\neq 0$，$\lim\limits _ {n\to\infty}a _ n/b _ n=l$，则当 $0&lt; l&lt; +\infty$ 时 $\sum a _ n$ 与 $\sum b _ n$ 敛散性相同。</li>
 </ul>
 </li>
 <li>$a _ n$ 自身性质挖掘<ul>
@@ -1827,11 +1827,14 @@ $$\forall\varepsilon&gt;0,\exists N&gt;0,\forall n\geq N,\forall x\in A:|R _ n(x
 </div>
 <p>&emsp;&emsp;教材上对于这个 $b _ n$ 的阐述非常好。Weierstrass 判别法的关键是将 $|u _ n(x)|$ <strong>适度</strong>放大为 $b _ n$，使得 $b _ n$ 不再含 $x$。</p>
 <h3 id="_6">幂级数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;幂级数是特殊的函数项级数，Abel 定理(1)</p>
-<p>{.annotate}</p>
+<p class="annotate">&emsp;&emsp;幂级数是特殊的函数项级数，从 Abel 定理(1)中可以导出收敛半径 $R$ 的概念，即幂级数的收敛域 $B$ 为一个连续且关于原点对称的区间（忽略端点）。而对于幂级数 $\displaystyle\sum _ {n=0}^\infty a _ nx ^n$ 来说，收敛半径的确认依式 $(12.1)$。</p>
 <ol>
-<li></li>
+<li>如果级数 $\displaystyle\sum _ {n=0}^\infty a _ nx ^n$ 当 $x=x _ 0(x _ 0\neq 0)$ 时收敛，则该级数在区间 $(-|x _ 0|,|x _ 0|)$ 上<strong>绝对收敛</strong>。如果级数 $\displaystyle\sum _ {n=0}^\infty a _ nx ^n$ 当 $x=x _ 0$ 时发散，则对 $|x|&gt;|x _ 0|$ 的 $x$ 级数发散。</li>
 </ol>
+<p>$$R=\lim _ {n\to\infty}\left|\cfrac{a _ n}{a _ {n+1}}\right|\tag{12.1}$$</p>
+<blockquote>
+<p>关于幂级数是否在 $x=\pm R$ 处收敛，需要单独拿出来讨论。</p>
+</blockquote>
 
 
   
