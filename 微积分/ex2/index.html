@@ -1698,6 +1698,34 @@ $$\begin{aligned}I&amp;\leq\lim _ {n\to\infty}\cfrac{n+\sum _ {k=2}^n\frac{2\sqr
 <p>根据此题的思想，读者可以试一试求 $\displaystyle\lim _ {n\to\infty} \cfrac{1}{\sqrt n}\left(\sum _ {k=1}^n\sqrt[k]{n}-2n\right)$，结果是 $1$，方法类似。</p>
 </blockquote>
 </details>
+<p><strong>题 4</strong>&emsp;设 $\displaystyle I _ n=n\int _ 1^a\cfrac{\mathrm dx}{1+x^n}$，其中 $a&gt;1$，求极限 $\lim\limits _ {n\to\infty}I _ n$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;<strong>分部积分+夹逼</strong>——解题思路（来自第十五届全国大学生数学竞赛初赛试卷）</summary>
+<p><strong>答案</strong>&emsp;$\ln 2$<br></p>
+<blockquote>
+<p>遇事不决，往往采用<strong>倒代换</strong>。一旦想到倒代换，就容易分部积分，根据 $\ln(1+x)\leq x$ 也容易想到放缩，从而夹逼。</p>
+</blockquote>
+<p><strong>解</strong>&emsp;记 $b=\cfrac{1}{a}$，则 $0&lt;b&lt;1$。作变量替换 $x=\cfrac{1}{t}$，得到
+$$I _ n=\int _ b^1\cfrac{nt^{n-1}}{t(1+t^n)}\mathrm dt=\int _ b^1\cfrac{\mathrm d(\ln(1+t^n))}{t}$$</p>
+<p>分部积分得 $$I _ n=\ln 2-\cfrac{\ln(1+b^n)}{b}+\int _ b^1\cfrac{\ln(1+t^n)}{t^2}\mathrm dt$$
+当 $t\in[b,1]$ 时，$\cfrac{\ln(1+t^n)}{t^2}\leq t^{n-2}$，从而
+$$0\leq \int _ b^1\cfrac{\ln(1+t^n)}{t^2}\mathrm dt\leq\int _ b^1t^{n-2}=\cfrac{1-b^{n-1}}{n-1}$$</p>
+<p>显然，$\lim\limits _ {n\to\infty}\cfrac{1-b^{n-1}}{n-1}=0$。由夹逼准则，$\lim\limits _ {n\to\infty}\displaystyle\int _ b^1\cfrac{\ln(1+t^n)}{t^2}\mathrm dt=0$。<br />
+又 $\lim\limits _ {n\to\infty}\cfrac{\ln(1+b^n)}{b}=0$，所以 $\lim\limits _ {n\to\infty}I _ n=\ln 2$。</p>
+</details>
+<hr />
+<p>以下题目存在问题，待修正。</p>
+<p><strong>题 5</strong>&emsp;求极限 $I=\displaystyle\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x\sqrt{x^2-t^2}\sin(x^2-t^2)\mathrm dt$ 的值。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;<strong>泰勒展开舍弃无穷小量</strong>——解题思路（来自 2023 年全国大学生数学竞赛华中科技大学校选拔考试）</summary>
+<p><strong>答案</strong>&emsp;$\cfrac{3\pi}{16}$</p>
+<blockquote>
+<p>这道题如果对 $\sin(x^2-t^2)$ 进行泰勒展开，并丢弃三阶小量，可以很方便地得到答案。关键是为什么可以丢弃，这一点需要认真琢磨。</p>
+</blockquote>
+<p><strong>解</strong>&emsp;令 $t=x\sin\theta$，可得 $\displaystyle\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{3/2}\mathrm dt=\int _ 0^{\frac{\pi}{2}}\cos^4\theta\mathrm d\theta=\cfrac{3\pi}{16}$。同样的令法，可得 $\displaystyle\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{7/2}\mathrm dt=0$。所以 $I=\cfrac{3\pi}{16}$。<br>
+题目实际上有点问题，因为左右极限不相等。
+$$\begin{aligned}\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{3/2}\mathrm dt&amp;=\lim _ {x\to 0}\cfrac{1}{x^4}\int _ {\frac{\pi}{2}}^0(x^2\cos^2\theta)^{3/2}x\cos\theta\mathrm d\theta\\&amp;=-\lim _ {x\to 0}\cfrac{|x|^3}{x^3}\int _ 0^{\frac{\pi}{2}}\cos^4\theta\mathrm d\theta\end{aligned}$$</p>
+</details>
 
 
   

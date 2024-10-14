@@ -1741,8 +1741,14 @@
 <p class="admonition-title">定积分 Cauchy-Schwartz（柯西-施瓦茨不等式）</p>
 <p>&emsp;&emsp;设 $f(x),g(x)$ 在 $[a,b]$ 上连续，则：$$\left(\int _ a^bf(x)g(x)\mathrm dx\right)^2\leq \left(\int _ a^bf^2(x)\mathrm dx\right)\left(\int _ a^bg^2(x)\mathrm dx\right)\tag{6.2}$$</p>
 <blockquote>
-<p>Cauchy-Schwartz 不等式在定积分中的变体，其证明非常巧妙。</p>
+<p class="annotate">Cauchy-Schwartz 不等式在定积分中的变体，其证明非常巧妙(1)。</p>
+<ol>
+<li>首先，显然对于任意 $\lambda\in\mathbb R$，下式恒成立：$$[\lambda f(x)+g(x)]^2\geq 0$$ 
+对上式积分，可得 $$\lambda^2\int _ a^bf^2(x)\mathrm dx+2\lambda\int _ a^bf(x)g(x)\mathrm dx+\int _ a^bg^2(x)\mathrm dx\geq 0$$ <ul><li> 若 $\displaystyle\int _ a^bf^2(x)\mathrm dx=0$，根据 $f(x)$ 的连续性得 $f(x)=0(x\in[a,b])$，待证不等式显然成立。</li> <li>若 $\displaystyle\int _ a^bf^2(x)\mathrm dx&gt;0$，式左侧可看作 $\lambda$ 的二次函数，其值恒为非负值，从而
+$$\Delta = \left(2\int _ a^bf(x)g(x)\mathrm dx\right)^2-4\left(\int _ a^bf^2(x)\mathrm dx\right)\left(\int _ a^bg^2(x)\mathrm dx\right)\leq 0$$ 从而待证不等式得证。</li></ul></li>
+</ol>
 </blockquote>
+<p>特别地，式 $(6.2)$ 等号成立的条件是 $f(x),g(x)$ 线性相关。在 $g(x)\neq 0$ 的情况下，也可写作 $\exists c\in\mathbb R:f(x)=cg(x)$。</p>
 </div>
 <p>&emsp;&emsp;同时，对于<strong>特殊上下限</strong>的定积分，也有公式用于简化计算或者证明：
 $$\int _ 0^af(x)\mathrm dx=\int _ 0^af(a-x)\mathrm dx\tag{6.3}$$ $$\int _ 0^af(x)\mathrm dx=\cfrac{1}{2}\int _ 0^a[f(x)+f(a-x)]\mathrm dx\tag{6.4}$$ $$\int _ {-a} ^ af(x)\mathrm dx=\int _ 0^a[f(x)+f(-x)]\mathrm dx\tag{6.5}$$</p>

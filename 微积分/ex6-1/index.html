@@ -1667,6 +1667,21 @@
 &amp;=2\int _ 2 ^{+\infty}\cfrac{[x]-x}{x^2}\mathrm dx-2\int _ 1^{+\infty}\cfrac{[x]-x}{x^2}\mathrm dx\quad(\text{前一个积分换元}\ x=2t)\\
 &amp;=2\int _ 1 ^2\cfrac{x-[x]}{x^2}\mathrm dx=2\int _ 1 ^2\cfrac{x-1}{x^2}\mathrm dx=2\ln 2-1\end{aligned}$$</p>
 </details>
+<p><strong>题 3</strong>&emsp;计算定积分 $I=\displaystyle\int _ 0^{\pi/2}\cfrac{\sin(2023x)}{\sin x}\mathrm dx$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学校选拔考试）</summary>
+<p><strong>答案</strong>&emsp;$\cfrac{\pi}{2}$</p>
+<blockquote>
+<p>和差化积的极致运用。这道题的关键在于<strong>将三角分式化成整式</strong>，从而利用三角函数的积分求解。</p>
+</blockquote>
+<p><strong>解</strong>&emsp;根据和差化积公式（直接展开也行），有
+$$\sin[(2n+1)x]-\sin[(2n-1)x]=2\cos(2nx)\sin x$$</p>
+<p>因此有
+$$\begin{aligned}\sin(2023x)&amp;=\sum _ {n=1}^{1011}\lbrace\sin[(2n+1)x]-\sin[(2n-1)x]\rbrace+\sin x\\&amp;=2\sum _ {n=1}^{1011}\cos(2nx)\sin x+\sin x\end{aligned}$$</p>
+<p>所以
+$$\begin{aligned}\int _ 0^{\pi/2}\cfrac{\sin(2023x)}{\sin x}\mathrm dx&amp;=\int _ 0^{\pi/2}\left[2\sum _ {n=1}^{1011}\cos(2nx)+1\right]\mathrm dx\\
+&amp;=\cfrac{\pi}{2}+2\sum _ {n=1}^{1011}\int _ 0^{\pi/2}\cos(2nx)=\cfrac{\pi}{2}\end{aligned}$$</p>
+</details>
 
 
   

@@ -1644,7 +1644,7 @@
 <hr />
 <p><strong>题 1</strong>&emsp;设 $f(x)$ 在 $[a,b]$ 上连续且 $\displaystyle\int _ a^bf(x)\mathrm dx=0$，证明存在 $\xi\in(a,b)$，使得 $\displaystyle\int _ a^\xi f(x)\mathrm dx=f(\xi)$。</p>
 <details class="tip">
-<summary>解题思路（来自《微积分学练习册》）</summary>
+<summary>$\bigstar\bigstar$&emsp;解题思路（来自《微积分学练习册》）</summary>
 <blockquote>
 <p>这道题和<a href="../ex4/">Taylor 公式/中值定理证明题</a>中的题 2 有些类似，也是需要乘以一个因子，然后使用 Rolle 定理。包装成定积分形式换汤不换药。</p>
 </blockquote>
@@ -1653,7 +1653,7 @@
 </details>
 <p><strong>题 2</strong>&emsp;设 $f(x)$ 在 $[2,4]$ 上可导，且 $f(2)=f(4)=0$，证明 $\displaystyle\left|\int _ 2 ^ 4f(x)\mathrm dx\right|\leq\max\limits _ {x\in[2,4]}|f^\prime(x)|$。</p>
 <details class="tip">
-<summary>解题思路（来自《微积分学练习册》）</summary>
+<summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自《微积分学练习册》）</summary>
 <blockquote>
 <p>这道题使用了 Lagrange 中值定理，方法实为巧妙，很有思维深度。</p>
 </blockquote>
@@ -1666,6 +1666,22 @@ $$f(x)-f(2)=f^\prime(\xi _ 1)(x-2)$$ $$f(4)-f(x)=f^\prime(\xi _ 2)(4-x)$$
 &amp;\leq\int _ 2^3|f^\prime(\xi _ 1)|(x-2)\mathrm dx+\int _ 3^4|f^\prime(\xi _ 2)|(4-x)\mathrm dx\\
 &amp;\leq\max\limits _ {x\in[2,4]}|f^\prime(x)|\left[\int _ 2^3(x-2)\mathrm dx+\int _ 3^4(4-x)\mathrm dx\right]\\
 &amp;=\max\limits _ {x\in[2,4]}|f^\prime(x)|\end{aligned}$$</p>
+</details>
+<p><strong>题 3</strong>&emsp;设 $f(x)$ 在 $[0,1]$ 上有连续的导数且 $f(0)=0$，求证 $$\int _ 0^1f^2(x)\mathrm dx\leq 4\int _ 0^1(1-x)^2|f^\prime(x)|^2\mathrm dx$$</p>
+<p>并求使上式成为等式的 $f(x)$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;解题思路（来自第十五届全国大学生数学竞赛初赛试卷）</summary>
+<blockquote>
+<p>这道题需要注意到 $\mathrm d(x+c)=\mathrm dx(c=-1)$，<strong>上来就可以直接分部积分</strong>，从而与 $f^\prime(x)$ 产生关系。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;由分部积分法
+$$\begin{aligned}\int _ 0^1f^2(x)\mathrm dx&amp;=(x-1)f^2(x)\bigg| _ 0^1-\int _ 0^1(x-1)\cdot 2f(x)f^\prime(x)\mathrm dx\\&amp;=2\int _ 0^1(1-x)f^\prime(x)\cdot f(x)\mathrm dx\end{aligned}$$</p>
+<p>由 Cauchy 积分不等式，有
+$$\int _ 0^1(1-x)f^\prime(x)\cdot f(x)\mathrm dx\leq\left(\int _ 0^1(1-x)^2(f^\prime(x))^2\mathrm dx\right)^{\frac{1}{2}}\left(\int _ 0^1f^2(x)\mathrm dx\right)^\frac{1}{2}$$</p>
+<p>于是待证不等式得证。等式成立时应有常数 $c$ 使得 $(1-x)f^\prime(x)=cf(x)$。因此当 $x\in(0,1)$ 时，有
+$$[(1-x)^cf(x)]^\prime=(1-x)^{c-1}[(1-x)f^\prime(x)-cf(x)]=0$$</p>
+<p>因而存在常数 $d$ 使得 $f(x)=d(1-x)^{-c}(0&lt;x&lt;1)$。当 $x\to 0$ 时，有 $f(x)\to 0$，故 $d=0$，于是 $f(x)=0$。<br>
+所以使得题中不等式成为等式的函数是 $f(x)=0$。</p>
 </details>
 
 

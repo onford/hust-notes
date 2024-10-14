@@ -1694,6 +1694,22 @@ $$\int _ 0^1(x^2-3x)\left[f^\prime(x)+\cfrac{6}{7}\right]\mathrm dx=(\eta^2-3\et
 $$F^\prime(\eta)=(\eta^2-3\eta)\left[f^\prime(\eta)+\cfrac{6}{7}\right]=0$$</p>
 <p>一样可以得证。</p>
 </details>
+<p><strong>题 4</strong>&emsp;设 $f(x)$ 在 $[a,b]$ 上连续可微，$f^\prime(a)\neq 0$，由积分中值定理知：存在 $\xi\in(a,b)$，使得 $\displaystyle\int _ a^bf(x)\mathrm dx=f(\xi)(b-a)$。证明 $\lim\limits _ {b\to a}\cfrac{\xi-a}{b-a}=\cfrac{1}{2}$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;<strong>Rolle 中值定理</strong>——解题思路（来自 2023 年全国大学生数学竞赛华中科技大学校选拔考试）</summary>
+<blockquote>
+<p>题目中得描述只涉及到 $f(\xi)$，所以需要思考怎么将 $\xi$ 转化为 $f(\xi)$ 。$f^\prime(a)$ 是完成这一点的桥梁。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;记 $F(b)=\displaystyle\int _ a^bf(x)\mathrm dx$，由泰勒公式可知
+$$F(b)=F(a)+F^\prime(a)(b-a)+\cfrac{1}{2}F^{\prime\prime}(a)(b-a)^2+o((b-a)^2)$$</p>
+<p>据此，有
+$$\int _ a^bf(x)\mathrm dx=f(a)(b-a)+\cfrac{f^\prime(a)}{2}(b-a)^2+o((b-a)^2)$$</p>
+<p>结合题目条件 $\displaystyle\int _ a^bf(x)\mathrm dx=f(\xi)(b-a)$，可得
+$$\cfrac{f(\xi)-f(a)}{b-a}=\cfrac{1}{2}f^\prime(a)+o(1)$$</p>
+<p>两边取极限，可得
+$$\lim _ {b\to a}\cfrac{f(\xi)-f(a)}{\xi-a}\cdot\cfrac{\xi -a}{b-a}=\cfrac{1}{2}f^\prime(a)$$</p>
+<p>因为 $\lim\limits _ {b\to a}\cfrac{f(\xi)-f(a)}{\xi-a}=f^\prime(a)\neq 0$，所以原式得证。</p>
+</details>
 
 
   

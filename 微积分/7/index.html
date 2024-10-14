@@ -1820,6 +1820,16 @@ $$y^\prime=a(x)y+b(x)y^n\quad(n\neq0,1)\tag{7.3}$$</p>
 <p>&emsp;&emsp;Bernoulli 方程是一阶非线性微分方程。你也注意到了，含有常数项的方程不是 Bernoulli 方程，就没法用这种方式求解。</p>
 <h2 id="_2">齐次方程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;满足 $F(ax,ay)=0$ 的方程 $F(x,y)=0$ 是齐次方程。对于这类方程，尝试使用 $t =\cfrac{y}{x}$ 进行换元，得到 $t$ 关于 $x$ 的微分方程，可能会简化计算。</p>
+<details class="notes">
+<summary>一类可以转化为齐次方程的微分方程</summary>
+<p>&emsp;&emsp;有一些微分方程，在去掉某一项后就是其次的微分方程。比如下面这个
+$$(x^2+y^2+3)\cfrac{\mathrm dy}{\mathrm dx}=2x(2y-\cfrac{x^2}{y})$$</p>
+<p>要是没有这个 $3$ 就好了。这题我们在凑微分的时候，也容易发现凑出来的都是 $x,y$ 的偶数次项，很容易想到换元 $u=x^2,v=y^2$，从而有
+$$\cfrac{\mathrm dv}{\mathrm du}=\cfrac{2(2v-u)}{u+v+3}$$</p>
+<p>依然，这个 $3$ 的存在很麻烦。考虑到 $\mathrm d(x+c)=\mathrm dx$，我们可以令 $U=u+a$，$V=v+b$，其中 $a,b$ 都是常数，希望能够将微分方程转换为如下所示的<strong>齐次方程</strong>便于后续解题
+$$\cfrac{\mathrm dV}{\mathrm dU}=\cfrac{2(2V-U)}{U+V+3}$$</p>
+<p>很容易能找到 $a=2,b=1$，接下来就可以使用齐次方程的方法了。</p>
+</details>
 <h2 id="_3">二阶微分方程的解法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">特殊方程（缺元）的降阶法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;对于一些高阶的微分方程，可以尝试降为一阶微分方程，从而应用式 $(7.1)$ 或者其他方式求解。两种典型的降阶方式：</p>
