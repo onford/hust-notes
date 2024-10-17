@@ -1591,6 +1591,46 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    级数相关题目
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    其他好题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1643,6 +1683,18 @@
   <h1>数列/函数极限计算题</h1>
 
 <p>&emsp;&emsp;极限的计算可以和微分中值定理、泰勒公式、定积分、二重积分结合在一起，从而极其具有思维深度。</p>
+<hr />
+<p><strong>题型 1</strong>&emsp;求 $I=\lim\limits _ {n\to \infty}\left(\cfrac{1}{n+1^\alpha}+\cfrac{1}{n+2^\alpha}+\cdots+\cfrac{1}{n+n^\alpha}\right)(\alpha&gt;0)$。</p>
+<blockquote>
+<p class="annotate">当 $0&lt;\alpha&lt;1$ 时，$I=1$。(1)<br>
+当 $\alpha=1$ 时，$I=\ln 2$。(2)<br>
+当 $\alpha&gt;1$ 时，$I=0$。(3)</p>
+<ol>
+<li>很容易由夹逼定理得知：$$1=\lim _ {n\to\infty}\cfrac{n}{n+n^\alpha}\leq I\leq\lim _ {n\to \infty}\cfrac{n}{n+1}=1$$ </li>
+<li>根据定义转化为定积分求取：$$I=\lim _ {n\to\infty}\cfrac{1}{n}\sum _ {k=1}^n\cfrac{1}{1+\frac{k}{n}}=\int _ 0^1\cfrac{1}{1+x}\mathrm dx=\ln 2$$</li>
+<li>记 $S(n)=\cfrac{1}{n+1^\alpha}+\cfrac{1}{n+2^\alpha}+\cdots+\cfrac{1}{n+n^\alpha}=\displaystyle\sum _ {k=1}^n\cfrac{1}{n+k^\alpha}$，使用均值不等式可得 $$0&lt; S(n)\leq\sum _ {k=1}^n\cfrac{1}{2\sqrt n\cdot k^{\alpha/2}}=\cfrac{1}{2\sqrt n}\sum _ {k=1}^n\cfrac{1}{k^{\alpha/2}}$$ 而由 <a href="../2/#stolz">stolz 定理</a>知 $$\begin{aligned}\lim _ {n\to\infty}\cfrac{\displaystyle\sum _ {k=1}^n\cfrac{1}{k^{\alpha/2}}}{\sqrt n}&amp;=\lim _ {n\to\infty}\cfrac{\displaystyle\sum _ {k=1}^{n+1}\cfrac{1}{k^{\alpha/2}}-\sum _ {k=1}^n\cfrac{1}{k^{\alpha/2}}}{\sqrt{n+1}-\sqrt n}\\&amp;=\lim _ {n\to\infty}\cfrac{(n+1)^{-\alpha/2}}{\sqrt{n+1}-\sqrt n}\\&amp;=\lim _ {n\to\infty}\cfrac{\sqrt {n+1}+\sqrt n}{(n+1)^{\alpha/2}}=0\end{aligned}$$ 因而由夹逼定理知 $I=0$。</li>
+</ol>
+</blockquote>
 <hr />
 <p><strong>题 1</strong>&emsp;求数列极限 $\displaystyle\lim _ {n\to\infty} n\sin(2\pi en!)$。</p>
 <details class="tip">
@@ -1713,18 +1765,27 @@ $$0\leq \int _ b^1\cfrac{\ln(1+t^n)}{t^2}\mathrm dt\leq\int _ b^1t^{n-2}=\cfrac{
 <p>显然，$\lim\limits _ {n\to\infty}\cfrac{1-b^{n-1}}{n-1}=0$。由夹逼准则，$\lim\limits _ {n\to\infty}\displaystyle\int _ b^1\cfrac{\ln(1+t^n)}{t^2}\mathrm dt=0$。<br />
 又 $\lim\limits _ {n\to\infty}\cfrac{\ln(1+b^n)}{b}=0$，所以 $\lim\limits _ {n\to\infty}I _ n=\ln 2$。</p>
 </details>
-<hr />
-<p>以下题目存在问题，待修正。</p>
-<p><strong>题 5</strong>&emsp;求极限 $I=\displaystyle\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x\sqrt{x^2-t^2}\sin(x^2-t^2)\mathrm dt$ 的值。</p>
+<p><strong>题 5</strong>&emsp;求极限 $I=\displaystyle\lim _ {x\to 0^+}\cfrac{1}{x^4}\int _ 0^x\sqrt{x^2-t^2}\sin(x^2-t^2)\mathrm dt$ 的值。</p>
 <details class="tip">
 <summary>$\bigstar\bigstar\bigstar$&emsp;<strong>泰勒展开舍弃无穷小量</strong>——解题思路（来自 2023 年全国大学生数学竞赛华中科技大学校选拔考试）</summary>
 <p><strong>答案</strong>&emsp;$\cfrac{3\pi}{16}$</p>
 <blockquote>
 <p>这道题如果对 $\sin(x^2-t^2)$ 进行泰勒展开，并丢弃三阶小量，可以很方便地得到答案。关键是为什么可以丢弃，这一点需要认真琢磨。</p>
 </blockquote>
-<p><strong>解</strong>&emsp;令 $t=x\sin\theta$，可得 $\displaystyle\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{3/2}\mathrm dt=\int _ 0^{\frac{\pi}{2}}\cos^4\theta\mathrm d\theta=\cfrac{3\pi}{16}$。同样的令法，可得 $\displaystyle\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{7/2}\mathrm dt=0$。所以 $I=\cfrac{3\pi}{16}$。<br>
-题目实际上有点问题，因为左右极限不相等。
-$$\begin{aligned}\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{3/2}\mathrm dt&amp;=\lim _ {x\to 0}\cfrac{1}{x^4}\int _ {\frac{\pi}{2}}^0(x^2\cos^2\theta)^{3/2}x\cos\theta\mathrm d\theta\\&amp;=-\lim _ {x\to 0}\cfrac{|x|^3}{x^3}\int _ 0^{\frac{\pi}{2}}\cos^4\theta\mathrm d\theta\end{aligned}$$</p>
+<p><strong>解</strong>&emsp;令 $t=x\sin\theta$，可得 $\displaystyle\lim _ {x\to 0^+}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{3/2}\mathrm dt=\int _ 0^{\frac{\pi}{2}}\cos^4\theta\mathrm d\theta=\cfrac{3\pi}{16}$。同样的令法，可得 $\displaystyle\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{7/2}\mathrm dt=0$。因为
+$$\lim _ {x\to 0^+}\cfrac{1}{x^4}\int _ 0^x\sqrt{x^2-t^2}\sin(x^2-t^2)\mathrm dt=\lim _ {x\to 0^+}\cfrac{1}{x^4}\int _ 0^x\sqrt{x^2-t^2}\left((x^2-t^2)+O((x^2-t^2)^3)\right)\mathrm dt$$</p>
+<p>所以 $I=\cfrac{3\pi}{16}$。</p>
+<hr />
+<p><strong>注 1</strong>&emsp;原题的极限过程是 $x\to 0$，这是有问题的，因为左右极限不相等，见下式
+$$\begin{aligned}\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{3/2}\mathrm dt&amp;=\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^{\frac{\pi}{2}}(x^2\cos^2\theta)^{3/2}x\cos\theta\mathrm d\theta\quad(t=x\sin\theta)\\&amp;=\lim _ {x\to 0}\cfrac{|x|^3}{x^3}\int _ 0^{\frac{\pi}{2}}\cos^4\theta\mathrm d\theta\end{aligned}$$</p>
+<p><strong>注 2</strong>&emsp;上面的解析是原题解析，该解析很多地方令人费解，尤其是 $o((x^2-t^2)^3)$。</p>
+<ul>
+<li>首先，$t$ 和 $x$ 是存在关系的，且 $t$ 作为积分变量有一定的独立性，我暂时难以理解 $o((x^2-t^2)^3)$ 想要表达的含义。</li>
+<li>其次，泰勒展开展错了。$o((x^2-t^2)^3)$ 前面还要加上一个 $-(x^2-t^2)^3/6$ 才对。 </li>
+</ul>
+<p>相比于 $o((x^2-t^2)^3)$，有一个我认为比较好的说法。先换元
+$$\lim _ {x\to 0^+}\cfrac{1}{x^4}\int _ 0^x\sqrt{x^2-t^2}\sin(x^2-t^2)\mathrm dt=\lim _ {x\to 0^+}\cfrac{1}{x^3}\int _ 0^{\frac{\pi}{2}}\cos\theta\sin(x^2\cos^2\theta)\mathrm d\theta$$</p>
+<p>此时 $x,\theta$ 是完全无关的两个量，从而在积分式中，$x$ 可以视作一个常量。相对地，$\theta$ 也与极限过程无关，从而可以将 $\sin(x^2\cos^2\theta)$ 写作 $x^2\cos^2\theta+o(x^2)$。</p>
 </details>
 
 

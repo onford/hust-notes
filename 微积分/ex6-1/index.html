@@ -1591,6 +1591,46 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    级数相关题目
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    其他好题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1681,6 +1721,22 @@ $$\begin{aligned}\sin(2023x)&amp;=\sum _ {n=1}^{1011}\lbrace\sin[(2n+1)x]-\sin[(
 <p>所以
 $$\begin{aligned}\int _ 0^{\pi/2}\cfrac{\sin(2023x)}{\sin x}\mathrm dx&amp;=\int _ 0^{\pi/2}\left[2\sum _ {n=1}^{1011}\cos(2nx)+1\right]\mathrm dx\\
 &amp;=\cfrac{\pi}{2}+2\sum _ {n=1}^{1011}\int _ 0^{\pi/2}\cos(2nx)=\cfrac{\pi}{2}\end{aligned}$$</p>
+</details>
+<p><strong>题 4</strong>&emsp;计算定积分 $I=\displaystyle\int _ 0^\pi\ln\sin x\mathrm dx$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（二））</summary>
+<p><strong>答案</strong>&emsp;$-\pi\ln 2$</p>
+<blockquote>
+<p>在使用各种手段计算 $I$ 时，如果兜兜转转回到 $I$，得到 $I=a+bI$ 这样的式子，就可以从中解出 $I$。 </p>
+</blockquote>
+<p><strong>解</strong>&emsp;$$\begin{aligned}I&amp;=2\int _ 0^{\frac{\pi}{2}}\ln\sin x\mathrm dx=2\int _ 0^{\frac{\pi}{2}}\ln\cos x\mathrm dx\\
+&amp;=\int _ 0^{\frac{\pi}{2}}\ln(\sin x\cos x)\mathrm dx\\
+&amp;=\int _ 0^{\frac{\pi}{2}}\ln\sin(2x)\mathrm dx-\cfrac{\pi\ln 2}{2}\\
+&amp;=\cfrac{1}{2}2\int _ 0^{\pi}\ln\sin t\mathrm dt-\cfrac{\pi\ln 2}{2}=\cfrac{1}{2}I-\cfrac{\pi\ln 2}{2}\end{aligned}$$</p>
+<p>因此，$I=-\pi\ln 2$。</p>
+<blockquote>
+<p>所计算的积分也称为欧拉积分。</p>
+</blockquote>
 </details>
 
 

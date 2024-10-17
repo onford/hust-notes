@@ -1591,6 +1591,46 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    级数相关题目
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    其他好题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1709,6 +1749,26 @@ $$\cfrac{f(\xi)-f(a)}{b-a}=\cfrac{1}{2}f^\prime(a)+o(1)$$</p>
 <p>两边取极限，可得
 $$\lim _ {b\to a}\cfrac{f(\xi)-f(a)}{\xi-a}\cdot\cfrac{\xi -a}{b-a}=\cfrac{1}{2}f^\prime(a)$$</p>
 <p>因为 $\lim\limits _ {b\to a}\cfrac{f(\xi)-f(a)}{\xi-a}=f^\prime(a)\neq 0$，所以原式得证。</p>
+</details>
+<p><strong>题 5</strong>&emsp;设 $a _ 1&lt;a _ 2&lt;\cdots &lt;a _ n$，$f(x)$ 在 $[a _ 1,a _ n]$ 上 $n$ 次可微，且 $f(a _ i)=0,i=1,2,\cdots,n$。证明：对任意 $c\in[a _ 1,a _ n]$，存在 $\xi\in(a _ 1,a _ n)$ 使 $f(c)=\cfrac{(c-a _ 1)(c- a _ 2)\cdots(c-a _ n)}{n!}f^{(n)}(\xi)$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;<strong>Rolle 中值定理</strong>——解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（二））</summary>
+<blockquote>
+<p>题目中 $f(x)$ 至少存在 $n$ 个零点，又是关于 $f^{(n)}(\xi)$ 的结论，可以想到连续使用 $n$ 次 Rolle 定理。但是，具体怎么构造一个函数是一个很有挑战性的问题。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;若 $c$ 为某个 $a _ i$，等式左右两边都为 $0$，结论自明。若 $c\in(a _ 1,a _ n)$ 且异于所有 $a _ i$，记常数 $K=n!f(c)/(c-a _ 1)(c-a _ 2)\cdots(c-a _ n)$。作辅助函数 $F(x)=f(x)-K\cfrac{(x-a _ 1)(x-a _ 2)\cdots(x-a _ n)}{n!}$，则 $F(a _ 1)=F(a _ 2)=\cdots=F(a _ n)=F(c)=0$，反复使用 $n$ 次 Rolle 定理知，存在 $\xi\in(a _ 1,a _ n)$ 使得 $F^{(n)}(\xi)=0$ 即 $f^{(n)}(\xi)=K$。</p>
+<hr />
+<p><strong>分析</strong>&emsp;证明中的辅助函数 $F(x)$ 肯定不是一拍脑袋想出来的，应该是通过某种方法构造出来的。这里简单分析一下。<br />
+&emsp;&emsp;沿用证明过程中的 $K$ 定义，待证为存在 $\xi\in(a _ 1,a _ n)$ 使得 $f^{(n)}(\xi)-K=0$。构造的辅助函数 $F(x)$ 应该满足 $F^{(n)}(x)=f^{(n)}(x)-K$，从而 $F(x)=f(x)-KG(x)$，其中 $G(x)$ 是 $x$ 的 $n$ 次多项式。<br />
+&emsp;&emsp;现在我们只需要确定 $G(x)$ 的形式。  <br />
+&emsp;&emsp;为了使得存在 $\xi\in(a _ 1,a _ n)$ 使得 $F^{(n)}(\xi)=0$，辅助函数 $F(x)$ 应该在 $[a _ 1,a _ n]$ 上有至少 $n+1$ 个零点。考虑到题目中给出的 $x$ 的可能取值，这 $n+1$ 个零点应该恰好是 $a _ 1$ 到 $a _ n$ 以及 $c$。这对 $G(x)$ 的要求是：$a _ 1$ 到 $a _ n$ 都是 $G(x)$ 的零点，并且 $G(c)=f(c)/K$。<br />
+&emsp;&emsp;由于 $G(x)$ 是 $x$ 的 $n$ 次多项式，$a _ 1$ 到 $a _ n$ 还都是 $G(x)$ 的零点，不难确定 $G(x)$ 具有如下形式
+$$G(x)=C(x-a _ 1)(x-a _ 2)\cdots(x-a _ n)$$</p>
+<p>其中 $C$ 是常数。然后，根据 $G(c)=f(c)/K$ 确定这个 $C$ 的值为
+$$C=\cfrac{f(c)}{K(c-a _ 1)(c-a _ 2)\cdots(c-a _ n)}$$</p>
+<p>综上，确定辅助函数 $F(x)$ 的形式为
+$$F(x)=f(x)-\cfrac{f(c)(x-a _ 1)(x-a _ 2)\cdots(x-a _ n)}{(c-a _ 1)(c-a _ 2)\cdots(c-a _ n)}$$</p>
+<p>这与证明过程中的 $F(x)$ 一模一样，可见它也是有迹可循的，不是什么牛鬼蛇神。</p>
 </details>
 
 
