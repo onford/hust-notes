@@ -1686,8 +1686,15 @@
 <details class="tip">
 <summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（二））</summary>
 <blockquote>
-<p>这题很容易得到 $|[\mathrm e^{-\lambda x}f(x)]^\prime|\leq(\mathrm e^{-\lambda x})^\prime$，如果没有这个绝对值就好了。实际上这个绝对值可以通过<strong>积分绝对值不等式</strong>进行变换，同时引入不等号。</p>
+<p>这题很容易得到 $\left|\left[\mathrm e^{-\lambda x}f(x)\right]^\prime\right|\leq\left(\mathrm e^{-\lambda x}\right)^\prime$，如果没有这个绝对值就好了。实际上这个绝对值可以通过<strong>积分绝对值不等式</strong>进行变换，同时引入不等号。</p>
 </blockquote>
+<p><strong>证明</strong>&emsp;因为对于任意的的 $x\in\mathbb R$，有 $\left(\mathrm e^{-\lambda t}f(t)\right)^\prime=\mathrm e^{-\lambda x}(-\lambda f(x)+f^\prime(x))$，所以
+$$\int _ {x}^{+\infty}\left(\mathrm e^{-\lambda t}f(t)\right)^\prime\mathrm dt=\mathrm e^{-\lambda t}f(t)\bigg| _ x^{+\infty}=-\mathrm e^{-\lambda x}f(x)$$</p>
+<p>所以
+$$\left|\mathrm e^{-\lambda x}f(x)\right|=\left|\int _ {x}^{+\infty}\left(\mathrm e^{-\lambda t}f(t)\right)^\prime\mathrm dt\right|\leq\int _ {x}^{+\infty}\left|\left(\mathrm e^{-\lambda t}f(t)\right)^\prime\right|\mathrm dt=\int _ {x}^{+\infty}\mathrm e^{-\lambda t}\left|-\lambda f(t)+f^\prime(t)\right|\mathrm dt$$</p>
+<p>利用题目条件 $\left|f(x)-\cfrac{1}{\lambda}f^\prime(x)\right|\leq 1$，可得
+$$\int _ {x}^{+\infty}\mathrm e^{-\lambda t}\left|-\lambda f(t)+f^\prime(t)\right|\mathrm dt\leq\int _ {x}^{+\infty}\mathrm \lambda e^{-\lambda t}\mathrm dt=\mathrm e^{-\lambda x}$$</p>
+<p>故得证。</p>
 </details>
 
 

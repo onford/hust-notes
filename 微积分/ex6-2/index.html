@@ -1725,6 +1725,26 @@ $$[(1-x)^cf(x)]^\prime=(1-x)^{c-1}[(1-x)f^\prime(x)-cf(x)]=0$$</p>
 <p>因而存在常数 $d$ 使得 $f(x)=d(1-x)^{-c}(0&lt;x&lt;1)$。当 $x\to 0$ 时，有 $f(x)\to 0$，故 $d=0$，于是 $f(x)=0$。<br>
 所以使得题中不等式成为等式的函数是 $f(x)=0$。</p>
 </details>
+<p><strong>题 3</strong>&emsp;设 $f(x)$ 是闭区间 $[a,b]$ 上的连续函数，且满足 $\forall x _ 1,x _ 2\in[a,b],\lambda\in(0,1)$ 总有 $f((1-\lambda)x _ 1+\lambda x _ 2)\leq(1-\lambda)^sf(x _ 1)+\lambda^s f(x _ 2),0 &lt; s &lt; 1$，证明：
+$$2^{s-1}f\left(\cfrac{a+b}{2}\right)\leq\cfrac{1}{b-a}\int _ a^bf(x)\mathrm dx\leq \cfrac{f(a)+f(b)}{s+1}$$</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（三））</summary>
+<blockquote>
+<p>这道题凭空生成积分是困难的，证明时应该反过来，通过各种手段将积分中的积分号消除。而这种手段就是换元，手法巧妙值得琢磨。这道题也启示我们函数函数 $f(x)$ 在区间 $[a,b]$ 积分时的两种换元技巧：对称换元 $x=a+b-t$ 和比例换元 $x=a+(b-a)t$。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;令 $x=a+b-t$，可得 $\displaystyle \int _ a^bf(x)\mathrm dx=\int _ a^bf(a+b-t)\mathrm dt$。于是
+$$\begin{aligned}\int _ a^bf(x)\mathrm dx&amp;=\int _ a^b\cfrac{f(x)+f(a+b-x)}{2}\mathrm dx\\
+&amp;\geq 2^{s-1}\int _ a^bf\left(\cfrac{x+(a+b-x)}{2}\right)\mathrm dx\\
+&amp;=2^{s-1}(b-a)f\left(\cfrac{a+b}{2}\right)\end{aligned}$$</p>
+<p>从而第一个不等号得证。另一方面，作换元 $x=a+(b-a)t=(1-t)a+tb$，可得
+$$\begin{aligned}\int _ a^bf(x)\mathrm dx&amp;=(b-a)\int _ 0^1f((1-t)a+tb)\mathrm dt\\
+&amp;\leq(b-a)\int _ 0^1\left[(1-t)^sf(a)+t^sf(b)\right]\mathrm dt\\
+&amp;=(b-a)\cfrac{f(a)+f(b)}{s+1}\end{aligned}$$</p>
+<p>从而第二个不等号得证。</p>
+<blockquote>
+<p>满足题目约束的这个 $f(x)$ 被称为 $s-$凸函数，这类函数具有 Hadamard 型不等式，即待证不等式。</p>
+</blockquote>
+</details>
 
 
   

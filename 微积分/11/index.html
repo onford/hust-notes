@@ -1915,9 +1915,12 @@ $$\int _ L\boldsymbol F\cdot\mathrm d\boldsymbol r=\int _ L\boldsymbol F\cdot\bo
 <p>首先，在积分号下面有一个 $L$ 表示积分路径的，是曲线积分；否则是定积分。在曲线积分中，一般给出 $\mathrm ds$ 的是<strong>第一型</strong>，给出 $\mathrm dx,\mathrm dy,\mathrm dz$ 的组合的是<strong>第二型</strong>。</p>
 </div>
 <h3 id="green">Green 公式<a class="headerlink" href="#green" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;Green 公式是计算<strong>第二型曲线积分</strong>的利器，将其转化为二重积分。遗憾的是 Green 公式所对应的曲线被限定为<strong>平面曲线</strong>。对于空间曲线，还得使用<a href="#stokes">Stokes 公式</a>才行。<br />
-&emsp;&emsp;Green 公式的表述为：设区域 $D$ 由 $xy$ 平面上的简单闭曲线 $L$ 围成，函数 $P,Q$ 在 $D$ 上（包含边界）有<strong>连续</strong>的一阶偏导数，则成立如下公式
-$$\oint _ LP\mathrm dx+Q\mathrm dy=\iint \limits _ D(Q _ x-P _ y)\mathrm dx\mathrm dy=\iint \limits _ D\left|\begin{matrix}\partial/\partial x&amp;\partial/\partial y\\ P&amp;Q\end{matrix}\right|\mathrm dx\mathrm dy\tag{11.4}$$</p>
+<p class="annotate">&emsp;&emsp;Green 公式是计算<strong>第二型曲线积分</strong>的利器，将其转化为二重积分。遗憾的是 Green 公式所对应的曲线被限定为<strong>平面曲线</strong>。对于空间曲线，还得使用<a href="#stokes">Stokes 公式</a>才行。<br />
+&emsp;&emsp;Green 公式的表述为：设区域 $D$ 由 $xy$ 平面上的简单闭曲线 $L$ 围成，函数 $P,Q$ 在 $D$ 上（包含边界）有<strong>连续</strong>的一阶偏导数(1)，则成立如下公式</p>
+<ol>
+<li>这个连续偏导数的存在十分重要。如果 $L _ 1$ 在其内部点 $A$，$P$ 或者 $Q$ 在这一点的偏导数不连续，需要挖掉包含 $A$ 的一小块区域，对 $L=L _ 1+L _ 2$ 使用 Green 公式化为区域 $D$ 上的二重积分。对于 $L _ 2$ 的曲线积分，使用其他方法计算。<img alt="" src="../../img/curve_int.svg" /></li>
+</ol>
+<p>$$\oint _ LP\mathrm dx+Q\mathrm dy=\iint \limits _ D(Q _ x-P _ y)\mathrm dx\mathrm dy=\iint \limits _ D\left|\begin{matrix}\partial/\partial x&amp;\partial/\partial y\\ P&amp;Q\end{matrix}\right|\mathrm dx\mathrm dy\tag{11.4}$$</p>
 <h2 id="_4">曲面积分<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="_5">第一型曲面积分<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;第一型曲面积分，也不考虑曲面的“方向”问题。曲面面积元 $\mathrm dS$ 需要经过适当的转换变为平面面积元 $\mathrm d\sigma$，从而转化为二重积分。如果曲面是 $z=z(x,y)$ 的一部分，那么
@@ -1950,6 +1953,7 @@ $$\operatorname{div}\boldsymbol F=P _ x+Q _ y+R _ z\tag{11.8}$$ $$\operatorname{
 $$\oiint\limits _ SP\mathrm dy\mathrm dz+Q\mathrm dz\mathrm dx+R\mathrm dx\mathrm dy=\iiint\limits _ V(P _ x+Q _ y+R _ z)\mathrm dv\tag{11.10}$$
 或者写作
 $$\oiint\limits _ S(\boldsymbol F\cdot\boldsymbol n)\mathrm dS=\iiint\limits _ V(\nabla\cdot\boldsymbol F)\mathrm dv\tag{11.11}$$</p>
+<p>&emsp;&emsp;Gause 公式的使用也要求 $P,Q,R$ 在 $V$（包含边界）上有<strong>连续的一阶偏导数</strong>，因此如果 $V$ 内存在一阶偏导数的不连续点，仿照 Green 公式一样挖去这个点的一个邻域。</p>
 <h3 id="stokes">Stokes 公式<a class="headerlink" href="#stokes" title="Permanent link">&para;</a></h3>
 <p class="annotate">&emsp;&emsp;设分片光滑的定向曲面 $S$ 以分段光滑的有向闭曲线 $L$ 为边界，$L$ 与 $S$ 的定向一致(1)；函数 $P,Q,R$ 在 $S$（包括边界）上有连续的一阶偏导数，$\boldsymbol F=\lbrace P,Q,R\rbrace$，则</p>
 <ol>

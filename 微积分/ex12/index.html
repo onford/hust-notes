@@ -1726,6 +1726,24 @@ $$\begin{aligned}S&amp;=\sum _ {n=1}^\infty\left(\sum _ {k=1}^n(-1)^{k-1}\int _ 
 &amp;=\int _ 0^1\cfrac{\sum _ {n=1}^\infty (-1)^{n-1}x^{2n}}{1+x^2}\mathrm dx\\
 &amp;=\int _ 0^1\cfrac{x^2}{(1+x^2)^2}\mathrm dx=\cfrac{\pi}{8}-\cfrac{1}{4}\end{aligned}$$</p>
 </details>
+<p><strong>题 4</strong>&emsp;设 $a _ n&gt;0$ 且 $\displaystyle\sum _ {n=1}^\infty a _ n$ 收敛，$r _ n=\displaystyle\sum _ {k=n}^\infty a _ k$，证明 $\displaystyle\sum _ {n=1}^\infty\cfrac{a _ n}{r _ n}$ 发散。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（二））</summary>
+<blockquote>
+<p>使用 <a href="../12/#cauchy">Cauchy 收敛准则</a>，判定级数发散。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;因为 $r _ {n+m+1}/r _ n\to\infty(m\to\infty)$，故任意 $n$，存在 $m$ 使得 $r _ {n+m+1}/r _ n&lt;1/2$。此时
+$$\sum _ {k=n}^{n+m}\cfrac{a _ k }{r _ k}&gt;\cfrac{1}{r _ n}\sum _ {k=n}^{n+m}a _ k=\cfrac{r _ n-r _ {n+m+1}}{r _ n}=1-\cfrac{r _ {n+m+1}}{r _ n}&gt;\cfrac{1}{2}$$</p>
+<p>因此由 Cauchy 收敛准则知 $\displaystyle\sum _ {n=1}^\infty\cfrac{a _ n}{r _ n}$ 发散。</p>
+<blockquote>
+<p class="annotate">如果问 $\displaystyle\sum _ {n=1}^\infty\cfrac{a _ n}{r _ n^p}(0&lt;p&lt;1)$ 的敛散性，也是可以证明的。(1)</p>
+<ol>
+<li>是收敛的，因为 $$\begin{aligned}\sum _ {k=1}^n\cfrac{a _ k}{r _ k^p}&amp;=\sum _ {k=1}^n\cfrac{r _ k-r _ {k+1}}{r _ k^p}=\sum _ {k=1}^n\int _ {r _ {k+1}}^{r _ k}\cfrac{1}{r _ k^p}\mathrm dx\\
+&amp;&lt;\sum _ {k=1}^n\int _ {r _ {k+1}}^{r _ k}\cfrac{1}{x^p}\mathrm dx=\int _ {r _ {n+1}}^{r _ 1}\cfrac{1}{x^p}\mathrm dx\\
+&amp;&lt;\int _ {0}^{r _ 1}\cfrac{1}{x^p}\mathrm dx=\cfrac{r _ 1^{1-p}}{1-p}\end{aligned}$$ 根据单调有界必收敛知级数收敛。</li>
+</ol>
+</blockquote>
+</details>
 
 
   

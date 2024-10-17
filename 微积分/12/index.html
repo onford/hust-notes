@@ -1501,6 +1501,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cauchy" class="md-nav__link">
+    Cauchy 收敛准则
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1777,6 +1784,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cauchy" class="md-nav__link">
+    Cauchy 收敛准则
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1851,6 +1865,15 @@
 </ul>
 <h3 id="_3">变号级数收敛判别法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;一般而言都是使用 Leibniz 判别法：若 $\lbrace a _ n\rbrace$ <strong>单调递减</strong>且<strong>收敛于零</strong>，则级数 $\sum(-1)^{n-1}a _ n$ 收敛。 </p>
+<h3 id="cauchy">Cauchy 收敛准则<a class="headerlink" href="#cauchy" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>这一部分是课本未曾涉及的内容。</p>
+</blockquote>
+<p>&emsp;&emsp;Cauchy 收敛准则，本身是对于数列收敛的一个描述，即数列 $\lbrace a _ n\rbrace$ 收敛的<strong>充要条件</strong>是：
+$$\forall\varepsilon&gt;0,\exists N\in\mathbb N^+,\forall m,n&gt;N:|a _ m-a _ n|&lt;\varepsilon$$</p>
+<p>&emsp;&emsp;而级数 $\sum x _ n$ 收敛的充要条件又是部分和 $a _ n=\sum _ {k=1}^n x _ k$ 收敛，据此，可以得到级数 $\sum x _ n$ 收敛的<strong>充要条件</strong>：</p>
+<p>$$\forall\varepsilon&gt;0,\exists N\in\mathbb N^+,\forall m,n&gt;N:\left|\sum _ {k=m}^n x _ k\right|&lt;\varepsilon$$</p>
+<p>因此，如果对于任意的 $m$，都存在 $n&gt;m$ 使得 $\left|\sum _ {k=m}^n x _ k\right|&gt;c$（$c$ 为一个正常数），就可以判断级数发散了。</p>
 <h2 id="_4">函数项级数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="_5">一致收敛性<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;有限个连续函数之和仍然是连续函数，无限个就未必了。<strong>一致收敛性</strong>是指在收敛域 $B$ 上的每个点，这些函数值之和收敛到和函数的速度的一致性。一旦收敛速度不一致，即非一致收敛，和函数就会产生间断。</p>

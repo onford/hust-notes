@@ -1903,20 +1903,24 @@ $$\cfrac{\mathrm du}{\mathrm dx}=-\left|\begin{matrix}F _ x&amp;F _ v\\G _ x&amp
 <h2 id="_6">方向导数与梯度<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;方向导数存在的一个充分条件是<strong>可微</strong>。设 $f(x,y,z)$ 在点 $P _ 0(x _ 0,y _ 0,z _ 0)$ 可微，$\boldsymbol n$ 是一方向余弦为 $\cos\alpha,\cos\beta,\cos\gamma$ 的非零矢量，则方向导数存在：
 $$\cfrac{\partial f(P _ 0)}{\partial\boldsymbol n}=f _ x(P _ 0)\cos\alpha+f _ y(P _ 0)\cos\beta+f _ z(P _ 0)\cos\gamma\tag{9.1}$$</p>
-<p>&emsp;&emsp;因为方向导数是多元函数在某个<strong>射线方向</strong>上的变化情况，所以它是一个很弱的结论，推不出偏导数存在，更推不出可微。<br />
-&emsp;&emsp;梯度的定义是
-$$\operatorname{\bold{grad}} f=\lbrace f _ x,f _ y,f _ z\rbrace\tag{9.2}$$</p>
+<blockquote>
+<p>从 $(9.1)$ 的形式上看，$f$ 的方向导数是 $f$ 的各偏导数按照某个权重的“加权平均”。这些权重是该方向与坐标轴正方向的“接近程度”，用方向余弦刻画；权重的平方和为 $1$。</p>
+</blockquote>
+<p>&emsp;&emsp;因为方向导数是多元函数在某个<strong>射线方向</strong>上的变化情况，所以它是一个很弱的结论，推不出偏导数存在，更推不出可微。当 $f$ 在 $P _ 0$ 不可微，或者可微性未知时，使用式 $(9.1)$ 可能会得到错误的结论。此时应该使用方向导数的定义式：
+$$\cfrac{\partial f(P _ 0)}{\partial\boldsymbol n}=\lim _ {\rho\to 0^+}\cfrac{f(x _ 0+\rho\cos\alpha,y _ 0+\rho\cos\beta,z _ 0+\rho\cos\gamma)-f(x _ 0,y _ 0,z _ 0)}{\rho}\tag{9.2}$$</p>
+<p>&emsp;&emsp;梯度的定义是
+$$\operatorname{\bold{grad}} f=\lbrace f _ x,f _ y,f _ z\rbrace\tag{9.3}$$</p>
 <h2 id="_7">多元函数的极值<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <h3 id="_8">自由极值<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;类似于一元函数的极值，我们看二元函数的极值时，首先会看一阶偏导 $f _ x=f _ y=0$ 是否成立；若成立则往往会看二阶偏导 $f _ {xx}$ 和 $f _ {yy}$。但是仅有 $f _ {xx}(P _ 0) &gt; 0$ 和 $f _ {yy}(P _ 0) &gt; 0$ 并不足以说明 $P _ 0$ 是极小值点。类似地，仅有 $f _ {xx}(P _ 0) &lt; 0$ 和 $f _ {yy}(P _ 0) &lt; 0$ 并不足以说明 $P _ 0$ 是极大值点。<br />
 &emsp;&emsp;简单的来说，首先需要根据 $\Delta&gt;0$ 来判断是极值点，$\Delta &lt; 0$ 判断不是极值点，再根据二阶偏导的符号判断是何种极值点。其中
-$$\Delta = f _ {xx}(P _ 0)f _ {yy}(P _ 0)-f _ {xy}^2(P _ 0)\tag{9.3}$$</p>
+$$\Delta = f _ {xx}(P _ 0)f _ {yy}(P _ 0)-f _ {xy}^2(P _ 0)\tag{9.4}$$</p>
 <h3 id="_9">条件极值<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;目标函数 $f(x _ 1,\cdots,x _ n)$，约束条件为 $g _ i(x _ 1,\cdots,x _ n)=0(i=1,2,\cdots,m)$。在 $f,g _ i(i=1,2,\cdots,m)$ 对 $x _ j(j=1,2,\cdots,n)$ 均存在<strong>一阶连续偏导数</strong>的情况下，可以使用 Lagrange 乘数法求解条件极值。<br />
 &emsp;&emsp;构造 Lagrange 函数
-$$L=f+\sum _ {i=1}^m\lambda _ ig _ i\tag{9.4}$$</p>
-<p>即可通过式 $(9.5)$ 求得 $f$ 的驻点。
-$$\begin{cases}\cfrac{\partial L}{\partial x _ j}=0(j=1,2,\cdots,n),\\ g _ i=0(i=1,2,\cdots,m)\end{cases}\tag{9.5}$$</p>
+$$L=f+\sum _ {i=1}^m\lambda _ ig _ i\tag{9.5}$$</p>
+<p>即可通过式 $(9.6)$ 求得 $f$ 的驻点。
+$$\begin{cases}\cfrac{\partial L}{\partial x _ j}=0(j=1,2,\cdots,n),\\ g _ i=0(i=1,2,\cdots,m)\end{cases}\tag{9.6}$$</p>
 
 
   

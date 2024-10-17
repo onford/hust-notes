@@ -1787,6 +1787,23 @@ $$\begin{aligned}\lim _ {x\to 0}\cfrac{1}{x^4}\int _ 0^x(x^2-t^2)^{3/2}\mathrm d
 $$\lim _ {x\to 0^+}\cfrac{1}{x^4}\int _ 0^x\sqrt{x^2-t^2}\sin(x^2-t^2)\mathrm dt=\lim _ {x\to 0^+}\cfrac{1}{x^3}\int _ 0^{\frac{\pi}{2}}\cos\theta\sin(x^2\cos^2\theta)\mathrm d\theta$$</p>
 <p>此时 $x,\theta$ 是完全无关的两个量，从而在积分式中，$x$ 可以视作一个常量。相对地，$\theta$ 也与极限过程无关，从而可以将 $\sin(x^2\cos^2\theta)$ 写作 $x^2\cos^2\theta+o(x^2)$。</p>
 </details>
+<p><strong>题 6</strong>&emsp;求极限 $I=\lim\limits _ {x\to+\infty}\left[(x+1)^{1+\frac{1}{x}}-x^{1+\frac{1}{x+1}}\right]$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;<strong>泰勒展开</strong>——解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（三））</summary>
+<p><strong>答案</strong>&emsp;$1$</p>
+<blockquote>
+<p>使用泰勒展开求极限，典中典。但是这题的推导较为繁杂，比较难想到。其中直接将 $\cfrac{\ln x}{x(1+x)}$ 直接写成 $o(x^{-1})$ 从而消去分母中的 $x+1$ 这一违和部分，确实高明。</p>
+</blockquote>
+<p><strong>解</strong>&emsp;因为
+$$\begin{aligned}(x+1)^{1+\frac{1}{x}}-x^{1+\frac{1}{x+1}}&amp;=\exp\left[\left(1+\cfrac{1}{x}\right)\ln(x+1)\right]-x\exp\left(\cfrac{\ln x}{x+1}\right)\\
+&amp;=\exp\left\lbrace\left(1+\cfrac{1}{x}\right)\left[\ln x+\ln\left(1+\cfrac{1}{x}\right)\right]\right\rbrace-x\exp\left[\cfrac{\ln x}{x}+\cfrac{\ln x}{x(1+x)}\right]\\
+&amp;=\exp\left\lbrace\left(1+\cfrac{1}{x}\right)\left[\ln x+\cfrac{1}{x}+o(x^{-1})\right]\right\rbrace-x\exp\left[\cfrac{\ln x}{x}+o(x^{-1})\right]\\
+&amp;=x\exp\left[\cfrac{\ln x}{x}+\cfrac{1}{x}+o(x^{-1})\right]-x\exp\left[\cfrac{\ln x}{x}+o(x^{-1})\right]\\
+&amp;=x\exp\left(\cfrac{\ln x}{x}\right)\left\lbrace\exp\left[\cfrac{1}{x}+o(x^{-1})\right]-\exp\left[o(x^{-1})\right]\right\rbrace\\
+&amp;=x\exp\left(\cfrac{\ln x}{x}\right)\left\lbrace 1+\left[\cfrac{1}{x}+o(x^{-1})\right]+o(x^{-1})-\left[1+o(x^{-1})\right]\right\rbrace\\
+&amp;=\exp\left(\cfrac{\ln x}{x}\right)\left[1+o(1)\right]\end{aligned}$$</p>
+<p>于是 $I=\lim\limits _ {x\to+\infty}\exp\left(\cfrac{\ln x}{x}\right)=1$。</p>
+</details>
 
 
   
