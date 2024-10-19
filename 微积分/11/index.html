@@ -1929,13 +1929,14 @@ $$\iint\limits _ Sf\mathrm dS=\iint\limits _ Df(x,y,z(x,y))\sqrt{1+z _ x^2+z _ y
 <h3 id="_6">第二型曲面积分<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;第二型曲面积分也有着很多表示形式，如
 $$\iint\limits _ S\boldsymbol F\cdot\mathrm d\boldsymbol S=\iint\limits _ S\boldsymbol F\cdot\boldsymbol n\mathrm dS=\iint\limits _ SP\mathrm dy\mathrm dz+Q\mathrm dz\mathrm dx+R\mathrm dx\mathrm dy\tag{11.6}$$</p>
+<p>其矢量函数 $\boldsymbol F=\lbrace P,Q,R\rbrace$，$\boldsymbol n$ 是曲面 $S$ 的<strong>单位</strong>法矢量。</p>
 <div class="admonition notes">
 <p class="admonition-title">分辨第一型与第二型曲面积分</p>
 <p>首先，在积分号下面有一个 $S$ 代表积分曲面的的是曲面积分；否则积分号下面表示积分平面（一般用不等式或者符号 $D$），是二重积分。在曲面积分中，一般给出 $\mathrm dS$ 的是<strong>第一型</strong>，给出 $\mathrm dx\mathrm dy,\mathrm dy\mathrm dz,\mathrm dz\mathrm dx$ 的组合的是<strong>第二型</strong>。</p>
 </div>
 <p>&emsp;&emsp;直接求取第二型曲面积分，一般使用<strong>分散投影法</strong>或<strong>统一投影法</strong>。统一投影法的原理是：
 $$\iint\limits _ SP\mathrm dy\mathrm dz+Q\mathrm dz\mathrm dx+R\mathrm dx\mathrm dy=\iint\limits _ S[-Pz _ x(x,y)-Qz _ y(x,y)+R]\mathrm dx\mathrm dy\tag{11.7}$$</p>
-<p>&emsp;&emsp;从式 $(11.6)$ 中看出，如果你能直接得到 $\boldsymbol n$ 的表达式，那么就可以转换为第一型曲面积分计算。不过大多数时候其他方法也能解决，所以不必费尽心思求 $\boldsymbol n$ 的表达式。</p>
+<p>&emsp;&emsp;从式 $(11.6)$ 中看出，如果你能直接得到 $\boldsymbol n$ 的表达式，那么就可以转换为第一型曲面积分计算。以诶时候其他方法也能解决，不必费尽心思求 $\boldsymbol n$ 的表达式；也有些时候这种方式可以简化计算量。</p>
 <h2 id="gause-stokes">Gause 公式与 Stokes 公式<a class="headerlink" href="#gause-stokes" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;在引入这两个公式之前，首先约定了一些记号。式 $(11.8)(11.9)$ 分别定义矢量函数 $\boldsymbol F=\lbrace P,Q,R\rbrace$ 的<strong>散度</strong>与<strong>旋度</strong>。
 $$\operatorname{div}\boldsymbol F=P _ x+Q _ y+R _ z\tag{11.8}$$ $$\operatorname{\bold{rot}}\boldsymbol F=\lbrace R _ y-Q _ z,P _ z-R _ x,Q _ x-P _ y\rbrace\tag{11.9}$$</p>

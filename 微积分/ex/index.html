@@ -1696,6 +1696,20 @@ $$\left|\mathrm e^{-\lambda x}f(x)\right|=\left|\int _ {x}^{+\infty}\left(\mathr
 $$\int _ {x}^{+\infty}\mathrm e^{-\lambda t}\left|-\lambda f(t)+f^\prime(t)\right|\mathrm dt\leq\int _ {x}^{+\infty}\mathrm \lambda e^{-\lambda t}\mathrm dt=\mathrm e^{-\lambda x}$$</p>
 <p>故得证。</p>
 </details>
+<p><strong>题 2</strong>&emsp;设半椭球面 $S:\cfrac{x^2}{a^2}+\cfrac{y^2}{b^2}+\cfrac{z^2}{c^2}=1(z\geq 0)$ 在点 $(x,y,z)\in S$ 处的切平面为 $\Pi$，记 $h(x,y,z)$ 为原点到切平面 $\Pi$ 的距离，求 $I=\displaystyle\iint\limits _ S\cfrac{z}{h(x,y,z)}\mathrm dS$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（四））</summary>
+<blockquote>
+<p>熟练掌握第二型曲面积分的各种定义式，以及 Gause 公式。</p>
+</blockquote>
+<p><strong>解</strong>&emsp;记 $\boldsymbol r=\lbrace x,y,z\rbrace$，$\boldsymbol n=\left\lbrace\cfrac{x}{a^2},\cfrac{y}{b^2},\cfrac{z}{c^2}\right\rbrace$（椭球面的外法矢量），则原点到切平面的距离为
+$$h(x,y,z)=\boldsymbol r\cdot\boldsymbol n^0=\cfrac{\boldsymbol r\cdot\boldsymbol n}{|\boldsymbol n|}=\cfrac{1}{\boldsymbol n}$$</p>
+<p>则有
+$$I=\iint\limits _ S\cfrac{z}{h(x,y,z)}\mathrm dS=\iint\limits _ Sz|\boldsymbol n|\mathrm dS=\iint\limits _ Sz\boldsymbol n\cdot\boldsymbol n^0\mathrm dS=\iint\limits _ S\cfrac{xy}{a^2}\mathrm dy\mathrm dz+\cfrac{yz}{a^2}\mathrm dz\mathrm dx+\cfrac{z^2}{c^2}\mathrm dx\mathrm dy$$</p>
+<p>补平面 $S _ 0:z=0,\cfrac{x^2}{a^2}+\cfrac{y^2}{b^2}\leq 1$（取下侧，单位法矢量为 $\lbrace0,0,-1\rbrace$），与 $S$ 围成半椭球区域 $\Omega$。注意到 $\displaystyle\iint\limits _ {S _ 0}\cfrac{xy}{a^2}\mathrm dy\mathrm dz+\cfrac{yz}{a^2}\mathrm dz\mathrm dx+\cfrac{z^2}{c^2}\mathrm dx\mathrm dy=0$，利用 Gause 公式得</p>
+<p>$$\begin{aligned}I&amp;=\iiint\limits _ \Omega\left(\cfrac{1}{a^2}+\cfrac{1}{b^2}+\cfrac{2}{c^2}\right)z\mathrm dx\mathrm dy\mathrm dz\\
+&amp;=\left(\cfrac{1}{a^2}+\cfrac{1}{b^2}+\cfrac{2}{c^2}\right)\int _ 0^cz\pi ab\left(1-\cfrac{z^2}{c^2}\right)\mathrm dz\\&amp;=\cfrac{\pi}{4}abc^2\left(\cfrac{1}{a^2}+\cfrac{1}{b^2}+\cfrac{2}{c^2}\right)\end{aligned}$$</p>
+</details>
 
 
   

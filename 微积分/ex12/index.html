@@ -1744,6 +1744,19 @@ $$\sum _ {k=n}^{n+m}\cfrac{a _ k }{r _ k}&gt;\cfrac{1}{r _ n}\sum _ {k=n}^{n+m}a
 </ol>
 </blockquote>
 </details>
+<p><strong>题 5</strong>&emsp;设 $a _ n&gt;0,s _ n=2^{-n}a _ {n+1}\left(a _ 1a _ 2\cdots a _ {n+1}\right)^{-1/2},n=1,2,\cdots$，若级数 $\displaystyle\sum _ {n=1}^\infty s _ n$ 收敛，证明数列 $t _ n=\sqrt{a _ 1+\sqrt{a _ 2+\cdots+\sqrt {a _ n}}}$ 也收敛。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（四））</summary>
+<blockquote>
+<p>一系列连续放缩，使得 $t _ n$ 与 $s _ n$ 具有联系。由于题目条件给出级数收敛，待证为数列 $\lbrace t _ n\rbrace$ 收敛，可以考虑将 $t _ n$ 看作某个数列的部分和进行转换。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;易知 $\lbrace t _ n\rbrace$ 是严格单调的，又因为
+$$\begin{aligned}t _ {n+1}-t _ n&amp;=\cfrac{\sqrt{a _ 2+\sqrt{a _ 3+\cdots+\sqrt{a _ {n+1}}}}-\sqrt{a _ 2+\sqrt{a _ 3+\cdots+\sqrt{a _ {n}}}}}{t _ {n+1}-t _ n}\\&amp;&lt;\cfrac{\sqrt{a _ 2+\sqrt{a _ 3+\cdots+\sqrt{a _ {n+1}}}}-\sqrt{a _ 2+\sqrt{a _ 3+\cdots+\sqrt{a _ {n}}}}}{2\sqrt{a _ 1}}\end{aligned}$$</p>
+<p>以上步骤就是有理化，并将分母放缩变小。如此可递推得到
+$$\begin{aligned}t _ {n+1}-t _ n&amp;&lt;\cfrac{\sqrt{a _ 3+\sqrt{a _ 4+\cdots+\sqrt{a _ {n+1}}}}-\sqrt{a _ 3+\sqrt{a _ 4+\cdots+\sqrt{a _ {n}}}}}{2\sqrt{a _ 1}\cdot 2\sqrt{a _ 2}}\\
+&amp;&lt;\cdots&lt;\cfrac{\sqrt{a _ {n+1}}}{2\sqrt{a _ 1}\cdot 2\sqrt{a _ 2}\cdot\cdots\cdot 2\sqrt{a _ n}}=s _ n\end{aligned}$$</p>
+<p>由比较判别法知正项级数 $\displaystyle\sum _ {n=1}^\infty(t _ {n+1}-t _ n)$ 收敛，进而数列 $\lbrace t _ n\rbrace$ 也收敛。</p>
+</details>
 
 
   
