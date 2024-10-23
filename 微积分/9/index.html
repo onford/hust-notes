@@ -1494,6 +1494,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#euler" class="md-nav__link">
+    齐次函数的 Euler 定理
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1851,6 +1858,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#euler" class="md-nav__link">
+    齐次函数的 Euler 定理
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1871,6 +1885,11 @@
 
   <h1>9 多元函数微分学</h1>
 
+<p>本节含有课本未出现的拓展内容：</p>
+<ul>
+<li><a href="#euler">齐次函数的 Euler 定理</a></li>
+</ul>
+<hr />
 <h2 id="_1">多元函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;多元函数的极限和一元函数颇具类似之处。两个重要结论：</p>
 <ul>
@@ -1921,6 +1940,19 @@ $$\Delta = f _ {xx}(P _ 0)f _ {yy}(P _ 0)-f _ {xy}^2(P _ 0)\tag{9.4}$$</p>
 $$L=f+\sum _ {i=1}^m\lambda _ ig _ i\tag{9.5}$$</p>
 <p>即可通过式 $(9.6)$ 求得 $f$ 的驻点。
 $$\begin{cases}\cfrac{\partial L}{\partial x _ j}=0(j=1,2,\cdots,n),\\ g _ i=0(i=1,2,\cdots,m)\end{cases}\tag{9.6}$$</p>
+<h2 id="euler">齐次函数的 Euler 定理<a class="headerlink" href="#euler" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;首先狭义地介绍一下什么是齐次函数。如果对于 $n$ 元函数 $f:\mathbb R^n\to \mathbb R$，任意 $\alpha\in\mathbb R$ 和任意 $\boldsymbol x\in\mathbb R^n$，都有下式成立
+$$f(\alpha\boldsymbol x)=\alpha^kf(\boldsymbol x)\tag{9.7}$$</p>
+<p>那么说 $f$ 是 $k$ 次齐次函数。</p>
+<div class="admonition note">
+<p class="admonition-title">齐次函数的欧拉定理</p>
+<p>&emsp;&emsp;若 $k$ 次齐次函数 $f:\mathbb R^n\to \mathbb R$ 是可导的，那么
+$$\boldsymbol x\cdot\nabla f(\boldsymbol x)=kf(\boldsymbol x)\tag{9.8}$$</p>
+</div>
+<p class="annotate">&emsp;&emsp;这个定理的证明(1)比较显然，结论也可以用于一些不等式的证明或者曲面积分的化简。</p>
+<ol>
+<li>记 $f(\boldsymbol x)=f(x _ 1,x _ 2,\cdots,x _ n)$，对式 $(9.7)$ 两边同时对 $\alpha$ 求导，根据复合函数可得 $$x _ 1f _ 1^\prime(\alpha\boldsymbol x)+\cdots+x _ nf _ n^\prime(\alpha\boldsymbol x)=k\alpha ^{k-1}f(\boldsymbol x)$$ 也即 $$\boldsymbol x\cdot\nabla f(\alpha\boldsymbol x)=k\alpha^{k-1}f(\boldsymbol x)$$ 令 $k=1$ 即可得证。</li>
+</ol>
 
 
   

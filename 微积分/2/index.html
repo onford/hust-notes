@@ -1803,7 +1803,12 @@
 
   <h1>2 极限与连续性</h1>
 
-<p>&emsp;&emsp;数列极限和函数极限，都有一些很难的计算题，插个眼：<a href="../ex2/">习题集锦</a>。</p>
+<p>本节含有课本未出现的拓展内容：</p>
+<ul>
+<li><a href="#stolz">Stolz 定理</a></li>
+</ul>
+<p>数列极限和函数极限，都有一些很难的计算题，插个眼：<a href="../ex2/">习题集锦</a>。</p>
+<hr />
 <h2 id="_1">数列极限<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">数列极限的定义与证明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;这里引入了极限的定义：</p>
@@ -1813,7 +1818,7 @@
 </div>
 <p>&emsp;&emsp;在数列极限证明问题中，如果要证明 $\lim\limits _ {n\to\infty}x _ n=a$，那么统统是由 $|x _ n -a|&lt;\varepsilon$ 得到 $n&gt;f(\varepsilon)$，从而取 $N=\lfloor f(\varepsilon)\rfloor$。  </p>
 <h3 id="_3">极限的保号性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>&emsp;&amp;emsp极限的保号性也是一个相当重要的结论。</p>
+<p>&emsp;&emsp;极限的保号性也是一个相当重要的结论。</p>
 <div class="admonition notes">
 <p class="admonition-title">极限的保号性</p>
 <p>&emsp;&emsp;设 $\lim\limits _ {n\to\infty}x _ n=a$。<br></p>
@@ -1823,7 +1828,7 @@
 </ul>
 </div>
 <h3 id="stolz">数列极限巧求法——stolz 定理<a class="headerlink" href="#stolz" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;当数列极限不是很好求的时候，可以利用下面的公式进行转换。</p>
+<p>&emsp;&emsp;当数列极限不是很好求的时候，可以利用下面的公式进行转换。将差分看成是微分，你会发现 Stolz 定理可以看作是<strong>数列形式的 L&rsquo;hospital 法则</strong>。</p>
 <div class="admonition notes">
 <p class="admonition-title">Stolz（斯托尔茨）定理</p>
 <p>&emsp;&emsp;若数列 $\lbrace x _ n\rbrace$ 为严格递增数列，$\lim\limits _ {n\to\infty}x _ n=+\infty$，且 $\displaystyle\lim _ {n\to\infty}\cfrac{y _ {n+1} - y _ n}{x _ {n+1} - x _ n}$ <strong>存在或发散于 $+\infty,-\infty$</strong>，则$$\lim _ {n\to\infty}\cfrac{y _ n}{x _ n}=\lim _ {n\to\infty}\cfrac{y _ n-y _ {n-1}}{x _ n-x _ {n-1}}\tag{2.1}$$</p>

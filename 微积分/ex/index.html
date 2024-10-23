@@ -1710,6 +1710,23 @@ $$I=\iint\limits _ S\cfrac{z}{h(x,y,z)}\mathrm dS=\iint\limits _ Sz|\boldsymbol 
 <p>$$\begin{aligned}I&amp;=\iiint\limits _ \Omega\left(\cfrac{1}{a^2}+\cfrac{1}{b^2}+\cfrac{2}{c^2}\right)z\mathrm dx\mathrm dy\mathrm dz\\
 &amp;=\left(\cfrac{1}{a^2}+\cfrac{1}{b^2}+\cfrac{2}{c^2}\right)\int _ 0^cz\pi ab\left(1-\cfrac{z^2}{c^2}\right)\mathrm dz\\&amp;=\cfrac{\pi}{4}abc^2\left(\cfrac{1}{a^2}+\cfrac{1}{b^2}+\cfrac{2}{c^2}\right)\end{aligned}$$</p>
 </details>
+<p><strong>题 3</strong>&emsp;设 $\Sigma:x^2+y^2+z^2=1$，若二次齐次函数 $f(x,y,z)$ 满足 $f _ {xx}+f _ {yy}+f _ {zz}=6$，求 $\displaystyle I = \oiint \limits _ \Sigma f(x,y,z)\mathrm dS$。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（一））</summary>
+<blockquote>
+<p>只需知道<a href="../9/#euler">齐次函数的 Euler 定理</a>即可很快速地解题。</p>
+</blockquote>
+<p><strong>解</strong>&emsp;二次齐次函数满足<strong>欧拉定理</strong>
+$$xf _ x+yf _y+zf _ z=2f$$</p>
+<p>曲面 $\Sigma:x^2+y^2+z^2=1$ 的外法矢量为 $\boldsymbol n=\lbrace x,y,z\rbrace$，所以
+$$\begin{aligned}I&amp;=\cfrac{1}{2}\oiint \limits _ \Sigma(xf _ x+yf _ y+zf _ z)\mathrm dS\\
+&amp;=\cfrac{1}{2}\oiint \limits _ \Sigma\lbrace f _ x,f _ y,f _ z\rbrace\cdot\boldsymbol n\mathrm dS\\
+&amp;=\cfrac{1}{2}\iiint \limits _ \Omega(f _ {xx}+f _ {yy} + f _ {zz})\mathrm dV\quad\text{(使用 Gause 公式,}\Omega:x^2+y^2+z^2\leq 1)\\
+&amp;=\cfrac{1}{2}\iiint \limits _ \Omega 6\mathrm dV=4\pi\end{aligned}$$</p>
+<blockquote>
+<p>如果作为填空题，也可以直接使用特例 $f=x^2+y^2+z^2$ 计算结果。</p>
+</blockquote>
+</details>
 
 
   
