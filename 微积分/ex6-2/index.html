@@ -1725,7 +1725,7 @@ $$[(1-x)^cf(x)]^\prime=(1-x)^{c-1}[(1-x)f^\prime(x)-cf(x)]=0$$</p>
 <p>因而存在常数 $d$ 使得 $f(x)=d(1-x)^{-c}(0&lt;x&lt;1)$。当 $x\to 0$ 时，有 $f(x)\to 0$，故 $d=0$，于是 $f(x)=0$。<br>
 所以使得题中不等式成为等式的函数是 $f(x)=0$。</p>
 </details>
-<p><strong>题 3</strong>&emsp;设 $f(x)$ 是闭区间 $[a,b]$ 上的连续函数，且满足 $\forall x _ 1,x _ 2\in[a,b],\lambda\in(0,1)$ 总有 $f((1-\lambda)x _ 1+\lambda x _ 2)\leq(1-\lambda)^sf(x _ 1)+\lambda^s f(x _ 2),0 &lt; s &lt; 1$，证明：
+<p><strong>题 4</strong>&emsp;设 $f(x)$ 是闭区间 $[a,b]$ 上的连续函数，且满足 $\forall x _ 1,x _ 2\in[a,b],\lambda\in(0,1)$ 总有 $f((1-\lambda)x _ 1+\lambda x _ 2)\leq(1-\lambda)^sf(x _ 1)+\lambda^s f(x _ 2),0 &lt; s &lt; 1$，证明：
 $$2^{s-1}f\left(\cfrac{a+b}{2}\right)\leq\cfrac{1}{b-a}\int _ a^bf(x)\mathrm dx\leq \cfrac{f(a)+f(b)}{s+1}$$</p>
 <details class="tip">
 <summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（三））</summary>
@@ -1744,6 +1744,17 @@ $$\begin{aligned}\int _ a^bf(x)\mathrm dx&amp;=(b-a)\int _ 0^1f((1-t)a+tb)\mathr
 <blockquote>
 <p>满足题目约束的这个 $f(x)$ 被称为 $s-$凸函数，这类函数具有 Hadamard 型不等式，即待证不等式。</p>
 </blockquote>
+</details>
+<p><strong>题 5</strong>&emsp;设 $f(x)$ 在 $[0,1]$ 上有连续导函数，且 $f(0)=0$，证明 $$\int _ 0^1\left[f(x)\right]^2\mathrm dx\leq\cfrac{1}{2}\int _ 0^1\left[f^\prime(x)\right]^2\mathrm dx-\cfrac{1}{2}\int _ 0^1x^2\left[f^\prime(x)\right]^2\mathrm dx$$</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2023 年全国大学生数学竞赛华中科技大学模拟试卷（一））</summary>
+<blockquote>
+<p>引入导数想分部积分，引入导数平方想 Cauchy 积分不等式。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;$$\begin{aligned}\int _ 0^1\left[f(x)\right]^2\mathrm dx&amp;=\int _ 0^1\left(\int _ 0^xf^\prime(t)\mathrm dt\right)^2\mathrm dx\\
+&amp;\leq\int _ 0^1 x\int _ 0^x\left[f^\prime(t)\right]^2\mathrm dt\mathrm dx\quad\text{使用 Cauchy 积分不等式}\\
+&amp;=\int _ 0^1\int _ 0^x\left[f^\prime(t)\right]^2\mathrm dt\mathrm d\cfrac{x^2}{2}\\
+&amp;=\cfrac{1}{2}\int _ 0^1\left[f^\prime(x)\right]^2\mathrm dx-\cfrac{1}{2}\int _ 0^1 x^2\left[f^\prime(x)\right]^2\mathrm dx\end{aligned}$$</p>
 </details>
 
 
