@@ -1727,6 +1727,29 @@ $$\begin{aligned}I&amp;=\cfrac{1}{2}\oiint \limits _ \Sigma(xf _ x+yf _ y+zf _ z
 <p>如果作为填空题，也可以直接使用特例 $f=x^2+y^2+z^2$ 计算结果。</p>
 </blockquote>
 </details>
+<p><strong>题 4</strong>&emsp;设 $f(x)$ 在 $[0,+\infty)$ 上是有界连续函数，证明：方程 $y^{\prime\prime}+14y^\prime+13y=f(x)$ 的每一个解在 $[0,+\infty)$ 上都是有界函数。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2021 年全国大学生数学竞赛(非数类)预赛试题）</summary>
+<blockquote>
+<p>其实，特解是可以直接求出来的，因而就有了通解。难度主要是求特解的方法。</p>
+</blockquote>
+<p><strong>证明</strong>&emsp;易知对应的齐次方程 $y^{\prime\prime}+14y^\prime+13y=0$ 的通解为
+$$y=C _ 1\mathrm e^{-x}+C _ 2\mathrm e^{-13x}$$</p>
+<p>&emsp;&emsp;又由 $y^{\prime\prime}+14y^\prime+13y=f(x)$，得 $(y^{\prime\prime}+y^\prime)+13(y^\prime+y)=f(x)$。令 $y _ 1=y^\prime+y$，则 $y _ 1^\prime+13y _ 1=f(x)$，解得
+$$y _ 1=\mathrm e^{-13x}\left(\int _ 0^xf(t)\mathrm e^{13t}\mathrm dt+C _ 3\right)$$</p>
+<p>同理，由 $y^{\prime\prime}+14y^\prime+13y=f(x)$，得 $(y^{\prime\prime}+13y^\prime)+(y^\prime+13y)=f(x)$.令 $y _ 2=y^\prime+13y$，则 $y _ 2^\prime+y _ 2=f(x)$，解得
+$$y _ 2=\mathrm e^{-x}\left(\int _ 0^xf(t)\mathrm e^{t}\mathrm dt+C _ 4\right)$$</p>
+<p>取 $C _ 3=C _ 4=0$，可得原方程的一个特解为
+$$y^*=\cfrac{y _ 2-y _ 1}{12}=\cfrac{1}{12}\mathrm e^{-x}\int _ 0^xf(t)\mathrm e^{t}\mathrm dt-\cfrac{1}{12}\mathrm e^{-13x}\int _ 0^xf(t)\mathrm e^{13t}\mathrm dt$$</p>
+<p>因此，原方程的通解为
+$$y=C _ 1\mathrm e^{-x}+C _ 2\mathrm e^{-13x}+\cfrac{1}{12}\mathrm e^{-x}\int _ 0^xf(t)\mathrm e^{t}\mathrm dt-\cfrac{1}{12}\mathrm e^{-13x}\int _ 0^xf(t)\mathrm e^{13t}\mathrm dt$$</p>
+<p>因为 $f(x)$ 在 $[0,+\infty)$ 上有界，所以存在 $M&gt;0$，使得 $|f(x)|\leq M,0\leq x&lt;+\infty$。注意到 $x\in[0,+\infty)$ 时有 $0&lt;\mathrm e^{-x},\mathrm e^{-13x}\leq 1$，所以
+$$\begin{aligned}|y|&amp;\leq\left|C _ 1\mathrm e^{-x}\right|+\left|C _ 2\mathrm e^{-13x}\right|+\cfrac{1}{12}\mathrm e^{-x}\left|\int _ 0^xf(t)\mathrm e^{t}\mathrm dt\right|-\cfrac{1}{12}\mathrm e^{-13x}\left|\int _ 0^xf(t)\mathrm e^{13t}\mathrm dt\right|\\
+&amp;\leq|C _ 1|+|C _ 2|+\cfrac{M}{12}\mathrm e^{-x}\int _ 0^x\mathrm e^t\mathrm dt+\cfrac{M}{12}\mathrm e^{-13x}\int _ 0^x\mathrm e^{13t}\mathrm dt\\
+&amp;\leq|C _ 1|+|C _ 2|+\cfrac{M}{12}\left(1-\mathrm e^{-x}\right)+\cfrac{M}{12\times 13}\left(1-\mathrm e^{-13x}\right)\\
+&amp;\leq|C _ 1|+|C _ 2|+\cfrac{M}{12}+\cfrac{M}{12\times 13}=|C _ 1|+|C _ 2|+\cfrac{7M}{78}\end{aligned}$$</p>
+<p>对于方程的每一个解，常数 $C _ 1,C _ 2$ 是固定的，所以，原方程的每一个解都是有界的。</p>
+</details>
 
 
   

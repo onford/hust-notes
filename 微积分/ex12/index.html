@@ -1757,6 +1757,24 @@ $$\begin{aligned}t _ {n+1}-t _ n&amp;&lt;\cfrac{\sqrt{a _ 3+\sqrt{a _ 4+\cdots+\
 &amp;&lt;\cdots&lt;\cfrac{\sqrt{a _ {n+1}}}{2\sqrt{a _ 1}\cdot 2\sqrt{a _ 2}\cdot\cdots\cdot 2\sqrt{a _ n}}=s _ n\end{aligned}$$</p>
 <p>由比较判别法知正项级数 $\displaystyle\sum _ {n=1}^\infty(t _ {n+1}-t _ n)$ 收敛，进而数列 $\lbrace t _ n\rbrace$ 也收敛。</p>
 </details>
+<p><strong>题 6</strong>&emsp;设 $\lbrace a _ n\rbrace$ 与 $\lbrace b _ n\rbrace$ 均为正实数列，满足 $a _ 1=b _ 1=1$，且 $b _ n=a _ nb _ {n-1}-2,n=2,3,\cdots$。又设 $\lbrace b _ n\rbrace$ 为有界数列，证明级数 $\displaystyle\sum _ {n=1}^\infty\cfrac{1}{a _ 1a _ 2\cdots a _ n}$ 收敛，并求该级数的和。</p>
+<details class="tip">
+<summary>$\bigstar\bigstar\bigstar\bigstar$&emsp;解题思路（来自 2021 年全国大学生数学竞赛(非数类)预赛试题）</summary>
+<blockquote>
+<p>通过构造部分和数列，转化为数列极限的证明和求解，思路是“$1$ 的替代”，这个方法在高中数学的各类不等式放缩中也经常使用，是非常巧妙的一个方法。实际上如果想到这个裂项方法，距离完整做出这道题就不远了。</p>
+</blockquote>
+<p><strong>解</strong>&emsp;首先注意到 $a _ 1=b _ 1=1$，且 $a _ n=\left(1+\cfrac{2}{b _ n}\right)\cfrac{b _ n}{b _ {n+1}}$，所以当 $n\geq 2$ 时，有
+$$a _ 1a _ 2\cdots a _ n=\left(1+\cfrac{2}{b _ 2}\right)\left(1+\cfrac{2}{b _ 3}\right)\cdots\left(1+\cfrac{2}{b _ n}\right)b _ n$$</p>
+<p>由于 $\lbrace b _ n\rbrace$ 有界，故存在 $M&gt;0$，使得当 $n\geq 1$ 时，恒有 $0&lt;b _ n\leq M$，因此
+$$0\leq\cfrac{b _ n}{a _ 1a _ 2\cdots a _ n}=\left(1+\cfrac{2}{b _ 2}\right)^{-1}\left(1+\cfrac{2}{b _ 3}\right)^{-1}\cdots\left(1+\cfrac{2}{b _ n}\right)^{-1}\leq\left(1+\cfrac{2}{M}\right)^{-n+1}$$</p>
+<p>根据夹逼准则，有 $\lim\limits _ {n\to\infty}\cfrac{b _ n}{a _ 1a _ 2\cdots a _ n}=0$。<br />
+&emsp;&emsp;级数 $\displaystyle\sum _ {n=1}^\infty\cfrac{1}{a _ 1a _ 2\cdots a _ n}$ 的那部分和 $S _ n$，当 $n\geq 2$ 时，有
+$$\begin{aligned}S _ n&amp;=\sum _ {k=1}^n\cfrac{1}{a _ 1a _ 2\cdots a _ k}\\
+&amp;=\cfrac{1}{a _ 1}+\sum _ {k=2}^n\cfrac{1}{a _ 1a _ 2\cdots a _ k}\cdot\cfrac{a _ kb _ {k-1}-b _ k}{2}\\
+&amp;=1+\cfrac{1}{2}\sum _ {k=2}^n\left(\cfrac{b _ {k-1}}{a _ 1a _ 2\cdots a _ {k-1}}-\cfrac{b _ {k}}{a _ 1a _ 2\cdots a _ {k}}\right)\\
+&amp;=\cfrac{3}{2}-\cfrac{b _ n}{2a _ 1a _ 2\cdots a _ n}\end{aligned}$$</p>
+<p>所以 $\lim\limits _ {n\to\infty}S _ n=\cfrac{3}{2}$，这就证明了级数 $\displaystyle\sum _ {n=1}^\infty\cfrac{1}{a _ 1a _ 2\cdots a _ n}$ 收敛，且其和为 $\cfrac{3}{2}$。</p>
+</details>
 
 
   
