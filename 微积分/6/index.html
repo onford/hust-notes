@@ -1380,6 +1380,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#holder" class="md-nav__link">
+    Hölder 不等式
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1743,6 +1750,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#holder" class="md-nav__link">
+    Hölder 不等式
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1763,7 +1777,12 @@
 
   <h1>6 定积分</h1>
 
+<p>本节含有课本未出现的拓展内容：</p>
 <p>&emsp;&emsp;定积分沿用了不定积分的很多性质，例如分部积分、换元法等，同时它还具备一些自己的新性质，计算技巧也更丰富。</p>
+<ul>
+<li><a href="#holder">Hölder（赫尔德）不等式</a></li>
+</ul>
+<hr />
 <h2 id="_1">定积分的性质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;定积分具有很多性质，下面列举三条比较重要的性质，它们都可以用于不等式的证明。定积分证明题也是常见的考点，收录了一些定积分证明题到<a href="../ex6-2/">习题集锦</a>中。</p>
 <div class="admonition notes">
@@ -1805,6 +1824,13 @@ $$\Gamma(\alpha)=\int _ 0^{+\infty}x^{\alpha-1}\mathrm e^{-x}\mathrm dx(\alpha&g
 <h2 id="_2">定积分的应用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;定积分可以用来求一些长度、面积、体积等。求曲线弧长时，曲线若是以参数方程 $\begin{cases}x=x(t),\\ y=y(t),\end{cases}(\alpha\leq t\leq\beta)$ 或极坐标 $r=r(\theta)(\alpha\leq\theta\leq\beta)$ 的形式给出，弧长应该分别按照下两式计算：
 $$s=\int _ \alpha^\beta\sqrt{x^\prime(t)^2+y^\prime(t)^2}\mathrm dt\tag{6.8}$$ $$s=\int _ \alpha^\beta\sqrt{r^\prime(\theta)^2+r(\theta)^2}\mathrm d\theta\tag{6.9}$$</p>
+<h2 id="holder">Hölder 不等式<a class="headerlink" href="#holder" title="Permanent link">&para;</a></h2>
+<p class="annotate">&emsp;&emsp;Hölder 不等式是 Cauchy-Schwartz 不等式的强化版本，对比式 $(6.2)$(1)，Hölder 不等式在定积分中的形式为</p>
+<ol>
+<li>$$\left(\int _ a^bf(x)g(x)\mathrm dx\right)^2\leq \left(\int _ a^bf^2(x)\mathrm dx\right)\left(\int _ a^bg^2(x)\mathrm dx\right)$$</li>
+</ol>
+<p>$$\left|\int _ a^bf(x)g(x)\mathrm dx\right|\leq \left(\int _ a^b|f(x)|^p\mathrm dx\right)^\frac{1}{p}\left(\int _ a^b|g(x)|^q\mathrm dx\right)^\frac{1}{q}\tag{6.10}$$</p>
+<p>其中 $\cfrac{1}{p}+\cfrac{1}{q}=1$。</p>
 
 
   

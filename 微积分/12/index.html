@@ -1508,6 +1508,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#a-d" class="md-nav__link">
+    A-D 判别法
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1791,6 +1798,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#a-d" class="md-nav__link">
+    A-D 判别法
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1846,6 +1860,7 @@
 <p>本节含有课本未出现的拓展内容：</p>
 <ul>
 <li><a href="#cauchy">Cauchy 收敛准则</a></li>
+<li><a href="#a-d">A-D 判别法</a></li>
 </ul>
 <hr />
 <h2 id="_1">数项级数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -1871,14 +1886,22 @@
 <h3 id="_3">变号级数收敛判别法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;一般而言都是使用 Leibniz 判别法：若 $\lbrace a _ n\rbrace$ <strong>单调递减</strong>且<strong>收敛于零</strong>，则级数 $\sum(-1)^{n-1}a _ n$ 收敛。 </p>
 <h3 id="cauchy">Cauchy 收敛准则<a class="headerlink" href="#cauchy" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>这一部分是课本未曾涉及的内容。</p>
-</blockquote>
 <p>&emsp;&emsp;Cauchy 收敛准则，本身是对于数列收敛的一个描述，即数列 $\lbrace a _ n\rbrace$ 收敛的<strong>充要条件</strong>是：
 $$\forall\varepsilon&gt;0,\exists N\in\mathbb N^+,\forall m,n&gt;N:|a _ m-a _ n|&lt;\varepsilon$$</p>
 <p>&emsp;&emsp;而级数 $\sum x _ n$ 收敛的充要条件又是部分和 $a _ n=\sum _ {k=1}^n x _ k$ 收敛，据此，可以得到级数 $\sum x _ n$ 收敛的<strong>充要条件</strong>：</p>
 <p>$$\forall\varepsilon&gt;0,\exists N\in\mathbb N^+,\forall m,n&gt;N:\left|\sum _ {k=m}^n x _ k\right|&lt;\varepsilon$$</p>
 <p>因此，如果对于任意的 $m$，都存在 $n&gt;m$ 使得 $\left|\sum _ {k=m}^n x _ k\right|&gt;c$（$c$ 为一个正常数），就可以判断级数发散了。</p>
+<h3 id="a-d">A-D 判别法<a class="headerlink" href="#a-d" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;A 指的是 Abel 判别法，D 指的是 Dirichlet 判别法。</p>
+<div class="admonition notes">
+<p class="admonition-title">Abel 判别法</p>
+<p>如果数列 $\lbrace a _ n\rbrace$ 单调有界，$\sum _ {n=1}^\infty b _ n$ 收敛，则级数 $\sum _ {n=1}^\infty a _ nb _ n$ 收敛。</p>
+</div>
+<div class="admonition notes">
+<p class="admonition-title">Dirichlet 判别法</p>
+<p>设数列 $\lbrace a _ n\rbrace$ 单调趋于 $0$，级数 $\sum _ {n=1}^\infty b _ n$ 的部分和有界，则级数 $\sum _ {n=1}^\infty a _ nb _ n$ 收敛。</p>
+</div>
+<p>&emsp;&emsp;这两个定理的证明比较复杂，详情可以参见<a href="https://zhuanlan.zhihu.com/p/82928108">这篇文章</a>。</p>
 <h2 id="_4">函数项级数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="_5">一致收敛性<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;有限个连续函数之和仍然是连续函数，无限个就未必了。<strong>一致收敛性</strong>是指在收敛域 $B$ 上的每个点，这些函数值之和收敛到和函数的速度的一致性。一旦收敛速度不一致，即非一致收敛，和函数就会产生间断。</p>
