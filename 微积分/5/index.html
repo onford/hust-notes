@@ -1351,6 +1351,26 @@
     不定积分计算
   </a>
   
+    <nav class="md-nav" aria-label="不定积分计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分部积分凑法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    值得留意的函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1727,6 +1747,26 @@
     不定积分计算
   </a>
   
+    <nav class="md-nav" aria-label="不定积分计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分部积分凑法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    值得留意的函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1793,12 +1833,17 @@
 
 <p>&emsp;&emsp;有趣的是，关于 $f(x)=x^{-1}$ 的原函数，一直有人说教材中表示得不对，应该是 $F(x)=\begin{cases}\ln(-x)+C _ 1,&amp;x&lt;0\\\ln x+C _ 2,&amp;x&gt;0\end{cases}$ 才对，这是有道理的。不过实际上不定积分都是为定积分服务，$x^{-1}$ 的积分上下限若跨越 $0$ 则不收敛，从而两种原函数也都无所谓了。</p>
 <h2 id="_2">不定积分计算<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;凑微分、分部积分、换元法是计算不定积分的三大法宝。然而即便知道有这些方法，实战中想要灵活应用也没那么容易。收录了一些题目到<a href="../ex5/">习题集锦</a>中以拓展思维。<br />
-&emsp;&emsp;对于诸如 $\displaystyle\int x^nf(x)\mathrm dx$ 的积分，要想采用分部积分的话，到底将 $x^n$ 还是 $f(x)$ 放到 $\mathrm d$ 后面去，以下是经验之谈：</p>
+<p>&emsp;&emsp;凑微分、分部积分、换元法是计算不定积分的三大法宝。然而即便知道有这些方法，实战中想要灵活应用也没那么容易。收录了一些题目到<a href="../ex5/">习题集锦</a>中以拓展思维。</p>
+<h3 id="_3">分部积分凑法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;对于诸如 $\displaystyle\int x^nf(x)\mathrm dx$ 的积分，要想采用分部积分的话，到底将 $x^n$ 还是 $f(x)$ 放到 $\mathrm d$ 后面去，以下是经验之谈：</p>
 <ul>
-<li>若 $f(x)$ 是诸如 $\sin x,\cos 2x$ 这类三角函数，往往会变成 $\displaystyle\int x^n\mathrm dF(x)$ 进行分部积分。如果 $f(x)$ 是三角函数的高次项，需要先降次，然后进行同等操作。</li>
-<li>若 $f(x)$ 是的导函数只含幂函数，诸如 $\arcsin x,\ln(1+x)$ 这类函数，往往会变成 $\cfrac{1}{n+1}\displaystyle\int f(x)\mathrm d(x^{n+1})$ 的形式进行分部积分。</li>
+<li>若 $f(x)$ 是诸如 $\sin x,\cos 2x$ 这类三角函数，往往将 $f(x)$ 放在后面进行分部积分。即会变成 $\displaystyle\int x^n\mathrm dF(x)$ 的形式。如果 $f(x)$ 是三角函数的高次项，需要先降次，然后进行同等操作。</li>
+<li>若 $f(x)$ 是的导函数只含幂函数，诸如 $\arcsin x,\ln(1+x)$ 这类函数，往往把 $x^n$ 放在后面进行分部积分。即会变成 $\cfrac{1}{n+1}\displaystyle\int f(x)\mathrm d(x^{n+1})$ 的形式。</li>
 </ul>
+<h3 id="_4">值得留意的函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;有些时候我们已经凑出 $\displaystyle\int f(x)\mathrm dg(x)$ 的形式了，接下来应该要进行分部积分，而 $f^\prime(x)$ 的复杂程度决定了我们尝试的意愿。有一些函数本身看起来比较复杂，我们自然而然地觉得它的导函数也很复杂，但是实际不然。所以这里总结一些<strong>导函数比原函数形式更简单的函数</strong>。
+$$\left(\cfrac{\sin x}{1+\cos x}\right)^\prime=\cfrac{1}{1+\cos x}$$</p>
+<p>&emsp;&emsp;与之类似的有那么几个函数，大题都是分子分母包含正弦余弦，常数是 $1$ 的分式。大胆开导吧！</p>
 
 
   
