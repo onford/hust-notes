@@ -1925,7 +1925,7 @@ $$\int _ L\boldsymbol F\cdot\mathrm d\boldsymbol r=\int _ L\boldsymbol F\cdot\bo
 <h3 id="_5">第一型曲面积分<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;第一型曲面积分，也不考虑曲面的“方向”问题。曲面面积元 $\mathrm dS$ 需要经过适当的转换变为平面面积元 $\mathrm d\sigma$，从而转化为二重积分。如果曲面是 $z=z(x,y)$ 的一部分，那么
 $$\iint\limits _ Sf\mathrm dS=\iint\limits _ Df(x,y,z(x,y))\sqrt{1+z _ x^2+z _ y^2}\mathrm dx\mathrm dy\tag{11.5}$$</p>
-<p>&emsp;&emsp;第一型曲面积分的直接计算方法，相对来说，没有第一型曲线积分的方法那么丰富。</p>
+<p>&emsp;&emsp;第一型曲面积分的直接计算方法，相对来说，没有第一型曲线积分的方法那么丰富；但是也未必总是转换到面积微元 $\mathrm d\sigma=\mathrm dx\mathrm dy$ 上。</p>
 <h3 id="_6">第二型曲面积分<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;第二型曲面积分也有着很多表示形式，如
 $$\iint\limits _ S\boldsymbol F\cdot\mathrm d\boldsymbol S=\iint\limits _ S\boldsymbol F\cdot\boldsymbol n\mathrm dS=\iint\limits _ SP\mathrm dy\mathrm dz+Q\mathrm dz\mathrm dx+R\mathrm dx\mathrm dy\tag{11.6}$$</p>
@@ -1936,7 +1936,7 @@ $$\iint\limits _ S\boldsymbol F\cdot\mathrm d\boldsymbol S=\iint\limits _ S\bold
 </div>
 <p>&emsp;&emsp;直接求取第二型曲面积分，一般使用<strong>分散投影法</strong>或<strong>统一投影法</strong>。统一投影法的原理是：
 $$\iint\limits _ SP\mathrm dy\mathrm dz+Q\mathrm dz\mathrm dx+R\mathrm dx\mathrm dy=\iint\limits _ S[-Pz _ x(x,y)-Qz _ y(x,y)+R]\mathrm dx\mathrm dy\tag{11.7}$$</p>
-<p>&emsp;&emsp;从式 $(11.6)$ 中看出，如果你能直接得到 $\boldsymbol n$ 的表达式，那么就可以转换为第一型曲面积分计算。以诶时候其他方法也能解决，不必费尽心思求 $\boldsymbol n$ 的表达式；也有些时候这种方式可以简化计算量。</p>
+<p>&emsp;&emsp;从式 $(11.6)$ 中看出，如果你能直接得到 $\boldsymbol n$ 的表达式，那么就可以转换为第一型曲面积分计算。有些时候其他方法也能解决，不必费尽心思求 $\boldsymbol n$ 的表达式；也有些时候这种方式可以简化计算量。</p>
 <h2 id="gause-stokes">Gause 公式与 Stokes 公式<a class="headerlink" href="#gause-stokes" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;在引入这两个公式之前，首先约定了一些记号。式 $(11.8)(11.9)$ 分别定义矢量函数 $\boldsymbol F=\lbrace P,Q,R\rbrace$ 的<strong>散度</strong>与<strong>旋度</strong>。
 $$\operatorname{div}\boldsymbol F=P _ x+Q _ y+R _ z\tag{11.8}$$ $$\operatorname{\bold{rot}}\boldsymbol F=\lbrace R _ y-Q _ z,P _ z-R _ x,Q _ x-P _ y\rbrace\tag{11.9}$$</p>
