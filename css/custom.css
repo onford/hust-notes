@@ -1,5 +1,24 @@
-.md-header {
+.md-header,
+nav.md-tabs {
   background-color: #2b5f75 !important;
+}
+
+.md-tabs__item {
+  font-family: "微软雅黑" !important;
+  font-size: bold !important;
+}
+
+.filename {
+  font-family: "Roboto" !important;
+}
+
+:root,
+[data-md-color-scheme=default] {
+  --md-code-hl-color: lightblue;
+}
+
+.highlight .hll {
+  box-shadow: 2px 0 0 0 #4287ff inset;
 }
 
 @media only screen and (max-width: 76.1875em) {
