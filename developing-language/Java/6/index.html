@@ -13,27 +13,27 @@
       
       
       
-        <link rel="prev" href="../11/">
+        <link rel="prev" href="../5/">
       
       
-        <link rel="next" href="../ex2/">
+        <link rel="next" href="../7/">
       
       
-      <link rel="icon" href="../../assets/favicon.jpg">
+      <link rel="icon" href="../../../assets/favicon.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
     
 	<meta name="format-detection" content="telephone=no">
 
     
       
-        <title>12 无穷级数 - HUST_CS 学习笔记</title>
+        <title>6 String类的常用方法 - HUST_CS 学习笔记</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -58,17 +58,17 @@
       
     
     
-      <link rel="stylesheet" href="../../css/katex.css">
+      <link rel="stylesheet" href="../../../css/katex.css">
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-      <link rel="stylesheet" href="../../css/table.css">
+      <link rel="stylesheet" href="../../../css/table.css">
     
-      <link rel="stylesheet" href="../../css/others.css">
+      <link rel="stylesheet" href="../../../css/others.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#string" class="md-skip">
           跳转至
         </a>
       
@@ -121,9 +121,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="HUST_CS 学习笔记" class="md-header__button md-logo" aria-label="HUST_CS 学习笔记" data-md-component="logo">
+    <a href="../../.." title="HUST_CS 学习笔记" class="md-header__button md-logo" aria-label="HUST_CS 学习笔记" data-md-component="logo">
       
-  <img src="../../assets/signature.svg" alt="logo">
+  <img src="../../../assets/signature.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12 无穷级数
+              6 String类的常用方法
             
           </span>
         </div>
@@ -244,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -269,10 +269,37 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/1/" class="md-tabs__link">
+        <a href="../../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/1/" class="md-tabs__link">
           
   
   专业核心课类
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%A4%A7%E7%89%A9/9/" class="md-tabs__link">
+          
+  
+  数学/物理基础课类
 
         </a>
       </li>
@@ -300,34 +327,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../%E5%A4%A7%E7%89%A9/9/" class="md-tabs__link">
-          
-  
-  数学/物理基础课类
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../developing-language/Java/1/" class="md-tabs__link">
+        <a href="../1/" class="md-tabs__link">
           
   
   开发语言笔记
@@ -363,9 +363,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HUST_CS 学习笔记" class="md-nav__button md-logo" aria-label="HUST_CS 学习笔记" data-md-component="logo">
+    <a href="../../.." title="HUST_CS 学习笔记" class="md-nav__button md-logo" aria-label="HUST_CS 学习笔记" data-md-component="logo">
       
-  <img src="../../assets/signature.svg" alt="logo">
+  <img src="../../../assets/signature.svg" alt="logo">
 
     </a>
     HUST_CS 学习笔记
@@ -391,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/1/" class="md-nav__link">
+      <a href="../../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/2/" class="md-nav__link">
+      <a href="../../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/3/" class="md-nav__link">
+      <a href="../../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/4/" class="md-nav__link">
+      <a href="../../../%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/1/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/2/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -640,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/3/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -660,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/4/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -680,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/5/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -700,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/6/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -733,19 +733,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -758,7 +756,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             数学/物理基础课类
@@ -805,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E5%A4%A7%E7%89%A9/9/" class="md-nav__link">
+      <a href="../../../%E5%A4%A7%E7%89%A9/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -825,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E5%A4%A7%E7%89%A9/10/" class="md-nav__link">
+      <a href="../../../%E5%A4%A7%E7%89%A9/10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E5%A4%A7%E7%89%A9/11/" class="md-nav__link">
+      <a href="../../../%E5%A4%A7%E7%89%A9/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -865,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E5%A4%A7%E7%89%A9/13/" class="md-nav__link">
+      <a href="../../../%E5%A4%A7%E7%89%A9/13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/1/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -947,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/2/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/3/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -987,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/4/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/7/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1027,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/8/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1047,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/10/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1067,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/11/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/12/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1107,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/13/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1127,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/14/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1147,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/15/" class="md-nav__link">
+      <a href="../../../%E7%94%B5%E8%B7%AF%E7%90%86%E8%AE%BA/15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1209,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BF%A1%E5%8F%B7/1/" class="md-nav__link">
+      <a href="../../../%E4%BF%A1%E5%8F%B7/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1229,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BF%A1%E5%8F%B7/2/" class="md-nav__link">
+      <a href="../../../%E4%BF%A1%E5%8F%B7/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1249,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BF%A1%E5%8F%B7/3/" class="md-nav__link">
+      <a href="../../../%E4%BF%A1%E5%8F%B7/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1269,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BF%A1%E5%8F%B7/4/" class="md-nav__link">
+      <a href="../../../%E4%BF%A1%E5%8F%B7/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1289,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BF%A1%E5%8F%B7/5/" class="md-nav__link">
+      <a href="../../../%E4%BF%A1%E5%8F%B7/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1309,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BF%A1%E5%8F%B7/6/" class="md-nav__link">
+      <a href="../../../%E4%BF%A1%E5%8F%B7/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1329,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BF%A1%E5%8F%B7/7/" class="md-nav__link">
+      <a href="../../../%E4%BF%A1%E5%8F%B7/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E4%BF%A1%E5%8F%B7/8/" class="md-nav__link">
+      <a href="../../../%E4%BF%A1%E5%8F%B7/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1375,19 +1373,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
@@ -1400,7 +1396,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             微积分学
@@ -1413,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1493,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1513,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1533,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1573,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../9/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1593,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1613,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,27 +1627,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    12 无穷级数
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1660,92 +1638,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    数项级数
-  </a>
-  
-    <nav class="md-nav" aria-label="数项级数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    正项级数收敛判别法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    变号级数收敛判别法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cauchy" class="md-nav__link">
-    Cauchy 收敛准则
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-d" class="md-nav__link">
-    A-D 判别法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    函数项级数
-  </a>
-  
-    <nav class="md-nav" aria-label="函数项级数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    一致收敛性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    幂级数
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1791,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex2/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/ex2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1811,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex4/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/ex4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1831,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex5/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/ex5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex6-1/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/ex6-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1871,7 +1763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex6-2/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/ex6-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1891,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex12/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/ex12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1911,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex/" class="md-nav__link">
+      <a href="../../../%E5%BE%AE%E7%A7%AF%E5%88%86/ex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1952,17 +1844,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -1975,7 +1869,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             开发语言笔记
@@ -1986,17 +1880,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
         
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
             
@@ -2009,7 +1905,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Java
@@ -2022,7 +1918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing-language/Java/1/" class="md-nav__link">
+      <a href="../1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing-language/Java/2/" class="md-nav__link">
+      <a href="../2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2062,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing-language/Java/3/" class="md-nav__link">
+      <a href="../3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2082,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing-language/Java/4/" class="md-nav__link">
+      <a href="../4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2102,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing-language/Java/5/" class="md-nav__link">
+      <a href="../5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2120,9 +2016,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../developing-language/Java/6/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    6 String类的常用方法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2131,6 +2045,127 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String 类及其创建
+  </a>
+  
+    <nav class="md-nav" aria-label="String 类及其创建">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string_1" class="md-nav__link">
+    String 类的创建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_2" class="md-nav__link">
+    String 对象在内存中的位置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string_3" class="md-nav__link">
+    String 类的一些常用方法
+  </a>
+  
+    <nav class="md-nav" aria-label="String 类的一些常用方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    字符串比较
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    字符串的长度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    获取特定位置的字符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    连接字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    截取字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    字符串转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    查找字符和字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    字符数组与字符串的转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    基本数据类型和字符串间的转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2142,7 +2177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developing-language/Java/7/" class="md-nav__link">
+      <a href="../7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2196,37 +2231,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    数项级数
+  <a href="#string" class="md-nav__link">
+    String 类及其创建
   </a>
   
-    <nav class="md-nav" aria-label="数项级数">
+    <nav class="md-nav" aria-label="String 类及其创建">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    正项级数收敛判别法
+  <a href="#string_1" class="md-nav__link">
+    String 类的创建
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    变号级数收敛判别法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cauchy" class="md-nav__link">
-    Cauchy 收敛准则
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-d" class="md-nav__link">
-    A-D 判别法
+  <a href="#string_2" class="md-nav__link">
+    String 对象在内存中的位置
   </a>
   
 </li>
@@ -2237,23 +2258,72 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    函数项级数
+  <a href="#string_3" class="md-nav__link">
+    String 类的一些常用方法
   </a>
   
-    <nav class="md-nav" aria-label="函数项级数">
+    <nav class="md-nav" aria-label="String 类的一些常用方法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    字符串比较
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    字符串的长度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    获取特定位置的字符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    连接字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    一致收敛性
+    截取字符串
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    幂级数
+    字符串转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    查找字符和字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    字符数组与字符串的转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    基本数据类型和字符串间的转换
   </a>
   
 </li>
@@ -2281,77 +2351,145 @@
   
 
 
-  <h1>12 无穷级数</h1>
+  <h1>6 String类的常用方法</h1>
 
-<p>本节含有课本未出现的拓展内容：</p>
-<ul>
-<li><a href="#cauchy">Cauchy 收敛准则</a></li>
-<li><a href="#a-d">A-D 判别法</a></li>
-</ul>
-<hr />
-<h2 id="_1">数项级数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>&emsp;&emsp;级数的收敛判别法没有普遍的通式。对于特殊的数项级数，系统性地总结一下数项级数的判别法。 </p>
-<h3 id="_2">正项级数收敛判别法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;对于正项级数 $\sum a _ n$ 而言，判别法大致分为三类：</p>
-<ul>
-<li>与已知敛散性的级数 $\sum b _ n$ 比较<ul>
-<li>一般形式的比较判别法。若从某项起有 $a _ n\leq b _ n$，则当 $\sum b _ n$ 收敛时 $\sum a _ n$ 收敛。<blockquote>
-<p>很多情况下，这个 $\sum b _ n$ 具有简单的形式，比如 $p-$级数。</p>
-</blockquote>
-</li>
-<li>极限形式的比较判别法。若 $b _ n\neq 0$，$\lim\limits _ {n\to\infty}a _ n/b _ n=l$，则当 $0&lt; l&lt; +\infty$ 时 $\sum a _ n$ 与 $\sum b _ n$ 敛散性相同。</li>
-</ul>
-</li>
-<li>$a _ n$ 自身性质挖掘<ul>
-<li>比值法：若 $\lim\limits _ {n\to\infty}a _ {n+1}/a _ n=l$，则级数 $\sum a _ n$ 当 $l&lt;1$ 时收敛，当 $l &gt; 1$ 时发散。</li>
-<li>根值法：若 $\lim\limits _ {n\to\infty}\sqrt[n]{a _ n}=l$，则级数 $\sum a _ n$ 当 $l&lt;1$ 时收敛，当 $l &gt; 1$ 时发散。</li>
-</ul>
-</li>
-<li>数列 $\lbrace a _ n\rbrace$ 拓展为函数 $f(x)$：设 $f(x)$ 在区间 $[1,+\infty)$ 上<strong>非负</strong>且<strong>单调递减</strong>，$a _ n=f(n)(n=1,2,\cdots)$，则级数 $\sum a _ n$ 收敛当且仅当反常积分 $\displaystyle\int _ 1 ^ {+\infty}f(x)\mathrm dx$ 收敛。</li>
-</ul>
-<h3 id="_3">变号级数收敛判别法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;一般而言都是使用 Leibniz 判别法：若 $\lbrace a _ n\rbrace$ <strong>单调递减</strong>且<strong>收敛于零</strong>，则级数 $\sum(-1)^{n-1}a _ n$ 收敛。 </p>
-<h3 id="cauchy">Cauchy 收敛准则<a class="headerlink" href="#cauchy" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;Cauchy 收敛准则，本身是对于数列收敛的一个描述，即数列 $\lbrace a _ n\rbrace$ 收敛的<strong>充要条件</strong>是：
-$$\forall\varepsilon&gt;0,\exists N\in\mathbb N^+,\forall m,n&gt;N:|a _ m-a _ n|&lt;\varepsilon$$</p>
-<p>&emsp;&emsp;而级数 $\sum x _ n$ 收敛的充要条件又是部分和 $a _ n=\sum _ {k=1}^n x _ k$ 收敛，据此，可以得到级数 $\sum x _ n$ 收敛的<strong>充要条件</strong>：</p>
-<p>$$\forall\varepsilon&gt;0,\exists N\in\mathbb N^+,\forall m,n&gt;N:\left|\sum _ {k=m}^n x _ k\right|&lt;\varepsilon$$</p>
-<p>因此，如果对于任意的 $m$，都存在 $n&gt;m$ 使得 $\left|\sum _ {k=m}^n x _ k\right|&gt;c$（$c$ 为一个正常数），就可以判断级数发散了。</p>
-<h3 id="a-d">A-D 判别法<a class="headerlink" href="#a-d" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;A 指的是 Abel 判别法，D 指的是 Dirichlet 判别法。</p>
-<div class="admonition notes">
-<p class="admonition-title">Abel 判别法</p>
-<p>如果数列 $\lbrace a _ n\rbrace$ 单调有界，$\sum _ {n=1}^\infty b _ n$ 收敛，则级数 $\sum _ {n=1}^\infty a _ nb _ n$ 收敛。</p>
-</div>
-<div class="admonition notes">
-<p class="admonition-title">Dirichlet 判别法</p>
-<p>设数列 $\lbrace a _ n\rbrace$ 单调趋于 $0$，级数 $\sum _ {n=1}^\infty b _ n$ 的部分和有界，则级数 $\sum _ {n=1}^\infty a _ nb _ n$ 收敛。</p>
-</div>
-<p>&emsp;&emsp;这两个定理的证明比较复杂，详情可以参见<a href="https://zhuanlan.zhihu.com/p/82928108">这篇文章</a>。</p>
-<h2 id="_4">函数项级数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="_5">一致收敛性<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;有限个连续函数之和仍然是连续函数，无限个就未必了。<strong>一致收敛性</strong>是指在收敛域 $B$ 上的每个点，这些函数值之和收敛到和函数的速度的一致性。一旦收敛速度不一致，即非一致收敛，和函数就会产生间断。</p>
-<div class="admonition quote">
-<p class="admonition-title">一致收敛性的定义</p>
-<p>&emsp;&emsp;设级数 $\displaystyle\sum _ {n=1}^{\infty}u _ n(x)=u _ 1(x)+u _ 2(x)+\cdots+u _ n(x)+\cdots$ 在点集 $A$ 上收敛， 若
-$$\forall\varepsilon&gt;0,\exists N&gt;0,\forall n\geq N,\forall x\in A:|R _ n(x)|&lt;\varepsilon$$</p>
-<p>则说级数在 $A$ 上一致收敛。其中 $R _ n(x)=\displaystyle\sum _ {k=n+1}^\infty u _ k(x)$。</p>
-</div>
-<p>&emsp;&emsp;使用定义证明一致收敛性往往十分困难，所以产生了一个 Weierstrass 判别法，提供一致收敛的充分条件：</p>
-<div class="admonition notes">
-<p class="admonition-title">Weierstrass 判别法</p>
-<p>&emsp;&emsp;若存在一个收敛的正项级数 $\sum b _ n$ 使得 $|u _ n(x)|\leq b _ n(x\in A,n=1,2,\cdots)$，则级数 $\sum u _ n(x)$ 在 $A$ 上绝对收敛且一致收敛。</p>
-</div>
-<p>&emsp;&emsp;教材上对于这个 $b _ n$ 的阐述非常好。Weierstrass 判别法的关键是将 $|u _ n(x)|$ <strong>适度</strong>放大为 $b _ n$，使得 $b _ n$ 不再含 $x$。</p>
-<h3 id="_6">幂级数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p class="annotate">&emsp;&emsp;幂级数是特殊的函数项级数，从 Abel 定理(1)中可以导出收敛半径 $R$ 的概念，即幂级数的收敛域 $B$ 为一个连续且关于原点对称的区间（忽略端点）。而对于幂级数 $\displaystyle\sum _ {n=0}^\infty a _ nx ^n$ 来说，收敛半径的确认依式 $(12.1)$。</p>
+<style>
+    .md-typeset img{
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        left: 15%;
+    }
+</style>
+
+<h2 id="string">String 类及其创建<a class="headerlink" href="#string" title="Permanent link">&para;</a></h2>
+<h3 id="string_1">String 类的创建<a class="headerlink" href="#string_1" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;String 类是 Java 内置的一个类，其完全限定类名是<code>java.lang.String</code>。想要创建一个字符串有多重方式，比如创建字符串<code>"Hello"</code>：
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 字面量创建</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 构造函数创建</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;He&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;llo&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 字符串连接</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">String</span><span class="w"> </span><span class="n">s4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="p">{</span><span class="sc">&#39;H&#39;</span><span class="p">,</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="sc">&#39;o&#39;</span><span class="p">});</span><span class="w"> </span><span class="c1">// 字符数组创建</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">String</span><span class="w"> </span><span class="n">s5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s4</span><span class="p">.</span><span class="na">intern</span><span class="p">();</span>
+</span></code></pre></div></td></tr></table></div></p>
+<h3 id="string_2">String 对象在内存中的位置<a class="headerlink" href="#string_2" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;上面的<code>s1,s3</code>存在<strong>常量池</strong>里，而<code>s2,s4</code>存在<strong>堆</strong>里。类似于 C 程序的编译，可能编译器在编译<code>String s1 = "Hello"</code>时，将<code>"Hello"</code>存进了可重定位文件的<code>.rodata</code>（只读数据节）中了，并且将这个字符串与<code>s1</code>的联系写进重定位节。<code>s3</code>在编译时预处理，自动计算了<code>"He" + "llo"</code>并也存入<code>.rodata</code>；由于已经有一个<code>"Hello"</code>了，就不再重复加入<code>"Hello"</code>，而是直接将<code>s3</code>与之前的那个<code>"Hello"</code>进行重定位。<br />
+&emsp;&emsp;<code>s2,s4</code>都是通过<code>new</code>一个新的字符串对象得到的，这个就好比<code>C</code>语言的<code>malloc</code>，分配的空间在内存的堆中。  </p>
+<p><img alt="" src="../img/6-1.png" /></p>
+<p>&emsp;&emsp;<code>s5</code>也是存在常量池里，和<code>s1,s3</code>一样。<code>intern</code>是<code>String</code>类的一个实例方法，返回字符串对象的字面量。下面是这个方法的 API 注释：</p>
+<p><img alt="" src="../img/6-2.png" /></p>
+<p>&emsp;&emsp;从框起来的部分可以看到，<code>intern</code>方法对于<code>str2=str1.intern()</code>处理在内存分配上有两种情况：</p>
 <ol>
-<li>如果级数 $\displaystyle\sum _ {n=0}^\infty a _ nx ^n$ 当 $x=x _ 0(x _ 0\neq 0)$ 时收敛，则该级数在区间 $(-|x _ 0|,|x _ 0|)$ 上<strong>绝对收敛</strong>。如果级数 $\displaystyle\sum _ {n=0}^\infty a _ nx ^n$ 当 $x=x _ 0$ 时发散，则对 $|x|&gt;|x _ 0|$ 的 $x$ 级数发散。</li>
+<li><code>str1</code>的字面量<strong>已经在</strong>常量池里，则直接让<code>str2</code>指向它。此时有<code>str1==str2</code>。</li>
+<li><code>str1</code>的字面量<strong>不在</strong>常量池里，这时<code>str1</code>肯定是在堆里面分配的，JVM会把<code>str1</code>的字面量<strong>存入常量池</strong>，再令<code>str2</code>指向它。</li>
 </ol>
-<p>$$R=\lim _ {n\to\infty}\left|\cfrac{a _ n}{a _ {n+1}}\right|\tag{12.1}$$</p>
-<blockquote>
-<p>关于幂级数是否在 $x=\pm R$ 处收敛，需要单独拿出来讨论。</p>
+<p>&emsp;&emsp;所以不管怎么说，通过<code>intern</code>方法得到的引用对象，<strong>始终指向常量池</strong>。</p>
+<h2 id="string_3">String 类的一些常用方法<a class="headerlink" href="#string_3" title="Permanent link">&para;</a></h2>
+<h3 id="_1">字符串比较<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>equals</code>。<code>s1.equals(s2)</code>比较<code>s1</code>与<code>s2</code>的字面量，如果字面量相等就返回<code>true</code>，否则是<code>false</code>。如果<code>s2==null</code>也是返回<code>false</code>。<blockquote>
+<p>在 Java 中由于所有非基本数据类型的变量都是引用变量，<code>s1==s2</code>这一语句其实是在判断<code>s1</code>和<code>s2</code>是否指向同一个内存区。相当于 C 语言中<strong>两个指针</strong>的<code>==</code>操作。</p>
 </blockquote>
+</li>
+<li><code>equalsIgnoreCase</code>。忽略大小写的比较。</li>
+<li><code>regionMatches</code>。比较部分内容是否相同，这个函数有两个重载的写法：<ul>
+<li><code>regionMatches(int toffset,String other,int ooffset,int len)</code>。调用<code>s1</code>的该方法，比较<code>s1[toffset]</code>和<code>other[ooffset]</code>开始的<code>len</code>个字符是否都相等；如果都相等返回<code>true</code>，否则<code>false</code>。
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">String</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Java&quot;</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Welcome to Java&quot;</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;welcome to java&quot;</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s2</span><span class="p">.</span><span class="na">regionMatches</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="n">s0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//true</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s3</span><span class="p">.</span><span class="na">regionMatches</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="n">s0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"> </span><span class="c1">//false</span>
+</span></code></pre></div></td></tr></table></div></li>
+<li><code>regionMatches(boolean ignoreCase, int toffset,String other, int ooffset, int len)</code>。和上面那个方法用法类似，只是当<code>ignoreCase==true</code>时比较的时候忽略大小写。
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s3</span><span class="p">.</span><span class="na">regionMatches</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="n">s0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="c1">//true</span>
+</span></code></pre></div></td></tr></table></div></li>
+</ul>
+</li>
+<li><code>startsWith(s1)</code>判断是否以字符串<code>s1</code>开始。</li>
+<li><code>endsWith(s1)</code>判断是否以字符串<code>s1</code>结束。</li>
+<li><code>compareTo</code>方法用于比较两个字符串的大小，即第一个不同字符的差值（字典序）。</li>
+</ul>
+<h3 id="_2">字符串的长度<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;使用<code>length()</code><strong>方法</strong>可以返回字符串的长度。注意数组获取长度是<code>length</code><strong>成员</strong>，两者不一样。</p>
+<h3 id="_3">获取特定位置的字符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;如果是 C 语言直接就是<code>s[index]</code>了，但是 Java 要用<code>s.charAt(index)</code>。</p>
+<h3 id="_4">连接字符串<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;可以直接用加法连接：
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s2</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+&emsp;&emsp;也可以是调用函数<code>concat</code>
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+&emsp;&emsp;两者效果一样，但是不会改变<code>s1,s2</code>的值。连接操作返回的是一个独立于<code>s1,s2</code>的新的字符串。</p>
+<h3 id="_5">截取字符串<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;调用<code>subString</code>方法。有两个重载的<code>subString</code>方法：</p>
+<ul>
+<li><code>substring(int beginIndex, int endIndex)</code>返回从<code>beginIndex</code>到<code>endIndex-1</code>的片段。</li>
+<li><code>substring(int beginIndex)</code>返回从<code>beginIndex</code>到末尾的片段。</li>
+</ul>
+<h3 id="_6">字符串转换<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>s1.toLowerCase()</code>将<code>s1</code>转换成小写形式，得到新串。</li>
+<li><code>s1.toUpperCase()</code>将<code>s1</code>转换成大写形式，得到新串。</li>
+<li><code>s1.trim()</code>删除<code>s1</code><strong>两端</strong>的空格，得到新串。</li>
+<li><code>s1.replace(oldChars,newChars)</code>用串<code>newChars</code>替换<code>s1</code>中的所有子串<code>oldChaes</code>，得到新串。</li>
+</ul>
+<h3 id="_7">查找字符和字符串<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>indexOf</code>返回字符串中字符或字符串匹配的位置，返回<code>-1</code>表示未找到。
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="s">&quot;Welcome to Java&quot;</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="sc">&#39;W&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="mf">0.</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="s">&quot;Welcome to Java&quot;</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="sc">&#39;x&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="o">-</span><span class="mf">1.</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="s">&quot;Welcome to Java&quot;</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;come&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="mf">3.</span>
+</span></code></pre></div></td></tr></table></div></li>
+<li><code>indexOf</code>还能加一个参数<code>fromIndex</code>，或者加两个参数<code>beginIndex,endIndex</code>，表示在特定的区间寻找字符/字符串。
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="s">&quot;Welcome to Java&quot;</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="err">&#39;</span><span class="n">o</span><span class="err">‘</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="mf">9.</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="s">&quot;Welcome to Java&quot;</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="mf">11.</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="s">&quot;Welcome to Java&quot;</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;java&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="o">-</span><span class="mf">1.</span>
+</span></code></pre></div></td></tr></table></div></li>
+<li><code>lastIndexOf</code>从字符串末尾开始查找。
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="s">&quot;Welcome to Java&quot;</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="mf">14.</span>
+</span></code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="_8">字符数组与字符串的转换<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>字符串到字符数组，用<code>toCharArray</code>。
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Java&quot;</span><span class="p">;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kt">char</span><span class="o">[</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="n">charArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="c1">// charArray.length=4</span>
+</span></code></pre></div></td></tr></table></div></li>
+<li>字符数组到字符串，用构造函数，或者静态方法<code>valueOf</code>：
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="o">[</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39;J&#39;</span><span class="p">,</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="sc">&#39;a&#39;</span><span class="p">}</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Java&quot;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="o">[</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39;J&#39;</span><span class="p">,</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="sc">&#39;a&#39;</span><span class="p">}</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Java&quot;</span>
+</span></code></pre></div></td></tr></table></div></li>
+</ul>
+<h3 id="_9">基本数据类型和字符串间的转换<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>valueOf</code>方法将基本数据类型转换为字符串
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span><span class="w">  </span><span class="c1">//&quot;1.0&quot;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;true&quot;</span>
+</span></code></pre></div></td></tr></table></div></li>
+<li>字符串转换为基本类型：利用包装类
+<div class="language-java highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Boolean</span><span class="p">.</span><span class="na">parseBoolean</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div></li>
+</ul>
 
 
   
@@ -2375,7 +2513,7 @@ $$\forall\varepsilon&gt;0,\exists N&gt;0,\forall n\geq N,\forall x\in A:|R _ n(x
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../11/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 11 曲线积分与曲面积分" rel="prev">
+          <a href="../5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 5 泛型（二）——通配泛型" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2385,20 +2523,20 @@ $$\forall\varepsilon&gt;0,\exists N&gt;0,\forall n\geq N,\forall x\in A:|R _ n(x
                 上一页
               </span>
               <div class="md-ellipsis">
-                11 曲线积分与曲面积分
+                5 泛型（二）——通配泛型
               </div>
             </div>
           </a>
         
         
           
-          <a href="../ex2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 数列/函数极限计算题" rel="next">
+          <a href="../7/" class="md-footer__link md-footer__link--next" aria-label="下一页: 7 易错题分析" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                数列/函数极限计算题
+                7 易错题分析
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2469,12 +2607,12 @@ $$\forall\varepsilon&gt;0,\exists N&gt;0,\forall n\geq N,\forall x\in A:|R _ n(x
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.footer", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.footer", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="../../js/katex.js"></script>
+        <script src="../../../js/katex.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
       

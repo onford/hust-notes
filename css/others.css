@@ -11,7 +11,8 @@ body {
 
 .md-typeset h2,
 .md-typeset h3,
-.md-typeset h4 {
+.md-typeset h4,
+.md-typeset h5 {
     font-weight: bold;
 }
 
