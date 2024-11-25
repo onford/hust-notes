@@ -85,7 +85,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -174,43 +183,6 @@
       
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="查找">
-        
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            正在初始化搜索引擎
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header__source">
@@ -480,11 +452,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practice/1/" class="md-nav__link">
+      <a href="../../../practice/detail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     1 详情
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practice/readings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 文献阅读
   </span>
   
 
@@ -2473,9 +2465,9 @@
 <h2 id="java">Java 开发包工具<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;Java 开发包工具(Java Development Kit, JDK)，包含软件库、基于命令行的编译器、解释器以及其它工具。如 javac（编译Java程序）、java（运行Java程序）、jdb（调试Java程序）。下载之后，即使没有 IDE 也能够运行 Java 程序。<br />
 &emsp;&emsp;在<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">官方网站</a>下载 Windows 的 jdk-21 后，其目录如下图所示：
-<img alt="" src="../img/1-1.png" /></p>
+<a class="glightbox" href="../img/1-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-1.png" /></a></p>
 <p>&emsp;&emsp;我们在<code>/bin</code>目录下搜索 &ldquo;java&rdquo;，结果如下：
-<img alt="" src="../img/1-2.png" /></p>
+<a class="glightbox" href="../img/1-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-2.png" /></a></p>
 <p>&emsp;&emsp;其中的 java.exe 和 javac.exe 分别就是用于运行、编译 Java 程序的可执行程序。</p>
 <h2 id="java_1">Java 程序的编写与运行<a class="headerlink" href="#java_1" title="Permanent link">&para;</a></h2>
 <h3 id="java_2">Java 程序的编写<a class="headerlink" href="#java_2" title="Permanent link">&para;</a></h3>
@@ -2495,9 +2487,9 @@
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <p>&emsp;&emsp;由于我们只写了一个公共类，按照 Java 的规定，类名必须和文件名一致，都叫<code>Test</code>。更改后缀名为<code>.java</code>，如下图所示：</p>
-<p><img alt="" src="../img/1-3.png" /></p>
+<p><a class="glightbox" href="../img/1-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-3.png" /></a></p>
 <p>&emsp;&emsp;我的机器上装有 IDEA 集成开发环境，所以修改后缀之后显示了 IDEA 的图标。IDEA 是一款非常好的 Java IDE，用它编写代码可读性更强，手感也更舒适。比如下面我写的屎山代码：</p>
-<p><img alt="" src="../img/1-4.png" /></p>
+<p><a class="glightbox" href="../img/1-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-4.png" /></a></p>
 <p>&emsp;&emsp;观感舒适。</p>
 <blockquote>
 <p>这是我自己写的一个<a href="https://github.com/onford/Greedy-Snake">贪吃蛇小游戏</a>，游戏的逻辑和玩法都写得很一般，欢迎尝试。</p>
@@ -2510,14 +2502,14 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">set</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>%path%<span class="p">;</span>%JAVA_HOME%/bin
 </span></code></pre></div></td></tr></table></div>
 <p>&emsp;&emsp;这样，在任意命令行调用 javac.exe，系统都知道要从<code>path</code>路径寻找它；并且之后运行时系统也会在该路径下寻找 java.exe。在环境变量设置完成后，可以在 javacode 目录（.java文件所在的目录）下运行命令提示符，敲入命令<code class="language-bash highlight">javac<span class="w"> </span>Test.java</code>，运行结果如下：</p>
-<p><img alt="" src="../img/1-5.png" /></p>
+<p><a class="glightbox" href="../img/1-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-5.png" /></a></p>
 <p>&emsp;&emsp;如果我们不在与 javacode 同级的目录，即 Test 下，也是可以运行的。比如返回到桌面，也可以通过<code>-classpath</code>添加路径：
 <div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>java<span class="w"> </span>-classpath<span class="w"> </span>Test<span class="w"> </span>javacode.Test
 </span></code></pre></div></td></tr></table></div>
 &emsp;&emsp;运行结果如下。</p>
-<p><img alt="" src="../img/1-6.png" /></p>
+<p><a class="glightbox" href="../img/1-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-6.png" /></a></p>
 <p>&emsp;&emsp;如果源码被打包成了 .jar 包，jar 包本身也应该属于路径。比如这里有一个打包好了的包<code>SnakeGame.jar</code>，它的内部是这样的：</p>
-<p><img alt="" src="../img/1-7.png" /></p>
+<p><a class="glightbox" href="../img/1-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-7.png" /></a></p>
 <p>&emsp;&emsp;其中公共类<code>Game</code>的完全限定名为<code>javacode.Game</code>，我们直接在<code>SnakeGame.jar</code>所在目录的命令行下敲下面的命令：
 <div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>java<span class="w"> </span>-classpath<span class="w"> </span>SnakeGame.jar<span class="w"> </span>javacode.Game
 </span></code></pre></div></td></tr></table></div>
@@ -2526,15 +2518,15 @@
 <h2 id="java-api">生成 Java API 注释文档<a class="headerlink" href="#java-api" title="Permanent link">&para;</a></h2>
 <h3 id="java_4">Java 特有的注释以及注释文档<a class="headerlink" href="#java_4" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;ava 内有三类注释，单行注释<code>//...</code>和多行注释<code>/*...*/</code>沿用 C 语言的。另一种注释是<code>/**...*/</code>，这种注释可以加在一个类之前、一个方法之前或者一个变量之前，用于对其进行解释。</p>
-<p><img alt="" src="../img/1-9.png" /></p>
+<p><a class="glightbox" href="../img/1-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-9.png" /></a></p>
 <p>&emsp;&emsp;上面的注释经过生成得到注释文档，可以看到我们注释的内容。</p>
-<p><img alt="" src="../img/1-10.png" />
-<img alt="" src="../img/1-11.png" /></p>
+<p><a class="glightbox" href="../img/1-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-10.png" /></a>
+<a class="glightbox" href="../img/1-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-11.png" /></a></p>
 <p>&emsp;&emsp;可以看到注释文档是一个精美的html网页文件，并且含有我们在编译器中所编写的所有注释。</p>
 <h3 id="idea">IDEA生成注释文档的方法<a class="headerlink" href="#idea" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../img/1-12.png" />
-<img alt="" src="../img/1-13.png" />
-<img alt="" src="../img/1-14.png" /></p>
+<p><a class="glightbox" href="../img/1-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-12.png" /></a>
+<a class="glightbox" href="../img/1-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-13.png" /></a>
+<a class="glightbox" href="../img/1-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1-14.png" /></a></p>
 <p>&emsp;&emsp;IDEA 会在设定的位置生成一堆文件，其中的 index.html 就是根注释文档。</p>
 
 
@@ -2665,5 +2657,7 @@
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

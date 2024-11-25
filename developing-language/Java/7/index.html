@@ -83,7 +83,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -167,43 +176,6 @@
       
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="查找">
-        
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            正在初始化搜索引擎
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header__source">
@@ -473,11 +445,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practice/1/" class="md-nav__link">
+      <a href="../../../practice/detail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     1 详情
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practice/readings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 文献阅读
   </span>
   
 
@@ -2412,7 +2404,7 @@ D. <code>m2</code>方法必须用<code>throws</code>声明异常，否则编译�
 <summary>解析</summary>
 <p><strong>答案</strong>&emsp;A<br>
 这道题和 $No.2$ 很像，容易也选 B。实际上，<code>RuntimeException</code>是<strong>非必检异常</strong>，所以即使抛出了也不需要处理（当然也可以选择处理，如果不处理就扔给 JVM 去做）。上一题的<code>IOException</code>是必检异常，抛出来了不处理编译就会出错。
-<img alt="" src="../img/7-1.png" /></p>
+<a class="glightbox" href="../img/7-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/7-1.png" /></a></p>
 </details>
 <hr />
 <p>$No.4$&emsp;下面程序，写出指定语句的输出结果，并解释原因。
@@ -2497,7 +2489,7 @@ D. <code>m2</code>方法必须用<code>throws</code>声明异常，否则编译�
 <strong>不是说实例方法具有多态性，方法入口是在运行时绑定的吗？</strong><br />
 实例方法确实具有多态性，入口也是在运行时绑定，只不过过程可能和我们想象的有些不一样。我们可能认为， JVM 在运行对于的代码的时候，是<strong>只根据</strong>传入形参的实际类型来选择调用哪个函数的。实际上，JVM<strong>还会</strong>兼顾在<strong>编译时获取的信息</strong>。<br />
 你看，如果我把<code>C</code>中的两个<code>m</code>方法全都删掉，语句 (3) 在编译时会报错——这说明<strong>编译时</strong>是会根据<code>o1</code>的<strong>引用</strong>类型去检查相应的方法的。</p>
-<p><img alt="" src="../img/7-2.png" /></p>
+<p><a class="glightbox" href="../img/7-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/7-2.png" /></a></p>
 <p>因此，编译器在编译<code>o1.m(1.0f,1.0f)</code>的时候，也根据形参列表<code>(float,float)</code>去引用类型<code>C</code>里面寻找相应的方法；没有找到完全适合的方法，但是有一个<code>m(double,double)</code>凑合着可以用。<strong>编译器告诉JVM：你在运行的时候要找到一个<code>m(double,double)</code>这样的方法并且调用它</strong>。JVM 很听话，在运行的时候去找了，但是是根据<strong>运行时类型</strong><code>D</code>去找的，恰好看到<code>D</code>继承了<code>C</code>的这个<code>m(double,double)</code>，所以就直接调用它了，也不去管什么<code>m(float,float)</code>是不是更合适一点。<br />
 上面提出的解释也能很好地说明<strong>子类覆盖父类方法</strong>时的情况。假设<code>D</code>里面也有一个<code>m(double,double)</code>，那么是对父类方法的重写。实际运行<code>m(1.0,1.0)</code>的时候看起来像是 JVM 直接根据形参列表在<code>D</code>里找到了一个<code>m(double,double)</code>方法，实则不然；实际情况应该是编译器找到<code>C</code>里的形参列表为<code>(double,double)</code>的方法，然后告诉 JVM 去找。此时刚好子类覆盖了这个方法，所以看起来像是 JVM 独立寻找得到的结果。</p>
 </details>
@@ -2614,5 +2606,7 @@ D. <code>m2</code>方法必须用<code>throws</code>声明异常，否则编译�
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

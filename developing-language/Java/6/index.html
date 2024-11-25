@@ -85,7 +85,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -174,43 +183,6 @@
       
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="查找">
-        
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            正在初始化搜索引擎
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header__source">
@@ -480,11 +452,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practice/1/" class="md-nav__link">
+      <a href="../../../practice/detail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     1 详情
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practice/readings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 文献阅读
   </span>
   
 
@@ -2566,9 +2558,9 @@
 <h3 id="string_2">String 对象在内存中的位置<a class="headerlink" href="#string_2" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;上面的<code>s1,s3</code>存在<strong>常量池</strong>里，而<code>s2,s4</code>存在<strong>堆</strong>里。类似于 C 程序的编译，可能编译器在编译<code>String s1 = "Hello"</code>时，将<code>"Hello"</code>存进了可重定位文件的<code>.rodata</code>（只读数据节）中了，并且将这个字符串与<code>s1</code>的联系写进重定位节。<code>s3</code>在编译时预处理，自动计算了<code>"He" + "llo"</code>并也存入<code>.rodata</code>；由于已经有一个<code>"Hello"</code>了，就不再重复加入<code>"Hello"</code>，而是直接将<code>s3</code>与之前的那个<code>"Hello"</code>进行重定位。<br />
 &emsp;&emsp;<code>s2,s4</code>都是通过<code>new</code>一个新的字符串对象得到的，这个就好比<code>C</code>语言的<code>malloc</code>，分配的空间在内存的堆中。  </p>
-<p><img alt="" src="../img/6-1.png" /></p>
+<p><a class="glightbox" href="../img/6-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/6-1.png" /></a></p>
 <p>&emsp;&emsp;<code>s5</code>也是存在常量池里，和<code>s1,s3</code>一样。<code>intern</code>是<code>String</code>类的一个实例方法，返回字符串对象的字面量。下面是这个方法的 API 注释：</p>
-<p><img alt="" src="../img/6-2.png" /></p>
+<p><a class="glightbox" href="../img/6-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/6-2.png" /></a></p>
 <p>&emsp;&emsp;从框起来的部分可以看到，<code>intern</code>方法对于<code>str2=str1.intern()</code>处理在内存分配上有两种情况：</p>
 <ol>
 <li><code>str1</code>的字面量<strong>已经在</strong>常量池里，则直接让<code>str2</code>指向它。此时有<code>str1==str2</code>。</li>
@@ -2806,5 +2798,7 @@
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
