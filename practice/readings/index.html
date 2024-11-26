@@ -544,6 +544,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#resireduce-w" class="md-nav__link">
+    ResiReduce-w
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resireduce-nd" class="md-nav__link">
+    ResiReduce-nd
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2367,6 +2381,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#resireduce-w" class="md-nav__link">
+    ResiReduce-w
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resireduce-nd" class="md-nav__link">
+    ResiReduce-nd
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2411,7 +2439,35 @@ $$x^i_{t+1}=x _ t^i-\eta\cfrac{1}{n}\sum _ {i=1}^nG _ t^i$$ 其中 $\eta$ 是学
 <p><strong>Main Idea</strong>: to leverage residual reduction to save memory without damaging the accuracy.（在不破坏准确性的情况下，充分削减残差以节约内存）</p>
 </blockquote>
 <h3 id="reusable-groups">可重用组（Reusable Groups）<a class="headerlink" href="#reusable-groups" title="Permanent link">&para;</a></h3>
-<p>&emsp;&emsp;</p>
+<p>&emsp;&emsp;在 DNN 中，模型参数、梯度和残差是一一对应的，他们都是分层的。首先进行一个实验：将 DNN 中每一层的残差展平为零维张量（标量），然后按层将它们的密度分布图作出。注意到<strong>相同类型的残差层具有类似的密度分布</strong>，从而提出可重用组的概念。</p>
+<div class="admonition note">
+<p class="admonition-title">可重用组</p>
+<p>&emsp;&emsp;可重用组由多个相邻的残差层组成，这些残差层属于相同的残差类型。</p>
+</div>
+<p>&emsp;&emsp;基于这个概念，论文中采用了 $2$ 种不同的方法来减少 DNN 模型中的残差存储：</p>
+<ul>
+<li>
+<p>层间残差削减（组内残差削减）：在一个可重用组内，既然各层的残差分布大致相同，那么可以取<strong>各层残差的平均值</strong>作为每一层的残差。</p>
+<blockquote>
+<p>这个平均值可以是<strong>算术平均</strong>（ResiReduce-a），也可以是<strong>加权平均</strong>（ResiReduce-w）。由于“可重用组内不同层的残差往往具有不同的精度显著性”，简单的算术平均并不合适。加权平均中的“权重”是有理有据地确定的。</p>
+</blockquote>
+<p>组内残差削减的缺点很明显，比如每个组都只有一个层，那么就没办法削减残差。    </p>
+</li>
+<li>
+<p>层内残差削减：一些特殊的层内，可以通过简单的维度压缩方法（ResiReduce-d）削减残差。论文作者还提出了一种二维压缩方法（ResiReduce-2d）提高训练精度。</p>
+</li>
+</ul>
+<h3 id="resireduce-w">ResiReduce-w<a class="headerlink" href="#resireduce-w" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;前面提到<strong>可重用组内不同层的残差往往具有不同的精度显著性</strong>，所以提出对各层的残差进行加权平均的方法。但是这个权重怎么确定呢？通过实验得到以下结论。</p>
+<blockquote>
+<p>在同一可重用组中，具有最大 $\rm{L1}$ 或 $\rm{L2}$ 范数的层比具有最小 $\rm{L1}$ 或 $\rm{L2}$ 范数的层具有更高的准确性。</p>
+</blockquote>
+<p>&emsp;&emsp;据此，我们给那些 $\rm{L1}$ 或 $\rm{L2}$ 范数大的层以更大的权重。下式可以按照这种方式确定权重：
+$$w _ i=\phi\cfrac{\Vert r _ i\Vert _ 1}{n _ i}+(1-\phi)\cfrac{\Vert r _ i\Vert _ 2}{\sqrt{n _ i}}$$</p>
+<p>其中 $i$ 代表这个可重用组的第 $i$ 层，$n _ i$ 是残差 $r _ i$ 中元素的个数，使用 $n _ i$ 和 $\sqrt{n _ i}$ 是为了平衡量纲。</p>
+<h3 id="resireduce-nd">ResiReduce-nd<a class="headerlink" href="#resireduce-nd" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;这包括 ResiReduce-d（一维压缩）和 ResiReduce-2d（二维压缩）。下图中，(a) 代表原始的残差，(b) 是一维压缩后的选取的行，(c) 是二维压缩后选取的行和列。选取行，列按照 $\rm{L1}$ 范数更大的优先，没被选中的就置为 $0$（即不用存储，从而减少内存占用）。</p>
+<p><a class="glightbox" href="../img/1/2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/1/2.png" /></a></p>
 <hr />
 
 
