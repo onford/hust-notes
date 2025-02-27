@@ -453,8 +453,28 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    行文小技巧
+    小技巧
   </a>
+  
+    <nav class="md-nav" aria-label="小技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markdownlatex" class="md-nav__link">
+    markdown/latex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    git
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2481,8 +2501,28 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    行文小技巧
+    小技巧
   </a>
+  
+    <nav class="md-nav" aria-label="小技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markdownlatex" class="md-nav__link">
+    markdown/latex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    git
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2531,11 +2571,21 @@
 <li><kbd>p</kbd> 上一页</li>
 <li><kbd>n</kbd> 下一页</li>
 </ul>
-<h2 id="_3">行文小技巧<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">小技巧<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="markdownlatex">markdown/latex<a class="headerlink" href="#markdownlatex" title="Permanent link">&para;</a></h3>
 <ul>
 <li>关于导数符号 $f^\prime(x)$ 是<code>f^\prime(x)</code>，二阶导的话如 $f^{\prime\prime}(x)$ 就用<code>f^{\prime\prime}(x)</code>。</li>
 <li>省略号横着 $\cdots$ 是<code>\cdots</code>，竖着 $\vdots$ 是<code>\vdots</code>，斜着 $\ddots$ 是<code>\ddots</code>。</li>
 <li>绝对值符号还可以用<code>\lvert</code>和<code>\rvert</code>，效果分别为 $\lvert$ 和 $\rvert$；主要是在 markdown 表格中嵌入的公式中含有绝对值符号时，为避免编译混淆而使用。</li>
+</ul>
+<h3 id="git">git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h3>
+<ul>
+<li>不小心 commit 当前的改动，想要撤回这次 commit。
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD^
+</span></code></pre></div></li>
+<li>在一个分支上做了很多更改，但还没提交。不想要这些更改了。
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>stash
+</span></code></pre></div></li>
 </ul>
 
 
