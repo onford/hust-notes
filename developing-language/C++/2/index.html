@@ -2593,7 +2593,7 @@
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">a</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">a</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1">// a = [1,4,5,1,4,*], b = a.begin() + 5, * 代表处于未指定状态</span>
 </span></code></pre></div></td></tr></table></div>
 &emsp;&emsp;如果要去掉所有重复的元素，做到真正的去重，可以先排序再使用该函数。</p>
@@ -2624,6 +2624,23 @@
 <summary>推演的例子</summary>
 <p>&emsp;&emsp;已知条件是，若传入<code class="language-cpp highlight"><span class="k">auto</span><span class="w"> </span><span class="n">cmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;};</span></code>，那么<code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">lower_bound</span></code>寻找的是第一个<strong>不小于</strong>某值的函数。若我传入<code class="language-cpp highlight"><span class="k">auto</span><span class="w"> </span><span class="n">cmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;};</span></code>，那么寻找的就是第一个<strong>不大于</strong>某值的函数（前提是序列要<strong>递减</strong>）。</p>
 </details>
+<p class="annotate">&emsp;&emsp;当然，有时候我们数组的元素和待比较的元素不是同一类型(1)。此时我们必须搞清楚这个自定义比较函数的内涵。这样不难理解，就比如<code>lower_bound</code>，我们可以认为它有一个“默认的比较函数”，也就是上面的<code>cmp</code>。结合<code>lower_bound</code>的目标是找到第一个<strong>不小于</strong>某值的元素，可以得到：</p>
+<ol>
+<li>比如有一个结构体数组：
+    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">lk</span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">likes</span><span class="p">;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span><span class="w"> </span><span class="n">liker</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></code></pre></div>
+    结构体数组<code>liker</code>的元素是按照的<code>likes</code>字段值升序排序的，想要这个<code>liker</code>数组中，第一个<code>likes</code>成员大于<code>val</code>的结构体。显然我们可以构造一个<code>likes</code>字段为<code>val</code>的结构体进行比较，但这样感觉不是很优雅，所以需要深入了解<strong>自定义比较函数</strong>的内涵。</li>
+</ol>
+<blockquote>
+<p><code>cmp</code>的第一个参数是数组元素，第二个参数是目标值；<code>lower_bound</code>找到第一个使得<code>cmp</code>返回<code>False</code>的元素。</p>
+</blockquote>
+<p>&emsp;&emsp;同样地，结合<code>upper_bound</code>的功能，以及它的“缺省比较函数”<code>cmp</code>，可以得到：</p>
+<blockquote>
+<p><code>cmp</code>的第一个参数是目标值，第二个参数是数组元素；<code>upper_bound</code>找到第一个使得<code>cmp</code>返回<code>True</code>的元素。</p>
+</blockquote>
 
 
   
