@@ -2587,6 +2587,16 @@
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// 依然是降序排序</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),[](</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">){</span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;});</span>
 </span></code></pre></div></td></tr></table></div></p>
+<div class="admonition warning">
+<p class="admonition-title">自定义排序函数的严格弱序要求</p>
+<p>&emsp;&emsp;自定义比较函数不能随意设置，它必须是<strong>严格弱序的</strong>，否则会引发未定义行为。同时满足以下三个条件的函数<code>cmp</code>是<strong>严格弱序</strong>的：</p>
+<ul>
+<li><strong>反自反性</strong>：<code>cmp(a,a)</code>返回<code>false</code>。</li>
+<li><strong>反对称性</strong>：如果<code>cmp(a,b)</code>返回<code>true</code>，则<code>cmp(b,a)</code>必须返回<code>false</code>。</li>
+<li><strong>传递性</strong>：如果<code>cmp(a,b)</code>和<code>cmp(b,c)</code>都返回<code>true</code>，那么<code>cmp(a,c)</code>也要返回<code>true</code>。</li>
+</ul>
+<p>经典的<code>&gt;=</code>和<code>&lt;=</code>都不是严格弱序的，因为不满足反自反性和反对称性。实际操作中建议使用<code>&gt;</code>或者<code>&lt;</code>。至于为什么要有严格弱序的要求，参见<a href="https://blog.csdn.net/Strengthennn/article/details/107738011">这篇博客</a>。</p>
+</div>
 <h2 id="unique">unique 函数<a class="headerlink" href="#unique" title="Permanent link">&para;</a></h2>
 <p>&emsp;&emsp;<code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique</span></code>用于去重，说的更明白些是<strong>将多个连续的相同元素变成一个</strong>。其时间复杂度应该是 $O(n)$。<br />
 &emsp;&emsp;该函数的调用方法和<code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">sort</span></code>类似，没有第三个参数。在实际执行时，会将指定范围内的数据进行去重，并返回去重后的尾地址（去重数组返回指针，去重<code>vector</code>返回迭代器）。尾地址后的元素处于未指定状态。
