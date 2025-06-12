@@ -1105,8 +1105,36 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#slr1" class="md-nav__link">
+    SLR（1）文法及其分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lr1" class="md-nav__link">
+    LR（1）文法及其分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lalr1" class="md-nav__link">
+    LALR（1）文法及其分析
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ll-lr" class="md-nav__link">
+    LL 文法和 LR 文法之间的关系
+  </a>
   
 </li>
       
@@ -2820,8 +2848,36 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#slr1" class="md-nav__link">
+    SLR（1）文法及其分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lr1" class="md-nav__link">
+    LR（1）文法及其分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lalr1" class="md-nav__link">
+    LALR（1）文法及其分析
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ll-lr" class="md-nav__link">
+    LL 文法和 LR 文法之间的关系
+  </a>
   
 </li>
       
@@ -3058,9 +3114,26 @@
 &emsp;&emsp;使用这个 LR（0）项目集还有一个好处，就是可以直接徒手搓识别活前缀的 DFA，而不需要上述一系列繁琐的步骤。具体来说，步骤是这样的：</p>
 <ol>
 <li>初始状态 $I _ 0$ 包含一个 $S^\prime\to\cdot S$。</li>
-<li>对于未完全确定的 $I _ i$，确定之（实际上就是求 $I _ i$ 的闭包）。具体来说是这样，找到 $I _ i$ 里面的“$\cdot$”之后的所有非终结符 $\lbrace A _ j\rbrace$，那么把左部在 $\lbrace A _ j\rbrace$ 中的所有产生式都加进来。一直到 $I _ i$ 中的项目不再新增了，$I _ 0$ 就算是完全确定了。</li>
 <li>
-<p>对于完全确定的状态 $I$，考虑这个状态有哪些出边。很显然 $I$ 的项目集中，所有“$\cdot$”之后的终结符、非终结符都可以作为出边。至于边指向的状态中应该有哪些项目，其实就是把 $I$ 中的项目往后移一个这样的符号。</p>
+<p class="annotate">Closure 操作：对于未完全确定的 $I _ i$，确定之（实际上就是求 $I _ i$ 的闭包）。具体来说是这样，找到 $I _ i$ 里面的“$\cdot$”之后的所有非终结符 $\lbrace A _ j\rbrace$，那么把左部在 $\lbrace A _ j\rbrace$ 中的所有产生式都加进来。一直到 $I _ i$ 中的项目不再新增了，$I _ i$ 就算是完全确定了。(1)</p>
+<ol>
+<li>Closure 操作用数学化的语言描述如下。<ol>
+<li>一开始 $\operatorname{Closure}(I _ i)= I _ i$。</li>
+<li>将 $\lbrace[B\to\cdot\gamma] | [A\to\alpha\cdot B\beta]\in\operatorname{Closure}(I  _ i)\rbrace$ 并入 $\operatorname{Closure}(I _ i)$。</li>
+<li>重复上一步，直到 $\operatorname{Closure}(I _ i)$ 不再变化，计算完成。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate">Move 操作：对于完全确定的状态 $I$，考虑这个状态有哪些出边。很显然 $I$ 的项目集中，所有“$\cdot$”之后的终结符、非终结符都可以作为出边。至于边指向的状态中应该有哪些项目，其实就是把 $I$ 中的项目往后移一个这样的符号。(1)</p>
+<ol>
+<li>
+<p>Move 操作也可以用数学化的语言描述，有
+    $$\operatorname{Move}(I,X)=\lbrace[A\to\alpha X\cdot\beta]|[A\to\alpha\cdot X\beta]\in I\rbrace$$</p>
+<p>其中这个 $X$ 可以是终结符，也可以是非终结符。</p>
+</li>
+</ol>
 <blockquote>
 <p>比如边上是 $a$，那么出边指向的状态中，应包含 $I$ 中那些“$\cdot$”后为 $a$ 的项目，这个点移到 $a$ 后面的结果。</p>
 </blockquote>
@@ -3076,9 +3149,18 @@
 <li>$\beta=A$ 是一个终结符。置 $\operatorname{GOTO}[i,A]=j$。</li>
 </ul>
 </li>
-<li>考虑没有出边的状态 $i$。这种状态里面一定全是归约项目。考虑这里面所有的项目：<ul>
-<li>如果不是接受项目，且该项目对应的产生式序号为 $j$，那么置 $\operatorname{ACTION}[i,\cdot]=r _ j$（意思是 ACTION 中关于 $i$ 的这一整行都填上 $r _ j$）。</li>
-<li>如果是接受项目 $S^\prime\to S\cdot$，直接置 $\operatorname{ACTION}[i,\#]=\mathit{acc}$ 即可。</li>
+<li>
+<p>考虑所有含有归约项目的状态 $i$。对于这里面所有的归约项目：</p>
+<ul>
+<li>
+<p class="annotate">如果不是接受项目，且该项目对应的产生式序号为 $j$，那么置 $\operatorname{ACTION}[i,\cdot]=r _ j$（意思是 ACTION 中关于 $i$ 的这一整行都填上 $r _ j$）。(1)</p>
+<ol>
+<li>注意这一条规则，后面 SLR（1）和 LR（1）都会对此进行修改，以优化我们的 LR 分析表。</li>
+</ol>
+</li>
+<li>
+<p>如果是接受项目 $S^\prime\to S\cdot$，直接置 $\operatorname{ACTION}[i,\#]=\mathit{acc}$ 即可。</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -3087,6 +3169,60 @@
 <li>比如一个状态 $i$ 中同时含有 $A\to\alpha\cdot a\beta$ 和 $B\to\gamma\cdot$，会发现 $\operatorname{ACTION}[i,a]$ 既要填 $S _ j$ 又要填 $r _ k$。这就导致了冲突。</li>
 <li>比如一个状态 $i$ 中同时含有 $A\to\alpha\cdot$ 和 $B\to\beta\cdot$，会发现 $\operatorname{ACTION}[i]$ 这一行既要都填 $r _ j$ 又要都填 $r _ k$。这是不可能的，因此就导致了冲突。</li>
 </ol>
+<h3 id="slr1">SLR（1）文法及其分析<a class="headerlink" href="#slr1" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;当文法不是 LR（0）文法时，可以采用<strong>简单</strong>向后看 $1$ 个输入符号的方法，解决<strong>移进-规约</strong>冲突或<strong>归约-归约</strong>冲突。这也是 SLR（1）文法的由来，其中 S 代表的是 Simple。<br />
+&emsp;&emsp;原理也是十分简单。比如一个项目集 $I _ k=\lbrace A\to\alpha\cdot\red{a}\beta,A\to\gamma\red{\cdot},B\to\delta\red{\cdot}\rbrace$。这个项目集明显存在上述两种冲突。但是，如果 $A,B$ 后面都不跟 $a$，那么若下一个 token 是 $a$ ，则到这一个状态显然就不能使用产生式 $A\to\gamma$ 或者 $B\to\beta$ 进行归约，只能选择移进。<br />
+&emsp;&emsp;具体地，可以描述一下这种冲突可解决的情况。若 $I _ k$ 所含的<strong>移进符号集</strong>（即“$\cdot$”后面紧跟的终结符所构成的集合），以及所有归约项目对应产生式左部的非终结符的 Follow 集，两两相交为空，则冲突可解决：</p>
+<ul>
+<li>若下一符号 $a _ i$ 在移进符号集中，则选择移入。</li>
+<li>若下一符号 $a _ i\in\operatorname{FOLLOW}(A _ i)$，则使用相应的产生式（归约项目中以 $A _ i$ 为左部的）进行归约。</li>
+</ul>
+<p>&emsp;&emsp;SLR（1）文法由 NFA 构造分析表的过程，与 LR（0）的唯一区别就是，当某个状态 $i$ 含有编号为 $j$ 的产生式 $A\to\alpha$ 的归约项目时，并不是置 $\operatorname{ACTION}[i]$ 一整行为 $r _ j$，而是对于 $\forall a\in\operatorname{FOLLOW}(A)$，置 $\operatorname{ACTION}[i,a]= r _ j$。直观地理解起来，SLR（1）的进步就是能够提前排除语法错误，因为如果下一个符号不是 $\operatorname{FOLLOW}(A)$ 中的终结符，那么即使这里过了，使用 $j$ 号产生式 $A\to\alpha$ 进行了归约，到后面还是会发现语法错误的。因此不如直接在这里就报错，SLR（1）文法很好地实现了这一点。</p>
+<details class="question">
+<summary>思考：一个项目集中是否会有多个左部相同的归约项目？</summary>
+<p>&emsp;&emsp;上面说道，“若下一符号 $a _ i\in\operatorname{FOLLOW}(A _ i)$，则使用相应的产生式（归约项目中以 $A _ i$ 为左部的）进行归约”。那如果 $I _ k$ 中有一个 $A\to\alpha _ 1$，还有一个 $A\to\alpha _ 2$，$\alpha _ 1\neq\alpha _ 2$，到底要用谁进行归约？<br>
+<div style="display:none">
+首先明确 $3$ 个要点：</p>
+<ul>
+<li>正经的识别活前缀的 NFA 都是一棵以 $I _ 0$ 为根的<strong>树</strong>。</li>
+<li>若 $I _ k$ 里面同时有多个 $A\to\alpha _ i$，那么一定是可以以 $I _ k$ 这个结点按照路径 $\alpha _ i$ 向上的，换句话说，如果记 $\alpha _ i$ 里面最长的那个为 $\hat\alpha$，那么所有的 $\alpha _ i$ 都是 $\hat\alpha$ 的后缀。</li>
+<li>一个 $I _ k$ 里面的 $A\to\cdot\alpha$ 是怎么来的？除了 $I _ 0$ 里面的 $S^\prime\to\cdot S$ 这一个项目是开局自带的，其它的 $A\to\cdot\alpha$ 的出现必然是因为 $I _ k$ 里面有一个 $B\to\beta\cdot A\gamma$，由这一项目所引入的。</li>
+</ul>
+<p>&emsp;&emsp;因此就以两个归约项目 $A\to\alpha _ 1\cdot$，还有一个 $A\to\alpha _ 2\cdot$ 为例。由于之前所说的第 2 点，其中 $\alpha _ 1$ 和 $\alpha _ 2$ 是“一个为另一个的后缀”的关系。因此我们不妨将这两个归约项目分别写为 $A\to\alpha$ 和 $A\to\beta\alpha$，其中 $\beta\neq\varepsilon$。沿着 $\alpha$ 从状态 $I _ k$ 向前回溯，你会发现一个状态 $I _ k^\prime$，它里面有 $A\to\cdot\alpha$ 和 $A\to\beta\cdot\alpha$ 两个项目。根据前面的第 3 点，$I _ k^\prime$ 里面必然还有一个 $B\to\gamma\cdot A\delta$。
+</div></p>
+<p>&emsp;&emsp;先说结论：我不知道。</p>
+</details>
+<blockquote>
+<p>即便一个文法是 LR（0）文法，它依然可以使用 SLR（1）分析法，使得分析表更加精致、能够尽早发现语法错误。</p>
+</blockquote>
+<p>&emsp;&emsp;看到这里，SLR（1）文法的定义也就不言自明了。</p>
+<h3 id="lr1">LR（1）文法及其分析<a class="headerlink" href="#lr1" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;SLR（1）文法用 Follow 集来看能否使用某产生式进行归约，实际上还是太粗糙了（太 Simple 了，符合 SLR 中的 S）。下一个 token $a$ 即使是属于 $\operatorname{FOLLOW}(A)$，也不一定能使用 $A\to\alpha$ 进行归约，也就是说这只是一个必要条件，归约了有可能后续会发现语法错误。LR（1）正是对此进行了相应改进，将使用 $A\to\alpha$ 归约的条件从 $a\in \operatorname{FOLLOW}(A)$ 进一步缩小到 Follow 集合的某一个子集 $a\in\operatorname{subset}(\operatorname{FOLLOW}(A))$。<br />
+&emsp;&emsp;LR（1）分析法在构造项目时，将特定位置的后继符信息一并纳入考量范围。具体来说，LR（1）项目的构成为<code>[LR（0）项目，搜索符]</code>，同时，形如 $[A\to\alpha\cdot,a]$ 的项表示仅在下一个输入符号等于 $a$ 时才可以按照 $A\to\alpha$ 进行归约，这样的 $a$ 的集合总是 $\operatorname{FOLLOW}(A)$ 的子集，因此比 SLR（1）更精细。<br />
+&emsp;&emsp;LR（1）手搓识别活前缀的 NFA，其操作大体上与 LR（0）是相同的，主要区别是：</p>
+<ul>
+<li>初始状态：$I _ 0$ 里面现在包括的是一个 $[S^\prime\to\cdot S,\#]$。</li>
+<li>
+<p>Closure 操作：操作的第 $2$ 步，并入 $\operatorname{Closure}(I _ i)$ 的为：
+    $$\lbrace[B\to\cdot\gamma,\red{b}]|[A\to\alpha\cdot B\red{\beta},\red{a}]\in\operatorname{Closure}(I _ i),b\in\operatorname{FIRST}(\beta a)\rbrace$$</p>
+<p>这个说起来也很有道理。只有下一个 token 为 $b$ 的时候才能使用 $B\to\gamma$ 归约，相当于从当前的状态按照 $\gamma$ 进行回退，然后再按照 $B$ 进行推进。归约后变成了 $A\to\alpha B\cdot\beta$。如果所以这个 $b$ 自然就需要与 $\beta$ 去匹配；特别地，如果 $\beta$ 是空或者可以推出空，则 $b$ 还可以是 $a$。</p>
+</li>
+<li>
+<p>Move 操作：仅仅是项目的形式变动一下而已：
+    $$\operatorname{MOVE}(I,X)=\lbrace [A\to\alpha X\cdot\beta,\red{a}]|[A\to\alpha\cdot X\beta,\red{a}]\in I\rbrace$$</p>
+<p>注意在进行 Move 的过程中，前瞻符号 $\red{a}$ 是不会变的。</p>
+</li>
+</ul>
+<p>&emsp;&emsp;现在说说构造 LR（1）分析表。其实就是一个不同，状态 $i$ 如果含有一个普通的归约项目 $[A\to\alpha\cdot,a]$，那么置 $\operatorname{ACTION}[i,a]=r _ j$。<br />
+&emsp;&emsp;LR（1）文法的定义已经不言自明了，在此不再展开。</p>
+<h3 id="lalr1">LALR（1）文法及其分析<a class="headerlink" href="#lalr1" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;在 LR（1）分析的过程中，很多时候会发现状态数量太多了。并且我们发现如果不看后面的前瞻符号，有很多状态都是一模一样的。LALR（1）正是出于这一种思想，把 LR（1）分析构造的 NFA 中相应的状态进行合并，同时同心项目的前瞻符也进行一个合并，最终得到一个状态数量更少的 NFA。<br />
+&emsp;&emsp;但是在上面的合并过程中，可能会产生冲突（主要指的是归约-归约）冲突，这个时候就不能采取合并。所以 LALR（1）文法仅仅是 LR（1）文法的一个子集。<br />
+&emsp;&emsp;LALR（1）文法的杰出贡献是减少了 NFA 的状态数，但是相应的代价就是延缓了潜在的语法错误发现的时机。在实际分析过程中，LALR（1）的优化往往比它的短板更显著，是可以接收的，比如 Bison 就是采用 LALR（1）分析。</p>
+<h2 id="ll-lr">LL 文法和 LR 文法之间的关系<a class="headerlink" href="#ll-lr" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;关系如下图所示。</p>
+<p><a class="glightbox" href="../../img/grammar_relation_light.svg#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/grammar_relation_light.svg#only-light" /></a>
+<a class="glightbox" href="../../img/grammar_relation_dark.svg#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/grammar_relation_dark.svg#only-dark" /></a></p>
 
 
   
